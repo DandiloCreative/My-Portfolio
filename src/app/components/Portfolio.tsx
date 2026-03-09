@@ -230,11 +230,11 @@ export function Portfolio() {
             </div>
             <Card className="overflow-hidden bg-white/5 border border-white/10 hover:border-violet-500/40 transition-all duration-500 rounded-[2rem] shadow-none hover:shadow-[0_0_60px_rgba(124,58,237,0.15)] group">
               <div className="grid md:grid-cols-2 gap-0">
-                <div className="relative overflow-hidden aspect-[4/3] md:aspect-auto min-h-[300px]">
+                <div className="relative overflow-hidden aspect-video md:aspect-auto min-h-[300px]">
                   <img
                     src={featured.image}
                     alt={featured.title}
-                    className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover object-center md:object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/80 hidden md:block" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:hidden" />
@@ -340,11 +340,11 @@ export function Portfolio() {
                   }}
                 >
                   {/* Image */}
-                  <div className="relative overflow-hidden aspect-[4/3] bg-zinc-900 ring-1 ring-white/5 mx-2 mt-2 rounded-t-[1.5rem] rounded-b-xl">
+                  <div className="relative overflow-hidden aspect-video bg-zinc-900 ring-1 ring-white/5 mx-2 mt-2 rounded-t-[1.5rem] rounded-b-xl">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                      className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                     />
                     {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />

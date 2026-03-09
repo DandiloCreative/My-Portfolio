@@ -21,7 +21,14 @@ export function Header() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
       setIsMenuOpen(false);
     }
   };
@@ -81,10 +88,11 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-zinc-300 hover:text-white transition-colors"
+            className="md:hidden text-zinc-300 hover:text-white transition-colors p-2 -mr-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle Menu"
           >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
@@ -102,7 +110,7 @@ export function Header() {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="text-zinc-400 hover:text-white transition-colors text-left text-lg font-medium capitalize"
+                  className="text-zinc-300 hover:text-white transition-colors text-left py-2 text-xl font-bold tracking-widest capitalize"
                 >
                   {item}
                 </button>
