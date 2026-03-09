@@ -60,13 +60,13 @@ export function Platforms() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-20 will-change-transform"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Ecosystem</span>
-          <h2 className="text-5xl font-bold mb-6 text-white tracking-tight">Platforms We Master</h2>
-          <p className="text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Platforms We Master</h2>
+          <p className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed">
             Enterprise-grade engineering across all dominant content architectures.
           </p>
         </motion.div>
@@ -77,13 +77,13 @@ export function Platforms() {
               key={index}
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: false, margin: "-50px" }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{
                 duration: 0.5,
                 delay: index * 0.1,
                 ease: "easeOut"
               }}
-              className="group"
+              className="group will-change-transform"
             >
               <Card className="p-8 h-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-md rounded-3xl relative overflow-hidden flex flex-col">
                 <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -91,8 +91,9 @@ export function Platforms() {
                   <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     transition={{ delay: index * 0.1 + 0.2, type: "spring", stiffness: 200 }}
+                    className="will-change-transform"
                   >
                     <Badge className={`px-4 py-1.5 text-sm rounded-full border ${platform.color} font-medium tracking-wide`}>
                       {platform.name}
@@ -104,10 +105,10 @@ export function Platforms() {
                   {platform.features.map((feature, idx) => (
                     <motion.li
                       key={idx}
-                      className="flex items-center gap-3"
+                      className="flex items-center gap-3 will-change-transform"
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true }}
                       transition={{ delay: index * 0.1 + 0.3 + idx * 0.1 }}
                     >
                       <div className="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">

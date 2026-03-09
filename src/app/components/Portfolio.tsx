@@ -106,7 +106,7 @@ const portfolioStats = [
 function StatCounter({ value, suffix, label, delay = 0 }: { value: number; suffix: string; label: string; delay?: number }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-50px" });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   useEffect(() => {
     if (isInView) {
@@ -163,27 +163,27 @@ export function Portfolio() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-20 will-change-transform"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 will-change-transform"
           >
             <Sparkles className="w-3.5 h-3.5 text-violet-400" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-xs">Showcase</span>
           </motion.div>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">
             Our{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">
               Featured Work
             </span>
           </h2>
-          <p className="text-xl text-zinc-300 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto font-light leading-relaxed">
             High-end digital experiences delivered to industry-leading clients across every major platform.
           </p>
         </motion.div>
@@ -192,17 +192,18 @@ export function Portfolio() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20 will-change-transform"
         >
           {portfolioStats.map((stat, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
+              className="will-change-transform"
             >
               <StatCounter
                 value={stat.value}
@@ -219,9 +220,9 @@ export function Portfolio() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "-80px" }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.9 }}
-            className="mb-16"
+            className="mb-16 will-change-transform"
           >
             <div className="flex items-center gap-3 mb-6">
               <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
@@ -282,9 +283,9 @@ export function Portfolio() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          className="flex flex-wrap justify-center gap-3 mb-12 will-change-transform"
         >
           {categories.map((cat) => (
             <motion.button
@@ -409,9 +410,9 @@ export function Portfolio() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.7 }}
-          className="text-center mt-20"
+          className="text-center mt-20 will-change-transform"
         >
           <p className="text-zinc-500 text-sm mb-6">Ready to join our portfolio of premium clients?</p>
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>

@@ -34,13 +34,13 @@ export function Services() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-20 will-change-transform"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Capabilities</span>
-          <h2 className="text-5xl font-bold mb-6 text-white tracking-tight">Our Services</h2>
-          <p className="text-xl text-zinc-200 max-w-2xl mx-auto font-light">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Our Services</h2>
+          <p className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light">
             Comprehensive web solutions to help your business thrive online in the modern digital era.
           </p>
         </motion.div>
@@ -51,7 +51,7 @@ export function Services() {
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-50px" }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{
                 duration: 0.6,
                 delay: index * 0.1,
@@ -61,7 +61,7 @@ export function Services() {
                 y: -10,
                 transition: { duration: 0.3 }
               }}
-              className="group"
+              className="group will-change-transform"
             >
               <Card className="p-8 h-full bg-white/5 border-white/10 hover:bg-white/10 hover:border-violet-500/30 transition-all duration-500 backdrop-blur-xl rounded-[2rem] overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-violet-500/20 to-cyan-500/20 blur-3xl rounded-full group-hover:opacity-100 opacity-0 transition-opacity duration-500"></div>

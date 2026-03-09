@@ -35,13 +35,13 @@ export function Contact() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-20 will-change-transform"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Connect</span>
-          <h2 className="text-5xl font-bold mb-6 text-white tracking-tight">Initiate Project</h2>
-          <p className="text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Initiate Project</h2>
+          <p className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed">
             Ready to architect your vision? Let's discuss requirements and scale.
           </p>
         </motion.div>
@@ -50,12 +50,13 @@ export function Contact() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="will-change-transform"
           >
             <Card className="p-8 md:p-10 bg-white/[0.02] border border-white/10 backdrop-blur-2xl rounded-[2rem] shadow-[0_0_50px_rgba(0,0,0,0.5)]">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }} transition={{ delay: 0.1 }}>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="will-change-transform">
                   <label className="block text-sm font-medium mb-2 text-zinc-300">Name</label>
                   <Input
                     type="text"
@@ -67,7 +68,7 @@ export function Contact() {
                   />
                 </motion.div>
 
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }} transition={{ delay: 0.2 }}>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="will-change-transform">
                   <label className="block text-sm font-medium mb-2 text-zinc-300">Email Address</label>
                   <Input
                     type="email"
@@ -79,7 +80,7 @@ export function Contact() {
                   />
                 </motion.div>
 
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }} transition={{ delay: 0.3 }}>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="will-change-transform">
                   <label className="block text-sm font-medium mb-2 text-zinc-300">Target Ecosystem</label>
                   <select
                     className="w-full px-4 h-12 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500/30 focus:border-violet-500/50 text-white placeholder-zinc-600 appearance-none"
@@ -97,7 +98,7 @@ export function Contact() {
                   </select>
                 </motion.div>
 
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }} transition={{ delay: 0.4 }}>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="will-change-transform">
                   <label className="block text-sm font-medium mb-2 text-zinc-300">Project Brief</label>
                   <Textarea
                     placeholder="Describe your vision, scale, and timeline..."
@@ -109,7 +110,7 @@ export function Contact() {
                   />
                 </motion.div>
 
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }} transition={{ delay: 0.5 }} className="pt-2">
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }} className="pt-2 will-change-transform">
                   <Button type="submit" className="w-full bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-xl h-14 text-lg font-medium shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] transition-all border-0 flex items-center justify-center gap-2">
                     Initialize Project <ArrowRight className="w-5 h-5" />
                   </Button>
@@ -119,17 +120,17 @@ export function Contact() {
           </motion.div>
 
           <motion.div
-            className="space-y-10"
+            className="space-y-10 will-change-transform"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <div>
               <h3 className="text-3xl font-bold mb-8 text-white tracking-tight">Direct Comms</h3>
               <div className="space-y-8">
                 <motion.div
-                  className="flex items-center gap-6 group cursor-pointer"
+                  className="flex items-center gap-6 group cursor-pointer will-change-transform"
                   whileHover={{ x: 5 }}
                 >
                   <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-violet-500/20 group-hover:border-violet-500/50 transition-colors">
@@ -144,7 +145,7 @@ export function Contact() {
                 </motion.div>
 
                 <motion.div
-                  className="flex items-center gap-6 group cursor-pointer"
+                  className="flex items-center gap-6 group cursor-pointer will-change-transform"
                   whileHover={{ x: 5 }}
                 >
                   <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-cyan-500/20 group-hover:border-cyan-500/50 transition-colors">
@@ -159,7 +160,7 @@ export function Contact() {
                 </motion.div>
 
                 <motion.div
-                  className="flex items-center gap-6 group"
+                  className="flex items-center gap-6 group will-change-transform"
                   whileHover={{ x: 5 }}
                 >
                   <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-indigo-500/20 group-hover:border-indigo-500/50 transition-colors">
@@ -178,8 +179,9 @@ export function Contact() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ delay: 0.4 }}
+              className="will-change-transform"
             >
               <Card className="p-8 bg-gradient-to-br from-violet-600/10 to-transparent border-white/10 rounded-3xl relative overflow-hidden backdrop-blur-xl">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-violet-500/20 blur-3xl rounded-full"></div>
