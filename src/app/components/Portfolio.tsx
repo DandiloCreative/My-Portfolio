@@ -194,7 +194,7 @@ export function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20 will-change-transform"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-20 will-change-transform"
         >
           {portfolioStats.map((stat, i) => (
             <motion.div

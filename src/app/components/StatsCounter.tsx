@@ -36,7 +36,7 @@ export function StatsCounter() {
       </motion.div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <StatItem
               key={index}

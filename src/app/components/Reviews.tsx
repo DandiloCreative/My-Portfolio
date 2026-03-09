@@ -74,7 +74,7 @@ function StarRating({ count }: { count: number }) {
 
 function ReviewCard({ review }: { review: (typeof reviews)[0] }) {
     return (
-        <div className="relative flex-shrink-0 w-[340px] md:w-[380px] mx-4 p-7 rounded-[2rem] bg-white/[0.03] border border-white/10 backdrop-blur-sm group hover:border-violet-500/40 hover:bg-white/[0.06] transition-all duration-500 cursor-default">
+        <div className="relative flex-shrink-0 w-[290px] md:w-[380px] max-w-[85vw] mx-3 md:mx-4 p-7 rounded-[2rem] bg-white/[0.03] border border-white/10 backdrop-blur-sm group hover:border-violet-500/40 hover:bg-white/[0.06] transition-all duration-500 cursor-default">
             {/* Quote icon */}
             <div className="absolute top-6 right-7 opacity-10 group-hover:opacity-20 transition-opacity">
                 <Quote className="w-10 h-10 text-white" />

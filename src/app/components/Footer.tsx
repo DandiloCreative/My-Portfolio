@@ -67,7 +67,8 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-6 tracking-wide">Initialize</h4>
             <div className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/5">
               <p className="text-zinc-400 text-sm mb-4 font-light">Ready to deploy your next generation web presence?</p>
-              <a href="#contact" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-colors">Start Project</a>
+              <a href="mailto:dandilocreative@gmail.com" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-colors mb-4 block w-fit">Email Us</a>
+              <a href="#contact" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-violet-600/20 hover:bg-violet-600/40 px-4 py-2 rounded-full transition-colors">Start Project</a>
             </div>
           </div>
         </div>

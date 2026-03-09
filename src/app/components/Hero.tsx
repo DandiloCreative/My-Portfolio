@@ -4,10 +4,10 @@ import { motion } from "motion/react";
 import profileImage from "figma:asset/3f11642fd33c5a4bb6a269c8340161a5ced1b197.png";
 
 const platformLogos = [
-  { name: "WordPress", color: "#21759B", position: "top-[10%] -left-[5%] md:-left-[10%]" },
-  { name: "Frontend Developer", color: "#38bdf8", position: "top-[20%] -right-[5%] md:-right-[15%]" },
-  { name: "Squarespace", color: "#FFFFFF", position: "bottom-[20%] -left-[5%] md:-left-[15%]" },
-  { name: "Wix", color: "#0C6EFC", position: "bottom-[10%] -right-[5%] md:-right-[10%]" },
+  { name: "WordPress", color: "#21759B", position: "top-[10%] left-0 sm:left-[5%] md:-left-[10%]" },
+  { name: "Frontend Developer", color: "#38bdf8", position: "top-[20%] right-0 sm:right-[5%] md:-right-[15%]" },
+  { name: "Squarespace", color: "#FFFFFF", position: "bottom-[20%] left-0 sm:left-[5%] md:-left-[15%]" },
+  { name: "Wix", color: "#0C6EFC", position: "bottom-[10%] right-0 sm:right-[5%] md:-right-[10%]" },
 ];
 
 export function Hero() {
