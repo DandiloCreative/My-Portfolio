@@ -33,8 +33,8 @@ export function Header() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-2 left-0 right-0 z-50 pointer-events-none transition-all duration-300"
     >
-      <nav className={`max-w-5xl mx-auto px-4 pointer-events-auto transition-all duration-300 ${isScrolled ? "scale-95" : "scale-100"}`}>
-        <div className={`flex items-center justify-between bg-black/40 backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-300 ${isScrolled ? "px-5 py-1" : "px-6 py-2"}`}>
+      <nav className={`mx-auto px-4 pointer-events-auto transition-all duration-500 ease-in-out ${isScrolled ? "max-w-2xl" : "max-w-5xl"}`}>
+        <div className={`flex items-center justify-between bg-black/40 backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-500 ease-in-out ${isScrolled ? "px-4 py-1" : "px-6 py-2"}`}>
           <motion.div
             className="flex items-center gap-2 relative group cursor-pointer"
             whileHover={{ scale: 1.05 }}
@@ -50,7 +50,7 @@ export function Header() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
             <div className="hidden sm:block">
-              <span className={`text-white font-black tracking-widest uppercase opacity-90 group-hover:opacity-100 transition-opacity ${isScrolled ? "text-base" : "text-lg"}`}>Dandilo</span>
+              <span className={`text-white font-black tracking-widest uppercase opacity-90 group-hover:opacity-100 transition-opacity ${isScrolled ? "text-sm" : "text-lg"}`}>Dandilo</span>
             </div>
           </motion.div>
 

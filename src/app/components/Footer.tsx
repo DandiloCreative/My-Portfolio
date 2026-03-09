@@ -1,6 +1,6 @@
 import { Facebook, Twitter, Instagram, Linkedin, ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
-import brandLogo from "figma:asset/ec0c1b12dfecad14bf5896bead9974455d9891ca.png";
+import brandLogo from "figma:asset/logo.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
