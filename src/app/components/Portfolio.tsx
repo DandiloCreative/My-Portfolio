@@ -231,7 +231,7 @@ export function Portfolio() {
             </div>
             <Card className="overflow-hidden bg-white/5 border border-white/10 hover:border-violet-500/40 transition-all duration-500 rounded-[2rem] shadow-none hover:shadow-[0_0_60px_rgba(124,58,237,0.15)] group">
               <div className="grid md:grid-cols-2 gap-0">
-                <div className="relative overflow-hidden aspect-video md:aspect-auto min-h-[300px]">
+                <div className="relative overflow-hidden aspect-video md:aspect-auto min-h-[220px] md:min-h-[400px]">
                   <img
                     src={featured.image}
                     alt={featured.title}
@@ -246,11 +246,11 @@ export function Portfolio() {
                     </div>
                   </div>
                 </div>
-                <div className="p-10 md:p-14 flex flex-col justify-center">
+                <div className="p-6 md:p-14 flex flex-col justify-center">
                   <Badge className={`w-fit px-3 py-1 text-xs font-semibold rounded-full shadow-none mb-6 ${featured.badgeColor}`}>
                     {featured.category}
                   </Badge>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-violet-400 group-hover:to-cyan-400 transition-all duration-300">
+                  <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-violet-400 group-hover:to-cyan-400 transition-all duration-300">
                     {featured.title}
                   </h3>
                   <p className="text-zinc-300 font-light leading-relaxed mb-6 text-lg">{featured.description}</p>
@@ -377,7 +377,7 @@ export function Portfolio() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-7 flex-1 flex flex-col">
+                  <div className="p-5 md:p-7 flex-1 flex flex-col">
                     <div className="flex items-center gap-3 mb-4">
                       <Badge className={`px-3 py-1 text-xs font-semibold rounded-full shadow-none ${project.badgeColor}`}>
                         {project.category}
@@ -421,7 +421,7 @@ export function Portfolio() {
               href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-full px-10 py-6 text-lg font-semibold shadow-[0_0_30px_rgba(124,58,237,0.35)] hover:shadow-[0_0_50px_rgba(124,58,237,0.55)] transition-all border-0 decoration-none hover:text-white"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-full px-7 py-3 md:px-10 md:py-4 text-base md:text-lg font-semibold shadow-[0_0_30px_rgba(124,58,237,0.35)] hover:shadow-[0_0_50px_rgba(124,58,237,0.55)] transition-all border-0 decoration-none hover:text-white"
             >
               Start Your Project <ArrowRight className="w-5 h-5" />
             </a>
