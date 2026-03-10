@@ -7,7 +7,9 @@ import { motion } from "motion/react";
 export function ThemeToggle() {
     const { theme, setTheme } = useTheme();
 
-    const isDark = theme === "dark";
+    // Resolve effective theme (treat system as dark for this site)
+    const resolvedDark = theme === "dark" || theme === "system";
+    const isDark = resolvedDark;
 
     const toggle = () => {
         setTheme(isDark ? "light" : "dark");
