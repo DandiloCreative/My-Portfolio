@@ -236,6 +236,7 @@ export function Portfolio() {
                     src={featured.image}
                     alt={featured.title}
                     className="w-full h-full object-cover object-center md:object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/80 hidden md:block" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:hidden" />
@@ -346,6 +347,7 @@ export function Portfolio() {
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                      loading="lazy"
                     />
                     {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />

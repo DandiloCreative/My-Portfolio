@@ -72,6 +72,7 @@ export function Header() {
               className={`w-auto relative z-10 drop-shadow-[0_0_15px_rgba(124,58,237,0.4)] transition-all duration-300 ${isScrolled ? "h-8" : "h-10"}`}
               animate={{ y: [0, -2, 2, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              loading="lazy"
             />
             <div className="hidden sm:block">
               <span className={`text-white font-black tracking-widest uppercase opacity-90 group-hover:opacity-100 transition-opacity ${isScrolled ? "text-sm" : "text-lg"}`}>Dandilo</span>

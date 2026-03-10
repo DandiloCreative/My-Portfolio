@@ -7,6 +7,7 @@ import { Reviews } from "./components/Reviews";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { StatsCounter } from "./components/StatsCounter";
+import { SecuritySection } from "./components/SecuritySection";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <StatsCounter />
         <Services />
         <Platforms />
+        <SecuritySection />
         <Portfolio />
         <Reviews />
         <Contact />
