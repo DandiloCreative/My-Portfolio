@@ -84,9 +84,9 @@ export function Hero() {
                   href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto flex items-center justify-center bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 shadow-[0_0_20px_rgba(124,58,237,0.4)] border-0 text-white rounded-full px-8 py-4 md:py-6 text-base md:text-lg font-bold tracking-wide transition-all uppercase no-underline hover:text-white"
+                  className="w-full sm:w-auto flex items-center justify-center bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 shadow-[0_0_20px_rgba(124,58,237,0.4)] border-0 text-white rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold tracking-wide transition-all uppercase no-underline hover:text-white"
                 >
-                  Start Your Project <ArrowRight className="ml-2 w-5 h-5" />
+                  Start Your Project <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
                 </a>
               </motion.div>
               <motion.div
@@ -98,7 +98,7 @@ export function Hero() {
                 <Button size="lg" variant="outline" onClick={() => {
                   const element = document.getElementById("featured-work");
                   if (element) element.scrollIntoView({ behavior: "smooth" });
-                }} className="w-full sm:w-auto rounded-full px-8 py-4 md:py-6 text-base md:text-lg font-bold bg-white/10 hover:bg-white/20 border-white/20 text-white backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all tracking-wide uppercase">
+                }} className="w-full sm:w-auto rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold bg-white/10 hover:bg-white/20 border-white/20 text-white backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all tracking-wide uppercase h-auto">
                   View Our Work
                 </Button>
               </motion.div>

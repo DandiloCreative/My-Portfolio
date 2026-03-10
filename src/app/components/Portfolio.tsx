@@ -421,9 +421,9 @@ export function Portfolio() {
               href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-full px-5 py-2 md:px-10 md:py-4 text-xs md:text-lg font-semibold shadow-[0_0_30px_rgba(124,58,237,0.35)] hover:shadow-[0_0_50px_rgba(124,58,237,0.55)] transition-all border-0 decoration-none hover:text-white"
+              className="inline-flex items-center gap-2.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-semibold shadow-[0_0_30px_rgba(124,58,237,0.35)] hover:shadow-[0_0_50px_rgba(124,58,237,0.55)] transition-all border-0 decoration-none hover:text-white"
             >
-              Start Your Project <ArrowRight className="w-3.5 h-3.5 md:w-5 md:h-5" />
+              Start Your Project <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
             </a>
           </motion.div>
         </motion.div>
