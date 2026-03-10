@@ -106,7 +106,7 @@ const portfolioStats = [
 function StatCounter({ value, suffix, label, delay = 0 }: { value: number; suffix: string; label: string; delay?: number }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isInView = useInView(ref, { once: true, margin: "-20px" });
 
   useEffect(() => {
     if (isInView) {
@@ -164,7 +164,7 @@ export function Portfolio() {
           id="featured-work"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-20px" }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12 md:mb-20 pt-8 md:pt-0 will-change-transform"
         >
@@ -221,7 +221,7 @@ export function Portfolio() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-20px" }}
             transition={{ duration: 0.9 }}
             className="mb-16 will-change-transform"
           >

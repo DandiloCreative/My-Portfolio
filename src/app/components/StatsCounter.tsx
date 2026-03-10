@@ -3,7 +3,7 @@ import { motion, useInView } from "motion/react";
 
 export function StatsCounter() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const isVisible = useInView(sectionRef, { once: false, margin: "-100px" });
+  const isVisible = useInView(sectionRef, { once: true, margin: "-20px" });
 
   const stats = [
     { number: 500, suffix: "+", label: "Projects Delivered" },
