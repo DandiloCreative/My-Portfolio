@@ -60,7 +60,7 @@ export function Platforms() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-20px" }}
+          viewport={{ once: false, margin: "-20px" }}
           transition={{ duration: 0.8 }}
           className="text-center mb-20 will-change-transform"
         >
@@ -77,7 +77,7 @@ export function Platforms() {
               key={index}
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true, margin: "-20px" }}
+              viewport={{ once: false, margin: "-20px" }}
               transition={{
                 duration: 0.5,
                 delay: index * 0.1,
@@ -91,7 +91,7 @@ export function Platforms() {
                   <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false, margin: "-20px" }}
                     transition={{ delay: index * 0.1 + 0.2, type: "spring", stiffness: 200 }}
                     className="will-change-transform"
                   >
@@ -108,7 +108,7 @@ export function Platforms() {
                       className="flex items-center gap-3 will-change-transform"
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: false, margin: "-20px" }}
                       transition={{ delay: index * 0.1 + 0.3 + idx * 0.1 }}
                     >
                       <div className="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">

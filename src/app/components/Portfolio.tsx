@@ -106,7 +106,7 @@ const portfolioStats = [
 function StatCounter({ value, suffix, label, delay = 0 }: { value: number; suffix: string; label: string; delay?: number }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-20px" });
+  const isInView = useInView(ref, { once: false, margin: "-20px" });
 
   useEffect(() => {
     if (isInView) {
@@ -164,14 +164,14 @@ export function Portfolio() {
           id="featured-work"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-20px" }}
+          viewport={{ once: false, margin: "-20px" }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12 md:mb-20 pt-8 md:pt-0 will-change-transform"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, margin: "-20px" }}
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 will-change-transform"
           >
@@ -193,7 +193,7 @@ export function Portfolio() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, margin: "-20px" }}
           transition={{ duration: 0.7, delay: 0.1 }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-20 will-change-transform"
         >
@@ -202,7 +202,7 @@ export function Portfolio() {
               key={i}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, margin: "-20px" }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
               className="will-change-transform"
             >
@@ -221,7 +221,7 @@ export function Portfolio() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-20px" }}
+            viewport={{ once: false, margin: "-20px" }}
             transition={{ duration: 0.9 }}
             className="mb-16 will-change-transform"
           >
@@ -411,7 +411,7 @@ export function Portfolio() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, margin: "-20px" }}
           transition={{ delay: 0.3, duration: 0.7 }}
           className="text-center mt-20 will-change-transform"
         >

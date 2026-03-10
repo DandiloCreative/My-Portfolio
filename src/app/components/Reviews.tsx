@@ -162,7 +162,7 @@ export function Reviews() {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false, margin: "-100px" }}
+                    viewport={{ once: false, margin: "-20px" }}
                     transition={{ duration: 0.8 }}
                     className="text-center"
                 >
@@ -189,7 +189,7 @@ export function Reviews() {
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
+                viewport={{ once: false, margin: "-20px" }}
                 transition={{ delay: 0.4, duration: 0.7 }}
                 className="flex justify-center mt-16 relative z-10"
             >

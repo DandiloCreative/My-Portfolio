@@ -34,7 +34,7 @@ export function Services() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-20px" }}
+          viewport={{ once: false, margin: "-20px" }}
           transition={{ duration: 0.8 }}
           className="text-center mb-20 will-change-transform"
         >
@@ -51,7 +51,7 @@ export function Services() {
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-20px" }}
+              viewport={{ once: false, margin: "-20px" }}
               transition={{
                 duration: 0.6,
                 delay: index * 0.1,
