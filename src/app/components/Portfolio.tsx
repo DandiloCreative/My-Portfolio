@@ -152,12 +152,12 @@ export function Portfolio() {
   const featured = projects.find(p => p.featured);
 
   return (
-    <section id="portfolio" className="py-16 bg-black relative overflow-hidden">
+    <section id="portfolio" className="py-24 md:py-16 bg-black relative overflow-hidden">
       {/* Background glows */}
       <div className="absolute top-1/3 left-0 w-[600px] h-[600px] bg-violet-600/8 rounded-full blur-[150px] pointer-events-none -translate-x-1/3" />
       <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-cyan-600/8 rounded-full blur-[120px] pointer-events-none translate-x-1/3" />
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
+      <div className="container mx-auto px-4 md:px-12 relative z-10">
 
         {/* Header */}
         <motion.div
@@ -166,7 +166,7 @@ export function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20 will-change-transform"
+          className="text-center mb-12 md:mb-20 pt-8 md:pt-0 will-change-transform"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -178,7 +178,7 @@ export function Portfolio() {
             <Sparkles className="w-3.5 h-3.5 text-violet-400" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-xs">Showcase</span>
           </motion.div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">
+          <h2 className="text-3xl md:text-6xl font-bold mb-6 text-white tracking-tight">
             Our{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">
               Featured Work
@@ -231,7 +231,7 @@ export function Portfolio() {
             </div>
             <Card className="overflow-hidden bg-white/5 border border-white/10 hover:border-violet-500/40 transition-all duration-500 rounded-[2rem] shadow-none hover:shadow-[0_0_60px_rgba(124,58,237,0.15)] group">
               <div className="grid md:grid-cols-2 gap-0">
-                <div className="relative overflow-hidden aspect-video md:aspect-auto min-h-[220px] md:min-h-[400px]">
+                <div className="relative overflow-hidden w-full h-[160px] sm:h-[220px] md:h-auto md:aspect-auto bg-zinc-900">
                   <img
                     src={featured.image}
                     alt={featured.title}
@@ -246,7 +246,7 @@ export function Portfolio() {
                     </div>
                   </div>
                 </div>
-                <div className="p-6 md:p-14 flex flex-col justify-center">
+                <div className="p-5 md:p-14 flex flex-col justify-center">
                   <Badge className={`w-fit px-3 py-1 text-xs font-semibold rounded-full shadow-none mb-6 ${featured.badgeColor}`}>
                     {featured.category}
                   </Badge>
@@ -286,7 +286,7 @@ export function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-3 mb-12 will-change-transform"
+          className="flex flex-wrap justify-center gap-2 mb-8 will-change-transform"
         >
           {categories.map((cat) => (
             <motion.button
@@ -341,7 +341,7 @@ export function Portfolio() {
                   }}
                 >
                   {/* Image */}
-                  <div className="relative overflow-hidden aspect-video bg-zinc-900 ring-1 ring-white/5 mx-2 mt-2 rounded-t-[1.5rem] rounded-b-xl">
+                  <div className="relative overflow-hidden w-full h-[150px] sm:h-[180px] bg-zinc-900 ring-1 ring-white/5 mx-2 mt-2 rounded-t-[1.5rem] rounded-b-xl">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -421,9 +421,9 @@ export function Portfolio() {
               href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-full px-7 py-3 md:px-10 md:py-4 text-base md:text-lg font-semibold shadow-[0_0_30px_rgba(124,58,237,0.35)] hover:shadow-[0_0_50px_rgba(124,58,237,0.55)] transition-all border-0 decoration-none hover:text-white"
+              className="inline-flex items-center gap-2.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-full px-5 py-2 md:px-10 md:py-4 text-xs md:text-lg font-semibold shadow-[0_0_30px_rgba(124,58,237,0.35)] hover:shadow-[0_0_50px_rgba(124,58,237,0.55)] transition-all border-0 decoration-none hover:text-white"
             >
-              Start Your Project <ArrowRight className="w-5 h-5" />
+              Start Your Project <ArrowRight className="w-3.5 h-3.5 md:w-5 md:h-5" />
             </a>
           </motion.div>
         </motion.div>
