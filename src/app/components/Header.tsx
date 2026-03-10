@@ -1,6 +1,6 @@
 import { Menu, X, Facebook } from "lucide-react";
 import { useState } from "react";
-import { Button } from "./ui/button";
+import { ThemeToggle } from "./ThemeToggle";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
 
 import logoImg from "figma:asset/logo.png";
@@ -126,16 +126,22 @@ export function Header() {
                 Contact
               </a>
             </motion.div>
+            <div className="ml-2">
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-zinc-300 hover:text-white transition-colors p-2 -mr-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle Menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex items-center gap-4 md:hidden">
+            <ThemeToggle />
+            <button
+              className="text-zinc-300 hover:text-white transition-colors p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle Menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
