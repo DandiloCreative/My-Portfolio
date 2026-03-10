@@ -41,7 +41,10 @@ export function Footer() {
               Engineering exceptional, high-bandwidth web experiences across premier content architectures.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
+              <a href="https://web.facebook.com/profile.php?id=61576876557950" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-violet-500/20 hover:border-violet-500/50 transition-all duration-300">
+                <Facebook size={18} />
+              </a>
+              {[Twitter, Instagram, Linkedin].map((Icon, i) => (
                 <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-violet-500/20 hover:border-violet-500/50 transition-all duration-300">
                   <Icon size={18} />
                 </a>
@@ -89,7 +92,7 @@ export function Footer() {
                 <a href="mailto:dandilocreative@gmail.com" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-colors">Email Us</a>
                 <a href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-emerald-600/20 hover:bg-emerald-600/40 px-4 py-2 rounded-full transition-colors">WhatsApp</a>
               </div>
-              <a href="#contact" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-violet-600/20 hover:bg-violet-600/40 px-4 py-2 rounded-full transition-colors mt-4">Start Project</a>
+              <a href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-violet-600/20 hover:bg-violet-600/40 px-4 py-2 rounded-full transition-colors mt-4">Start Project</a>
             </div>
           </div>
         </div>

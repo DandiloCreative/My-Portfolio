@@ -80,9 +80,14 @@ export function Hero() {
                 className="w-full sm:w-auto"
                 style={{ perspective: 1000 }}
               >
-                <Button size="lg" onClick={scrollToContact} className="w-full sm:w-auto bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 shadow-[0_0_20px_rgba(124,58,237,0.4)] border-0 text-white rounded-full px-8 py-4 md:py-6 text-base md:text-lg font-bold tracking-wide transition-all uppercase">
+                <a
+                  href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto flex items-center justify-center bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 shadow-[0_0_20px_rgba(124,58,237,0.4)] border-0 text-white rounded-full px-8 py-4 md:py-6 text-base md:text-lg font-bold tracking-wide transition-all uppercase no-underline hover:text-white"
+                >
                   Start Your Project <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+                </a>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
