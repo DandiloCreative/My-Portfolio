@@ -33,13 +33,20 @@ export function Header() {
     if (element) {
       const headerOffset = 100;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth"
       });
       setIsMenuOpen(false);
+    } else if (id === "portfolio") {
+      const featured = document.getElementById("featured-work");
+      if (featured) {
+        const offsetPosition = featured.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+        setIsMenuOpen(false);
+      }
     }
   };
 
