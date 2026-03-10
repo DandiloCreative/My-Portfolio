@@ -341,7 +341,7 @@ export function Portfolio() {
                   }}
                 >
                   {/* Image */}
-                  <div className="relative overflow-hidden w-full h-[150px] sm:h-[180px] bg-zinc-900 ring-1 ring-white/5 mx-2 mt-2 rounded-t-[1.5rem] rounded-b-xl">
+                  <div className="relative overflow-hidden w-full h-[160px] sm:h-[200px] bg-zinc-900 border-b border-white/5">
                     <img
                       src={project.image}
                       alt={project.title}
