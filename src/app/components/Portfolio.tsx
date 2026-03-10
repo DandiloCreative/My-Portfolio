@@ -161,6 +161,7 @@ export function Portfolio() {
 
         {/* Header */}
         <motion.div
+          id="featured-work"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -416,9 +417,14 @@ export function Portfolio() {
         >
           <p className="text-zinc-500 text-sm mb-6">Ready to join our portfolio of premium clients?</p>
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-            <Button className="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-full px-10 py-6 text-lg font-semibold shadow-[0_0_30px_rgba(124,58,237,0.35)] hover:shadow-[0_0_50px_rgba(124,58,237,0.55)] transition-all border-0 inline-flex items-center gap-3">
+            <a
+              href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-full px-10 py-6 text-lg font-semibold shadow-[0_0_30px_rgba(124,58,237,0.35)] hover:shadow-[0_0_50px_rgba(124,58,237,0.55)] transition-all border-0 decoration-none hover:text-white"
+            >
               Start Your Project <ArrowRight className="w-5 h-5" />
-            </Button>
+            </a>
           </motion.div>
         </motion.div>
       </div>

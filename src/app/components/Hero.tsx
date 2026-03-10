@@ -96,7 +96,7 @@ export function Hero() {
                 style={{ perspective: 1000 }}
               >
                 <Button size="lg" variant="outline" onClick={() => {
-                  const element = document.getElementById("portfolio");
+                  const element = document.getElementById("featured-work");
                   if (element) element.scrollIntoView({ behavior: "smooth" });
                 }} className="w-full sm:w-auto rounded-full px-8 py-4 md:py-6 text-base md:text-lg font-bold bg-white/10 hover:bg-white/20 border-white/20 text-white backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all tracking-wide uppercase">
                   View Our Work

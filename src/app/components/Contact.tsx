@@ -200,7 +200,7 @@ export function Contact() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-violet-500/20 blur-3xl rounded-full"></div>
                 <h4 className="text-2xl font-bold mb-4 text-white tracking-tight relative z-10">Dandilo Advantage</h4>
                 <ul className="space-y-3 text-zinc-400 font-light relative z-10 text-lg">
-                  <li className="flex items-center gap-3"><span className="text-violet-400">✦</span> 10+ Years Full-Stack Expertise</li>
+                  <li className="flex items-center gap-3"><span className="text-violet-400">✦</span> 8+ Years Full-Stack Expertise</li>
                   <li className="flex items-center gap-3"><span className="text-violet-400">✦</span> Highly Optimized Architectures</li>
                   <li className="flex items-center gap-3"><span className="text-violet-400">✦</span> Dedicated Support Pipelines</li>
                   <li className="flex items-center gap-3"><span className="text-violet-400">✦</span> Elite Performance Metrics</li>
