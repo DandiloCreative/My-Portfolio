@@ -1,13 +1,16 @@
+import { lazy, Suspense } from "react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
-import { Services } from "./components/Services";
-import { Platforms } from "./components/Platforms";
-import { Portfolio } from "./components/Portfolio";
-import { Reviews } from "./components/Reviews";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
-import { StatsCounter } from "./components/StatsCounter";
-import { SecuritySection } from "./components/SecuritySection";
+
+// Lazy-load below-fold sections for faster initial paint
+const StatsCounter = lazy(() => import("./components/StatsCounter").then(m => ({ default: m.StatsCounter })));
+const Services = lazy(() => import("./components/Services").then(m => ({ default: m.Services })));
+const Platforms = lazy(() => import("./components/Platforms").then(m => ({ default: m.Platforms })));
+const SecuritySection = lazy(() => import("./components/SecuritySection").then(m => ({ default: m.SecuritySection })));
+const Portfolio = lazy(() => import("./components/Portfolio").then(m => ({ default: m.Portfolio })));
+const Reviews = lazy(() => import("./components/Reviews").then(m => ({ default: m.Reviews })));
+const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
+const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
 
 export default function App() {
   return (
@@ -15,15 +18,19 @@ export default function App() {
       <Header />
       <main className="w-full relative">
         <Hero />
-        <StatsCounter />
-        <Services />
-        <Platforms />
-        <SecuritySection />
-        <Portfolio />
-        <Reviews />
-        <Contact />
+        <Suspense fallback={null}>
+          <StatsCounter />
+          <Services />
+          <Platforms />
+          <SecuritySection />
+          <Portfolio />
+          <Reviews />
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
