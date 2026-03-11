@@ -125,7 +125,7 @@ export function Contact() {
 
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }} className="pt-2 will-change-transform">
                   <Button type="submit" className="w-full bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-xl h-14 text-lg font-medium shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] transition-all border-0 flex items-center justify-center gap-2">
-                    Initialize Project <ArrowRight className="w-5 h-5" />
+                    Get Your Free Website Review <ArrowRight className="w-5 h-5" />
                   </Button>
                 </motion.div>
               </form>
