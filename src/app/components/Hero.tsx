@@ -85,7 +85,7 @@ export function Hero() {
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto flex items-center justify-center bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 shadow-[0_0_20px_rgba(124,58,237,0.4)] border-0 text-white rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold tracking-wide transition-all uppercase no-underline hover:text-white"
                 >
-                  Start Your Project <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
+                  Get Free Website Audit <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
                 </a>
               </motion.div>
               <motion.div
