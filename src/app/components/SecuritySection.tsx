@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { motion } from "motion/react";
-import { Search, Gauge, TrendingUp } from "lucide-react";
+import { Search, Gauge, TrendingUp, ArrowRight } from "lucide-react";
 
 const auditPoints = [
     {
@@ -68,6 +68,22 @@ export const SecuritySection = memo(function SecuritySection() {
                         </motion.div>
                     ))}
                 </div>
+                <motion.div
+                    className="mt-14 flex justify-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-20px" }}
+                    transition={{ delay: 0.3 }}
+                >
+                    <a
+                        href="https://api.whatsapp.com/send/?phone=%2B12246200930&text=Hi%2C+I%27d+like+a+free+website+audit&type=phone_number&app_absent=0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 shadow-[0_0_20px_rgba(124,58,237,0.4)] text-white rounded-full px-9 py-4 text-base font-bold tracking-wide transition-all uppercase no-underline hover:text-white"
+                    >
+                        Send Me Your Website on WhatsApp <ArrowRight className="w-5 h-5" />
+                    </a>
+                </motion.div>
             </div>
         </section>
     );
