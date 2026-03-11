@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
@@ -50,7 +51,7 @@ const platforms = [
   }
 ];
 
-export function Platforms() {
+export const Platforms = memo(function Platforms() {
   return (
     <section id="platforms" className="py-16 bg-black relative">
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[150px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
@@ -60,7 +61,7 @@ export function Platforms() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-20px" }}
+          viewport={{ once: true, margin: "-20px" }}
           transition={{ duration: 0.8 }}
           className="text-center mb-20 will-change-transform"
         >
@@ -77,7 +78,7 @@ export function Platforms() {
               key={index}
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: false, margin: "-20px" }}
+              viewport={{ once: true, margin: "-20px" }}
               transition={{
                 duration: 0.5,
                 delay: index * 0.1,
@@ -91,7 +92,7 @@ export function Platforms() {
                   <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
-                    viewport={{ once: false, margin: "-20px" }}
+                    viewport={{ once: true, margin: "-20px" }}
                     transition={{ delay: index * 0.1 + 0.2, type: "spring", stiffness: 200 }}
                     className="will-change-transform"
                   >
@@ -108,7 +109,7 @@ export function Platforms() {
                       className="flex items-center gap-3 will-change-transform"
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: false, margin: "-20px" }}
+                      viewport={{ once: true, margin: "-20px" }}
                       transition={{ delay: index * 0.1 + 0.3 + idx * 0.1 }}
                     >
                       <div className="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">
@@ -125,4 +126,4 @@ export function Platforms() {
       </div>
     </section>
   );
-}
+});

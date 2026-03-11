@@ -204,6 +204,12 @@ html.light ::-webkit-scrollbar-thumb {
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Performance: skip rendering of off-screen below-fold sections */
+.below-fold-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 800px;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

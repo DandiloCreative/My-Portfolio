@@ -106,7 +106,7 @@ const portfolioStats = [
 function StatCounter({ value, suffix, label, delay = 0 }: { value: number; suffix: string; label: string; delay?: number }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-20px" });
+  const isInView = useInView(ref, { once: true, margin: "-20px" });
 
   useEffect(() => {
     if (isInView) {
@@ -164,14 +164,14 @@ export function Portfolio() {
           id="featured-work"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-20px" }}
+          viewport={{ once: true, margin: "-20px" }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12 md:mb-20 pt-8 md:pt-0 will-change-transform"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false, margin: "-20px" }}
+            viewport={{ once: true, margin: "-20px" }}
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 will-change-transform"
           >
@@ -193,7 +193,7 @@ export function Portfolio() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-20px" }}
+          viewport={{ once: true, margin: "-20px" }}
           transition={{ duration: 0.7, delay: 0.1 }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-20 will-change-transform"
         >
@@ -202,7 +202,7 @@ export function Portfolio() {
               key={i}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: false, margin: "-20px" }}
+              viewport={{ once: true, margin: "-20px" }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
               className="will-change-transform"
             >
@@ -221,7 +221,7 @@ export function Portfolio() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "-20px" }}
+            viewport={{ once: true, margin: "-20px" }}
             transition={{ duration: 0.9 }}
             className="mb-16 will-change-transform"
           >
@@ -237,6 +237,7 @@ export function Portfolio() {
                     alt={featured.title}
                     className="w-full h-full object-cover object-center md:object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/80 hidden md:block" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:hidden" />
@@ -348,6 +349,7 @@ export function Portfolio() {
                       alt={project.title}
                       className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                       loading="lazy"
+                      decoding="async"
                     />
                     {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
@@ -413,7 +415,7 @@ export function Portfolio() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-20px" }}
+          viewport={{ once: true, margin: "-20px" }}
           transition={{ delay: 0.3, duration: 0.7 }}
           className="text-center mt-20 will-change-transform"
         >

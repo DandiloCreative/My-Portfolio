@@ -29,16 +29,37 @@ export default defineConfig({
     rollupOptions: {
       output: {
         // Split vendor libraries into separate chunks for better caching
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'motion': ['motion/react'],
-          'lucide': ['lucide-react'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            // MUI + emotion are very heavy – isolate them
+            if (id.includes('@mui') || id.includes('@emotion')) {
+              return 'mui-vendor';
+            }
+            // Motion library
+            if (id.includes('motion')) {
+              return 'motion';
+            }
+            // Lucide icons
+            if (id.includes('lucide-react')) {
+              return 'lucide';
+            }
+            // Radix UI primitives
+            if (id.includes('@radix-ui')) {
+              return 'radix-vendor';
+            }
+            // React core
+            if (id.includes('react-dom') || id.includes('react/')) {
+              return 'react-vendor';
+            }
+          }
         },
       },
     },
     // Enable CSS code splitting
     cssCodeSplit: true,
-    // Minify with esbuild (faster than terser)
+    // Minify with esbuild (faster than terser, still very efficient)
     minify: 'esbuild',
+    // Enable source map only in dev (not prod) for faster builds
+    sourcemap: false,
   },
 })

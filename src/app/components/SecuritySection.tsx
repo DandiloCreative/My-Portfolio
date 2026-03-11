@@ -1,7 +1,8 @@
+import { memo } from "react";
 import { motion } from "motion/react";
 import { Shield, Lock, CheckCircle, Smartphone, Globe, Zap } from "lucide-react";
 
-export function SecuritySection() {
+export const SecuritySection = memo(function SecuritySection() {
     return (
         <section id="security" className="py-24 bg-zinc-950 relative overflow-hidden">
             {/* Background elements */}
@@ -12,7 +13,7 @@ export function SecuritySection() {
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false, margin: "-20px" }}
+                    viewport={{ once: true, margin: "-20px" }}
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6 font-medium text-emerald-400 text-sm">
                         <Lock size={14} /> Security First
@@ -47,7 +48,7 @@ export function SecuritySection() {
                             className="p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-emerald-500/30 transition-all group"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false, margin: "-20px" }}
+                            viewport={{ once: true, margin: "-20px" }}
                             transition={{ delay: i * 0.1 }}
                         >
                             <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -64,7 +65,7 @@ export function SecuritySection() {
                     className="mt-20 pt-12 border-t border-white/5 flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-700"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 0.5 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                 >
                     <div className="flex items-center gap-2 text-white font-bold tracking-tighter">
                         <CheckCircle size={20} className="text-emerald-500" /> ISO 27001 COMPLIANT
@@ -79,4 +80,4 @@ export function SecuritySection() {
             </div>
         </section>
     );
-}
+});

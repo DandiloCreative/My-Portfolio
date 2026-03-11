@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Code, Palette, Rocket, Users } from "lucide-react";
 import { Card } from "./ui/card";
 import { motion } from "motion/react";
@@ -25,7 +26,7 @@ const services = [
   }
 ];
 
-export function Services() {
+export const Services = memo(function Services() {
   return (
     <section id="services" className="py-16 bg-zinc-950 relative">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
@@ -34,7 +35,7 @@ export function Services() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-20px" }}
+          viewport={{ once: true, margin: "-20px" }}
           transition={{ duration: 0.8 }}
           className="text-center mb-20 will-change-transform"
         >
@@ -51,7 +52,7 @@ export function Services() {
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-20px" }}
+              viewport={{ once: true, margin: "-20px" }}
               transition={{
                 duration: 0.6,
                 delay: index * 0.1,
@@ -81,4 +82,4 @@ export function Services() {
       </div>
     </section>
   );
-}
+});

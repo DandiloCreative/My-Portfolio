@@ -19,13 +19,27 @@ export default function App() {
       <main className="w-full relative">
         <Hero />
         <Suspense fallback={null}>
-          <StatsCounter />
-          <Services />
-          <Platforms />
-          <SecuritySection />
-          <Portfolio />
-          <Reviews />
-          <Contact />
+          <div className="below-fold-section">
+            <StatsCounter />
+          </div>
+          <div className="below-fold-section">
+            <Services />
+          </div>
+          <div className="below-fold-section">
+            <Platforms />
+          </div>
+          <div className="below-fold-section">
+            <SecuritySection />
+          </div>
+          <div className="below-fold-section">
+            <Portfolio />
+          </div>
+          <div className="below-fold-section">
+            <Reviews />
+          </div>
+          <div className="below-fold-section">
+            <Contact />
+          </div>
         </Suspense>
       </main>
       <Suspense fallback={null}>

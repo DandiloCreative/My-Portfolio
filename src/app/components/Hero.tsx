@@ -52,9 +52,9 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              Build Your Dream Website with <br />
+              Turn Your Website Into a <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
-                Dandilo Creative
+                Customer-Generating Machine
               </span>
             </motion.h1>
 
@@ -124,6 +124,10 @@ export function Hero() {
                     alt="Dandilo Creative Founder"
                     className="w-full h-full rounded-full object-cover shadow-[0_0_50px_rgba(0,0,0,0.5)]"
                     loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
+                    width={384}
+                    height={384}
                   />
                   {/* Inner glow */}
                   <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(255,255,255,0.2)] mix-blend-overlay"></div>
