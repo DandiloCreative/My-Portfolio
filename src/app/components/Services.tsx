@@ -1,30 +1,39 @@
 import { memo } from "react";
-import { Code, Palette, Rocket, Users } from "lucide-react";
+import { Monitor, RefreshCw, Megaphone, Rocket } from "lucide-react";
 import { Card } from "./ui/card";
 import { motion } from "motion/react";
 
-const services = [
+type Service = { iconName: "monitor" | "refresh" | "megaphone" | "rocket"; title: string; description: string };
+
+const services: Service[] = [
   {
-    icon: <Code className="w-10 h-10 text-violet-400" />,
-    title: "Custom Development",
-    description: "Tailored solutions built to match your unique business needs and goals with robust architecture."
+    iconName: "monitor",
+    title: "Website Design for Businesses",
+    description: "Professional websites designed to convert visitors into paying customers."
   },
   {
-    icon: <Palette className="w-10 h-10 text-cyan-400" />,
-    title: "Design & Branding",
-    description: "Eye-catching designs and immersive 3D/glassmorphic aesthetics that capture your audience."
+    iconName: "refresh",
+    title: "Website Redesign",
+    description: "Improve your existing website so it attracts and converts more customers."
   },
   {
-    icon: <Rocket className="w-10 h-10 text-indigo-400" />,
+    iconName: "megaphone",
+    title: "Landing Pages for Ads",
+    description: "High-converting pages designed for marketing campaigns."
+  },
+  {
+    iconName: "rocket",
     title: "Performance Optimization",
     description: "Lightning-fast websites optimized for speed, SEO, and flawless user experience."
-  },
-  {
-    icon: <Users className="w-10 h-10 text-fuchsia-400" />,
-    title: "Ongoing Support",
-    description: "Continuous maintenance and agile support to keep your scaling website running smoothly."
   }
 ];
+
+function ServiceIcon({ name }: { name: Service["iconName"] }) {
+  if (name === "monitor") return <Monitor className="w-10 h-10 text-violet-400" />;
+  if (name === "refresh") return <RefreshCw className="w-10 h-10 text-cyan-400" />;
+  if (name === "megaphone") return <Megaphone className="w-10 h-10 text-indigo-400" />;
+  return <Rocket className="w-10 h-10 text-fuchsia-400" />;
+}
 
 export const Services = memo(function Services() {
   return (
@@ -71,7 +80,7 @@ export const Services = memo(function Services() {
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  {service.icon}
+                  <ServiceIcon name={service.iconName} />
                 </motion.div>
                 <h3 className="text-2xl font-semibold mb-3 text-white tracking-tight">{service.title}</h3>
                 <p className="text-zinc-200 font-light leading-relaxed">{service.description}</p>
