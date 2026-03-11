@@ -53,7 +53,7 @@ export function Contact() {
           className="text-center mb-20 will-change-transform"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Connect</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Initiate Project</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Get Your Free Website Review</h2>
           <p className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed">
             Ready to architect your vision? Let's discuss requirements and scale.
           </p>
