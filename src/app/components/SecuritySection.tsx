@@ -79,7 +79,7 @@ export const SecuritySection = memo(function SecuritySection() {
                         href="https://api.whatsapp.com/send/?phone=%2B12246200930&text=Hi%2C+I%27d+like+a+free+website+audit&type=phone_number&app_absent=0"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 shadow-[0_0_20px_rgba(124,58,237,0.4)] text-white rounded-full px-9 py-4 text-base font-bold tracking-wide transition-all uppercase no-underline hover:text-white"
+                        className="inline-flex items-center gap-2 bg-transparent hover:bg-white/10 border border-white/30 hover:border-white/60 text-white rounded-lg px-9 py-4 text-base font-bold tracking-wide transition-all uppercase no-underline hover:text-white"
                     >
                         Send Me Your Website on WhatsApp <ArrowRight className="w-5 h-5" />
                     </a>
