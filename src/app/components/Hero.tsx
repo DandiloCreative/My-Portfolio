@@ -64,8 +64,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Expert CMS solutions for WordPress, Squarespace, Wix, and Frontend Development.
-              We bring your vision to life with stunning, high-performance websites.
+              I help small businesses build fast, modern websites that convert visitors into paying customers.
             </motion.p>
 
             <motion.div
