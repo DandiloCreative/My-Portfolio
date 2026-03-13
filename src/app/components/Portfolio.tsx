@@ -103,30 +103,6 @@ const portfolioStats = [
   { value: 5, suffix: "★", label: "Average Rating" },
 ];
 
-// Platform showcase images - user will replace with actual images
-const platformImages = {
-  Frontend: [
-    { src: "https://teacollection.com", title: "Tea Collection" },
-    { src: "", title: "Project 2" },
-    { src: "", title: "Project 3" },
-  ],
-  "Wix Studio": [
-    { src: "https://collectiveprospects.com", title: "Collective Prospects" },
-    { src: "", title: "Project 2" },
-    { src: "", title: "Project 3" },
-  ],
-  WordPress: [
-    { src: "https://timelesscamelia.com", title: "Timeless Camelia" },
-    { src: "", title: "Project 2" },
-    { src: "", title: "Project 3" },
-  ],
-  Squarespace: [
-    { src: "https://littleme.com", title: "Little Me" },
-    { src: "", title: "Project 2" },
-    { src: "", title: "Project 3" },
-  ],
-};
-
 function StatCounter({ value, suffix, label, delay = 0 }: { value: number; suffix: string; label: string; delay?: number }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -302,61 +278,6 @@ export function Portfolio() {
             </Card>
           </motion.div>
         )}
-
-        {/* Platform Showcase */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-20px" }}
-          transition={{ duration: 0.8 }}
-          className="mb-20 will-change-transform"
-        >
-          <div className="flex items-center gap-3 mb-8">
-            <Sparkles className="w-4 h-4 text-violet-400" />
-            <span className="text-violet-400 font-semibold uppercase text-xs tracking-widest">Platform Showcase</span>
-          </div>
-
-          {Object.entries(platformImages).map(([platform, images]) => (
-            <div key={platform} className="mb-12 last:mb-0">
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-6 tracking-tight">
-                {platform} <span className="text-zinc-500 font-normal text-base">(Complete 3)</span>
-              </h3>
-              <div className="grid md:grid-cols-3 gap-6">
-                {images.map((img, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-20px" }}
-                    transition={{ delay: idx * 0.1, duration: 0.5 }}
-                    className="group"
-                  >
-                    <Card className="overflow-hidden bg-white/5 border border-white/10 hover:border-violet-500/40 transition-all duration-500 rounded-2xl shadow-none">
-                      <div className="relative aspect-video bg-zinc-900 overflow-hidden">
-                        {img.src ? (
-                          <img
-                            src={img.src}
-                            alt={img.title}
-                            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                            loading="lazy"
-                          />
-                        ) : (
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="text-zinc-500 text-sm">Add Image</span>
-                          </div>
-                        )}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
-                      </div>
-                      <div className="p-4">
-                        <p className="text-white font-medium text-sm truncate">{img.title}</p>
-                      </div>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </motion.div>
 
         {/* Category Filter Tabs */}
         <motion.div
