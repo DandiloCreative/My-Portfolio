@@ -105,7 +105,7 @@ export function Contact() {
                     <option value="" disabled className="text-zinc-500 bg-zinc-900">Select an architecture</option>
                     <option value="wordpress" className="text-white bg-zinc-900">WordPress</option>
                     <option value="frontend" className="text-white bg-zinc-900">Frontend Development</option>
-                    <option value="squarespace" className="text-white bg-zinc-900">Squarespace</option>
+                    <option value="shopify" className="text-white bg-zinc-900">Shopify</option>
                     <option value="wix" className="text-white bg-zinc-900">Wix Studio</option>
                     <option value="not-sure" className="text-white bg-zinc-900">Needs Assessment</option>
                   </select>

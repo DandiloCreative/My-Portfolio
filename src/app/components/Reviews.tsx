@@ -27,7 +27,7 @@ const reviews = [
         avatar: "PS",
         rating: 5,
         review:
-            "The Squarespace site they built for us outperforms our competitors by a huge margin. User engagement doubled in the first month after launch.",
+            "The Shopify site they built for us outperforms our competitors by a huge margin. User engagement doubled in the first month after launch.",
         color: "from-fuchsia-500 to-pink-600",
     },
     {

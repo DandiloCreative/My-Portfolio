@@ -79,7 +79,7 @@ export function Footer() {
             <ul className="space-y-4 text-zinc-500 font-light">
               <li className="hover:text-white transition-colors cursor-pointer">WordPress Core</li>
               <li className="hover:text-white transition-colors cursor-pointer">Frontend Development</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Squarespace Premium</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Shopify Premium</li>
               <li className="hover:text-white transition-colors cursor-pointer">Wix Studio Native</li>
             </ul>
           </div>

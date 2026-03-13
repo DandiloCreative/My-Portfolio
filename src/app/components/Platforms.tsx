@@ -28,7 +28,7 @@ const platforms = [
     ]
   },
   {
-    name: "Squarespace",
+    name: "Shopify",
     color: "bg-fuchsia-500/10 text-fuchsia-400 border-fuchsia-500/20",
     description: "Striking templates supercharged with custom code for a luxury feel.",
     features: [

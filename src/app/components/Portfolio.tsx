@@ -11,9 +11,9 @@ import realEstateProject from "figma:asset/realestate-project.jpg";
 import yachtProject from "figma:asset/yacht-project.jpg";
 import apartmentProject from "figma:asset/apartment-project.jpg";
 
-type Category = "All" | "Frontend" | "WordPress" | "Squarespace" | "Wix Studio";
+type Category = "All" | "Frontend" | "WordPress" | "Shopify" | "Wix Studio";
 
-const categories: Category[] = ["All", "Frontend", "WordPress", "Squarespace", "Wix Studio"];
+const categories: Category[] = ["All", "Frontend", "WordPress", "Shopify", "Wix Studio"];
 
 const projects = [
   {
@@ -45,10 +45,10 @@ const projects = [
   {
     id: 3,
     title: "Medipresse Health",
-    category: "Squarespace" as Category,
+    category: "Shopify" as Category,
     description: "Professional medical catalog rebuilt with custom injection layers, advanced filtering, and integrated appointment booking system.",
     image: mockup4,
-    tags: ["Squarespace", "Custom CSS", "Acuity"],
+    tags: ["Shopify", "Custom CSS", "Acuity"],
     accentColor: "from-fuchsia-500 to-pink-500",
     badgeColor: "bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30",
     glowColor: "rgba(217,70,239,0.15)",
