@@ -22,6 +22,9 @@ export default function App() {
             <StatsCounter />
           </div>
           <div className="below-fold-section">
+            <Portfolio />
+          </div>
+          <div className="below-fold-section">
             <Services />
           </div>
           <div className="below-fold-section">
@@ -29,9 +32,6 @@ export default function App() {
           </div>
           <div className="below-fold-section">
             <SecuritySection />
-          </div>
-          <div className="below-fold-section">
-            <Portfolio />
           </div>
           <div className="below-fold-section">
             <Contact />
