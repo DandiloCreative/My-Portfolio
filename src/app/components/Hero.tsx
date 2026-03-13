@@ -83,7 +83,7 @@ export function Hero() {
                   href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group w-full sm:w-auto flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white backdrop-blur-md shadow-[0_0_20px_rgba(124,58,237,0.4)] rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold tracking-wide transition-all uppercase no-underline"
+                  className="group w-full sm:w-auto flex items-center justify-center bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white backdrop-blur-md shadow-[0_0_20px_rgba(124,58,237,0.4)] rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold tracking-wide transition-all uppercase no-underline"
                 >
                   Get Free Website Audit <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
                 </a>
@@ -97,7 +97,7 @@ export function Hero() {
                 <Button size="lg" variant="outline" onClick={() => {
                   const element = document.getElementById("featured-work");
                   if (element) element.scrollIntoView({ behavior: "smooth" });
-                }} className="group w-full sm:w-auto rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold bg-white/10 hover:bg-white/20 border-white/20 text-white backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all tracking-wide uppercase h-auto">
+                }} className="group w-full sm:w-auto rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold bg-white/10 hover:bg-white/20 border-white/20 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all tracking-wide uppercase h-auto text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
                   View Our Work
                 </Button>
               </motion.div>
