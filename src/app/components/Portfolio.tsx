@@ -272,9 +272,6 @@ export function Portfolio() {
                       <Star className="w-4 h-4 fill-amber-400" />
                       <span>{featured.stats.rating}</span>
                     </div>
-                    <Button className="ml-auto bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-full px-6 py-4 text-sm font-medium shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] transition-all border-0 inline-flex items-center gap-2">
-                      View Project <ExternalLink className="w-4 h-4" />
-                    </Button>
                   </div>
                 </div>
               </div>
@@ -398,12 +395,7 @@ export function Portfolio() {
                         </span>
                       ))}
                     </div>
-                    <motion.button
-                      whileHover={{ x: 4 }}
-                      className="flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 font-medium transition-colors mt-auto"
-                    >
-                      View Project <ArrowRight className="w-4 h-4" />
-                    </motion.button>
+
                   </div>
                 </Card>
               </motion.div>
