@@ -2,6 +2,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
 import profileImage from "figma:asset/3f11642fd33c5a4bb6a269c8340161a5ced1b197.png";
+import logoImg from "../assets/Dandilo-creative-logo.png";
 
 const platformLogos = [
   { name: "WordPress", color: "#21759B", position: "top-[10%] left-0 sm:left-[5%] md:-left-[10%]" },
@@ -45,6 +46,16 @@ export function Hero() {
               <Sparkles className="w-4 h-4 text-violet-400" />
               <span className="text-xs md:text-sm font-medium text-zinc-300">Premium Web Design Studio</span>
             </motion.div>
+
+            {/* Logo */}
+            <motion.img
+              src={logoImg}
+              alt="Dandilo Creative Logo"
+              className="h-16 md:h-20 w-auto mb-6 drop-shadow-[0_0_20px_rgba(124,58,237,0.4)]"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.15, duration: 0.6 }}
+            />
 
             <motion.h1
               className="text-4xl sm:text-5xl md:text-[5rem] leading-[1.2] md:leading-[1.1] font-bold mb-6 text-white tracking-tight will-change-transform"

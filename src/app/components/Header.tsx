@@ -2,7 +2,7 @@ import { Menu, X, Facebook } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
 
-import logoImg from "figma:asset/logo.png";
+import logoImg from "../assets/Dandilo-creative-logo.png";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
