@@ -2,7 +2,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
 import profileImage from "figma:asset/3f11642fd33c5a4bb6a269c8340161a5ced1b197.png";
-import logoImg from "../assets/Dandilo-creative-logo.png";
+import logoImg from "../../assets/Dandilo-creative-logo.png";
 
 const platformLogos = [
   { name: "WordPress", color: "#21759B", position: "top-[10%] left-0 sm:left-[5%] md:-left-[10%]" },
