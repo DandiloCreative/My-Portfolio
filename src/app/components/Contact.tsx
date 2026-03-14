@@ -29,7 +29,7 @@ export function Contact() {
     // Redirect to mailto as a simple way to "go to" the email for static sites
     const subject = encodeURIComponent(`Project Inquiry: ${formData.platform}`);
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:dandilocreative@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:dandilodigitals@gmail.com?subject=${subject}&body=${body}`;
 
     setFormData({ name: "", email: "", platform: "", message: "" });
   };
@@ -151,8 +151,8 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-zinc-500 font-light text-sm mb-1 uppercase tracking-wider">Email Inquiry</p>
-                    <a href="mailto:dandilocreative@gmail.com" className="text-xl text-zinc-200 font-medium group-hover:text-white transition-colors">
-                      dandilocreative@gmail.com
+                    <a href="mailto:dandilodigital@gmail.com" className="text-xl text-zinc-200 font-medium group-hover:text-white transition-colors">
+                      dandilodigital@gmail.com
                     </a>
                   </div>
                 </motion.div>
