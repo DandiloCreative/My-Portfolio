@@ -65,8 +65,11 @@ export function Header() {
             <motion.img
               src={logoImg}
               alt="Dandilo Creative"
-              className={`w-auto relative z-10 drop-shadow-[0_0_15px_rgba(124,58,237,0.4)] transition-all duration-300 ${isScrolled ? "h-8" : "h-10"}`}
+              className={`w-auto relative z-10 drop-shadow-[0_0_15px_rgba(124,58,237,0.4)] transition-all duration-300 ${isScrolled ? "h-6 md:h-8" : "h-7 md:h-10"}`}
               loading="eager"
+              decoding="async"
+              width={40}
+              height={40}
             />
             <div className="hidden sm:block">
               <span className={`text-white font-black tracking-widest uppercase opacity-90 group-hover:opacity-100 transition-opacity ${isScrolled ? "text-sm" : "text-lg"}`}>Dandilo</span>
