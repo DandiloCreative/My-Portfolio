@@ -1,3 +1,79 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+
+    /* Reduce motion for better mobile performance */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    /* Improve scrolling performance */
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Optimize images for mobile */
+    img {
+        max-width: 100%;
+        height: auto;
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+    /* Reduce blur effects on mobile for performance */
+    .blur-\[80px\],
+    .blur-\[120px\],
+    .blur-\[70px\],
+    .blur-\[100px\],
+    .blur-\[150px\] {
+        filter: blur(40px);
+    }
+
+    /* Disable some heavy effects on mobile */
+    .backdrop-blur-xl,
+    .backdrop-blur-md {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Larger touch targets */
+    button,
+    a,
+    [role="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Remove hover effects on touch devices */
+    .group-hover\:opacity-100 {
+        opacity: 1 !important;
+    }
+
+    .group-hover\:scale-105 {
+        transform: scale(1.02);
+    }
+}
+
+/* Improve render performance */
+.will-change-transform {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Optimize images loading */
+img {
+    loading: lazy;
+    decoding: async;
+}

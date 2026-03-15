@@ -4,12 +4,12 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence, useInView } from "motion/react";
-import mockup1 from "figma:asset/f7089e12afdc2e6682c069b7e396e71d23770ae2.png";
-import mockup3 from "figma:asset/232d34fbe23a1ca670bd00e527a319bb055372f1.png";
-import mockup4 from "figma:asset/cbfadb7bbb7a585953b0a0fca4c1157492892fe3.png";
-import realEstateProject from "figma:asset/realestate-project.jpg";
-import yachtProject from "figma:asset/yacht-project.jpg";
-import apartmentProject from "figma:asset/apartment-project.jpg";
+import mockup1 from "../../assets/f7089e12afdc2e6682c069b7e396e71d23770ae2.png";
+import mockup3 from "../../assets/232d34fbe23a1ca670bd00e527a319bb055372f1.png";
+import mockup4 from "../../assets/cbfadb7bbb7a585953b0a0fca4c1157492892fe3.png";
+import realEstateProject from "../../assets/realestate-project.jpg";
+import yachtProject from "../../assets/yacht-project.jpg";
+import apartmentProject from "../../assets/apartment-project.jpg";
 
 type Category = "All" | "Frontend" | "WordPress" | "Shopify" | "Wix Studio";
 

@@ -1,7 +1,7 @@
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
-import profileImage from "figma:asset/3f11642fd33c5a4bb6a269c8340161a5ced1b197.png";
+import profileImage from "../../assets/3f11642fd33c5a4bb6a269c8340161a5ced1b197.png";
 import logoImg from "../../assets/Dandilo-creative-logo.png";
 
 const platformLogos = [
@@ -120,8 +120,8 @@ export function Hero() {
             <div className="relative z-10 flex justify-center items-center lg:min-h-[600px] py-8 md:py-12">
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
                 {/* Profile Image with modern rings */}
-                <div className="absolute inset-0 rounded-full border border-white/20 scale-110 animate-[spin_10s_linear_infinite] will-change-transform" />
-                <div className="absolute inset-0 rounded-full border border-violet-500/30 scale-[1.25] animate-[spin_15s_linear_infinite_reverse] hide-on-mobile will-change-transform" />
+                <div className="absolute inset-0 rounded-full border border-white/20 scale-110 animate-[spin_10s_linear_infinite] will-change-transform hidden md:block" />
+                <div className="absolute inset-0 rounded-full border border-violet-500/30 scale-[1.25] animate-[spin_15s_linear_infinite_reverse] will-change-transform hidden md:block" />
 
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8, filter: "blur(20px)" }}
@@ -138,6 +138,8 @@ export function Hero() {
                     fetchPriority="high"
                     width={384}
                     height={384}
+                    srcSet={`${profileImage} 384w, ${profileImage} 256w`}
+                    sizes="(max-width: 768px) 256px, 384px"
                   />
                   {/* Inner glow */}
                   <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(255,255,255,0.2)] mix-blend-overlay"></div>
