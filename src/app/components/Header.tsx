@@ -53,23 +53,22 @@ export function Header() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-2 left-0 right-0 z-50 pointer-events-none transition-all duration-300"
     >
-      <nav className={`mx-auto px-2 sm:px-4 pointer-events-auto transition-all duration-500 ease-in-out max-w-[95vw] ${isScrolled ? "md:max-w-2xl" : "md:max-w-5xl"}`}>
-        <div className={`flex items-center justify-between bg-black/40 backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-500 ease-in-out px-2 py-1 sm:px-4 sm:py-2 ${isScrolled ? "md:px-4 md:py-1" : "md:px-6 md:py-2"}`}>
+      <nav className={`mx-auto px-1 sm:px-4 pointer-events-auto transition-all duration-500 ease-in-out w-full ${isScrolled ? "md:max-w-2xl" : "md:max-w-5xl"}`}>
+        <div className={`flex items-center justify-between bg-black/40 backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-500 ease-in-out px-1 py-0.5 sm:px-4 sm:py-2 overflow-hidden ${isScrolled ? "md:px-4 md:py-1" : "md:px-6 md:py-2"}`}>
           <motion.div
-            className="flex items-center gap-1 sm:gap-2 relative group cursor-pointer"
+            className="flex items-center relative group cursor-pointer"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
             onClick={() => scrollToSection("home")}
           >
-            <div className="absolute inset-0 bg-violet-600/20 blur-xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <motion.img
               src={logoImg}
               alt="Dandilo Creative"
-              className={`w-auto relative z-10 drop-shadow-[0_0_15px_rgba(124,58,237,0.4)] transition-all duration-300 ${isScrolled ? "h-5 sm:h-6 md:h-8" : "h-6 sm:h-7 md:h-10"}`}
+              className={`w-auto relative z-10 drop-shadow-[0_0_15px_rgba(124,58,237,0.4)] transition-all duration-300 ${isScrolled ? "h-4 sm:h-5 md:h-8" : "h-5 sm:h-6 md:h-10"}`}
               loading="eager"
               decoding="async"
-              width={32}
-              height={32}
+              width={28}
+              height={28}
             />
             <div className="hidden md:block">
               <span className={`text-white font-black tracking-widest uppercase opacity-90 group-hover:opacity-100 transition-opacity ${isScrolled ? "text-sm" : "text-lg"}`}>Dandilo</span>
@@ -126,13 +125,13 @@ export function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center md:hidden">
             <button
-              className="text-zinc-300 hover:text-white transition-colors p-1"
+              className="text-zinc-300 hover:text-white transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle Menu"
             >
-              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
           </div>
         </div>
