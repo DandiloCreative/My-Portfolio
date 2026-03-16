@@ -63,10 +63,10 @@ body {
 /* Touch-friendly improvements */
 @media (hover: none) and (pointer: coarse) {
 
-    /* Larger touch targets */
-    button,
-    a,
-    [role="button"] {
+    /* Larger touch targets (exclude header to keep it compact) */
+    button:not(header button):not(header *),
+    a:not(header a):not(header *),
+    [role="button"]:not(header [role="button"]):not(header *) {
         min-height: 44px;
         min-width: 44px;
     }
