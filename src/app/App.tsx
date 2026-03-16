@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from "react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 
@@ -11,6 +11,51 @@ const Portfolio = lazy(() => import("./components/Portfolio").then(m => ({ defau
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
 
+// On mobile, defer rendering until the section is near the viewport
+function LazySection({ children, className }: { children: ReactNode; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  useEffect(() => {
+    // On desktop, render immediately
+    if (!isMobile) {
+      setVisible(true);
+      return;
+    }
+
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" } // start loading 300px before entering viewport
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [isMobile]);
+
+  return (
+    <div ref={ref} className={className}>
+      {visible ? children : <div style={{ minHeight: 200 }} />}
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <div className="min-h-screen w-full overflow-x-hidden bg-background">
@@ -18,24 +63,24 @@ export default function App() {
       <main className="w-full relative">
         <Hero />
         <Suspense fallback={null}>
-          <div className="below-fold-section">
+          <LazySection className="below-fold-section">
             <StatsCounter />
-          </div>
-          <div className="below-fold-section">
+          </LazySection>
+          <LazySection className="below-fold-section">
             <Portfolio />
-          </div>
-          <div className="below-fold-section">
+          </LazySection>
+          <LazySection className="below-fold-section">
             <Services />
-          </div>
-          <div className="below-fold-section">
+          </LazySection>
+          <LazySection className="below-fold-section">
             <Platforms />
-          </div>
-          <div className="below-fold-section">
+          </LazySection>
+          <LazySection className="below-fold-section">
             <SecuritySection />
-          </div>
-          <div className="below-fold-section">
+          </LazySection>
+          <LazySection className="below-fold-section">
             <Contact />
-          </div>
+          </LazySection>
         </Suspense>
       </main>
       <Suspense fallback={null}>
