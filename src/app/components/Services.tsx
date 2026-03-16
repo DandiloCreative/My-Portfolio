@@ -8,23 +8,23 @@ type Service = { iconName: "monitor" | "refresh" | "megaphone" | "rocket"; title
 const services: Service[] = [
   {
     iconName: "monitor",
-    title: "Website Design for Businesses",
-    description: "Professional websites designed to convert visitors into paying customers."
+    title: "Custom Website Development",
+    description: "Professional Website Design Services for businesses. We build Custom Website Development solutions that convert visitors into paying customers."
   },
   {
     iconName: "refresh",
-    title: "Website Redesign",
-    description: "Improve your existing website so it attracts and converts more customers."
+    title: "Website Redesign Services",
+    description: "Transform your online presence with our Website Development for Small Business solutions. Modern, responsive designs that drive growth."
   },
   {
     iconName: "megaphone",
-    title: "Landing Pages for Ads",
-    description: "High-converting pages designed for marketing campaigns."
+    title: "Landing Page Development Services",
+    description: "High-converting Landing Page Development Services designed for marketing campaigns. Conversion-focused website design that delivers results."
   },
   {
     iconName: "rocket",
-    title: "Performance Optimization",
-    description: "Lightning-fast websites optimized for speed, SEO, and flawless user experience."
+    title: "E-commerce Website Development",
+    description: "Shopify Website Development Agency & WordPress Website Development Services. Build your online store with our Professional Web Development Services."
   }
 ];
 
@@ -48,10 +48,10 @@ export const Services = memo(function Services() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20 will-change-transform"
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Capabilities</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Our Services</h2>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Web Development Company</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Professional Web Development Services</h2>
           <p className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light">
-            Comprehensive web solutions to help your business thrive online in the modern digital era.
+            As a leading Website Development Agency, we offer Custom Website Development, E-commerce Solutions, Shopify & WordPress Development. Hire Website Developer experts today.
           </p>
         </motion.div>
 

@@ -38,7 +38,7 @@ export function Footer() {
               />
             </div>
             <p className="text-zinc-300 font-light leading-relaxed max-w-sm mb-6">
-              Engineering exceptional, high-bandwidth web experiences across premier content architectures.
+              Dandilo Digitals - Premier Website Development Agency. Professional Web Development Services, Custom Website Development, E-commerce Solutions, Shopify & WordPress Development. Hire Website Developer experts for your business.
             </p>
             <div className="flex gap-3">
               <a href="https://web.facebook.com/profile.php?id=61576876557950" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-violet-500/20 hover:border-violet-500/50 transition-all duration-300">
@@ -61,7 +61,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-6 tracking-wide">Architecture</h4>
+            <h4 className="text-white font-semibold mb-6 tracking-wide">Services</h4>
             <ul className="space-y-4 font-light">
               {['Home', 'Services', 'Platforms', 'Portfolio'].map((item) => (
                 <li key={item}>
@@ -75,19 +75,19 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-6 tracking-wide">Ecosystems</h4>
+            <h4 className="text-white font-semibold mb-6 tracking-wide">Web Development</h4>
             <ul className="space-y-4 text-zinc-500 font-light">
-              <li className="hover:text-white transition-colors cursor-pointer">WordPress Core</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Frontend Development</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Shopify Premium</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Wix Studio Native</li>
+              <li className="hover:text-white transition-colors cursor-pointer">WordPress Website Development</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Custom Website Development</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Shopify Website Development</li>
+              <li className="hover:text-white transition-colors cursor-pointer">E-commerce Development</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-6 tracking-wide">Initialize</h4>
+            <h4 className="text-white font-semibold mb-6 tracking-wide">Get Started</h4>
             <div className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/5">
-              <p className="text-zinc-400 text-sm mb-4 font-light">Ready to deploy your next generation web presence?</p>
+              <p className="text-zinc-400 text-sm mb-4 font-light">Ready to hire a Website Developer? Start your project with our Web Development Company today!</p>
               <div className="flex flex-wrap gap-3">
                 <a href="mailto:dandilodigital@gmail.com" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-colors">Email Us</a>
                 <a href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-emerald-600/20 hover:bg-emerald-600/40 px-4 py-2 rounded-full transition-colors">WhatsApp</a>
@@ -98,7 +98,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between text-zinc-500 text-sm font-light">
-          <p>© {currentYear} Dandilo Creative. Global Reach.</p>
+          <p>© {currentYear} Dandilo Digitals - Website Development Agency. All Rights Reserved.</p>
           <div className="flex items-center gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Privacy Paradigm</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

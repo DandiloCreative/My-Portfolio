@@ -43,7 +43,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 md:mb-8 backdrop-blur-md"
             >
               <Sparkles className="w-4 h-4 text-violet-400" />
-              <span className="text-xs md:text-sm font-medium text-zinc-300">Premium Web Design Studio</span>
+              <span className="text-xs md:text-sm font-medium text-zinc-300">Best Website Development Agency</span>
             </motion.div>
 
             {/* Logo - removed from Hero to improve mobile load time */}
@@ -66,7 +66,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              I help small businesses build fast, modern websites that convert visitors into paying customers.
+              Expert Web Development Company providing Professional Website Design Services, Custom Website Development, E-commerce Solutions, Shopify & WordPress Development. Hire a Website Developer for conversion-focused websites.
             </motion.p>
 
             <motion.div
