@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dandilodigitals.com/sitemap.xml
