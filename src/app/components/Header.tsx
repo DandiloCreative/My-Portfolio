@@ -62,8 +62,8 @@ export function Header() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-2 left-0 right-0 z-50 pointer-events-none transition-all duration-300"
     >
-      <nav className={`mx-auto px-4 pointer-events-auto transition-all duration-500 ease-in-out max-w-[95vw] ${isScrolled ? "md:max-w-2xl" : "md:max-w-5xl"}`}>
-        <div className={`flex items-center justify-between bg-black/40 backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-500 ease-in-out px-3 py-1.5 md:px-4 md:py-2 ${isScrolled ? "md:px-4 md:py-1" : "md:px-6 md:py-2"}`}>
+      <nav className={`mx-auto px-4 pointer-events-auto transition-all duration-500 ease-in-out ${isScrolled ? "max-w-[75vw] md:max-w-2xl" : "max-w-[95vw] md:max-w-5xl"}`}>
+        <div className={`flex items-center justify-between bg-black/40 backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-500 ease-in-out ${isScrolled ? "px-3 py-1 md:px-4 md:py-1" : "px-3 py-1.5 md:px-6 md:py-2"}`}>
           <motion.div
             className="flex items-center gap-2 relative group cursor-pointer"
             whileHover={{ scale: 1.05 }}

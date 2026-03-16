@@ -21,10 +21,10 @@ body {
 /* Mobile Performance Optimizations */
 @media (max-width: 768px) {
 
-    /* Reduce motion for better mobile performance */
-    *,
-    *::before,
-    *::after {
+    /* Reduce motion for better mobile performance (exclude header for scroll transition) */
+    *:not(header):not(header *),
+    *:not(header):not(header *)::before,
+    *:not(header):not(header *)::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
