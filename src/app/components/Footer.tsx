@@ -89,7 +89,7 @@ export function Footer() {
             <div className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/5">
               <p className="text-zinc-400 text-sm mb-4 font-light">Ready to hire a Website Developer? Start your project with our Web Development Company today!</p>
               <div className="flex flex-wrap gap-3">
-                <a href="mailto:dandilodigital@gmail.com" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-colors">Email Us</a>
+                <a href="mailto:dandilodigitals@gmail.com" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-colors">Email Us</a>
                 <a href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-emerald-600/20 hover:bg-emerald-600/40 px-4 py-2 rounded-full transition-colors">WhatsApp</a>
               </div>
               <a href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-violet-600/20 hover:bg-violet-600/40 px-4 py-2 rounded-full transition-colors mt-4">Start Project</a>

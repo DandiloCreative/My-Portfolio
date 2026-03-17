@@ -1,6 +1,7 @@
 import { Menu, X, Facebook } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
+import { ThemeToggle } from "./ThemeToggle";
 
 import logoImg from "../../assets/Dandilo-creative-logo.png";
 
@@ -104,6 +105,7 @@ export function Header() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
+            <ThemeToggle />
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <a
                 href="https://web.facebook.com/profile.php?id=61576876557950"
@@ -140,6 +142,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-4 md:hidden">
+            <ThemeToggle />
             <button
               className="text-zinc-300 hover:text-white transition-colors p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}

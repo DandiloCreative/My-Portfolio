@@ -151,8 +151,8 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-zinc-500 font-light text-sm mb-1 uppercase tracking-wider">Email Inquiry</p>
-                    <a href="mailto:dandilodigital@gmail.com" className="text-xl text-zinc-200 font-medium group-hover:text-white transition-colors">
-                      dandilodigital@gmail.com
+                    <a href="mailto:dandilodigitals@gmail.com" className="text-xl text-zinc-200 font-medium group-hover:text-white transition-colors">
+                      dandilodigitals@gmail.com
                     </a>
                   </div>
                 </motion.div>
