@@ -23,15 +23,38 @@ export function Contact() {
     platform: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Redirect to mailto as a simple way to "go to" the email for static sites
-    const subject = encodeURIComponent(`Project Inquiry: ${formData.platform}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:dandilodigitals@gmail.com?subject=${subject}&body=${body}`;
+    setIsSubmitting(true);
 
-    setFormData({ name: "", email: "", platform: "", message: "" });
+    try {
+      // Use formsubmit.co API to send the email directly without needing a mail client
+      await fetch("https://formsubmit.co/ajax/dandilodigitals@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          platform: formData.platform,
+          message: formData.message,
+          _subject: `New Project Inquiry from ${formData.name}`,
+          _template: "table"
+        })
+      });
+
+      alert("Thank you! Your message has been sent successfully.");
+      setFormData({ name: "", email: "", platform: "", message: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Oops! There was a problem sending your message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -124,8 +147,12 @@ export function Contact() {
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }} className="pt-2 will-change-transform">
-                  <Button type="submit" className="w-full bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-xl h-14 text-lg font-medium shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] transition-all border-0 flex items-center justify-center gap-2">
-                    Get Your Free Website Review <ArrowRight className="w-5 h-5" />
+                  <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-xl h-14 text-lg font-medium shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] transition-all border-0 flex items-center justify-center gap-2">
+                    {isSubmitting ? "Sending..." : (
+                      <>
+                        Get Your Free Website Review <ArrowRight className="w-5 h-5" />
+                      </>
+                    )}
                   </Button>
                 </motion.div>
               </form>

@@ -8,6 +8,8 @@ const Services = lazy(() => import("./components/Services").then(m => ({ default
 const Platforms = lazy(() => import("./components/Platforms").then(m => ({ default: m.Platforms })));
 const SecuritySection = lazy(() => import("./components/SecuritySection").then(m => ({ default: m.SecuritySection })));
 const Portfolio = lazy(() => import("./components/Portfolio").then(m => ({ default: m.Portfolio })));
+const Reviews = lazy(() => import("./components/Reviews").then(m => ({ default: m.Reviews })));
+const VideoReview = lazy(() => import("./components/VideoReview").then(m => ({ default: m.VideoReview })));
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
 
@@ -77,6 +79,12 @@ export default function App() {
           </LazySection>
           <LazySection className="below-fold-section">
             <SecuritySection />
+          </LazySection>
+          <LazySection className="below-fold-section">
+            <VideoReview />
+          </LazySection>
+          <LazySection className="below-fold-section">
+            <Reviews />
           </LazySection>
           <LazySection className="below-fold-section">
             <Contact />
