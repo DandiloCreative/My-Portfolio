@@ -1,7 +1,44 @@
+import { useState, useEffect } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
 import profileImage from "../../assets/3f11642fd33c5a4bb6a269c8340161a5ced1b197.png";
+
+const TypewriterText = ({ text }: { text: string }) => {
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
+    if (!isDeleting && displayText === text) {
+      // Pause at the end before deleting
+      timeout = setTimeout(() => setIsDeleting(true), 2500);
+    } else if (isDeleting && displayText === "") {
+      // Pause before typing again
+      timeout = setTimeout(() => setIsDeleting(false), 500);
+    } else {
+      // Typing or deleting
+      const nextDelay = isDeleting ? 40 : 80;
+      timeout = setTimeout(() => {
+        setDisplayText(current =>
+          isDeleting
+            ? current.slice(0, -1)
+            : text.slice(0, current.length + 1)
+        );
+      }, nextDelay);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, text]);
+
+  return (
+    <>
+      <span className={displayText.length === 0 ? "opacity-0" : ""}>{displayText || "C"}</span>
+      <span className="animate-pulse opacity-70 ml-[1px]">|</span>
+    </>
+  );
+};
 
 const platformLogos = [
   { name: "WordPress", color: "#21759B", position: "top-[10%] left-0 sm:left-[5%] md:-left-[10%]" },
@@ -55,8 +92,8 @@ export function Hero() {
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               Turn Your Website Into a <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
-                Customer-Generating Machine
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 inline-block min-h-[1.2em]">
+                <TypewriterText text="Customer-Generating Machine" />
               </span>
             </motion.h1>
 
