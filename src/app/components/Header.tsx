@@ -1,6 +1,7 @@
 import { Menu, X, Facebook } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
+import { useNavigate, useLocation } from "react-router";
 import { ThemeToggle } from "./ThemeToggle";
 
 import logoImg from "../../assets/Dandilo-creative-logo.png";
@@ -20,6 +21,8 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const { scrollY } = useScroll();
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 767px)");
@@ -37,23 +40,35 @@ export function Header() {
     }
   });
 
-  const scrollToSection = (id: string) => {
+  const navigateToSection = (section: string) => {
     setIsMenuOpen(false);
-    setTimeout(() => {
-      const element = document.getElementById(id);
-      if (element) {
-        const headerOffset = 100;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - headerOffset;
-        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-      } else if (id === "portfolio") {
-        const featured = document.getElementById("featured-work");
-        if (featured) {
-          const offsetPosition = featured.getBoundingClientRect().top + window.scrollY - 100;
-          window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    const targetPath = section === "home" ? "/" : `/${section}`;
+
+    if (pathname === targetPath) {
+      // Already on this route — just scroll to the section
+      setTimeout(() => {
+        if (section === "home") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          return;
         }
-      }
-    }, 350);
+        const element = document.getElementById(section);
+        if (element) {
+          const headerOffset = 100;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.scrollY - headerOffset;
+          window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+        } else if (section === "portfolio") {
+          const featured = document.getElementById("featured-work");
+          if (featured) {
+            const offsetPosition = featured.getBoundingClientRect().top + window.scrollY - 100;
+            window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+          }
+        }
+      }, 100);
+    } else {
+      // Navigate to the new route (ScrollToSection in App.tsx handles the scroll)
+      navigate(targetPath);
+    }
   };
 
   return (
@@ -69,7 +84,7 @@ export function Header() {
             className="flex items-center gap-2 relative group cursor-pointer"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
-            onClick={() => scrollToSection("home")}
+            onClick={() => navigateToSection("home")}
           >
             <div className="absolute inset-0 bg-violet-600/20 blur-xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <motion.img
@@ -92,10 +107,10 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {["home", "services", "platforms", "portfolio"].map((item) => (
+            {["home", "services", "platforms", "portfolio", "contact"].map((item) => (
               <motion.button
                 key={item}
-                onClick={() => scrollToSection(item)}
+                onClick={() => navigateToSection(item)}
                 className={`text-white hover:text-cyan-400 capitalize transition-colors font-bold tracking-widest ${isScrolled ? "text-xs" : "text-sm"}`}
                 whileHover={{ y: -1, scale: 1.05 }}
               >
@@ -129,14 +144,12 @@ export function Header() {
               </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <a
-                href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => navigateToSection("contact")}
                 className={`flex items-center justify-center bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 border-0 text-white rounded-full font-bold uppercase tracking-wider transition-all ${isScrolled ? "px-4 py-1 text-[10px]" : "px-5 py-2 text-xs"}`}
               >
-                Contact
-              </a>
+                Get in Touch
+              </button>
             </motion.div>
           </div>
 
@@ -163,10 +176,10 @@ export function Header() {
               transition={{ duration: 0.3 }}
               className="md:hidden mt-4 pb-6 flex flex-col gap-4 overflow-hidden rounded-3xl bg-black/60 backdrop-blur-3xl border border-white/10 p-6"
             >
-              {["home", "services", "platforms", "portfolio"].map((item) => (
+              {["home", "services", "platforms", "portfolio", "contact"].map((item) => (
                 <button
                   key={item}
-                  onClick={() => scrollToSection(item)}
+                  onClick={() => navigateToSection(item)}
                   className="text-zinc-300 hover:text-white transition-colors text-left py-2 text-xl font-bold tracking-widest capitalize"
                 >
                   {item}
@@ -190,14 +203,12 @@ export function Header() {
                   <WhatsAppIcon className="w-6 h-6" /> WhatsApp
                 </a>
               </div>
-              <a
-                href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => navigateToSection("contact")}
                 className="w-full mt-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white rounded-full py-4 text-center text-lg font-semibold shadow-[0_0_20px_rgba(124,58,237,0.4)]"
               >
                 Get in Touch
-              </a>
+              </button>
             </motion.div>
           )}
         </AnimatePresence>

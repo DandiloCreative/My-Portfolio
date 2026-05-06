@@ -1,4 +1,5 @@
 import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from "react";
+import { Routes, Route, useLocation } from "react-router";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 
@@ -12,6 +13,69 @@ const Reviews = lazy(() => import("./components/Reviews").then(m => ({ default: 
 const VideoReview = lazy(() => import("./components/VideoReview").then(m => ({ default: m.VideoReview })));
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
+
+// Map URL paths to section element IDs
+const ROUTE_SECTION_MAP: Record<string, string> = {
+  '/': 'home',
+  '/services': 'services',
+  '/platforms': 'platforms',
+  '/portfolio': 'portfolio',
+  '/contact': 'contact',
+  '/reviews': 'reviews',
+  '/security': 'security',
+};
+
+/**
+ * Watches the current route and scrolls to the matching section.
+ * Uses retry logic to handle lazy-loaded sections that may not be in the DOM yet.
+ */
+function ScrollToSection() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const sectionId = ROUTE_SECTION_MAP[pathname];
+    if (!sectionId) return;
+
+    // For home/root, just scroll to top
+    if (sectionId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    // Retry scrolling until the lazy-loaded section is available
+    let attempts = 0;
+    const maxAttempts = 30;
+    let rafId: number;
+
+    const tryScroll = () => {
+      const element = document.getElementById(sectionId)
+        || (sectionId === 'portfolio' ? document.getElementById('featured-work') : null);
+
+      if (element) {
+        const headerOffset = 100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        return;
+      }
+
+      attempts++;
+      if (attempts < maxAttempts) {
+        rafId = requestAnimationFrame(tryScroll);
+      }
+    };
+
+    // Small initial delay to let React render
+    const timerId = setTimeout(tryScroll, 150);
+
+    return () => {
+      clearTimeout(timerId);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, [pathname]);
+
+  return null;
+}
 
 // On mobile, defer rendering until the section is near the viewport
 function LazySection({ children, className }: { children: ReactNode; className?: string }) {
@@ -58,10 +122,11 @@ function LazySection({ children, className }: { children: ReactNode; className?:
   );
 }
 
-export default function App() {
+function PageContent() {
   return (
     <div className="min-h-screen w-full overflow-x-hidden bg-background">
       <Header />
+      <ScrollToSection />
       <main className="w-full relative">
         <Hero />
         <Suspense fallback={null}>
@@ -95,5 +160,13 @@ export default function App() {
         <Footer />
       </Suspense>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="*" element={<PageContent />} />
+    </Routes>
   );
 }

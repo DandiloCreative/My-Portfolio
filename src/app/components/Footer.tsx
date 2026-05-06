@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Instagram, Linkedin, ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router";
 import brandLogo from "../../assets/Dandilo-creative-logo.png";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -14,10 +15,18 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
 
   const scrollToTop = (e: React.MouseEvent) => {
     e.preventDefault();
+    navigate("/");
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNavClick = (e: React.MouseEvent, section: string) => {
+    e.preventDefault();
+    const targetPath = section === "home" ? "/" : `/${section}`;
+    navigate(targetPath);
   };
 
   return (
@@ -61,12 +70,22 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-6 tracking-wide">Services</h4>
+            <h4 className="text-white font-semibold mb-6 tracking-wide">Quick Links</h4>
             <ul className="space-y-4 font-light">
-              {['Home', 'Services', 'Platforms', 'Portfolio'].map((item) => (
-                <li key={item}>
-                  <a href={`#${item.toLowerCase()}`} className="text-zinc-500 hover:text-cyan-400 transition-colors inline-flex items-center gap-1 group">
-                    {item}
+              {[
+                { label: 'Home', section: 'home' },
+                { label: 'Services', section: 'services' },
+                { label: 'Platforms', section: 'platforms' },
+                { label: 'Portfolio', section: 'portfolio' },
+                { label: 'Contact', section: 'contact' },
+              ].map((item) => (
+                <li key={item.section}>
+                  <a
+                    href={item.section === 'home' ? '/' : `/${item.section}`}
+                    onClick={(e) => handleNavClick(e, item.section)}
+                    className="text-zinc-500 hover:text-cyan-400 transition-colors inline-flex items-center gap-1 group"
+                  >
+                    {item.label}
                     <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
                   </a>
                 </li>
