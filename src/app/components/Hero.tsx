@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router";
 import profileImage from "../../assets/3f11642fd33c5a4bb6a269c8340161a5ced1b197.png";
 
 const TypewriterText = ({ text }: { text: string }) => {
@@ -48,11 +49,10 @@ const platformLogos = [
 ];
 
 export function Hero() {
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const navigate = useNavigate();
+
+  const navigateToContact = () => {
+    navigate("/contact");
   };
 
   return (
@@ -118,14 +118,12 @@ export function Hero() {
                 className="w-full sm:w-auto"
                 style={{ perspective: 1000 }}
               >
-                <a
-                  href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group w-full sm:w-auto flex items-center justify-center bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white backdrop-blur-md shadow-[0_0_20px_rgba(124,58,237,0.4)] rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold tracking-wide transition-all uppercase no-underline"
+                <button
+                  onClick={navigateToContact}
+                  className="group w-full sm:w-auto flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white backdrop-blur-md shadow-[0_0_20px_rgba(124,58,237,0.4)] rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold tracking-wide transition-all uppercase"
                 >
-                  Get Free Website Audit <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
-                </a>
+                  Get Free Website Audit <ArrowRight className="ml-2 flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
+                </button>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -133,10 +131,7 @@ export function Hero() {
                 className="w-full sm:w-auto"
                 style={{ perspective: 1000 }}
               >
-                <Button size="lg" variant="outline" onClick={() => {
-                  const element = document.getElementById("featured-work");
-                  if (element) element.scrollIntoView({ behavior: "smooth" });
-                }} className="group w-full sm:w-auto rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold bg-white/10 hover:bg-white/20 border-white/20 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all tracking-wide uppercase h-auto text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
+                <Button size="lg" variant="outline" onClick={() => navigate("/portfolio")} className="group w-full sm:w-auto whitespace-nowrap rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold bg-white/10 hover:bg-white/20 border-white/20 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all tracking-wide uppercase h-auto text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
                   View Our Work
                 </Button>
               </motion.div>
