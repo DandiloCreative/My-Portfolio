@@ -132,7 +132,7 @@ export function Hero() {
                 style={{ perspective: 1000 }}
               >
                 <Button size="lg" variant="outline" onClick={() => navigate("/portfolio")} className="group w-full sm:w-auto whitespace-nowrap rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold bg-white/10 hover:bg-white/20 border-white/20 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all tracking-wide uppercase h-auto text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
-                  View Our Work
+                  View My Portfolio
                 </Button>
               </motion.div>
             </motion.div>
