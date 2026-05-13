@@ -11,7 +11,6 @@ const Platforms = lazy(() => import("./components/Platforms").then(m => ({ defau
 const SecuritySection = lazy(() => import("./components/SecuritySection").then(m => ({ default: m.SecuritySection })));
 const Portfolio = lazy(() => import("./components/Portfolio").then(m => ({ default: m.Portfolio })));
 const Reviews = lazy(() => import("./components/Reviews").then(m => ({ default: m.Reviews })));
-const VideoReview = lazy(() => import("./components/VideoReview").then(m => ({ default: m.VideoReview })));
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
 
@@ -159,6 +158,9 @@ function PageContent() {
         <Hero />
         <Suspense fallback={null}>
           <LazySection className="below-fold-section" forceVisible={forceLoad}>
+            <Reviews />
+          </LazySection>
+          <LazySection className="below-fold-section" forceVisible={forceLoad}>
             <StatsCounter />
           </LazySection>
           <LazySection className="below-fold-section" forceVisible={forceLoad}>
@@ -173,12 +175,7 @@ function PageContent() {
           <LazySection className="below-fold-section" forceVisible={forceLoad}>
             <SecuritySection />
           </LazySection>
-          <LazySection className="below-fold-section" forceVisible={forceLoad}>
-            <VideoReview />
-          </LazySection>
-          <LazySection className="below-fold-section" forceVisible={forceLoad}>
-            <Reviews />
-          </LazySection>
+
           <LazySection className="below-fold-section" forceVisible={forceLoad}>
             <Contact />
           </LazySection>
