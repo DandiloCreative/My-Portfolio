@@ -13,6 +13,7 @@ const Portfolio = lazy(() => import("./components/Portfolio").then(m => ({ defau
 const Reviews = lazy(() => import("./components/Reviews").then(m => ({ default: m.Reviews })));
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
+const FloatingWhatsApp = lazy(() => import("./components/FloatingWhatsApp").then(m => ({ default: m.FloatingWhatsApp })));
 
 // Map URL paths to section element IDs
 const ROUTE_SECTION_MAP: Record<string, string> = {
@@ -179,6 +180,9 @@ function PageContent() {
           <LazySection className="below-fold-section" forceVisible={forceLoad}>
             <Contact />
           </LazySection>
+        </Suspense>
+        <Suspense fallback={null}>
+          <FloatingWhatsApp />
         </Suspense>
       </main>
       <Suspense fallback={null}>
