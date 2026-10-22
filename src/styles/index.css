@@ -88,6 +88,17 @@ body {
     backface-visibility: hidden;
 }
 
+/* Float animation for mobile hero image glow */
+@keyframes float {
+    0%, 100% { transform: translate(-50%, -10px); }
+    50% { transform: translate(-50%, 10px); }
+}
+
+.float-glow {
+    animation: float 4s ease-in-out infinite;
+    will-change: transform;
+}
+
 /* Optimize images loading */
 img {
     loading: lazy;

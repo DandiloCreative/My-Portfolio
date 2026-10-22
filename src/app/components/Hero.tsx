@@ -91,7 +91,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              Turn Your Website Into a <br />
+              <span className="hidden sm:inline">Turn Your Website Into a <br /></span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 inline-block min-h-[1.2em]">
                 <TypewriterText text="Customer-Generating Machine" />
               </span>
@@ -142,6 +142,7 @@ export function Hero() {
             {/* Main profile image container with glowing effects */}
             <div className="relative z-10 flex justify-center items-center lg:min-h-[600px] py-8 md:py-12">
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
+                <div className="absolute -top-10 sm:-top-16 md:-top-20 left-1/2 -translate-x-1/2 w-72 h-72 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] rounded-full bg-violet-500/20 blur-[60px] md:blur-[100px] animate-[float_4s_ease-in-out_infinite] float-glow" />
                 {/* Profile Image with modern rings */}
                 <div className="absolute inset-0 rounded-full border border-white/20 scale-110 animate-[spin_10s_linear_infinite] will-change-transform hidden md:block" />
                 <div className="absolute inset-0 rounded-full border border-violet-500/30 scale-[1.25] animate-[spin_15s_linear_infinite_reverse] will-change-transform hidden md:block" />
