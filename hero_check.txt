@@ -1,0 +1,140 @@
+﻿import { useState, useEffect } from "react";
+import { ArrowRight, Sparkles } from "lucide-react";
+import { Button } from "./ui/button";
+import { motion } from "motion/react";
+import { useNavigate } from "react-router";
+import profileImage from "../../assets/3f11642fd33c5a4bb6a269c8340161a5ced1b197.png";
+
+const TypewriterText = ({ text }: { text: string }) => {
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
+    if (!isDeleting && displayText === text) {
+      // Pause at the end before deleting
+      timeout = setTimeout(() => setIsDeleting(true), 2500);
+    } else if (isDeleting && displayText === "") {
+      // Pause before typing again
+      timeout = setTimeout(() => setIsDeleting(false), 500);
+    } else {
+      // Typing or deleting
+      const nextDelay = isDeleting ? 40 : 80;
+      timeout = setTimeout(() => {
+        setDisplayText(current =>
+          isDeleting
+            ? current.slice(0, -1)
+            : text.slice(0, current.length + 1)
+        );
+      }, nextDelay);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, text]);
+
+  return (
+    <>
+      <span className={displayText.length === 0 ? "opacity-0" : ""}>{displayText || "C"}</span>
+      <span className="animate-pulse opacity-70 ml-[1px]">|</span>
+    </>
+  );
+};
+
+const platformLogos = [
+  { name: "WordPress", color: "#21759B", position: "top-[10%] left-0 sm:left-[5%] md:-left-[10%]" },
+  { name: "Frontend Developer", color: "#38bdf8", position: "top-[20%] right-0 sm:right-[5%] md:-right-[15%]" },
+  { name: "Shopify", color: "#FFFFFF", position: "bottom-[20%] left-0 sm:left-[5%] md:-left-[15%]" },
+  { name: "Wix", color: "#0C6EFC", position: "bottom-[10%] right-0 sm:right-[5%] md:-right-[10%]" },
+];
+
+export function Hero() {
+  const navigate = useNavigate();
+
+  const navigateToContact = () => {
+    navigate("/contact");
+  };
+
+  return (
+    <section id="home" className="pt-32 md:pt-44 pb-20 bg-zinc-950 relative overflow-hidden min-h-screen flex items-center">
+      {/* Background glowing orbs */}
+      <div className="absolute top-0 left-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-violet-600/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none will-change-[filter]" />
+      <div className="absolute bottom-0 right-1/4 w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-indigo-600/20 rounded-full blur-[70px] md:blur-[100px] pointer-events-none will-change-[filter]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[800px] h-[200px] md:h-[400px] bg-cyan-600/10 rounded-full blur-[100px] md:blur-[150px] pointer-events-none will-change-[filter]" />
+
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiIC8+CjxwYXRoIGQ9Ik0wIDBoNHY0SDB6IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIiAvPgo8L3N2Zz4=')] opacity-50 pointer-events-none" />
+
+      <div className="container mx-auto px-4 md:px-12 relative z-10">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex flex-col items-start will-change-transform"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 md:mb-8 backdrop-blur-md"
+            >
+              <Sparkles className="w-4 h-4 text-violet-400" />
+              <span className="text-xs md:text-sm font-medium text-zinc-300">Best Website Development Agency</span>
+            </motion.div>
+
+            {/* Logo - removed from Hero to improve mobile load time */}
+
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-[5rem] leading-[1.2] md:leading-[1.1] font-bold mb-6 text-white tracking-tight will-change-transform"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              <span className="hidden sm:inline">Turn Your Website Into a <br /></span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 inline-block min-h-[1.2em]">
+                <TypewriterText text="Customer-Generating Machine" />
+              </span>
+            </motion.h1>
+
+            <motion.p
+              className="text-lg md:text-2xl text-zinc-200 mb-8 md:mb-10 leading-relaxed font-light max-w-xl will-change-transform"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            >
+              Expert Web Development Company providing Professional Website Design Services, Custom Website Development, E-commerce Solutions, Shopify & WordPress Development. Hire a Website Developer for conversion-focused websites.
+            </motion.p>
+
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ rotateX: 360, transition: { duration: 0.6, ease: "easeInOut" } }}
+                className="w-full sm:w-auto"
+                style={{ perspective: 1000 }}
+              >
+                <button
+                  onClick={navigateToContact}
+                  className="group w-full sm:w-auto flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white backdrop-blur-md shadow-[0_0_20px_rgba(124,58,237,0.4)] rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold tracking-wide transition-all uppercase"
+                >
+                  Get Free Website Audit <ArrowRight className="ml-2 flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
+                </button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ rotateX: 360, transition: { duration: 0.6, ease: "easeInOut" } }}
+                className="w-full sm:w-auto"
+                style={{ perspective: 1000 }}
+              >
+                <Button size="lg" variant="outline" onClick={() => navigate("/portfolio")} className="group w-full sm:w-auto whitespace-nowrap rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold bg-white/10 hover:bg-white/20 border-white/20 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all tracking-wide uppercase h-auto text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
+                  View My Portfolio
+                </Button>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+
