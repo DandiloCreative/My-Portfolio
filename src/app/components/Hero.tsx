@@ -67,20 +67,20 @@ export function Hero() {
 
       <div className="container mx-auto px-4 md:px-12 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div className="relative order-1 md:order-2 flex flex-col items-start md:items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.6 }}
-              className="md:hidden inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-4 backdrop-blur-md"
-            >
-              <Sparkles className="w-4 h-4 text-violet-400" />
-              <span className="text-xs font-medium text-zinc-300">Best Website Development Agency</span>
-            </motion.div>
+          <div className="relative order-1 md:order-2 flex flex-col items-center">
             {/* Main profile image container with glowing effects */}
-            <div className="relative z-10 flex justify-center items-center lg:min-h-[600px] py-4 md:py-12">
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
-                <div className="absolute -top-10 sm:-top-16 md:-top-20 left-1/2 -translate-x-1/2 w-72 h-72 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] rounded-full bg-violet-500/20 blur-[60px] md:blur-[100px] animate-[float_4s_ease-in-out_infinite] float-glow" />
+            <div className="relative z-10 flex justify-center items-center lg:min-h-[600px] py-8 md:py-12">
+              <div className="relative w-[280px] h-[280px] sm:w-80 sm:h-80 md:w-96 md:h-96">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1, duration: 0.6 }}
+                  className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 -rotate-90 origin-center inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md whitespace-nowrap z-30"
+                >
+                  <Sparkles className="w-4 h-4 text-violet-400 rotate-90" />
+                  <span className="text-xs md:text-sm font-medium text-zinc-300">Best Website Development Agency</span>
+                </motion.div>
+                <div className="absolute -top-10 sm:-top-16 md:-top-20 left-1/2 -translate-x-1/2 w-80 h-80 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] rounded-full bg-violet-500/20 blur-[60px] md:blur-[100px] animate-[float_4s_ease-in-out_infinite] float-glow" />
                 {/* Profile Image with modern rings */}
                 <div className="absolute inset-0 rounded-full border border-white/20 scale-110 animate-[spin_10s_linear_infinite] will-change-transform hidden md:block" />
                 <div className="absolute inset-0 rounded-full border border-violet-500/30 scale-[1.25] animate-[spin_15s_linear_infinite_reverse] will-change-transform hidden md:block" />
@@ -94,7 +94,7 @@ export function Hero() {
                   <img
                     src={profileImage}
                     alt="Dandilo Creative Founder"
-                    className="w-full h-full rounded-full object-cover shadow-[0_0_60px_rgba(124,58,237,0.7)]"
+                    className="w-full h-full rounded-full object-cover shadow-[0_0_70px_rgba(124,58,237,0.9)]"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
@@ -141,15 +141,6 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex flex-col items-start will-change-transform order-2 md:order-1"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.6 }}
-              className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 md:mb-8 backdrop-blur-md"
-            >
-              <Sparkles className="w-4 h-4 text-violet-400" />
-              <span className="text-xs md:text-sm font-medium text-zinc-300">Best Website Development Agency</span>
-            </motion.div>
 
             {/* Logo - removed from Hero to improve mobile load time */}
 
