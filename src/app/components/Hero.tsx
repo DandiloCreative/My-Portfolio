@@ -98,7 +98,7 @@ export function Hero() {
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-2xl mb-8 md:mb-10 leading-relaxed font-light max-w-xl will-change-transform italic text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400"
+              className="text-lg md:text-2xl mb-8 md:mb-10 leading-relaxed font-light max-w-xl will-change-transform italic text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
@@ -107,7 +107,7 @@ export function Hero() {
             </motion.p>
 
             <motion.p
-              className="text-lg md:text-2xl mb-8 md:mb-10 leading-relaxed font-light max-w-xl will-change-transform italic text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400"
+              className="text-lg md:text-2xl mb-8 md:mb-10 leading-relaxed font-light max-w-xl will-change-transform italic text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
