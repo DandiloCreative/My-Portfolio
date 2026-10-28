@@ -91,10 +91,20 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
-                Turn Your Customer Into A Website Generating Machine
+              <span className="hidden sm:inline">Turn Your Website Into a <br /></span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 inline-block min-h-[1.2em]">
+                <TypewriterText text="Customer-Generating Machine" />
               </span>
             </motion.h1>
+
+            <motion.p
+              className="text-lg md:text-2xl text-zinc-200 mb-8 md:mb-10 leading-relaxed font-light max-w-xl will-change-transform"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            >
+              Expert Web Development Company providing Professional Website Design Services, Custom Website Development, E-commerce Solutions, Shopify & WordPress Development. Hire a Website Developer for conversion-focused websites.
+            </motion.p>
 
             <motion.p
               className="text-lg md:text-2xl text-zinc-200 mb-8 md:mb-10 leading-relaxed font-light max-w-xl will-change-transform"
