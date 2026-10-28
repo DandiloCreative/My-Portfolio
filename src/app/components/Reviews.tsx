@@ -182,7 +182,6 @@ export function Reviews() {
             {/* Marquee rows */}
             <div className="flex flex-col gap-6">
                 <MarqueeRow items={allReviews} direction={1} speed={35} />
-                <MarqueeRow items={[...allReviews].reverse()} direction={-1} speed={28} />
             </div>
 
             {/* Overall rating badge */}
