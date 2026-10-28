@@ -91,9 +91,8 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <span className="hidden sm:inline">Turn Your Website Into a <br /></span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 inline-block min-h-[1.2em]">
-                <TypewriterText text="Customer-Generating Machine" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
+                Turn Your Customer Into A Website Generating Machine
               </span>
             </motion.h1>
 
