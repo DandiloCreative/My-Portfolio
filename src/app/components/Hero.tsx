@@ -66,19 +66,19 @@ export function Hero() {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiIC8+CjxwYXRoIGQ9Ik0wIDBoNHY0SDB6IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIiAvPgo8L3N2Zz4=')] opacity-50 pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-12 relative z-10">
-        <div className="md:hidden mb-6 flex justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
-          >
-            <Sparkles className="w-4 h-4 text-violet-400" />
-            <span className="text-xs font-medium text-zinc-300">Best Website Development Agency</span>
-          </motion.div>
-        </div>
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="relative order-1 md:order-2">
+            <div className="md:hidden mb-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.6 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
+              >
+                <Sparkles className="w-4 h-4 text-violet-400" />
+                <span className="text-xs font-medium text-zinc-300">Best Website Development Agency</span>
+              </motion.div>
+            </div>
             {/* Main profile image container with glowing effects */}
             <div className="relative z-10 flex justify-center items-center lg:min-h-[600px] py-4 md:py-12">
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
