@@ -67,11 +67,70 @@ export function Hero() {
 
       <div className="container mx-auto px-4 md:px-12 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="relative order-1 md:order-2">
+            {/* Main profile image container with glowing effects */}
+            <div className="relative z-10 flex justify-center items-center lg:min-h-[600px] py-8 md:py-12">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
+                <div className="absolute -top-10 sm:-top-16 md:-top-20 left-1/2 -translate-x-1/2 w-72 h-72 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] rounded-full bg-violet-500/20 blur-[60px] md:blur-[100px] animate-[float_4s_ease-in-out_infinite] float-glow" />
+                {/* Profile Image with modern rings */}
+                <div className="absolute inset-0 rounded-full border border-white/20 scale-110 animate-[spin_10s_linear_infinite] will-change-transform hidden md:block" />
+                <div className="absolute inset-0 rounded-full border border-violet-500/30 scale-[1.25] animate-[spin_15s_linear_infinite_reverse] will-change-transform hidden md:block" />
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8, filter: "blur(20px)" }}
+                  animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="relative z-10 w-full h-full p-2 rounded-full bg-gradient-to-tr from-violet-600/50 to-cyan-600/50 backdrop-blur-xl will-change-transform"
+                >
+                  <img
+                    src={profileImage}
+                    alt="Dandilo Creative Founder"
+                    className="w-full h-full rounded-full object-cover shadow-[0_0_60px_rgba(124,58,237,0.6)] ring-4 ring-white/20"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    width={384}
+                    height={384}
+                  />
+                  {/* Inner glow */}
+                  <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(255,255,255,0.2)] mix-blend-overlay"></div>
+                </motion.div>
+
+                {/* Floating Platform Logos */}
+                {platformLogos.map((platform, index) => (
+                  <motion.div
+                    key={platform.name}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1, y: [0, -15, 0] }}
+                    transition={{
+                      opacity: { delay: 0.6 + index * 0.1, duration: 0.5 },
+                      scale: { delay: 0.6 + index * 0.1, duration: 0.5, type: "spring" },
+                      y: {
+                        delay: 1,
+                        duration: 3 + index * 0.5,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }
+                    }}
+                    className={`absolute z-20 will-change-transform ${platform.position}`}
+                  >
+                    <div className="flex items-center justify-center px-3 py-2 md:px-5 md:py-3 rounded-xl md:rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+                      <span className="text-white font-semibold tracking-wide text-[10px] md:text-sm flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full shadow-[0_0_10px_currentColor]" style={{ backgroundColor: platform.color, color: platform.color }}></span>
+                        {platform.name}
+                      </span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col items-start will-change-transform"
+            className="flex flex-col items-start will-change-transform order-2 md:order-1"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -138,7 +197,7 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          <div className="relative">
+          <div className="relative order-1 md:order-2">
             {/* Main profile image container with glowing effects */}
             <div className="relative z-10 flex justify-center items-center lg:min-h-[600px] py-8 md:py-12">
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
@@ -156,8 +215,9 @@ export function Hero() {
                   <img
                     src={profileImage}
                     alt="Dandilo Creative Founder"
-                    className="w-full h-full rounded-full object-cover shadow-[0_0_50px_rgba(0,0,0,0.5)]"
-                    loading="lazy"
+                    className="w-full h-full rounded-full object-cover shadow-[0_0_60px_rgba(124,58,237,0.6)] ring-4 ring-white/20"
+                    loading="eager"
+                    fetchPriority="high"
                     decoding="async"
                     width={384}
                     height={384}
