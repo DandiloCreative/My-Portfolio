@@ -68,6 +68,15 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-12 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="relative order-1 md:order-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+              className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-4 backdrop-blur-md"
+            >
+              <Sparkles className="w-4 h-4 text-violet-400" />
+              <span className="text-xs font-medium text-zinc-300">Best Website Development Agency</span>
+            </motion.div>
             <div className="md:hidden mb-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -96,7 +105,7 @@ export function Hero() {
                   <img
                     src={profileImage}
                     alt="Dandilo Creative Founder"
-                    className="w-full h-full rounded-full object-cover shadow-[0_0_60px_rgba(124,58,237,0.7)]"
+                    className="w-full h-full rounded-full object-cover shadow-[0_0_60px_rgba(124,58,237,0.8)]"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
