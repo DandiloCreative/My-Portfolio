@@ -106,15 +106,6 @@ export function Hero() {
               Building websites that connect, convert, and grow.
             </motion.p>
 
-            <motion.p
-              className="text-lg md:text-2xl mb-8 md:mb-10 leading-relaxed font-light max-w-xl will-change-transform italic text-white"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-            >
-              Building websites that connect, convert, and grow.
-            </motion.p>
-
             <motion.div
               className="flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto"
               initial={{ opacity: 0, y: 20 }}
