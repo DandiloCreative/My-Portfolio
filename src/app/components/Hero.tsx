@@ -79,22 +79,27 @@ export function Hero() {
             </motion.div>
             {/* Main profile image container with glowing effects */}
             <div className="relative z-10 flex justify-center items-center py-4 md:py-12 lg:min-h-[600px]">
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
-                <div className="absolute -top-10 sm:-top-16 md:-top-20 left-1/2 -translate-x-1/2 w-80 h-80 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] rounded-full bg-violet-500/20 blur-[60px] md:blur-[100px] animate-[float_4s_ease-in-out_infinite] float-glow" />
-                {/* Profile Image with modern rings */}
-                <div className="absolute inset-0 rounded-full border border-white/20 scale-110 animate-[spin_10s_linear_infinite] will-change-transform hidden md:block" />
-                <div className="absolute inset-0 rounded-full border border-violet-500/30 scale-[1.25] animate-[spin_15s_linear_infinite_reverse] will-change-transform hidden md:block" />
+              <div className="relative w-[82vw] h-[82vw] max-w-[24rem] max-h-[24rem] md:w-96 md:h-96 md:max-w-none md:max-h-none">
+                {/* Soft glow behind the image (radial gradient instead of blur, so phones don't render a square edge) */}
+                <div className="hero-glow absolute -inset-[30%] rounded-full bg-[radial-gradient(circle,rgba(139,92,246,0.35)_0%,rgba(99,102,241,0.15)_40%,transparent_70%)] pointer-events-none" />
+
+                {/* Faded rings around the image */}
+                <div className="hero-ring absolute inset-0 rounded-full border border-white/20 scale-110 animate-[spin_10s_linear_infinite]" />
+                <div className="hero-ring absolute inset-0 rounded-full border border-violet-500/30 scale-[1.18] md:scale-[1.25] animate-[spin_15s_linear_infinite_reverse]" />
+                {/* Mobile-only ripple rings that pulse outward */}
+                <div className="hero-ripple absolute inset-0 rounded-full border border-violet-400/40 md:hidden" />
+                <div className="hero-ripple hero-ripple-delay absolute inset-0 rounded-full border border-cyan-400/30 md:hidden" />
 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8, filter: "blur(20px)" }}
-                  animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="relative z-10 w-full h-full p-2 rounded-full bg-gradient-to-tr from-violet-600/50 to-cyan-600/50 backdrop-blur-xl will-change-transform"
+                  className="relative z-10 w-full h-full p-[5px] md:p-2 rounded-full bg-gradient-to-tr from-violet-500 via-indigo-500 to-cyan-400 md:from-violet-600/50 md:via-transparent md:to-cyan-600/50 md:backdrop-blur-xl shadow-[0_0_40px_rgba(124,58,237,0.55),0_0_90px_rgba(34,211,238,0.2)] md:shadow-none"
                 >
                   <img
                     src={profileImage}
                     alt="Dandilo Creative Founder"
-                    className="w-full h-full rounded-full object-cover shadow-[0_0_60px_rgba(124,58,237,0.8)]"
+                    className="w-full h-full rounded-full object-cover border-4 border-zinc-950 md:border-0 contrast-[1.05] saturate-[1.1] md:contrast-100 md:saturate-100 shadow-[0_0_60px_rgba(124,58,237,0.8)]"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
