@@ -89,7 +89,7 @@ export function Hero() {
                 >
                   <img
                     src={profileImage}
-                    alt="Dandilo Creative Founder"
+                    alt="Founder of Dandilo Digitals, a web design and development agency"
                     className="w-full h-full rounded-full object-cover border-4 border-zinc-950 md:border-0 contrast-[1.05] saturate-[1.1] md:contrast-100 md:saturate-100 shadow-[0_0_60px_rgba(124,58,237,0.8)]"
                     loading="eager"
                     fetchPriority="high"
@@ -167,7 +167,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Building websites that connect, convert, and grow.
+              Web design & development for small businesses. Websites that connect, convert, and grow.
             </motion.p>
 
             <motion.div

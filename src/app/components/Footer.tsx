@@ -47,7 +47,7 @@ export function Footer() {
               />
             </div>
             <p className="text-zinc-300 font-light leading-relaxed max-w-sm mb-6">
-              Dandilo Digitals - Premier Website Development Agency. Professional Web Development Services, Custom Website Development, E-commerce Solutions, Shopify & WordPress Development. Hire Website Developer experts for your business.
+              Dandilo Digitals is a web design and development agency helping US small businesses win more customers online with WordPress, Shopify, Wix Studio and custom websites.
             </p>
             <div className="flex gap-3">
               <a href="https://web.facebook.com/profile.php?id=61576876557950" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-violet-500/20 hover:border-violet-500/50 transition-all duration-300">
@@ -106,7 +106,7 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-6 tracking-wide">Get Started</h4>
             <div className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/5">
-              <p className="text-zinc-400 text-sm mb-4 font-light">Ready to hire a Website Developer? Start your project with our Web Development Company today!</p>
+              <p className="text-zinc-400 text-sm mb-4 font-light">Ready for a website that brings in customers? Get a free website audit or start your project today.</p>
               <div className="flex flex-wrap gap-3">
                 <a href="mailto:dandilodigitals@gmail.com" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-colors">Email Us</a>
                 <a href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-block text-sm font-semibold text-white uppercase tracking-wider bg-emerald-600/20 hover:bg-emerald-600/40 px-4 py-2 rounded-full transition-colors">WhatsApp</a>

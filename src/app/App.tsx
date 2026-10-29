@@ -11,6 +11,7 @@ const Platforms = lazy(() => import("./components/Platforms").then(m => ({ defau
 const SecuritySection = lazy(() => import("./components/SecuritySection").then(m => ({ default: m.SecuritySection })));
 const Portfolio = lazy(() => import("./components/Portfolio").then(m => ({ default: m.Portfolio })));
 const Reviews = lazy(() => import("./components/Reviews").then(m => ({ default: m.Reviews })));
+const FAQ = lazy(() => import("./components/FAQ").then(m => ({ default: m.FAQ })));
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
 const FloatingWhatsApp = lazy(() => import("./components/FloatingWhatsApp").then(m => ({ default: m.FloatingWhatsApp })));
@@ -24,6 +25,7 @@ const ROUTE_SECTION_MAP: Record<string, string> = {
   '/contact': 'contact',
   '/reviews': 'reviews',
   '/security': 'security',
+  '/faq': 'faq',
 };
 
 /**
@@ -102,6 +104,9 @@ function ScrollToSection() {
 }
 
 // On mobile, defer rendering until the section is near the viewport
+// Search engine crawlers should see every section without needing to scroll
+const IS_BOT = typeof navigator !== "undefined" && /bot|crawler|spider|crawling|lighthouse|inspectiontool/i.test(navigator.userAgent);
+
 function LazySection({ children, className, forceVisible }: { children: ReactNode; className?: string; forceVisible?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -117,7 +122,7 @@ function LazySection({ children, className, forceVisible }: { children: ReactNod
 
   useEffect(() => {
     // On desktop, or when forced by route navigation, render immediately
-    if (!isMobile || forceVisible) {
+    if (!isMobile || forceVisible || IS_BOT) {
       setVisible(true);
       return;
     }
@@ -218,7 +223,9 @@ function PageContent() {
           <LazySection className="below-fold-section" forceVisible={forceLoad}>
             <SecuritySection />
           </LazySection>
-
+          <LazySection className="below-fold-section" forceVisible={forceLoad}>
+            <FAQ />
+          </LazySection>
           <LazySection className="below-fold-section" forceVisible={forceLoad}>
             <Contact />
           </LazySection>

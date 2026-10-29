@@ -8,7 +8,7 @@ const platforms = [
   {
     name: "WordPress",
     color: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-    description: "The world's most popular CMS, engineered for high-performance and scale.",
+    description: "WordPress web design for businesses that want a flexible site they can update themselves, built for speed and SEO.",
     features: [
       "Headless architecture",
       "Dynamic data binding",
@@ -19,7 +19,7 @@ const platforms = [
   {
     name: "Frontend Developer",
     color: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-    description: "Modern web applications built with cutting-edge frameworks like React, Vue, and Next.js.",
+    description: "Custom websites and web apps built with React and Next.js, for when you need something no template can do.",
     features: [
       "Responsive UI/UX",
       "Interactive Animations",
@@ -30,7 +30,7 @@ const platforms = [
   {
     name: "Shopify",
     color: "bg-fuchsia-500/10 text-fuchsia-400 border-fuchsia-500/20",
-    description: "High-converting Shopify stores engineered for maximum sales, traffic growth, and seamless conversions.",
+    description: "Shopify website design and development for stores that need to sell more, with clean product pages and a smooth checkout.",
     features: [
       "Custom theme development",
       "Conversion-optimized layouts",
@@ -41,7 +41,7 @@ const platforms = [
   {
     name: "Wix Studio",
     color: "bg-orange-500/10 text-orange-400 border-orange-500/20",
-    description: "Ultra-modern scalable sites crafted with code-first Wix APIs.",
+    description: "Wix Studio web design for businesses that want a polished, easy-to-manage website without the technical upkeep.",
     features: [
       "Velo custom logic",
       "Database architecture",
@@ -65,10 +65,10 @@ export const Platforms = memo(function Platforms() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20 will-change-transform"
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Ecosystem</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Platforms We Master</h2>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Platforms</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">WordPress, Shopify, Wix & Custom Websites</h2>
           <p className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed">
-            Enterprise-grade engineering across all dominant content architectures.
+            Whichever platform suits your business, we design and build it properly, or help you choose the right one.
           </p>
         </motion.div>
 

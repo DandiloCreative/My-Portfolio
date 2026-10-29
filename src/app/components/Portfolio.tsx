@@ -185,7 +185,7 @@ export function Portfolio() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto font-light leading-relaxed">
-            High-end digital experiences delivered to industry-leading clients across every major platform.
+            Recent web design and development projects built on WordPress, Shopify, Wix Studio and custom code.
           </p>
         </motion.div>
 
@@ -234,7 +234,7 @@ export function Portfolio() {
                 <div className="relative overflow-hidden w-full h-[160px] sm:h-[220px] md:h-auto md:aspect-auto bg-zinc-900">
                   <img
                     src={featured.image}
-                    alt={featured.title}
+                    alt={`${featured.title} – ${featured.category} website design project`}
                     className="w-full h-full object-cover object-center md:object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                     loading="lazy"
                     decoding="async"
@@ -343,7 +343,7 @@ export function Portfolio() {
                   <div className="relative overflow-hidden w-full h-[160px] sm:h-[200px] bg-zinc-900 border-b border-white/5">
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={`${project.title} – ${project.category} website design project`}
                       className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                       loading="lazy"
                       decoding="async"
