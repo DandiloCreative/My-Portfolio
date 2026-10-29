@@ -1,6 +1,6 @@
 import { Menu, X, Facebook } from "lucide-react";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useNavigate, useLocation } from "react-router";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -32,13 +32,31 @@ export function Header() {
     return () => mq.removeEventListener("change", handler);
   }, []);
 
+  // Shrink progress: 0 = full size, 1 = smallest.
+  // Scrolling down shrinks the bar a little at a time, scrolling up grows it back.
+  const SHRINK_DISTANCE = 250; // px of scrolling to go from full size to smallest
+  const rawProgress = useMotionValue(0);
+  const progress = useSpring(rawProgress, { stiffness: 260, damping: 32, mass: 0.6 });
+
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
+    const previous = scrollY.getPrevious() ?? latest;
+    // Cap each step so sudden page jumps (content loading above) don't snap the bar
+    const delta = Math.max(-80, Math.min(80, latest - previous));
+    const next = latest <= 10
+      ? 0 // always full size at the very top
+      : Math.min(1, Math.max(0, rawProgress.get() + delta / SHRINK_DISTANCE));
+    rawProgress.set(next);
+    setIsScrolled(next > 0.5);
   });
+
+  const navMaxWidth = useTransform(progress, [0, 1], isMobile ? ["95vw", "60vw"] : ["64rem", "54rem"]);
+  const pillPaddingY = useTransform(progress, [0, 1], isMobile ? [6, 2] : [8, 4]);
+  const pillPaddingX = useTransform(progress, [0, 1], isMobile ? [12, 8] : [24, 16]);
+  const logoHeight = useTransform(progress, [0, 1], isMobile ? [32, 22] : [40, 28]);
+  const brandFontSize = useTransform(progress, [0, 1], [18, 14]);
+  const linkFontSize = useTransform(progress, [0, 1], [14, 12]);
+  const controlsScale = useTransform(progress, [0, 1], [1, 0.82]);
+  const linkGap = useTransform(progress, [0, 1], [32, 18]);
 
   const navigateToSection = (section: string) => {
     setIsMenuOpen(false);
@@ -78,8 +96,11 @@ export function Header() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-2 left-0 right-0 z-50 pointer-events-none transition-all duration-300"
     >
-      <nav className={`mx-auto px-4 pointer-events-auto transition-all duration-500 ease-in-out ${isScrolled ? "max-w-[75vw] md:max-w-2xl" : "max-w-[95vw] md:max-w-5xl"}`}>
-        <div className={`flex items-center justify-between bg-black/40 backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-500 ease-in-out ${isScrolled ? "px-3 py-1 md:px-4 md:py-1" : "px-3 py-1.5 md:px-6 md:py-2"}`}>
+      <motion.nav className="mx-auto px-4 pointer-events-auto" style={{ maxWidth: navMaxWidth }}>
+        <motion.div
+          className="flex items-center justify-between bg-black/40 backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
+          style={{ paddingTop: pillPaddingY, paddingBottom: pillPaddingY, paddingLeft: pillPaddingX, paddingRight: pillPaddingX }}
+        >
           <motion.div
             className="flex items-center gap-2 relative group cursor-pointer"
             whileHover={{ scale: 1.05 }}
@@ -92,32 +113,31 @@ export function Header() {
               alt="Dandilo Creative"
               className="relative z-10 drop-shadow-[0_0_15px_rgba(124,58,237,0.4)] object-contain"
               style={{
-                height: isMobile
-                  ? (isScrolled ? 24 : 32)
-                  : (isScrolled ? 32 : 40),
+                height: logoHeight,
                 maxWidth: isMobile ? 120 : 'none',
                 width: 'auto',
               }}
               loading="eager"
             />
             <div className="hidden sm:block">
-              <span className={`text-white font-black tracking-widest uppercase opacity-90 group-hover:opacity-100 transition-opacity ${isScrolled ? "text-sm" : "text-lg"}`}>Dandilo</span>
+              <motion.span className="text-white font-black tracking-widest uppercase opacity-90 group-hover:opacity-100 transition-opacity" style={{ fontSize: brandFontSize }}>Dandilo</motion.span>
             </div>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <motion.div className="hidden md:flex items-center mx-4" style={{ gap: linkGap }}>
             {["home", "services", "platforms", "portfolio", "contact"].map((item) => (
               <motion.button
                 key={item}
                 onClick={() => navigateToSection(item)}
-                className={`text-white hover:text-cyan-400 capitalize transition-colors font-bold tracking-widest ${isScrolled ? "text-xs" : "text-sm"}`}
+                className="text-white hover:text-cyan-400 capitalize transition-colors font-bold tracking-widest"
+                style={{ fontSize: linkFontSize }}
                 whileHover={{ y: -1, scale: 1.05 }}
               >
                 {item}
               </motion.button>
             ))}
-          </div>
+          </motion.div>
 
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle />
@@ -146,7 +166,7 @@ export function Header() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <button
                 onClick={() => navigateToSection("contact")}
-                className={`flex items-center justify-center bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 border-0 text-white rounded-full font-bold uppercase tracking-wider transition-all ${isScrolled ? "px-4 py-1 text-[10px]" : "px-5 py-2 text-xs"}`}
+                className={`flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 border-0 text-white rounded-full font-bold uppercase tracking-wider transition-all ${isScrolled ? "px-4 py-1 text-[10px]" : "px-5 py-2 text-xs"}`}
               >
                 Get in Touch
               </button>
@@ -154,7 +174,7 @@ export function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-4 md:hidden">
+          <motion.div className="flex items-center gap-4 md:hidden origin-right" style={{ scale: controlsScale }}>
             <ThemeToggle />
             <button
               className="text-zinc-300 hover:text-white transition-colors p-2"
@@ -163,8 +183,8 @@ export function Header() {
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Mobile Navigation */}
         <AnimatePresence>
@@ -212,7 +232,7 @@ export function Header() {
             </motion.div>
           )}
         </AnimatePresence>
-      </nav>
+      </motion.nav>
     </motion.header>
   );
 }
