@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from "react";
-import { Routes, Route, useLocation } from "react-router";
+import { Routes, Route, useLocation, Link } from "react-router";
 
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
@@ -31,7 +31,8 @@ const ROUTE_SECTION_MAP: Record<string, string> = {
  * Uses retry logic to handle lazy-loaded sections that may not be in the DOM yet.
  */
 function ScrollToSection() {
-  const { pathname } = useLocation();
+  const { pathname: rawPath } = useLocation();
+  const pathname = rawPath.length > 1 ? rawPath.replace(/\/+$/, "") : rawPath;
 
   useEffect(() => {
     const sectionId = ROUTE_SECTION_MAP[pathname];
@@ -145,8 +146,49 @@ function LazySection({ children, className, forceVisible }: { children: ReactNod
   );
 }
 
+function NotFound() {
+  // Tell search engines not to index unknown URLs
+  useEffect(() => {
+    const meta = document.createElement("meta");
+    meta.name = "robots";
+    meta.content = "noindex";
+    document.head.appendChild(meta);
+    const prevTitle = document.title;
+    document.title = "Page Not Found | Dandilo Digitals";
+    return () => {
+      meta.remove();
+      document.title = prevTitle;
+    };
+  }, []);
+
+  return (
+    <main className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-zinc-950">
+      <p className="text-violet-400 font-semibold tracking-widest uppercase text-sm mb-4">404</p>
+      <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Page not found</h1>
+      <p className="text-zinc-400 text-lg mb-8">The page you're looking for doesn't exist.</p>
+      <Link
+        to="/"
+        className="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-full px-8 py-3 font-bold uppercase tracking-wide"
+      >
+        Back to Home
+      </Link>
+    </main>
+  );
+}
+
 function PageContent() {
-  const { pathname } = useLocation();
+  const { pathname: rawPath } = useLocation();
+  const pathname = rawPath.length > 1 ? rawPath.replace(/\/+$/, "") : rawPath;
+
+  if (!(pathname in ROUTE_SECTION_MAP)) {
+    return (
+      <div className="min-h-screen w-full overflow-x-hidden bg-background">
+        <Header />
+        <NotFound />
+      </div>
+    );
+  }
+
   // When navigating directly to a section route (e.g. /contact),
   // force all lazy sections to render so the scroll target is in the DOM.
   const forceLoad = pathname !== '/';

@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router";
-import profileImage from "../../assets/3f11642fd33c5a4bb6a269c8340161a5ced1b197.png";
+import profileImage from "../../assets/hero-profile.webp";
 
 const TypewriterText = ({ text }: { text: string }) => {
   const [displayText, setDisplayText] = useState("");

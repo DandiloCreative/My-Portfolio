@@ -5,6 +5,7 @@ import { Textarea } from "./ui/textarea";
 import { Card } from "./ui/card";
 import { useState } from "react";
 import { motion } from "motion/react";
+import { Toaster, toast } from "sonner";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
@@ -31,7 +32,7 @@ export function Contact() {
 
     try {
       // Use formsubmit.co API to send the email directly without needing a mail client
-      await fetch("https://formsubmit.co/ajax/dandilodigitals@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/dandilodigitals@gmail.com", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -47,11 +48,17 @@ export function Contact() {
         })
       });
 
-      alert("Thank you! Your message has been sent successfully.");
+      const result = await res.json().catch(() => null);
+      // FormSubmit returns success: "true" (string) when the email was accepted
+      if (!res.ok || String(result?.success) !== "true") {
+        throw new Error(result?.message || `Request failed (${res.status})`);
+      }
+
+      toast.success("Thanks! Your message was sent. We'll get back to you soon.");
       setFormData({ name: "", email: "", platform: "", message: "" });
     } catch (error) {
       console.error("Error sending message:", error);
-      alert("Oops! There was a problem sending your message. Please try again.");
+      toast.error("Your message couldn't be sent. Please try again or message us on WhatsApp.");
     } finally {
       setIsSubmitting(false);
     }
@@ -59,6 +66,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-16 bg-zinc-950 relative overflow-hidden">
+      <Toaster theme="dark" position="top-center" richColors />
       {/* Background glowing orbs matching Hero */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-violet-600/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-indigo-600/20 rounded-full blur-[100px] pointer-events-none" />
@@ -93,8 +101,11 @@ export function Contact() {
             <Card className="p-8 md:p-10 bg-white/[0.02] border border-white/10 backdrop-blur-2xl rounded-[2rem] shadow-[0_0_50px_rgba(0,0,0,0.5)]">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="will-change-transform">
-                  <label className="block text-sm font-medium mb-2 text-zinc-300">Name</label>
+                  <label htmlFor="contact-name" className="block text-sm font-medium mb-2 text-zinc-300">Name</label>
                   <Input
+                    id="contact-name"
+                    name="name"
+                    autoComplete="name"
                     type="text"
                     placeholder="E.g. Sarah Connor"
                     value={formData.name}
@@ -105,8 +116,11 @@ export function Contact() {
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="will-change-transform">
-                  <label className="block text-sm font-medium mb-2 text-zinc-300">Email Address</label>
+                  <label htmlFor="contact-email" className="block text-sm font-medium mb-2 text-zinc-300">Email Address</label>
                   <Input
+                    id="contact-email"
+                    name="email"
+                    autoComplete="email"
                     type="email"
                     placeholder="sarah@example.com"
                     value={formData.email}
@@ -117,8 +131,10 @@ export function Contact() {
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="will-change-transform">
-                  <label className="block text-sm font-medium mb-2 text-zinc-300">Target Ecosystem</label>
+                  <label htmlFor="contact-platform" className="block text-sm font-medium mb-2 text-zinc-300">Target Ecosystem</label>
                   <select
+                    id="contact-platform"
+                    name="platform"
                     className="w-full px-4 h-12 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500/30 focus:border-violet-500/50 text-white placeholder-zinc-600 appearance-none"
                     value={formData.platform}
                     onChange={(e) => setFormData({ ...formData, platform: e.target.value })}
@@ -135,8 +151,10 @@ export function Contact() {
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="will-change-transform">
-                  <label className="block text-sm font-medium mb-2 text-zinc-300">Project Brief</label>
+                  <label htmlFor="contact-message" className="block text-sm font-medium mb-2 text-zinc-300">Project Brief</label>
                   <Textarea
+                    id="contact-message"
+                    name="message"
                     placeholder="Describe your vision, scale, and timeline..."
                     rows={5}
                     value={formData.message}

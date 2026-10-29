@@ -4,7 +4,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/
 import { useNavigate, useLocation } from "react-router";
 import { ThemeToggle } from "./ThemeToggle";
 
-import logoImg from "../../assets/Dandilo-creative-logo.png";
+import logoImg from "../../assets/dandilo-logo.webp";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg

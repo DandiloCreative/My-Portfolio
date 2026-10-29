@@ -1,7 +1,7 @@
 import { Facebook, Twitter, Instagram, Linkedin, ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router";
-import brandLogo from "../../assets/Dandilo-creative-logo.png";
+import brandLogo from "../../assets/dandilo-logo.webp";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg

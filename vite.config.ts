@@ -31,10 +31,6 @@ export default defineConfig({
         // Split vendor libraries into separate chunks for better caching
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            // MUI + emotion are very heavy – isolate them
-            if (id.includes('@mui') || id.includes('@emotion')) {
-              return 'mui-vendor';
-            }
             // Motion library
             if (id.includes('motion')) {
               return 'motion';

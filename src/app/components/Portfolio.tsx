@@ -4,12 +4,12 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence, useInView } from "motion/react";
-import mockup1 from "../../assets/f7089e12afdc2e6682c069b7e396e71d23770ae2.png";
-import mockup3 from "../../assets/232d34fbe23a1ca670bd00e527a319bb055372f1.png";
-import mockup4 from "../../assets/cbfadb7bbb7a585953b0a0fca4c1157492892fe3.png";
-import realEstateProject from "../../assets/realestate-project.jpg";
-import yachtProject from "../../assets/yacht-project.jpg";
-import apartmentProject from "../../assets/apartment-project.jpg";
+import mockup1 from "../../assets/project-clothy.webp";
+import mockup3 from "../../assets/project-jadoo.webp";
+import mockup4 from "../../assets/project-medipresse.webp";
+import realEstateProject from "../../assets/project-realestate.webp";
+import yachtProject from "../../assets/project-yacht.webp";
+import apartmentProject from "../../assets/project-apartment.webp";
 
 type Category = "All" | "Frontend" | "WordPress" | "Shopify" | "Wix Studio";
 
