@@ -7,9 +7,10 @@ import { motion } from "motion/react";
 export function ThemeToggle() {
     const { theme, setTheme } = useTheme();
 
-    // Resolve effective theme (treat system as dark for this site)
-    const resolvedDark = theme === "dark" || theme === "system";
-    const isDark = resolvedDark;
+    // "system" follows the device setting, same as ThemeProvider
+    const isDark =
+        theme === "dark" ||
+        (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
 
     const toggle = () => {
         setTheme(isDark ? "light" : "dark");
@@ -21,7 +22,7 @@ export function ThemeToggle() {
             animate={{ opacity: 1, scale: 1 }}
             onClick={toggle}
             aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-            className="relative flex items-center w-16 h-8 rounded-full border border-white/20 bg-black/30 backdrop-blur-md cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 transition-colors duration-300"
+            className="theme-toggle relative flex items-center w-16 h-8 rounded-full border border-white/20 bg-black/30 backdrop-blur-md cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 transition-colors duration-300"
         >
             {/* Track fill */}
             <div

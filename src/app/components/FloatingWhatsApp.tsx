@@ -29,7 +29,7 @@ export function FloatingWhatsApp() {
       <WhatsAppIcon className="w-8 h-8 relative z-10" />
       
       {/* Tooltip */}
-      <div className="absolute right-full mr-4 px-4 py-2 bg-zinc-900 text-white text-sm font-medium rounded-xl opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none whitespace-nowrap border border-white/10">
+      <div className="hidden md:block absolute right-full mr-4 px-4 py-2 bg-zinc-900 text-white text-sm font-medium rounded-xl opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none whitespace-nowrap border border-white/10">
         Chat with us!
         <div className="absolute left-full top-1/2 -translate-y-1/2 border-8 border-transparent border-left-zinc-900" />
       </div>
