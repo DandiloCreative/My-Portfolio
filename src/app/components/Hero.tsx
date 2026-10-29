@@ -68,15 +68,6 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-12 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="relative order-1 md:order-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.6 }}
-              className="mb-4 inline-flex md:hidden items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
-            >
-              <Sparkles className="w-4 h-4 text-violet-400" />
-              <span className="text-xs font-medium text-zinc-300">Best Website Development Agency</span>
-            </motion.div>
             {/* Main profile image container with glowing effects */}
             <div className="relative z-10 flex justify-center items-center py-4 md:py-12 lg:min-h-[600px]">
               <div className="relative w-[82vw] h-[82vw] max-w-[24rem] max-h-[24rem] md:w-96 md:h-96 md:max-w-none md:max-h-none">
