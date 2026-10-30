@@ -1,0 +1,32 @@
+{
+  "/": {
+    "title": "Web Design Company for Small Businesses | Dandilo Digitals",
+    "description": "Web design and development agency for US small businesses. WordPress, Shopify, Wix Studio and custom websites built to win customers. Free website audit.",
+    "faq": true
+  },
+  "/services": {
+    "title": "Web Design & Development Services | Dandilo Digitals",
+    "description": "Custom website design, website redesign, landing pages and ecommerce web design for small businesses. Fast, mobile-friendly sites built to bring in leads.",
+    "faq": true
+  },
+  "/platforms": {
+    "title": "WordPress, Shopify & Wix Website Development | Dandilo",
+    "description": "WordPress web design, Shopify store development, Wix Studio websites and custom React builds. We help small businesses pick and build on the right platform.",
+    "faq": false
+  },
+  "/portfolio": {
+    "title": "Web Design Portfolio & Recent Projects | Dandilo Digitals",
+    "description": "See recent website design and development projects on WordPress, Shopify, Wix Studio and custom code, from online stores to real estate websites.",
+    "faq": false
+  },
+  "/reviews": {
+    "title": "Client Reviews & Testimonials | Dandilo Digitals",
+    "description": "Read what clients say about working with Dandilo Digitals on their WordPress, Shopify, Wix Studio and custom website projects.",
+    "faq": false
+  },
+  "/contact": {
+    "title": "Contact Us & Free Website Audit | Dandilo Digitals",
+    "description": "Get a free website audit or start your project. Contact Dandilo Digitals by form, email or WhatsApp at +1 224-620-0930.",
+    "faq": true
+  }
+}

@@ -26,7 +26,11 @@ export function Footer() {
   const handleNavClick = (e: React.MouseEvent, section: string) => {
     e.preventDefault();
     const targetPath = section === "home" ? "/" : `/${section}`;
-    navigate(targetPath);
+    if (window.location.pathname.replace(/\/+$/, "") === targetPath.replace(/\/+$/, "")) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate(targetPath);
+    }
   };
 
   return (
@@ -77,6 +81,7 @@ export function Footer() {
                 { label: 'Services', section: 'services' },
                 { label: 'Platforms', section: 'platforms' },
                 { label: 'Portfolio', section: 'portfolio' },
+                { label: 'Reviews', section: 'reviews' },
                 { label: 'Contact', section: 'contact' },
               ].map((item) => (
                 <li key={item.section}>
@@ -96,10 +101,22 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-6 tracking-wide">Web Development</h4>
             <ul className="space-y-4 text-zinc-500 font-light">
-              <li className="hover:text-white transition-colors cursor-pointer">WordPress Website Development</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Custom Website Development</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Shopify Website Development</li>
-              <li className="hover:text-white transition-colors cursor-pointer">E-commerce Development</li>
+              {[
+                { label: 'WordPress Website Development', section: 'platforms' },
+                { label: 'Custom Website Development', section: 'services' },
+                { label: 'Shopify Website Development', section: 'platforms' },
+                { label: 'E-commerce Development', section: 'services' },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={`/${item.section}`}
+                    onClick={(e) => handleNavClick(e, item.section)}
+                    className="hover:text-white transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

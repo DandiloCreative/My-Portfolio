@@ -51,9 +51,10 @@ const platforms = [
   }
 ];
 
-export const Platforms = memo(function Platforms() {
+export const Platforms = memo(function Platforms({ isPage = false }: { isPage?: boolean }) {
+  const Heading = isPage ? "h1" : "h2";
   return (
-    <section id="platforms" className="py-16 bg-black relative">
+    <section id="platforms" className={`py-16 bg-black relative${isPage ? " pt-32 md:pt-40" : ""}`}>
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[150px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none translate-x-1/3" />
 
@@ -66,7 +67,7 @@ export const Platforms = memo(function Platforms() {
           className="text-center mb-20 will-change-transform"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Platforms</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">WordPress, Shopify, Wix & Custom Websites</h2>
+          <Heading className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">WordPress, Shopify, Wix & Custom Websites</Heading>
           <p className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed">
             Whichever platform suits your business, we design and build it properly, or help you choose the right one.
           </p>

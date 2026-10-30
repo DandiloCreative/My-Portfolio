@@ -72,9 +72,9 @@ function StarRating({ count }: { count: number }) {
     );
 }
 
-function ReviewCard({ review }: { review: (typeof reviews)[0] }) {
+function ReviewCard({ review, inGrid = false }: { review: (typeof reviews)[0]; inGrid?: boolean }) {
     return (
-        <div className="relative flex-shrink-0 w-[290px] md:w-[380px] max-w-[85vw] mx-3 md:mx-4 p-7 rounded-[2rem] bg-white/[0.03] border border-white/10 backdrop-blur-sm group hover:border-violet-500/40 hover:bg-white/[0.06] transition-all duration-500 cursor-default">
+        <div className={`relative flex-shrink-0 ${inGrid ? "w-full h-full" : "w-[290px] md:w-[380px] max-w-[85vw] mx-3 md:mx-4"} p-7 rounded-[2rem] bg-white/[0.03] border border-white/10 backdrop-blur-sm group hover:border-violet-500/40 hover:bg-white/[0.06] transition-all duration-500 cursor-default`}>
             {/* Quote icon */}
             <div className="absolute top-6 right-7 opacity-10 group-hover:opacity-20 transition-opacity">
                 <Quote className="w-10 h-10 text-white" />
@@ -147,9 +147,10 @@ function MarqueeRow({
     );
 }
 
-export function Reviews() {
+export function Reviews({ isPage = false }: { isPage?: boolean }) {
+    const Heading = isPage ? "h1" : "h2";
     return (
-        <section id="reviews" className="py-16 bg-zinc-950 relative overflow-hidden">
+        <section id="reviews" className={`py-16 bg-zinc-950 relative overflow-hidden${isPage ? " pt-32 md:pt-40" : ""}`}>
             {/* Background glows */}
             <div className="absolute top-0 left-1/4 w-[600px] h-[400px] bg-violet-600/15 rounded-full blur-[140px] pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-[500px] h-[350px] bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none" />
@@ -169,9 +170,9 @@ export function Reviews() {
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">
                         Testimonials
                     </span>
-                    <h2 className="text-5xl font-bold mb-6 text-white tracking-tight">
-                        What Clients Say
-                    </h2>
+                    <Heading className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
+                        {isPage ? "Client Reviews" : "What Clients Say"}
+                    </Heading>
                     <p className="text-xl text-zinc-300 max-w-2xl mx-auto font-light leading-relaxed">
                         Real feedback from founders, CMOs, and teams who trusted us to build
                         their digital presence.
@@ -179,10 +180,21 @@ export function Reviews() {
                 </motion.div>
             </div>
 
-            {/* Marquee rows */}
-            <div className="flex flex-col gap-6">
-                <MarqueeRow items={allReviews} direction={1} speed={35} />
-            </div>
+            {isPage ? (
+                /* Full reviews page: show every review in a readable grid */
+                <div className="container mx-auto px-6 md:px-12 relative z-10">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {reviews.map((review) => (
+                            <ReviewCard key={review.name} review={review} inGrid />
+                        ))}
+                    </div>
+                </div>
+            ) : (
+                /* Marquee rows */
+                <div className="flex flex-col gap-6">
+                    <MarqueeRow items={allReviews} direction={1} speed={35} />
+                </div>
+            )}
 
             {/* Overall rating badge */}
             <motion.div

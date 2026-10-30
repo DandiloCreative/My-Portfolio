@@ -141,7 +141,8 @@ function StatCounter({ value, suffix, label, delay = 0 }: { value: number; suffi
   );
 }
 
-export function Portfolio() {
+export function Portfolio({ isPage = false }: { isPage?: boolean }) {
+  const Heading = isPage ? "h1" : "h2";
   const [activeCategory, setActiveCategory] = useState<Category>("All");
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
@@ -152,7 +153,7 @@ export function Portfolio() {
   const featured = projects.find(p => p.featured);
 
   return (
-    <section id="portfolio" className="py-24 md:py-16 bg-black relative overflow-hidden">
+    <section id="portfolio" className={`py-24 md:py-16 bg-black relative overflow-hidden${isPage ? " pt-32 md:pt-40" : ""}`}>
       {/* Background glows */}
       <div className="absolute top-1/3 left-0 w-[600px] h-[600px] bg-violet-600/8 rounded-full blur-[150px] pointer-events-none -translate-x-1/3" />
       <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-cyan-600/8 rounded-full blur-[120px] pointer-events-none translate-x-1/3" />
@@ -178,12 +179,12 @@ export function Portfolio() {
             <Sparkles className="w-3.5 h-3.5 text-violet-400" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-xs">Showcase</span>
           </motion.div>
-          <h2 className="text-3xl md:text-6xl font-bold mb-6 text-white tracking-tight">
-            Our{" "}
+          <Heading className="text-3xl md:text-6xl font-bold mb-6 text-white tracking-tight">
+            {isPage ? "Our Web Design " : "Our "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">
-              Featured Work
+              {isPage ? "Portfolio" : "Featured Work"}
             </span>
-          </h2>
+          </Heading>
           <p className="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto font-light leading-relaxed">
             Recent web design and development projects built on WordPress, Shopify, Wix Studio and custom code.
           </p>

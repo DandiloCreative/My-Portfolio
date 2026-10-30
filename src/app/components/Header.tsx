@@ -16,6 +16,8 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const NAV_ITEMS = ["home", "services", "platforms", "portfolio", "reviews", "contact"];
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +27,7 @@ export function Header() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
+    const mq = window.matchMedia("(max-width: 1023px)");
     setIsMobile(mq.matches);
     const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
     mq.addEventListener("change", handler);
@@ -49,7 +51,7 @@ export function Header() {
     setIsScrolled(next > 0.5);
   });
 
-  const navMaxWidth = useTransform(progress, [0, 1], isMobile ? ["95vw", "60vw"] : ["64rem", "54rem"]);
+  const navMaxWidth = useTransform(progress, [0, 1], isMobile ? ["95vw", "60vw"] : ["70rem", "60rem"]);
   const pillPaddingY = useTransform(progress, [0, 1], isMobile ? [6, 2] : [8, 4]);
   const pillPaddingX = useTransform(progress, [0, 1], isMobile ? [12, 8] : [24, 16]);
   const logoHeight = useTransform(progress, [0, 1], isMobile ? [32, 22] : [40, 28]);
@@ -58,33 +60,17 @@ export function Header() {
   const controlsScale = useTransform(progress, [0, 1], [1, 0.82]);
   const linkGap = useTransform(progress, [0, 1], [32, 18]);
 
-  const navigateToSection = (section: string) => {
-    setIsMenuOpen(false);
-    const targetPath = section === "home" ? "/" : `/${section}`;
+  const pathFor = (item: string) => (item === "home" ? "/" : `/${item}`);
+  const currentPath = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
 
-    if (pathname === targetPath) {
-      // Already on this route — just scroll to the section
-      setTimeout(() => {
-        if (section === "home") {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-          return;
-        }
-        const element = document.getElementById(section);
-        if (element) {
-          const headerOffset = 100;
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.scrollY - headerOffset;
-          window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-        } else if (section === "portfolio") {
-          const featured = document.getElementById("featured-work");
-          if (featured) {
-            const offsetPosition = featured.getBoundingClientRect().top + window.scrollY - 100;
-            window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-          }
-        }
-      }, 100);
+  // Real links (good for Google), but handled by the router so the page doesn't reload
+  const goTo = (item: string, e?: React.MouseEvent) => {
+    e?.preventDefault();
+    setIsMenuOpen(false);
+    const targetPath = pathFor(item);
+    if (currentPath === targetPath) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      // Navigate to the new route (ScrollToSection in App.tsx handles the scroll)
       navigate(targetPath);
     }
   };
@@ -105,7 +91,7 @@ export function Header() {
             className="flex items-center gap-2 relative group cursor-pointer"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
-            onClick={() => navigateToSection("home")}
+            onClick={() => goTo("home")}
           >
             <div className="absolute inset-0 bg-violet-600/20 blur-xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <motion.img
@@ -125,23 +111,28 @@ export function Header() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <motion.div className="hidden md:flex items-center mx-4" style={{ gap: linkGap }}>
-            {["home", "services", "platforms", "portfolio", "contact"].map((item) => (
-              <motion.button
-                key={item}
-                onClick={() => navigateToSection(item)}
-                className="text-white hover:text-cyan-400 capitalize transition-colors font-bold tracking-widest"
-                style={{ fontSize: linkFontSize }}
-                whileHover={{ y: -1, scale: 1.05 }}
-              >
-                {item}
-              </motion.button>
-            ))}
+          <motion.div className="hidden lg:flex items-center mx-4" style={{ gap: linkGap }}>
+            {NAV_ITEMS.map((item) => {
+              const active = currentPath === pathFor(item);
+              return (
+                <motion.a
+                  key={item}
+                  href={pathFor(item)}
+                  onClick={(e) => goTo(item, e)}
+                  aria-current={active ? "page" : undefined}
+                  className={`capitalize transition-colors font-bold tracking-widest whitespace-nowrap ${active ? "text-cyan-400" : "text-white hover:text-cyan-400"}`}
+                  style={{ fontSize: linkFontSize }}
+                  whileHover={{ y: -1, scale: 1.05 }}
+                >
+                  {item}
+                </motion.a>
+              );
+            })}
           </motion.div>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <ThemeToggle />
-            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <motion.div className="hidden xl:block" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <a
                 href="https://web.facebook.com/profile.php?id=61576876557950"
                 target="_blank"
@@ -152,7 +143,7 @@ export function Header() {
                 <Facebook size={20} />
               </a>
             </motion.div>
-            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <motion.div className="hidden xl:block" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <a
                 href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
                 target="_blank"
@@ -165,7 +156,7 @@ export function Header() {
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <button
-                onClick={() => navigateToSection("contact")}
+                onClick={() => goTo("contact")}
                 className={`flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 border-0 text-white rounded-full font-bold uppercase tracking-wider transition-all ${isScrolled ? "px-4 py-1 text-[10px]" : "px-5 py-2 text-xs"}`}
               >
                 Get in Touch
@@ -174,7 +165,7 @@ export function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <motion.div className="flex items-center gap-4 md:hidden origin-right" style={{ scale: controlsScale }}>
+          <motion.div className="flex items-center gap-4 lg:hidden origin-right" style={{ scale: controlsScale }}>
             <ThemeToggle />
             <button
               className="text-zinc-300 hover:text-white transition-colors p-2"
@@ -194,17 +185,22 @@ export function Header() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden mt-4 pb-6 flex flex-col gap-4 overflow-hidden rounded-3xl bg-black/60 backdrop-blur-3xl border border-white/10 p-6"
+              className="lg:hidden mt-4 pb-6 flex flex-col gap-4 overflow-hidden rounded-3xl bg-black/60 backdrop-blur-3xl border border-white/10 p-6"
             >
-              {["home", "services", "platforms", "portfolio", "contact"].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => navigateToSection(item)}
-                  className="text-zinc-300 hover:text-white transition-colors text-left py-2 text-xl font-bold tracking-widest capitalize"
-                >
-                  {item}
-                </button>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const active = currentPath === pathFor(item);
+                return (
+                  <a
+                    key={item}
+                    href={pathFor(item)}
+                    onClick={(e) => goTo(item, e)}
+                    aria-current={active ? "page" : undefined}
+                    className={`transition-colors text-left py-2 text-xl font-bold tracking-widest capitalize ${active ? "text-cyan-400" : "text-zinc-300 hover:text-white"}`}
+                  >
+                    {item}
+                  </a>
+                );
+              })}
               <div className="flex items-center gap-6 mt-2 mb-4">
                 <a
                   href="https://web.facebook.com/profile.php?id=61576876557950"
@@ -224,7 +220,7 @@ export function Header() {
                 </a>
               </div>
               <button
-                onClick={() => navigateToSection("contact")}
+                onClick={() => goTo("contact")}
                 className="w-full mt-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white rounded-full py-4 text-center text-lg font-semibold shadow-[0_0_20px_rgba(124,58,237,0.4)]"
               >
                 Get in Touch

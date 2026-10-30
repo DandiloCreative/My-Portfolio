@@ -17,7 +17,8 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export function Contact() {
+export function Contact({ isPage = false }: { isPage?: boolean }) {
+  const Heading = isPage ? "h1" : "h2";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -65,7 +66,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 bg-zinc-950 relative overflow-hidden">
+    <section id="contact" className={`py-16 bg-zinc-950 relative overflow-hidden${isPage ? " pt-32 md:pt-40" : ""}`}>
       <Toaster theme="dark" position="top-center" richColors />
       {/* Background glowing orbs matching Hero */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-violet-600/20 rounded-full blur-[120px] pointer-events-none" />
@@ -84,7 +85,7 @@ export function Contact() {
           className="text-center mb-20 will-change-transform"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Connect</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Get Your Free Website Review</h2>
+          <Heading className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Get Your Free Website Review</Heading>
           <p className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed">
             Ready to architect your vision? Let's discuss requirements and scale.
           </p>

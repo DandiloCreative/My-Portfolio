@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from "rea
 import { Routes, Route, useLocation, Link } from "react-router";
 
 import { Header } from "./components/Header";
+import pagesJson from "./pages.json";
 import { Hero } from "./components/Hero";
 
 // Lazy-load below-fold sections for faster initial paint
@@ -16,91 +17,43 @@ const Contact = lazy(() => import("./components/Contact").then(m => ({ default: 
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
 const FloatingWhatsApp = lazy(() => import("./components/FloatingWhatsApp").then(m => ({ default: m.FloatingWhatsApp })));
 
-// Map URL paths to section element IDs
-const ROUTE_SECTION_MAP: Record<string, string> = {
-  '/': 'home',
-  '/services': 'services',
-  '/platforms': 'platforms',
-  '/portfolio': 'portfolio',
-  '/contact': 'contact',
-  '/reviews': 'reviews',
-  '/security': 'security',
-  '/faq': 'faq',
-};
+type PageMeta = { title: string; description: string; faq: boolean };
+const PAGES = pagesJson as Record<string, PageMeta>;
+const SITE_URL = "https://dandilodigitals.com";
 
-/**
- * Watches the current route and scrolls to the matching section.
- * Uses retry logic to handle lazy-loaded sections that may not be in the DOM yet.
- */
-function ScrollToSection() {
-  const { pathname: rawPath } = useLocation();
-  const pathname = rawPath.length > 1 ? rawPath.replace(/\/+$/, "") : rawPath;
+function normalizePath(path: string) {
+  return path.length > 1 ? path.replace(/\/+$/, "") : path;
+}
 
+/** Jump to the top of the page whenever the route changes. */
+function ScrollToTop() {
+  const { pathname } = useLocation();
   useEffect(() => {
-    const sectionId = ROUTE_SECTION_MAP[pathname];
-    if (!sectionId) return;
-
-    // For home/root, just scroll to top
-    if (sectionId === 'home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      return;
-    }
-
-    const headerOffset = 100;
-    let findAttempts = 0;
-    const maxFindAttempts = 50;
-    let correctionAttempts = 0;
-    const maxCorrections = 10;
-    let timer: ReturnType<typeof setTimeout>;
-
-    // Phase 1: Wait until the target element is in the DOM (lazy-loading)
-    const waitForElement = () => {
-      const element = document.getElementById(sectionId)
-        || (sectionId === 'portfolio' ? document.getElementById('featured-work') : null);
-
-      if (element) {
-        // Element found — start scrolling with correction
-        scrollWithCorrection(element);
-        return;
-      }
-
-      findAttempts++;
-      if (findAttempts < maxFindAttempts) {
-        timer = setTimeout(waitForElement, 200);
-      }
-    };
-
-    // Phase 2: Scroll to the element, then re-check position to handle
-    // layout shifts from images/videos loading in sections above the target.
-    const scrollWithCorrection = (element: HTMLElement) => {
-      const rect = element.getBoundingClientRect();
-      const distanceFromTarget = Math.abs(rect.top - headerOffset);
-
-      // If we're within 10px of the correct position, we're done
-      if (distanceFromTarget < 10 && correctionAttempts > 0) {
-        return;
-      }
-
-      // Scroll to the calculated position
-      const offsetPosition = rect.top + window.scrollY - headerOffset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-
-      correctionAttempts++;
-      if (correctionAttempts < maxCorrections) {
-        // Re-check after a delay to catch layout shifts
-        timer = setTimeout(() => scrollWithCorrection(element), 800);
-      }
-    };
-
-    // Initial delay to let React start rendering lazy chunks
-    timer = setTimeout(waitForElement, 300);
-
-    return () => {
-      clearTimeout(timer);
-    };
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
   }, [pathname]);
-
   return null;
+}
+
+function setMeta(selector: string, attr: "content" | "href", value: string) {
+  const el = document.head.querySelector(selector);
+  if (el) el.setAttribute(attr, value);
+}
+
+/** Keep the browser tab title, Google description and share-preview tags in sync with the page. */
+function usePageMeta(pathname: string) {
+  useEffect(() => {
+    const meta = PAGES[pathname];
+    if (!meta) return;
+    const url = SITE_URL + (pathname === "/" ? "/" : pathname);
+    document.title = meta.title;
+    setMeta('meta[name="description"]', "content", meta.description);
+    setMeta('link[rel="canonical"]', "href", url);
+    setMeta('meta[property="og:url"]', "content", url);
+    setMeta('meta[property="og:title"]', "content", meta.title);
+    setMeta('meta[property="og:description"]', "content", meta.description);
+    setMeta('meta[name="twitter:title"]', "content", meta.title);
+    setMeta('meta[name="twitter:description"]', "content", meta.description);
+  }, [pathname]);
 }
 
 // On mobile, defer rendering until the section is near the viewport
@@ -181,54 +134,99 @@ function NotFound() {
   );
 }
 
-function PageContent() {
-  const { pathname: rawPath } = useLocation();
-  const pathname = rawPath.length > 1 ? rawPath.replace(/\/+$/, "") : rawPath;
+function Section({ children, eager }: { children: ReactNode; eager: boolean }) {
+  return (
+    <LazySection className="below-fold-section" forceVisible={eager}>
+      {children}
+    </LazySection>
+  );
+}
 
-  if (!(pathname in ROUTE_SECTION_MAP)) {
+/** Which sections each page shows, in order. */
+function PageSections({ pathname }: { pathname: string }) {
+  // Sub-pages are short, so render them straight away
+  const eager = pathname !== "/";
+  switch (pathname) {
+    case "/services":
+      return (
+        <>
+          <Section eager={eager}><Services isPage /></Section>
+          <Section eager={eager}><SecuritySection /></Section>
+          <Section eager={eager}><FAQ /></Section>
+          <Section eager={eager}><Contact /></Section>
+        </>
+      );
+    case "/platforms":
+      return (
+        <>
+          <Section eager={eager}><Platforms isPage /></Section>
+          <Section eager={eager}><StatsCounter /></Section>
+          <Section eager={eager}><Contact /></Section>
+        </>
+      );
+    case "/portfolio":
+      return (
+        <>
+          <Section eager={eager}><Portfolio isPage /></Section>
+          <Section eager={eager}><Reviews /></Section>
+          <Section eager={eager}><Contact /></Section>
+        </>
+      );
+    case "/reviews":
+      return (
+        <>
+          <Section eager={eager}><Reviews isPage /></Section>
+          <Section eager={eager}><StatsCounter /></Section>
+          <Section eager={eager}><Contact /></Section>
+        </>
+      );
+    case "/contact":
+      return (
+        <>
+          <Section eager={eager}><Contact isPage /></Section>
+          <Section eager={eager}><FAQ /></Section>
+        </>
+      );
+    default:
+      // Homepage: everything
+      return (
+        <>
+          <Section eager={eager}><Reviews /></Section>
+          <Section eager={eager}><StatsCounter /></Section>
+          <Section eager={eager}><Portfolio /></Section>
+          <Section eager={eager}><Services /></Section>
+          <Section eager={eager}><Platforms /></Section>
+          <Section eager={eager}><SecuritySection /></Section>
+          <Section eager={eager}><FAQ /></Section>
+          <Section eager={eager}><Contact /></Section>
+        </>
+      );
+  }
+}
+
+function PageContent() {
+  const pathname = normalizePath(useLocation().pathname);
+  const isKnownPage = pathname in PAGES;
+  usePageMeta(pathname);
+
+  if (!isKnownPage) {
     return (
       <div className="min-h-screen w-full overflow-x-hidden bg-background">
         <Header />
+        <ScrollToTop />
         <NotFound />
       </div>
     );
   }
 
-  // When navigating directly to a section route (e.g. /contact),
-  // force all lazy sections to render so the scroll target is in the DOM.
-  const forceLoad = pathname !== '/';
-
   return (
     <div className="min-h-screen w-full overflow-x-hidden bg-background">
       <Header />
-      <ScrollToSection />
+      <ScrollToTop />
       <main className="w-full relative">
-        <Hero />
-        <Suspense fallback={null}>
-          <LazySection className="below-fold-section" forceVisible={forceLoad}>
-            <Reviews />
-          </LazySection>
-          <LazySection className="below-fold-section" forceVisible={forceLoad}>
-            <StatsCounter />
-          </LazySection>
-          <LazySection className="below-fold-section" forceVisible={forceLoad}>
-            <Portfolio />
-          </LazySection>
-          <LazySection className="below-fold-section" forceVisible={forceLoad}>
-            <Services />
-          </LazySection>
-          <LazySection className="below-fold-section" forceVisible={forceLoad}>
-            <Platforms />
-          </LazySection>
-          <LazySection className="below-fold-section" forceVisible={forceLoad}>
-            <SecuritySection />
-          </LazySection>
-          <LazySection className="below-fold-section" forceVisible={forceLoad}>
-            <FAQ />
-          </LazySection>
-          <LazySection className="below-fold-section" forceVisible={forceLoad}>
-            <Contact />
-          </LazySection>
+        {pathname === "/" && <Hero />}
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <PageSections pathname={pathname} />
         </Suspense>
         <Suspense fallback={null}>
           <FloatingWhatsApp />

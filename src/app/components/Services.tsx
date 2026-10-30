@@ -35,9 +35,10 @@ function ServiceIcon({ name }: { name: Service["iconName"] }) {
   return <Rocket className="w-10 h-10 text-fuchsia-400" />;
 }
 
-export const Services = memo(function Services() {
+export const Services = memo(function Services({ isPage = false }: { isPage?: boolean }) {
+  const Heading = isPage ? "h1" : "h2";
   return (
-    <section id="services" className="py-16 bg-zinc-950 relative">
+    <section id="services" className={`py-16 bg-zinc-950 relative${isPage ? " pt-32 md:pt-40" : ""}`}>
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -49,7 +50,7 @@ export const Services = memo(function Services() {
           className="text-center mb-20 will-change-transform"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Web Design Services</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Web Design & Development Services for Small Businesses</h2>
+          <Heading className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Web Design & Development Services for Small Businesses</Heading>
           <p className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light">
             From a brand-new website to a full redesign, we design and build fast, mobile-friendly websites that turn visitors into calls, bookings and sales.
           </p>
