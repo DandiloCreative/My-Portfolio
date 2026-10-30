@@ -6,6 +6,7 @@ import { Card } from "./ui/card";
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Toaster, toast } from "sonner";
+import { trackLead } from "../lib/metaPixel";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
@@ -55,6 +56,7 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
         throw new Error(result?.message || `Request failed (${res.status})`);
       }
 
+      trackLead();
       toast.success("Thanks! Your message was sent. We'll get back to you soon.");
       setFormData({ name: "", email: "", platform: "", message: "" });
     } catch (error) {

@@ -43,7 +43,7 @@ export function Footer() {
             <div className="flex flex-col items-start gap-3 mb-6" style={{ perspective: 1000 }}>
               <motion.img
                 src={brandLogo}
-                alt="Dandilo Creative"
+                alt="Dandilo Digitals logo"
                 className="h-12 md:h-14 w-auto drop-shadow-[0_20px_25px_rgba(124,58,237,0.3)] mb-2"
                 animate={{ rotateY: [0, -15, 15, 0], rotateX: [0, 10, -10, 0], y: [0, -5, 5, 0] }}
                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}

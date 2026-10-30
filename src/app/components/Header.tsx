@@ -96,7 +96,7 @@ export function Header() {
             <div className="absolute inset-0 bg-violet-600/20 blur-xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <motion.img
               src={logoImg}
-              alt="Dandilo Creative"
+              alt="Dandilo Digitals logo"
               className="relative z-10 drop-shadow-[0_0_15px_rgba(124,58,237,0.4)] object-contain"
               style={{
                 height: logoHeight,
