@@ -59,6 +59,8 @@ export function Header() {
   const linkFontSize = useTransform(progress, [0, 1], [14, 12]);
   const controlsScale = useTransform(progress, [0, 1], [1, 0.82]);
   const linkGap = useTransform(progress, [0, 1], [32, 18]);
+  // Desktop: scale the whole bar down so it visibly shrinks without its contents overflowing
+  const desktopScale = useTransform(progress, [0, 1], [1, 0.8]);
 
   const pathFor = (item: string) => (item === "home" ? "/" : `/${item}`);
   const currentPath = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
@@ -82,7 +84,10 @@ export function Header() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-2 left-0 right-0 z-50 pointer-events-none transition-all duration-300"
     >
-      <motion.nav className="mx-auto px-4 pointer-events-auto" style={{ maxWidth: navMaxWidth }}>
+      <motion.nav
+        className="mx-auto px-4 pointer-events-auto"
+        style={{ maxWidth: navMaxWidth, scale: isMobile ? 1 : desktopScale, transformOrigin: "top center" }}
+      >
         <motion.div
           className="flex items-center justify-between bg-black/40 backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
           style={{ paddingTop: pillPaddingY, paddingBottom: pillPaddingY, paddingLeft: pillPaddingX, paddingRight: pillPaddingX }}
