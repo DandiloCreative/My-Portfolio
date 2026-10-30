@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin, ArrowUpRight } from "lucide-react";
+import { Facebook, Instagram, ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router";
 import brandLogo from "../../assets/dandilo-logo.webp";
@@ -54,14 +54,12 @@ export function Footer() {
               Dandilo Digitals is a web design and development agency helping US small businesses win more customers online with WordPress, Shopify, Wix Studio and custom websites.
             </p>
             <div className="flex gap-3">
-              <a href="https://web.facebook.com/profile.php?id=61576876557950" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-violet-500/20 hover:border-violet-500/50 transition-all duration-300">
+              <a href="https://web.facebook.com/profile.php?id=61576876557950" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-violet-500/20 hover:border-violet-500/50 transition-all duration-300">
                 <Facebook size={18} />
               </a>
-              {[Twitter, Instagram, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-violet-500/20 hover:border-violet-500/50 transition-all duration-300">
-                  <Icon size={18} />
-                </a>
-              ))}
+              <a href="https://www.instagram.com/dandilodigitals" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-pink-500/20 hover:border-pink-500/50 transition-all duration-300">
+                <Instagram size={18} />
+              </a>
               <a
                 href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
                 target="_blank"

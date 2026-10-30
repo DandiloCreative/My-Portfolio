@@ -1,4 +1,4 @@
-import { Menu, X, Facebook } from "lucide-react";
+import { Menu, X, Facebook, Instagram } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useNavigate, useLocation } from "react-router";
@@ -51,7 +51,7 @@ export function Header() {
     setIsScrolled(next > 0.5);
   });
 
-  const navMaxWidth = useTransform(progress, [0, 1], isMobile ? ["95vw", "60vw"] : ["70rem", "60rem"]);
+  const navMaxWidth = useTransform(progress, [0, 1], isMobile ? ["95vw", "60vw"] : ["70rem", "62rem"]);
   const pillPaddingY = useTransform(progress, [0, 1], isMobile ? [6, 2] : [8, 4]);
   const pillPaddingX = useTransform(progress, [0, 1], isMobile ? [12, 8] : [24, 16]);
   const logoHeight = useTransform(progress, [0, 1], isMobile ? [32, 22] : [40, 28]);
@@ -145,6 +145,17 @@ export function Header() {
             </motion.div>
             <motion.div className="hidden xl:block" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <a
+                href="https://www.instagram.com/dandilodigitals"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-pink-400 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
+            </motion.div>
+            <motion.div className="hidden xl:block" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <a
                 href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -201,7 +212,7 @@ export function Header() {
                   </a>
                 );
               })}
-              <div className="flex items-center gap-6 mt-2 mb-4">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mt-2 mb-4">
                 <a
                   href="https://web.facebook.com/profile.php?id=61576876557950"
                   target="_blank"
@@ -209,6 +220,14 @@ export function Header() {
                   className="text-zinc-300 hover:text-blue-400 transition-colors flex items-center gap-2 text-lg font-bold"
                 >
                   <Facebook size={24} /> Facebook
+                </a>
+                <a
+                  href="https://www.instagram.com/dandilodigitals"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-300 hover:text-pink-400 transition-colors flex items-center gap-2 text-lg font-bold"
+                >
+                  <Instagram size={24} /> Instagram
                 </a>
                 <a
                   href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
