@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, Sparkles } from "lucide-react";
-import { Button } from "./ui/button";
+import { Sparkles } from "lucide-react";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router";
 import profileImage from "../../assets/hero-profile.webp";
@@ -171,7 +170,7 @@ export function Hero() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row items-start gap-3 md:gap-5 w-full sm:w-auto"
+              className="flex flex-row items-stretch gap-2 sm:gap-4 md:gap-5"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
@@ -179,25 +178,30 @@ export function Hero() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ rotateX: 360, transition: { duration: 0.6, ease: "easeInOut" } }}
-                className="w-auto"
+                className="flex"
                 style={{ perspective: 1000 }}
               >
                 <button
                   onClick={navigateToContact}
-                  className="group w-auto flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white backdrop-blur-md shadow-[0_0_20px_rgba(124,58,237,0.4)] rounded-full px-5 py-2.5 md:px-9 md:py-4 text-xs md:text-base font-bold tracking-wide transition-all uppercase"
+                  className="w-full flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white border border-transparent shadow-[0_0_20px_rgba(124,58,237,0.4)] rounded-full px-3.5 py-2.5 sm:px-5 md:px-9 md:py-4 text-[11px] sm:text-xs md:text-base font-bold sm:tracking-wide transition-all uppercase"
                 >
-                  Get Free Website Audit <ArrowRight className="ml-2 flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
+                  Get Free Website Audit
                 </button>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ rotateX: 360, transition: { duration: 0.6, ease: "easeInOut" } }}
-                className="w-auto"
+                className="flex"
                 style={{ perspective: 1000 }}
               >
-                <Button size="lg" variant="outline" onClick={() => navigate("/portfolio")} className="group w-auto whitespace-nowrap rounded-full px-5 py-2.5 md:px-9 md:py-4 text-xs md:text-base font-bold bg-white/10 hover:bg-white/20 border-white/20 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all tracking-wide uppercase h-auto text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
-                  View My Portfolio
-                </Button>
+                <button
+                  onClick={() => navigate("/portfolio")}
+                  className="group w-full flex items-center justify-center whitespace-nowrap bg-transparent hover:bg-white/10 border border-violet-400/50 hover:border-white/70 rounded-lg px-3.5 py-2.5 sm:px-5 md:px-9 md:py-4 text-[11px] sm:text-xs md:text-base font-bold sm:tracking-wide transition-all duration-300 uppercase"
+                >
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 group-hover:text-white group-hover:bg-none">
+                    View My Portfolio
+                  </span>
+                </button>
               </motion.div>
             </motion.div>
           </motion.div>
