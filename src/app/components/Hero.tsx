@@ -84,7 +84,7 @@ export function Hero() {
                   initial={{ opacity: 0, scale: 0.85 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="relative z-10 w-full h-full p-[5px] md:p-2 rounded-full bg-gradient-to-tr from-violet-500 via-indigo-500 to-cyan-400 md:from-violet-600/50 md:via-transparent md:to-cyan-600/50 md:backdrop-blur-xl shadow-[0_0_40px_rgba(124,58,237,0.55),0_0_90px_rgba(34,211,238,0.2)] md:shadow-none"
+                  className="relative z-10 w-full h-full p-[5px] md:p-2 rounded-full bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 shadow-[0_0_40px_rgba(167,139,250,0.5),0_0_90px_rgba(232,121,249,0.2)]"
                 >
                   <img
                     src={profileImage}
