@@ -171,7 +171,7 @@ export function Hero() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto"
+              className="flex flex-col sm:flex-row items-start gap-3 md:gap-5 w-full sm:w-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
@@ -179,12 +179,12 @@ export function Hero() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ rotateX: 360, transition: { duration: 0.6, ease: "easeInOut" } }}
-                className="w-full sm:w-auto"
+                className="w-auto"
                 style={{ perspective: 1000 }}
               >
                 <button
                   onClick={navigateToContact}
-                  className="group w-full sm:w-auto flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white backdrop-blur-md shadow-[0_0_20px_rgba(124,58,237,0.4)] rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold tracking-wide transition-all uppercase"
+                  className="group w-auto flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white backdrop-blur-md shadow-[0_0_20px_rgba(124,58,237,0.4)] rounded-full px-5 py-2.5 md:px-9 md:py-4 text-xs md:text-base font-bold tracking-wide transition-all uppercase"
                 >
                   Get Free Website Audit <ArrowRight className="ml-2 flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
                 </button>
@@ -192,10 +192,10 @@ export function Hero() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ rotateX: 360, transition: { duration: 0.6, ease: "easeInOut" } }}
-                className="w-full sm:w-auto"
+                className="w-auto"
                 style={{ perspective: 1000 }}
               >
-                <Button size="lg" variant="outline" onClick={() => navigate("/portfolio")} className="group w-full sm:w-auto whitespace-nowrap rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold bg-white/10 hover:bg-white/20 border-white/20 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all tracking-wide uppercase h-auto text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
+                <Button size="lg" variant="outline" onClick={() => navigate("/portfolio")} className="group w-auto whitespace-nowrap rounded-full px-5 py-2.5 md:px-9 md:py-4 text-xs md:text-base font-bold bg-white/10 hover:bg-white/20 border-white/20 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all tracking-wide uppercase h-auto text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
                   View My Portfolio
                 </Button>
               </motion.div>
