@@ -95,7 +95,7 @@ export function Header() {
         style={{ maxWidth: navMaxWidth, scale: isMobile ? 1 : desktopScale, transformOrigin: "top center" }}
       >
         <motion.div
-          className="flex items-center justify-between bg-black/40 backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
+          className="flex items-center justify-between bg-black/15 backdrop-blur-md border border-white/15 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.25)]"
           style={{ paddingTop: pillPaddingY, paddingBottom: pillPaddingY, paddingLeft: pillPaddingX, paddingRight: pillPaddingX }}
         >
           <motion.div
