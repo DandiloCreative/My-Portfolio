@@ -92,7 +92,7 @@ export function Hero() {
                     alt="Founder of Dandilo Digitals, a web design and development agency"
                     className="w-full h-full rounded-full object-cover border-4 border-zinc-950 md:border-0 contrast-[1.05] saturate-[1.1] md:contrast-100 md:saturate-100 shadow-[0_0_60px_rgba(124,58,237,0.8)]"
                     loading="eager"
-                    fetchPriority="high"
+                    {...{ fetchpriority: "high" }}
                     decoding="async"
                     width={384}
                     height={384}

@@ -7,6 +7,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { Toaster, toast } from "sonner";
 import { trackLead } from "../lib/metaPixel";
+import { trackEvent } from "../lib/analytics";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
@@ -57,6 +58,7 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
       }
 
       trackLead();
+      trackEvent("generate_lead", { method: "contact_form" });
       toast.success("Thanks! Your message was sent. We'll get back to you soon.");
       setFormData({ name: "", email: "", platform: "", message: "" });
     } catch (error) {

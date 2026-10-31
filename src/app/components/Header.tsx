@@ -65,6 +65,12 @@ export function Header() {
   const pathFor = (item: string) => (item === "home" ? "/" : `/${item}`);
   const currentPath = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
 
+  // "Services" stays highlighted on /services/... pages too
+  const isActive = (item: string) => {
+    const p = pathFor(item);
+    return currentPath === p || (p !== "/" && currentPath.startsWith(p + "/"));
+  };
+
   // Real links (good for Google), but handled by the router so the page doesn't reload
   const goTo = (item: string, e?: React.MouseEvent) => {
     e?.preventDefault();
@@ -118,7 +124,7 @@ export function Header() {
           {/* Desktop Navigation */}
           <motion.div className="hidden lg:flex items-center mx-4" style={{ gap: linkGap }}>
             {NAV_ITEMS.map((item) => {
-              const active = currentPath === pathFor(item);
+              const active = isActive(item);
               return (
                 <motion.a
                   key={item}
@@ -204,7 +210,7 @@ export function Header() {
               className="lg:hidden mt-4 pb-6 flex flex-col gap-4 overflow-hidden rounded-3xl bg-black/60 backdrop-blur-3xl border border-white/10 p-6"
             >
               {NAV_ITEMS.map((item) => {
-                const active = currentPath === pathFor(item);
+                const active = isActive(item);
                 return (
                   <a
                     key={item}

@@ -10,7 +10,8 @@ export function ThemeToggle() {
     // "system" follows the device setting, same as ThemeProvider
     const isDark =
         theme === "dark" ||
-        (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        (theme === "system" &&
+            (typeof window === "undefined" || window.matchMedia("(prefers-color-scheme: dark)").matches));
 
     const toggle = () => {
         setTheme(isDark ? "light" : "dark");

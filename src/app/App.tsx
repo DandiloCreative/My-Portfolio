@@ -2,8 +2,9 @@ import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from "rea
 import { Routes, Route, useLocation, Link } from "react-router";
 
 import { Header } from "./components/Header";
-import pagesJson from "./pages.json";
+import { ROUTE_MAP, SITE_URL, normalizePath } from "./routes";
 import { initMetaPixel, trackPageView } from "./lib/metaPixel";
+import { initAnalytics, trackAnalyticsPageView } from "./lib/analytics";
 import { Hero } from "./components/Hero";
 
 // Lazy-load below-fold sections for faster initial paint
@@ -16,15 +17,10 @@ const Reviews = lazy(() => import("./components/Reviews").then(m => ({ default: 
 const FAQ = lazy(() => import("./components/FAQ").then(m => ({ default: m.FAQ })));
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
+const ContentPage = lazy(() => import("./components/ContentPage").then(m => ({ default: m.ContentPage })));
+const BlogIndex = lazy(() => import("./components/BlogIndex").then(m => ({ default: m.BlogIndex })));
+const ServiceLinks = lazy(() => import("./components/ServiceLinks").then(m => ({ default: m.ServiceLinks })));
 const FloatingWhatsApp = lazy(() => import("./components/FloatingWhatsApp").then(m => ({ default: m.FloatingWhatsApp })));
-
-type PageMeta = { title: string; description: string; faq: boolean };
-const PAGES = pagesJson as Record<string, PageMeta>;
-const SITE_URL = "https://dandilodigitals.com";
-
-function normalizePath(path: string) {
-  return path.length > 1 ? path.replace(/\/+$/, "") : path;
-}
 
 /** Jump to the top of the page whenever the route changes, and record the page view. */
 function ScrollToTop() {
@@ -33,6 +29,9 @@ function ScrollToTop() {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
     initMetaPixel(); // no-op after the first call, or if no Pixel ID is set
     trackPageView();
+    initAnalytics(); // no-op until a GA4 Measurement ID is set
+    // Wait a tick so the page title has updated before recording the view
+    setTimeout(trackAnalyticsPageView, 0);
   }, [pathname]);
   return null;
 }
@@ -45,7 +44,7 @@ function setMeta(selector: string, attr: "content" | "href", value: string) {
 /** Keep the browser tab title, Google description and share-preview tags in sync with the page. */
 function usePageMeta(pathname: string) {
   useEffect(() => {
-    const meta = PAGES[pathname];
+    const meta = ROUTE_MAP[pathname];
     if (!meta) return;
     const url = SITE_URL + (pathname === "/" ? "/" : pathname);
     document.title = meta.title;
@@ -65,7 +64,8 @@ const IS_BOT = typeof navigator !== "undefined" && /bot|crawler|spider|crawling|
 
 function LazySection({ children, className, forceVisible }: { children: ReactNode; className?: string; forceVisible?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  // Render everything during the build-time prerender (no window there)
+  const [visible, setVisible] = useState(() => typeof window === "undefined");
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -149,11 +149,21 @@ function Section({ children, eager }: { children: ReactNode; eager: boolean }) {
 function PageSections({ pathname }: { pathname: string }) {
   // Sub-pages are short, so render them straight away
   const eager = pathname !== "/";
+  const content = ROUTE_MAP[pathname]?.content;
+  if (content) {
+    return (
+      <>
+        <ContentPage page={content} />
+        {content.kind !== "legal" && <Section eager><Contact /></Section>}
+      </>
+    );
+  }
   switch (pathname) {
     case "/services":
       return (
         <>
           <Section eager={eager}><Services isPage /></Section>
+          <Section eager={eager}><ServiceLinks /></Section>
           <Section eager={eager}><SecuritySection /></Section>
           <Section eager={eager}><FAQ /></Section>
           <Section eager={eager}><Contact /></Section>
@@ -163,6 +173,7 @@ function PageSections({ pathname }: { pathname: string }) {
       return (
         <>
           <Section eager={eager}><Platforms isPage /></Section>
+          <Section eager={eager}><ServiceLinks /></Section>
           <Section eager={eager}><StatsCounter /></Section>
           <Section eager={eager}><Contact /></Section>
         </>
@@ -183,6 +194,8 @@ function PageSections({ pathname }: { pathname: string }) {
           <Section eager={eager}><Contact /></Section>
         </>
       );
+    case "/blog":
+      return <BlogIndex />;
     case "/contact":
       return (
         <>
@@ -209,7 +222,7 @@ function PageSections({ pathname }: { pathname: string }) {
 
 function PageContent() {
   const pathname = normalizePath(useLocation().pathname);
-  const isKnownPage = pathname in PAGES;
+  const isKnownPage = pathname in ROUTE_MAP;
   usePageMeta(pathname);
 
   if (!isKnownPage) {

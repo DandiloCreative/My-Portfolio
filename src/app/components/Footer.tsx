@@ -1,6 +1,7 @@
 import { Facebook, Instagram, ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router";
+import { servicePages } from "../routes";
 import brandLogo from "../../assets/dandilo-logo.webp";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -80,6 +81,7 @@ export function Footer() {
                 { label: 'Platforms', section: 'platforms' },
                 { label: 'Portfolio', section: 'portfolio' },
                 { label: 'Reviews', section: 'reviews' },
+                { label: 'Blog', section: 'blog' },
                 { label: 'Contact', section: 'contact' },
               ].map((item) => (
                 <li key={item.section}>
@@ -97,13 +99,10 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-6 tracking-wide">Web Development</h4>
+            <h4 className="text-white font-semibold mb-6 tracking-wide">Web Design Services</h4>
             <ul className="space-y-4 text-zinc-500 font-light">
               {[
-                { label: 'WordPress Website Development', section: 'platforms' },
-                { label: 'Custom Website Development', section: 'services' },
-                { label: 'Shopify Website Development', section: 'platforms' },
-                { label: 'E-commerce Development', section: 'services' },
+                ...servicePages.map((p) => ({ label: p.label, section: p.path.slice(1) })),
               ].map((item) => (
                 <li key={item.label}>
                   <a
@@ -134,8 +133,8 @@ export function Footer() {
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between text-zinc-500 text-sm font-light">
           <p>© {currentYear} Dandilo Digitals - Website Development Agency. All Rights Reserved.</p>
           <div className="flex items-center gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Privacy Paradigm</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="/privacy" onClick={(e) => handleNavClick(e, 'privacy')} className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms" onClick={(e) => handleNavClick(e, 'terms')} className="hover:text-white transition-colors">Terms of Use</a>
             <button onClick={scrollToTop} className="hover:text-white transition-colors">Back to Top ↑</button>
           </div>
         </div>
