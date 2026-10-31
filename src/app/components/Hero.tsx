@@ -156,7 +156,7 @@ export function Hero() {
             >
               <span>Turn Your Website Into a <br /></span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 inline-block min-h-[1.2em]">
-                <TypewriterText text="Customer-Generating Machine" />
+                <TypewriterText text="Customer-Generating Machine." />
               </span>
             </motion.h1>
 
@@ -170,7 +170,7 @@ export function Hero() {
             </motion.p>
 
             <motion.div
-              className="flex flex-row items-stretch gap-2 sm:gap-4 md:gap-5"
+              className="flex flex-row items-stretch self-center md:self-start gap-2 sm:gap-4 md:gap-5"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
