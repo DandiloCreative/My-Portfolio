@@ -1,7 +1,7 @@
 // Google Analytics 4.
 // Paste your Measurement ID below (Google Analytics → Admin → Data streams → your web stream,
 // it looks like "G-XXXXXXXXXX"). While it's empty, nothing loads and every call does nothing.
-export const GA_MEASUREMENT_ID = "";
+export const GA_MEASUREMENT_ID = "G-T81ZEL1547";
 
 declare global {
   interface Window {
