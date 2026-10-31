@@ -84,12 +84,12 @@ export function Hero() {
                   initial={{ opacity: 0, scale: 0.85 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="relative z-10 w-full h-full p-[5px] md:p-2 rounded-full bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 shadow-[0_0_40px_rgba(167,139,250,0.5),0_0_90px_rgba(232,121,249,0.2)]"
+                  className="relative z-10 w-full h-full p-[5px] md:p-2 rounded-full bg-[conic-gradient(from_0deg,#a78bfa_0%,#e879f9_14%,#5eead4_26%,#5eead4_36%,#a78bfa_50%,#e879f9_64%,#5eead4_76%,#5eead4_86%,#a78bfa_100%)] shadow-[0_0_40px_rgba(167,139,250,0.45),0_0_90px_rgba(94,234,212,0.25)]"
                 >
                   <img
                     src={profileImage}
                     alt="Founder of Dandilo Digitals, a web design and development agency"
-                    className="w-full h-full rounded-full object-cover border-4 border-zinc-950 md:border-0 contrast-[1.05] saturate-[1.1] md:contrast-100 md:saturate-100 shadow-[0_0_60px_rgba(124,58,237,0.8)]"
+                    className="w-full h-full rounded-full object-cover border-4 border-zinc-950 md:border-0 contrast-[1.05] saturate-[1.1] md:contrast-100 md:saturate-100"
                     loading="eager"
                     {...{ fetchpriority: "high" }}
                     decoding="async"
