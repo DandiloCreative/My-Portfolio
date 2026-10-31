@@ -207,7 +207,7 @@ export function Header() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden mt-4 pb-6 flex flex-col gap-4 overflow-hidden rounded-3xl bg-black/60 backdrop-blur-3xl border border-white/10 p-6"
+              className="lg:hidden mt-4 pb-6 flex flex-col gap-4 overflow-hidden rounded-3xl bg-black/10 backdrop-blur-md border border-white/20 shadow-[0_4px_16px_rgba(0,0,0,0.12)] p-6"
             >
               {NAV_ITEMS.map((item) => {
                 const active = isActive(item);
