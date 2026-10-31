@@ -183,7 +183,7 @@ export function Hero() {
               >
                 <button
                   onClick={navigateToContact}
-                  className="w-full flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white border border-transparent shadow-[0_0_20px_rgba(124,58,237,0.4)] rounded-full px-3.5 py-2.5 sm:px-5 md:px-9 md:py-4 text-[11px] sm:text-xs md:text-base font-bold sm:tracking-wide transition-all uppercase"
+                  className="w-full flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white border border-transparent shadow-[0_0_20px_rgba(124,58,237,0.4)] rounded-full px-3 py-3 min-[375px]:py-3.5 min-[410px]:px-4 sm:px-6 md:px-9 md:py-4 text-xs min-[375px]:text-[12.5px] min-[410px]:text-[13px] sm:text-sm md:text-base font-bold sm:tracking-wide transition-all uppercase"
                 >
                   Get Free Website Audit
                 </button>
@@ -196,7 +196,7 @@ export function Hero() {
               >
                 <button
                   onClick={() => navigate("/portfolio")}
-                  className="group w-full flex items-center justify-center whitespace-nowrap bg-transparent hover:bg-white/10 border border-violet-400/50 hover:border-white/70 rounded-lg px-3.5 py-2.5 sm:px-5 md:px-9 md:py-4 text-[11px] sm:text-xs md:text-base font-bold sm:tracking-wide transition-all duration-300 uppercase"
+                  className="group w-full flex items-center justify-center whitespace-nowrap bg-transparent hover:bg-white/10 border border-violet-400/50 hover:border-white/70 rounded-lg px-3 py-3 min-[375px]:py-3.5 min-[410px]:px-4 sm:px-6 md:px-9 md:py-4 text-xs min-[375px]:text-[12.5px] min-[410px]:text-[13px] sm:text-sm md:text-base font-bold sm:tracking-wide transition-all duration-300 uppercase"
                 >
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 group-hover:text-white group-hover:bg-none">
                     View My Portfolio
