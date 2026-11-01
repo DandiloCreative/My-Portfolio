@@ -196,27 +196,6 @@ export function Reviews({ isPage = false }: { isPage?: boolean }) {
                 </div>
             )}
 
-            {/* Overall rating badge */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-20px" }}
-                transition={{ delay: 0.4, duration: 0.7 }}
-                className="flex justify-center mt-16 relative z-10"
-            >
-                <div className="inline-flex items-center gap-2 md:gap-4 px-4 py-2 md:px-8 md:py-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
-                    <div className="flex gap-0.5 md:gap-1">
-                        {[1, 2, 3, 4, 5].map((i) => (
-                            <Star key={i} className="w-3.5 h-3.5 md:w-5 md:h-5 fill-amber-400 text-amber-400" />
-                        ))}
-                    </div>
-                    <span className="text-white font-semibold text-sm md:text-lg">5.0</span>
-                    <div className="w-px h-4 md:h-5 bg-white/20" />
-                    <span className="text-zinc-400 text-xs md:text-sm font-light whitespace-nowrap">
-                        Based on 200+ client reviews
-                    </span>
-                </div>
-            </motion.div>
         </section>
     );
 }

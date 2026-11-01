@@ -1,4 +1,5 @@
 import { Facebook, Instagram, ArrowUpRight } from "lucide-react";
+import { openCookieSettings } from "../lib/consent";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router";
 import { servicePages } from "../routes";
@@ -135,6 +136,7 @@ export function Footer() {
           <div className="flex items-center gap-6 mt-4 md:mt-0">
             <a href="/privacy" onClick={(e) => handleNavClick(e, 'privacy')} className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="/terms" onClick={(e) => handleNavClick(e, 'terms')} className="hover:text-white transition-colors">Terms of Use</a>
+            <button type="button" onClick={openCookieSettings} className="hover:text-white transition-colors">Cookie settings</button>
             <button onClick={scrollToTop} className="hover:text-white transition-colors">Back to Top ↑</button>
           </div>
         </div>

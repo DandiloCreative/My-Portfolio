@@ -16,6 +16,8 @@ export type RouteInfo = {
   mainFaq: boolean;
   /** Set for text pages rendered by ContentPage */
   content?: ContentPageData;
+  /** Ad landing and thank-you pages: kept out of Google's index and the sitemap */
+  noindex?: boolean;
 };
 
 const mainPages: RouteInfo[] = [
@@ -70,11 +72,31 @@ const mainPages: RouteInfo[] = [
   },
 ];
 
+// Pages for paid ads and after a form is sent. Not in the menu, sitemap or search results.
+const hiddenPages: RouteInfo[] = [
+  {
+    path: "/free-website-audit",
+    title: "Free Website Audit for Small Businesses | Dandilo Digitals",
+    description:
+      "Get a free, no-obligation website audit. We review your design, mobile experience, speed and SEO, and send clear fixes to get more enquiries.",
+    mainFaq: false,
+    noindex: true,
+  },
+  {
+    path: "/thank-you",
+    title: "Thank You | Dandilo Digitals",
+    description: "Thanks for contacting Dandilo Digitals. We'll reply by email soon.",
+    mainFaq: false,
+    noindex: true,
+  },
+];
+
 export const CONTENT_PAGES: ContentPageData[] = [...servicePages, ...industryPages, ...blogPosts, ...legalPages];
 export { servicePages, industryPages, blogPosts, legalPages };
 
 export const ROUTES: RouteInfo[] = [
   ...mainPages,
+  ...hiddenPages,
   ...CONTENT_PAGES.map((c) => ({
     path: c.path,
     title: c.title,

@@ -143,7 +143,7 @@ export function Hero() {
               className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-md"
             >
               <Sparkles className="w-4 h-4 text-violet-400" />
-              <span className="text-xs md:text-sm font-medium text-zinc-300">Best Website Development Agency</span>
+              <span className="text-xs md:text-sm font-medium text-zinc-300">Web Design for Small Businesses</span>
             </motion.div>
 
             {/* Logo - removed from Hero to improve mobile load time */}

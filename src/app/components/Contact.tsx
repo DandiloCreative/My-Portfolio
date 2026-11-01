@@ -1,13 +1,8 @@
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
+import { Mail, MapPin } from "lucide-react";
 import { Card } from "./ui/card";
-import { useState } from "react";
 import { motion } from "motion/react";
-import { Toaster, toast } from "sonner";
-import { trackLead } from "../lib/metaPixel";
-import { trackEvent } from "../lib/analytics";
+import { Toaster } from "sonner";
+import { LeadForm } from "./LeadForm";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
@@ -21,54 +16,6 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 export function Contact({ isPage = false }: { isPage?: boolean }) {
   const Heading = isPage ? "h1" : "h2";
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    platform: "",
-    message: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Use formsubmit.co API to send the email directly without needing a mail client
-      const res = await fetch("https://formsubmit.co/ajax/dandilodigitals@gmail.com", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          platform: formData.platform,
-          message: formData.message,
-          _subject: `New Project Inquiry from ${formData.name}`,
-          _template: "table"
-        })
-      });
-
-      const result = await res.json().catch(() => null);
-      // FormSubmit returns success: "true" (string) when the email was accepted
-      if (!res.ok || String(result?.success) !== "true") {
-        throw new Error(result?.message || `Request failed (${res.status})`);
-      }
-
-      trackLead();
-      trackEvent("generate_lead", { method: "contact_form" });
-      toast.success("Thanks! Your message was sent. We'll get back to you soon.");
-      setFormData({ name: "", email: "", platform: "", message: "" });
-    } catch (error) {
-      console.error("Error sending message:", error);
-      toast.error("Your message couldn't be sent. Please try again or message us on WhatsApp.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section id="contact" className={`py-16 bg-zinc-950 relative overflow-hidden${isPage ? " pt-32 md:pt-40" : ""}`}>
       <Toaster theme="dark" position="top-center" richColors />
@@ -104,81 +51,7 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
             className="will-change-transform"
           >
             <Card className="p-8 md:p-10 bg-white/[0.02] border border-white/10 backdrop-blur-2xl rounded-[2rem] shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="will-change-transform">
-                  <label htmlFor="contact-name" className="block text-sm font-medium mb-2 text-zinc-300">Name</label>
-                  <Input
-                    id="contact-name"
-                    name="name"
-                    autoComplete="name"
-                    type="text"
-                    placeholder="E.g. Sarah Connor"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    className="bg-white/5 border-white/10 text-white placeholder-zinc-600 focus:border-violet-500/50 focus:ring-violet-500/30 rounded-xl h-12"
-                  />
-                </motion.div>
-
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="will-change-transform">
-                  <label htmlFor="contact-email" className="block text-sm font-medium mb-2 text-zinc-300">Email Address</label>
-                  <Input
-                    id="contact-email"
-                    name="email"
-                    autoComplete="email"
-                    type="email"
-                    placeholder="sarah@example.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                    className="bg-white/5 border-white/10 text-white placeholder-zinc-600 focus:border-violet-500/50 focus:ring-violet-500/30 rounded-xl h-12"
-                  />
-                </motion.div>
-
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="will-change-transform">
-                  <label htmlFor="contact-platform" className="block text-sm font-medium mb-2 text-zinc-300">Target Ecosystem</label>
-                  <select
-                    id="contact-platform"
-                    name="platform"
-                    className="w-full px-4 h-12 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500/30 focus:border-violet-500/50 text-white placeholder-zinc-600 appearance-none"
-                    value={formData.platform}
-                    onChange={(e) => setFormData({ ...formData, platform: e.target.value })}
-                    required
-                    style={{ WebkitAppearance: 'none', MozAppearance: 'none' }}
-                  >
-                    <option value="" disabled className="text-zinc-500 bg-zinc-900">Select an architecture</option>
-                    <option value="wordpress" className="text-white bg-zinc-900">WordPress</option>
-                    <option value="frontend" className="text-white bg-zinc-900">Frontend Development</option>
-                    <option value="shopify" className="text-white bg-zinc-900">Shopify</option>
-                    <option value="wix" className="text-white bg-zinc-900">Wix Studio</option>
-                    <option value="not-sure" className="text-white bg-zinc-900">Needs Assessment</option>
-                  </select>
-                </motion.div>
-
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="will-change-transform">
-                  <label htmlFor="contact-message" className="block text-sm font-medium mb-2 text-zinc-300">Project Brief</label>
-                  <Textarea
-                    id="contact-message"
-                    name="message"
-                    placeholder="Describe your vision, scale, and timeline..."
-                    rows={5}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                    className="bg-white/5 border-white/10 text-white placeholder-zinc-600 focus:border-violet-500/50 focus:ring-violet-500/30 rounded-xl resize-none p-4"
-                  />
-                </motion.div>
-
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }} className="pt-2 will-change-transform">
-                  <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-xl h-14 text-lg font-medium shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] transition-all border-0 flex items-center justify-center gap-2">
-                    {isSubmitting ? "Sending..." : (
-                      <>
-                        Get Your Free Website Review <ArrowRight className="w-5 h-5" />
-                      </>
-                    )}
-                  </Button>
-                </motion.div>
-              </form>
+              <LeadForm formName="Contact form" submitLabel="Get Your Free Website Review" idPrefix="contact" />
             </Card>
           </motion.div>
 

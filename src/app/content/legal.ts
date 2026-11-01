@@ -11,60 +11,72 @@ export const legalPages: ContentPageData[] = [
     eyebrow: "Legal",
     h1: "Privacy Policy",
     intro: [
-      "Last updated: October 30, 2026.",
-      "This policy explains what information Dandilo Digitals (\"we\", \"us\") collects when you visit dandilodigitals.com or contact us, how we use it and the choices you have.",
+      "Last updated: October 31, 2026.",
+      "This policy explains what information Dandilo Digitals (\"we\", \"us\") collects when you visit dandilodigitals.com or contact us, why we use it, and the choices and rights you have. Dandilo Digitals is responsible (the \"controller\") for this information. You can reach us at dandilodigitals@gmail.com.",
     ],
     sections: [
       {
         heading: "Information you give us",
         paragraphs: [
-          "When you use our contact form, we collect your name, email address, the platform you're interested in and your message. If you contact us by email or WhatsApp, we receive the details you choose to share, such as your name, phone number and message.",
-          "Contact form messages are delivered to our email inbox through a form-delivery service (FormSubmit).",
+          "When you use one of our forms, we collect your name and email address, and anything else you choose to add, such as your phone or WhatsApp number, your website address, the platform you're interested in, your budget range and your message. If you contact us by email or WhatsApp, we receive the details you choose to share.",
+          "Form messages are delivered to our email inbox through a form-delivery service (FormSubmit).",
         ],
       },
       {
-        heading: "Information collected automatically",
-        bullets: [
-          "Meta Pixel: we use the Meta Pixel to understand how visitors use our site and to measure and improve our Facebook and Instagram advertising. It may collect information such as pages visited, buttons clicked, your browser and device, and your IP address, and may use cookies. Meta's use of this data is governed by Meta's own privacy policy.",
-          "Google Analytics: we may use Google Analytics to understand how visitors find and use our website (for example, pages viewed and how long people stay). It uses cookies and collects information such as your device, browser and approximate location. You can opt out with Google's browser add-on at tools.google.com/dlpage/gaoptout.",
-          "Hosting logs: our hosting provider may record technical information such as IP addresses and browser types to keep the site secure and running.",
-          "Fonts: our website loads fonts from Google Fonts, which means your browser connects to Google's servers.",
-          "Your theme choice (light or dark mode) is saved in your own browser's storage and is not sent to us.",
+        heading: "How you found us",
+        paragraphs: [
+          "When you send a form, we also include how you reached our website: for example the ad, campaign or keyword you clicked (including the ad click ID that Google or Microsoft adds to the link), the website that referred you, and the first page you visited. Your browser remembers this for up to 90 days. We use it to see which advertising brings in enquiries.",
         ],
       },
       {
-        heading: "How we use your information",
+        heading: "Cookies and similar tools",
         bullets: [
-          "To reply to your enquiries and provide the services you ask for",
-          "To understand how our website is used and improve it",
-          "To measure and improve our advertising",
-          "To keep our website secure",
+          "Google Analytics: shows us how visitors find and use our website, such as pages viewed and approximate location. It uses cookies.",
+          "Google Ads: measures whether people who click our ads go on to contact us. When you send a form after clicking an ad, Google may receive your email address or phone number in a scrambled (hashed) form so it can match the enquiry to the ad click (\"enhanced conversions\").",
+          "Meta Pixel: helps us understand visits from Facebook and Instagram and measure our ads there. It may collect pages visited, buttons clicked, your browser, device and IP address, and uses cookies.",
+          "Microsoft Clarity: if enabled, records how visitors move, click and scroll on our pages so we can improve them. It does not record what you type into forms.",
+          "Your light or dark mode choice, cookie choice and how-you-found-us details are saved in your own browser's storage.",
+          "Hosting and fonts: our hosting provider keeps technical logs such as IP addresses to keep the site secure, and our fonts load from Google Fonts.",
+        ],
+        paragraphs: [
+          "If you're in the European Economic Area, the UK or Switzerland, we ask for your consent before using analytics and advertising cookies, and they stay off unless you accept. You can change your choice at any time with \"Cookie settings\" at the bottom of every page.",
+        ],
+      },
+      {
+        heading: "Why we use your information (legal bases)",
+        bullets: [
+          "To reply to your enquiry and provide the services you ask for: to take steps at your request before a contract, or to perform one.",
+          "To understand how our website is used and to measure our advertising: with your consent where the law requires it (for example in the EEA and UK), otherwise our legitimate interest in running and improving our business.",
+          "To keep our website secure and to meet legal obligations: our legitimate interests and legal duties.",
         ],
         paragraphs: ["We do not sell your personal information."],
       },
       {
-        heading: "Sharing your information",
+        heading: "Who we share it with",
         paragraphs: [
-          "We share information only with the service providers that help us run our website and business (such as our hosting provider, FormSubmit, Meta and Google), and when required by law.",
+          "We share information only with service providers that help us run our website and business (our hosting provider, FormSubmit, Google, Meta and Microsoft), and when required by law. These providers may process information in the United States and other countries. Where the law requires it, transfers rely on safeguards such as the European Commission's Standard Contractual Clauses or the EU-US Data Privacy Framework.",
         ],
       },
       {
-        heading: "Your choices",
+        heading: "Your rights",
         bullets: [
-          "You can ask us what personal information we hold about you, or ask us to correct or delete it.",
-          "You can block or delete cookies in your browser settings.",
-          "You can control how Meta uses your information for ads in your Facebook or Instagram ad settings.",
+          "Ask for a copy of the personal information we hold about you, or ask us to correct or delete it.",
+          "Object to, or ask us to limit, how we use your information, and ask to receive it in a portable format.",
+          "Withdraw your consent to cookies at any time with \"Cookie settings\", without affecting anything done before.",
+          "Control how Meta and Google use your information for ads in your Facebook, Instagram and Google ad settings, and block or delete cookies in your browser.",
+          "Complain to a data protection authority, such as your local authority in the EU, the Information Commissioner's Office (ICO) in the UK, the Office of the Privacy Commissioner of Canada, or the Office of the Australian Information Commissioner. We'd appreciate the chance to help first.",
         ],
+        paragraphs: ["To use any of these rights, email dandilodigitals@gmail.com. We'll reply within the time the law allows, usually within one month."],
       },
       {
         heading: "How long we keep information",
         paragraphs: [
-          "We keep enquiry messages for as long as needed to respond to you and manage our working relationship, and then delete them when they're no longer needed.",
+          "We keep enquiry messages for as long as needed to respond to you and manage our working relationship, then delete them when they're no longer needed. Analytics data is kept for the periods set in the providers' tools (up to 14 months for Google Analytics).",
         ],
       },
       {
         heading: "Children's privacy",
-        paragraphs: ["Our website is intended for businesses and adults. We do not knowingly collect information from children under 13."],
+        paragraphs: ["Our website is intended for businesses and adults. We do not knowingly collect information from children under 16."],
       },
       {
         heading: "Changes and contact",

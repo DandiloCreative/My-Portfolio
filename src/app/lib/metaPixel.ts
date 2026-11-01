@@ -1,6 +1,8 @@
 // Meta (Facebook/Instagram) Pixel.
 // Paste your Pixel ID below (Meta Events Manager → Data sources → your pixel → ID).
 // While it's empty, nothing loads and every call below does nothing.
+import { onConsentChange, trackingAllowed } from "./consent";
+
 export const META_PIXEL_ID = "1153704343895256";
 
 type Fbq = ((...args: unknown[]) => void) & {
@@ -42,6 +44,10 @@ export function initMetaPixel() {
     script.src = "https://connect.facebook.net/en_US/fbevents.js";
     document.head.appendChild(script);
   }
+
+  // Visitors in Europe aren't tracked until they accept cookies (the pixel queues events until then)
+  if (!trackingAllowed()) window.fbq("consent", "revoke");
+  onConsentChange((choice) => window.fbq?.("consent", choice === "granted" ? "grant" : "revoke"));
 
   window.fbq("init", META_PIXEL_ID);
   trackContactClicks();

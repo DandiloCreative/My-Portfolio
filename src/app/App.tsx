@@ -5,6 +5,8 @@ import { Header } from "./components/Header";
 import { ROUTE_MAP, SITE_URL, normalizePath } from "./routes";
 import { initMetaPixel, trackPageView } from "./lib/metaPixel";
 import { initAnalytics, trackAnalyticsPageView } from "./lib/analytics";
+import { initClarity } from "./lib/clarity";
+import { captureAttribution } from "./lib/attribution";
 import { Hero } from "./components/Hero";
 
 // Lazy-load below-fold sections for faster initial paint
@@ -20,16 +22,22 @@ const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.
 const ContentPage = lazy(() => import("./components/ContentPage").then(m => ({ default: m.ContentPage })));
 const BlogIndex = lazy(() => import("./components/BlogIndex").then(m => ({ default: m.BlogIndex })));
 const ServiceLinks = lazy(() => import("./components/ServiceLinks").then(m => ({ default: m.ServiceLinks })));
+const AuditLanding = lazy(() => import("./components/AuditLanding").then(m => ({ default: m.AuditLanding })));
+const ThankYou = lazy(() => import("./components/ThankYou").then(m => ({ default: m.ThankYou })));
+const CookieBanner = lazy(() => import("./components/CookieBanner").then(m => ({ default: m.CookieBanner })));
 const FloatingWhatsApp = lazy(() => import("./components/FloatingWhatsApp").then(m => ({ default: m.FloatingWhatsApp })));
 
 /** Jump to the top of the page whenever the route changes, and record the page view. */
 function ScrollToTop() {
   const { pathname } = useLocation();
+  // Remember the ad/UTM details from the first page of the visit (before any navigation drops them)
+  useEffect(() => captureAttribution(), []);
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
     initMetaPixel(); // no-op after the first call, or if no Pixel ID is set
     trackPageView();
     initAnalytics(); // no-op until a GA4 Measurement ID is set
+    initClarity(); // no-op until a Clarity Project ID is set
     // Wait a tick so the page title has updated before recording the view
     setTimeout(trackAnalyticsPageView, 0);
   }, [pathname]);
@@ -55,6 +63,9 @@ function usePageMeta(pathname: string) {
     setMeta('meta[property="og:description"]', "content", meta.description);
     setMeta('meta[name="twitter:title"]', "content", meta.title);
     setMeta('meta[name="twitter:description"]', "content", meta.description);
+    const robots = meta.noindex ? "noindex, follow" : "index, follow";
+    setMeta('meta[name="robots"]', "content", robots);
+    setMeta('meta[name="googlebot"]', "content", robots);
   }, [pathname]);
 }
 
@@ -196,6 +207,10 @@ function PageSections({ pathname }: { pathname: string }) {
       );
     case "/blog":
       return <BlogIndex />;
+    case "/free-website-audit":
+      return <AuditLanding />;
+    case "/thank-you":
+      return <ThankYou />;
     case "/contact":
       return (
         <>
@@ -246,6 +261,7 @@ function PageContent() {
         </Suspense>
         <Suspense fallback={null}>
           <FloatingWhatsApp />
+          <CookieBanner />
         </Suspense>
       </main>
       <Suspense fallback={null}>

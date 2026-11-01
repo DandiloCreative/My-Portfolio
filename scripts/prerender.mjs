@@ -97,6 +97,10 @@ for (const route of ROUTES) {
   if (route.content?.kind === "blog") {
     html = replaceOnce(html, /(<meta property="og:type" content=")[^"]*/, `$1article`, "og:type");
   }
+  if (route.noindex) {
+    html = replaceOnce(html, /(<meta name="robots" content=")[^"]*/, `$1noindex, follow`, "robots");
+    html = replaceOnce(html, /(<meta name="googlebot" content=")[^"]*/, `$1noindex, follow`, "googlebot");
+  }
   // The homepage FAQ's structured data only belongs on pages that show that FAQ
   if (!route.mainFaq) html = replaceOnce(html, FAQ_BLOCK, "", "FAQ schema");
   const extra = extraSchema(route);
@@ -109,10 +113,11 @@ for (const route of ROUTES) {
   console.log(`prerender: ${route.path}  (${Math.round(appHtml.length / 1024)} KB of content)`);
 }
 
+const indexed = ROUTES.filter((r) => !r.noindex);
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${ROUTES.map((r) => `  <url><loc>${urlFor(r.path)}</loc><lastmod>${r.content?.date ?? today}</lastmod></url>`).join("\n")}
+${indexed.map((r) => `  <url><loc>${urlFor(r.path)}</loc><lastmod>${r.content?.date ?? today}</lastmod></url>`).join("\n")}
 </urlset>
 `;
 writeFileSync(join(dist, "sitemap.xml"), sitemap);
-console.log(`prerender: sitemap.xml with ${ROUTES.length} pages`);
+console.log(`prerender: sitemap.xml with ${indexed.length} pages`);
