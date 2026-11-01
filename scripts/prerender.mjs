@@ -72,7 +72,7 @@ function extraSchema(route) {
       name: c.label,
       description: c.description,
       url: urlFor(c.path),
-      areaServed: { "@type": "Country", name: "United States" },
+      areaServed: ["United States", "Canada", "United Kingdom", "Australia", "Ireland", "New Zealand", "Nigeria"].map((name) => ({ "@type": "Country", name })),
       provider: { "@type": "ProfessionalService", name: "Dandilo Digitals", url: SITE_URL },
     });
   }
