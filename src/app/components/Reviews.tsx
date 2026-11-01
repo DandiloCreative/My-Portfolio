@@ -2,62 +2,24 @@ import { useRef } from "react";
 import { motion, useAnimationFrame, useMotionValue } from "motion/react";
 import { Star, Quote } from "lucide-react";
 
+// Real client reviews from our Google Business Profile (shortened ones end with …).
 const reviews = [
-    {
-        name: "Sarah Mitchell",
-        role: "Founder, Lumea Studio",
-        avatar: "SM",
-        rating: 5,
-        review:
-            "Dandilo transformed our outdated site into a sleek, high-converting platform. The attention to design detail is unmatched — every animation feels intentional.",
-        color: "from-violet-500 to-purple-600",
-    },
-    {
-        name: "James Okoye",
-        role: "CEO, NovaBrand Agency",
-        avatar: "JO",
-        rating: 5,
-        review:
-            "Absolutely world-class work. Our WordPress build was completed ahead of schedule and the performance score went from 54 to 97. Incredible.",
-        color: "from-cyan-500 to-blue-600",
-    },
-    {
-        name: "Priya Sharma",
-        role: "CMO, Veltrix Health",
-        avatar: "PS",
-        rating: 5,
-        review:
-            "The Shopify site they built for us outperforms our competitors by a huge margin. User engagement doubled in the first month after launch.",
-        color: "from-fuchsia-500 to-pink-600",
-    },
-    {
-        name: "Luca Ferrari",
-        role: "Director, Arteza Milan",
-        avatar: "LF",
-        rating: 5,
-        review:
-            "Every pixel is perfected. Dandilo understands brand identity deeply — the result felt premium, modern, and exactly on-point for our audience.",
-        color: "from-amber-500 to-orange-600",
-    },
-    {
-        name: "Amara Diop",
-        role: "E-Commerce Lead, Kinnect",
-        avatar: "AD",
-        rating: 5,
-        review:
-            "Our Wix Studio store rebuild drove a 3x increase in conversions. The mobile experience especially blew our team away. Highly recommend.",
-        color: "from-emerald-500 to-teal-600",
-    },
-    {
-        name: "Tom Hargrove",
-        role: "CTO, Stackbloom Inc.",
-        avatar: "TH",
-        rating: 5,
-        review:
-            "The frontend build was clean, scalable, and beautifully documented. Working with Dandilo feels like collaborating with a top-tier product team.",
-        color: "from-indigo-500 to-violet-600",
-    },
+    { name: "Prescott Sims", role: "Google review", avatar: "PS", rating: 5, review: "Excellent experience! He helped me with my website development and did a great job. Communication was smooth…", color: "from-violet-500 to-purple-600" },
+    { name: "Louis Gregory", role: "Google review", avatar: "LG", rating: 5, review: "He design my Shopify store from start he also manage my store inventory, products and my product page looks more unique I really love it store in general, Thank you DandiloDigitals. Highly recommend!!", color: "from-cyan-500 to-blue-600" },
+    { name: "Theresa", role: "Google review", avatar: "TH", rating: 5, review: "Dandilo digitals is highly competent and efficient. Their attention to detail is commendable and I will recommend their services to everyone. My problem got fixed in less than 24hrs of contacting them.", color: "from-fuchsia-500 to-pink-600" },
+    { name: "Topzy Lawrence", role: "Google review", avatar: "TL", rating: 5, review: "Great work from their team of experts. They did an excellent job designing and optimizing my website; it runs perfectly. Communication throughout the process was clear, professional, and efficient.", color: "from-amber-500 to-orange-600" },
+    { name: "Charlotte Johnson", role: "Google review", avatar: "CJ", rating: 5, review: "I recommend Dandilo, he is professional. Made my website exactly the way i want it", color: "from-emerald-500 to-teal-600" },
+    { name: "Adex Berry", role: "Google review", avatar: "AB", rating: 5, review: "The website development he made for my brand looks superb and attract more customer to my woocommerce wordpress store…", color: "from-indigo-500 to-violet-600" },
+    { name: "Johnstone", role: "Google review", avatar: "JO", rating: 5, review: "I have been looking for a website developer for a long time until I found Dandilo Digitals…", color: "from-violet-500 to-purple-600" },
+    { name: "Allen Samuel", role: "Google review", avatar: "AS", rating: 5, review: "It was nice working with agency. Their response and work rate is exceptionally good.", color: "from-cyan-500 to-blue-600" },
+    { name: "Jephthah Nwakaji", role: "Google review", avatar: "JN", rating: 5, review: "I'm so happy with the way he handled my website; the integrations are functional and responsive ☺️", color: "from-fuchsia-500 to-pink-600" },
+    { name: "Sophia", role: "Google review", avatar: "SO", rating: 5, review: "I am happy I have choosen dandilo, he upscale our online presence…", color: "from-amber-500 to-orange-600" },
+    { name: "Great Idris", role: "Google review", avatar: "GI", rating: 5, review: "Dandilo Digitals delivers creativity, quality, and results all in one place…", color: "from-emerald-500 to-teal-600" },
 ];
+
+export const GOOGLE_RATING = 5.0;
+export const GOOGLE_REVIEW_COUNT = reviews.length;
+export const GOOGLE_REVIEWS_URL = "https://www.google.com/search?q=Dandilo+Digitals";
 
 // Duplicate for infinite loop
 const allReviews = [...reviews, ...reviews];
@@ -174,8 +136,7 @@ export function Reviews({ isPage = false }: { isPage?: boolean }) {
                         {isPage ? "Client Reviews" : "What Clients Say"}
                     </Heading>
                     <p className="text-xl text-zinc-300 max-w-2xl mx-auto font-light leading-relaxed">
-                        Real feedback from founders, CMOs, and teams who trusted us to build
-                        their digital presence.
+                        Real reviews from our clients on Google.
                     </p>
                 </motion.div>
             </div>
@@ -196,6 +157,26 @@ export function Reviews({ isPage = false }: { isPage?: boolean }) {
                 </div>
             )}
 
+            {/* Overall Google rating */}
+            <div className="flex justify-center mt-12 relative z-10 px-4">
+                <a
+                    href={GOOGLE_REVIEWS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 md:gap-4 px-4 py-2 md:px-8 md:py-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:border-violet-500/40 transition-colors"
+                >
+                    <div className="flex gap-0.5 md:gap-1">
+                        {[1, 2, 3, 4, 5].map((i) => (
+                            <Star key={i} className="w-3.5 h-3.5 md:w-5 md:h-5 fill-amber-400 text-amber-400" />
+                        ))}
+                    </div>
+                    <span className="text-white font-semibold text-sm md:text-lg">{GOOGLE_RATING.toFixed(1)}</span>
+                    <div className="w-px h-4 md:h-5 bg-white/20" />
+                    <span className="text-zinc-400 text-xs md:text-sm font-light whitespace-nowrap">
+                        {GOOGLE_REVIEW_COUNT} reviews on Google
+                    </span>
+                </a>
+            </div>
         </section>
     );
 }
