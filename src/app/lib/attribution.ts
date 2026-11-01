@@ -66,6 +66,13 @@ export function captureAttribution() {
   }
 }
 
+/** The Facebook/Instagram ad click this visitor arrived from, if any (time in milliseconds). */
+export function getFacebookClick(): { fbclid: string; time: number } | null {
+  const a = memory ?? read();
+  if (!a?.fbclid) return null;
+  return { fbclid: a.fbclid, time: Date.parse(a.first_seen || "") || Date.now() };
+}
+
 /** A readable summary for the enquiry email, e.g. "Google Ads (cpc) · campaign: US Search". */
 export function getAttributionFields(): Record<string, string> {
   const a = memory ?? read() ?? {};

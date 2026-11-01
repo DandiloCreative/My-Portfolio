@@ -11,7 +11,7 @@ export const legalPages: ContentPageData[] = [
     eyebrow: "Legal",
     h1: "Privacy Policy",
     intro: [
-      "Last updated: October 31, 2026.",
+      "Last updated: November 1, 2026.",
       "This policy explains what information Dandilo Digitals (\"we\", \"us\") collects when you visit dandilodigitals.com or contact us, why we use it, and the choices and rights you have. Dandilo Digitals is responsible (the \"controller\") for this information. You can reach us at dandilodigitals@gmail.com.",
     ],
     sections: [
@@ -33,7 +33,7 @@ export const legalPages: ContentPageData[] = [
         bullets: [
           "Google Analytics: shows us how visitors find and use our website, such as pages viewed and approximate location. It uses cookies.",
           "Google Ads: measures whether people who click our ads go on to contact us. When you send a form after clicking an ad, Google may receive your email address or phone number in a scrambled (hashed) form so it can match the enquiry to the ad click (\"enhanced conversions\").",
-          "Meta Pixel: helps us understand visits from Facebook and Instagram and measure our ads there. It may collect pages visited, buttons clicked, your browser, device and IP address, and uses cookies.",
+          "Meta Pixel: helps us understand visits from Facebook and Instagram and measure our ads there. It may collect pages visited, buttons clicked, your browser, device and IP address, and uses cookies. When you send a form or tap a WhatsApp link, our server may also send this to Meta directly (\"Conversions API\"), together with your email address, phone number and first name in a scrambled (hashed) form, so Meta can match it to an ad you saw.",
           "Microsoft Clarity: if enabled, records how visitors move, click and scroll on our pages so we can improve them. It does not record what you type into forms.",
           "Your light or dark mode choice, cookie choice and how-you-found-us details are saved in your own browser's storage.",
           "Hosting and fonts: our hosting provider keeps technical logs such as IP addresses to keep the site secure, and our fonts load from Google Fonts.",

@@ -38,7 +38,7 @@ export async function submitLead(fields: LeadFields, formName: string) {
     throw new Error(result?.message || `Request failed (${res.status})`);
   }
 
-  trackLead();
+  trackLead({ email: fields.email, phone: fields.phone, name: fields.name }, formName);
   trackEvent("generate_lead", { method: formName });
   trackAdsLead(fields.email, fields.phone);
 }
