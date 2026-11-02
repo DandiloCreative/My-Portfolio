@@ -76,6 +76,7 @@ function extraSchema(route) {
       provider: { "@type": "ProfessionalService", name: "Dandilo Digitals", url: SITE_URL },
     });
   }
+  if (route.schema) blocks.push(...route.schema);
   return blocks.map(jsonLd).join("\n  ");
 }
 

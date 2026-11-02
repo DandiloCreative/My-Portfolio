@@ -383,7 +383,7 @@ export const blogPosts: ContentPageData[] = [
         a: "Most small business websites take 2 to 6 weeks, depending on size, features and how quickly content is ready.",
       },
     ],
-    related: ["/blog/small-business-website-cost", "/portfolio", "/reviews"],
+    related: ["/pricing", "/blog/small-business-website-cost", "/reviews"],
   },
   {
     path: "/blog/small-business-website-cost",
@@ -466,7 +466,8 @@ export const blogPosts: ContentPageData[] = [
       {
         heading: "Get a clear quote for your website",
         paragraphs: [
-          "Every business is different, so we don't believe in one-size-fits-all prices. Send us your current website (or tell us about your business) and we'll give you a free website audit and a clear, fixed quote, with no pressure to build with us.",
+          "Our packages start at $250 for a starter website, $500 for a complete business website and $700 for an online store. See our pricing page for what's included.",
+          "Every business is different, so send us your current website (or tell us about your business) and we'll give you a free website audit and a clear, fixed quote, with no pressure to build with us.",
         ],
       },
     ],
@@ -488,7 +489,7 @@ export const blogPosts: ContentPageData[] = [
         a: "A typical small business website takes 2 to 6 weeks, depending on the number of pages, how quickly content is ready and how many rounds of changes are needed.",
       },
     ],
-    related: ["/services/small-business-web-design", "/services/website-redesign", "/contact"],
+    related: ["/pricing", "/services/small-business-web-design", "/services/website-redesign"],
   },
   {
     path: "/blog/wix-vs-wordpress-vs-shopify",

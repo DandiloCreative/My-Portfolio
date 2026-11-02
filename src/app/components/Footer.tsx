@@ -79,6 +79,7 @@ export function Footer() {
               {[
                 { label: 'Home', section: 'home' },
                 { label: 'Services', section: 'services' },
+                { label: 'Pricing', section: 'pricing' },
                 { label: 'Platforms', section: 'platforms' },
                 { label: 'Portfolio', section: 'portfolio' },
                 { label: 'Reviews', section: 'reviews' },

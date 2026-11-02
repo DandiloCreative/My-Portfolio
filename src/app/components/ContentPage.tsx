@@ -9,6 +9,7 @@ const LINK_LABELS: Record<string, string> = {
   "/portfolio": "Our Portfolio",
   "/contact": "Contact Us",
   "/reviews": "Client Reviews",
+  "/pricing": "Pricing & Packages",
   "/services": "Services",
   "/blog": "Blog",
 };

@@ -5,6 +5,7 @@ import { servicePages } from "./content/services";
 import { industryPages } from "./content/industries";
 import { blogPosts } from "./content/blog";
 import { legalPages } from "./content/legal";
+import { pricingFaqs, pricingPackages } from "./content/pricing";
 
 export const SITE_URL = "https://dandilodigitals.com";
 
@@ -18,7 +19,34 @@ export type RouteInfo = {
   content?: ContentPageData;
   /** Ad landing and thank-you pages: kept out of Google's index and the sitemap */
   noindex?: boolean;
+  /** Extra structured data (JSON-LD objects) added by the prerender */
+  schema?: object[];
 };
+
+const pricingSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    name: "Web design packages",
+    url: `${SITE_URL}/pricing`,
+    itemListElement: pricingPackages.map((p) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: p.name, description: p.summary },
+      priceSpecification: {
+        "@type": p.per ? "UnitPriceSpecification" : "PriceSpecification",
+        minPrice: p.price,
+        priceCurrency: "USD",
+        ...(p.per ? { unitText: "MONTH" } : {}),
+      },
+      seller: { "@type": "ProfessionalService", name: "Dandilo Digitals", url: SITE_URL },
+    })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: pricingFaqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  },
+];
 
 const mainPages: RouteInfo[] = [
   {
@@ -41,6 +69,14 @@ const mainPages: RouteInfo[] = [
     description:
       "WordPress web design, Shopify store development, Wix Studio websites and custom React builds. We help small businesses pick and build on the right platform.",
     mainFaq: false,
+  },
+  {
+    path: "/pricing",
+    title: "Web Design Pricing & Packages | Dandilo Digitals",
+    description:
+      "Affordable web design packages for small businesses: websites from $250, online stores from $700 and redesigns from $300. Clear quotes, no surprises.",
+    mainFaq: false,
+    schema: pricingSchema,
   },
   {
     path: "/portfolio",

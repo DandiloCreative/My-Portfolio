@@ -20,6 +20,7 @@ const FAQ = lazy(() => import("./components/FAQ").then(m => ({ default: m.FAQ })
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
 const ContentPage = lazy(() => import("./components/ContentPage").then(m => ({ default: m.ContentPage })));
+const Pricing = lazy(() => import("./components/Pricing").then(m => ({ default: m.Pricing })));
 const BlogIndex = lazy(() => import("./components/BlogIndex").then(m => ({ default: m.BlogIndex })));
 const ServiceLinks = lazy(() => import("./components/ServiceLinks").then(m => ({ default: m.ServiceLinks })));
 const AuditLanding = lazy(() => import("./components/AuditLanding").then(m => ({ default: m.AuditLanding })));
@@ -207,6 +208,14 @@ function PageSections({ pathname }: { pathname: string }) {
       );
     case "/blog":
       return <BlogIndex />;
+    case "/pricing":
+      return (
+        <>
+          <Pricing />
+          <Section eager={eager}><Reviews /></Section>
+          <Section eager={eager}><Contact /></Section>
+        </>
+      );
     case "/free-website-audit":
       return <AuditLanding />;
     case "/thank-you":

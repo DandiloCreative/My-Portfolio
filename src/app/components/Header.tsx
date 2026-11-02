@@ -16,7 +16,8 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const NAV_ITEMS = ["home", "services", "platforms", "portfolio", "reviews", "contact"];
+// "Platforms" lives in the footer to leave room for "Pricing" in the bar
+const NAV_ITEMS = ["home", "services", "pricing", "portfolio", "reviews", "contact"];
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
