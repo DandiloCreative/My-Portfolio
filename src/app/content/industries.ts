@@ -5,7 +5,7 @@ export const industryPages: ContentPageData[] = [
     path: "/industries/contractor-web-design",
     kind: "industry",
     label: "Web Design for Contractors",
-    title: "Web Design for Contractors & Home Services | Dandilo Digitals",
+    title: "Web Design for Contractors | Dandilo Digitals",
     description:
       "Websites for contractors, roofers, plumbers, electricians and home service businesses. Built to get more calls and quote requests from local customers.",
     eyebrow: "Contractors & Home Services",
@@ -50,7 +50,7 @@ export const industryPages: ContentPageData[] = [
     path: "/industries/real-estate-web-design",
     kind: "industry",
     label: "Real Estate Web Design",
-    title: "Real Estate Web Design for Agents & Brokers | Dandilo Digitals",
+    title: "Real Estate Web Design for Agents | Dandilo Digitals",
     description:
       "Real estate website design for agents, brokers and property developers. Property listings, lead capture and a premium look that builds trust.",
     eyebrow: "Real Estate",

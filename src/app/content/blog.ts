@@ -2,10 +2,115 @@ import type { ContentPageData } from "./types";
 
 export const blogPosts: ContentPageData[] = [
   {
+    path: "/blog/small-business-website-cost",
+    kind: "blog",
+    label: "How Much Does a Small Business Website Cost?",
+    title: "How Much Does a Small Business Website Cost in 2026?",
+    description:
+      "What a small business website really costs in 2026: DIY builders, freelancers and agencies compared, plus ongoing costs and how to avoid paying for the wrong thing.",
+    eyebrow: "Guide",
+    h1: "How Much Does a Small Business Website Cost in 2026?",
+    date: "2026-11-02",
+    readMinutes: 7,
+    intro: [
+      "\"How much will my website cost?\" is the first question almost every business owner asks, and the honest answer is: it depends on who builds it, which platform you use and what the website needs to do.",
+      "This guide breaks down typical price ranges in the US, the ongoing costs people forget about, and how to make sure you pay for a website that actually brings in customers. The figures are typical market ranges, not fixed prices, so always get a written quote.",
+    ],
+    sections: [
+      {
+        heading: "The short answer",
+        bullets: [
+          "Do it yourself with a website builder: roughly $15 to $50 a month, plus your time.",
+          "Freelance web designer: usually $500 to $5,000 for a small business website.",
+          "Web design agency: usually $3,000 to $15,000 or more, depending on size and features.",
+          "Online store (Shopify or WooCommerce): usually $1,500 to $10,000+, depending on how many products and custom features you need.",
+          "Ongoing costs: from about $20 to $150+ a month for hosting, platform fees, apps and maintenance.",
+        ],
+      },
+      {
+        heading: "Option 1: Build it yourself",
+        paragraphs: [
+          "Website builders like Wix, Squarespace and Shopify let you build a site from a template without code. You pay a monthly plan, and hosting and security are included.",
+          "Good for: brand-new businesses with a very small budget and time to learn.",
+          "The hidden cost: your time, and a site that often looks like a template and isn't set up to turn visitors into enquiries. Many business owners end up paying for a redesign a year later.",
+        ],
+      },
+      {
+        heading: "Option 2: Hire a freelancer",
+        paragraphs: [
+          "Freelancers range from beginners on marketplaces to experienced designers with years of client work. Prices vary just as widely.",
+          "Good for: small, clearly defined projects where you know exactly what you need.",
+          "Watch out for: unclear scope, no support after launch, and designers who disappear. Check real reviews and live websites they've built before you pay.",
+        ],
+      },
+      {
+        heading: "Option 3: Work with a web design agency",
+        paragraphs: [
+          "An agency handles strategy, design, development, SEO basics and launch, and usually offers support afterwards. Traditional US agencies often charge $5,000 to $15,000 or more for a small business site.",
+          "Good for: businesses that want a professional website built to win customers, without managing the project themselves.",
+          "Smaller remote agencies (like us) often deliver the same quality for less, because they don't carry the overheads of a big city office.",
+        ],
+      },
+      {
+        heading: "What makes a website cost more?",
+        bullets: [
+          "Number of pages: a 5-page site costs far less than a 30-page site.",
+          "Custom design vs. a template: custom design takes more time but helps you stand out.",
+          "Online selling: products, payments, shipping and inventory add work.",
+          "Bookings, memberships or custom features: anything that needs extra functionality adds cost.",
+          "Copywriting and photos: if you need help writing your pages or sourcing images.",
+          "SEO setup: page titles, descriptions, speed and structured data so customers can find you on Google.",
+        ],
+      },
+      {
+        heading: "Ongoing costs to budget for",
+        bullets: [
+          "Domain name: about $10 to $25 a year.",
+          "Hosting or platform plan: about $15 to $50 a month for most small business sites; Shopify plans start at roughly $40 a month.",
+          "Apps and plugins: $0 to $100+ a month, depending on what you use.",
+          "Maintenance and updates: either your time, or a monthly care plan from your designer.",
+          "Platform prices change often, so check the current pricing on each platform's website.",
+        ],
+      },
+      {
+        heading: "How to avoid paying for the wrong website",
+        paragraphs: [
+          "The cheapest website is expensive if it doesn't bring in customers. Before you compare prices, decide what the website must do: get calls, take bookings or sell products. Then ask every designer how their site will achieve that.",
+          "Ask for a written quote that lists the pages, features, platform, timeline, number of revisions and what support you get after launch. Make sure you will own your domain and website.",
+        ],
+      },
+      {
+        heading: "Get a clear quote for your website",
+        paragraphs: [
+          "Every business is different, so we don't believe in one-size-fits-all prices. Send us your current website (or tell us about your business) and we'll give you a free website audit and a clear, fixed quote, with no pressure to build with us.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much should a small business pay for a website?",
+        a: "Most small businesses in the US pay somewhere between $1,500 and $10,000 for a professionally designed website, depending on the number of pages, features and whether it includes an online store. DIY builders are cheaper but cost you time.",
+      },
+      {
+        q: "Is a cheap website worth it?",
+        a: "It can be if you're just starting out. But a website that's slow, hard to use on phones or unclear about what you do will lose you customers, which costs more than a better website in the long run.",
+      },
+      {
+        q: "Are there monthly costs after my website is built?",
+        a: "Yes. Expect to pay for your domain, hosting or platform plan, and any apps or plugins. Budget from about $20 to $150 a month for most small business websites.",
+      },
+      {
+        q: "How long does it take to build a small business website?",
+        a: "A typical small business website takes 2 to 6 weeks, depending on the number of pages, how quickly content is ready and how many rounds of changes are needed.",
+      },
+    ],
+    related: ["/services/small-business-web-design", "/services/website-redesign", "/contact"],
+  },
+  {
     path: "/blog/wix-vs-wordpress-vs-shopify",
     kind: "blog",
     label: "Wix vs WordPress vs Shopify",
-    title: "Wix vs WordPress vs Shopify: Which Is Best for Your Business?",
+    title: "Wix vs WordPress vs Shopify: Which Is Best? (2026 Guide)",
     description:
       "Wix, WordPress or Shopify? A plain-English comparison for small business owners: cost, ease of use, SEO, online selling and which to choose.",
     eyebrow: "Guide",
@@ -72,7 +177,7 @@ export const blogPosts: ContentPageData[] = [
     path: "/blog/signs-your-website-is-losing-customers",
     kind: "blog",
     label: "5 Signs Your Website Is Losing Customers",
-    title: "5 Signs Your Website Is Losing You Customers (and How to Fix Them)",
+    title: "5 Signs Your Website Is Losing Customers (and Fixes)",
     description:
       "Is your website turning visitors away? Five common problems that cost small businesses customers, and practical fixes for each one.",
     eyebrow: "Guide",

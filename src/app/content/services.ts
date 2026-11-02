@@ -232,7 +232,7 @@ export const servicePages: ContentPageData[] = [
     label: "Ecommerce Web Design",
     title: "Ecommerce Web Design for Small Businesses | Dandilo Digitals",
     description:
-      "Ecommerce web design on Shopify, WooCommerce and Wix. Online stores with clear product pages, easy navigation and a simple checkout that turns browsers into buyers.",
+      "Ecommerce web design on Shopify, WooCommerce and Wix. Online stores with clear product pages and a simple checkout that turns browsers into buyers.",
     eyebrow: "Ecommerce Web Design",
     h1: "Ecommerce Web Design That Turns Browsers Into Buyers",
     intro: [
@@ -275,7 +275,7 @@ export const servicePages: ContentPageData[] = [
     path: "/services/website-redesign",
     kind: "service",
     label: "Website Redesign",
-    title: "Website Redesign Services for Small Businesses | Dandilo Digitals",
+    title: "Website Redesign for Small Businesses | Dandilo Digitals",
     description:
       "Website redesign services for outdated or slow websites. A modern design, clearer messaging and faster pages so more visitors contact you.",
     eyebrow: "Website Redesign",

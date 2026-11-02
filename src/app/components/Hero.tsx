@@ -34,8 +34,9 @@ const TypewriterText = ({ text }: { text: string }) => {
 
   return (
     <>
-      <span className={displayText.length === 0 ? "opacity-0" : ""}>{displayText || "C"}</span>
-      <span className="animate-pulse opacity-70 ml-[1px]">|</span>
+      <span>{displayText || " "}</span>
+      {/* Cursor drawn with CSS (not a "|" character) so it doesn't end up in the page text */}
+      <span className="inline-block w-[3px] h-[0.85em] ml-1 align-[-0.08em] bg-cyan-400 animate-pulse opacity-70" />
     </>
   );
 };
@@ -155,7 +156,9 @@ export function Hero() {
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               <span>Turn Your Website Into a <br /></span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 inline-block min-h-[1.2em]">
+              {/* Full text for Google and screen readers; the animated copy is visual only */}
+              <span className="sr-only">Customer-Generating Machine.</span>
+              <span aria-hidden="true" className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 inline-block min-h-[1.2em]">
                 <TypewriterText text="Customer-Generating Machine." />
               </span>
             </motion.h1>

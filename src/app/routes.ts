@@ -44,7 +44,7 @@ const mainPages: RouteInfo[] = [
   },
   {
     path: "/portfolio",
-    title: "Web Design Portfolio & Recent Projects | Dandilo Digitals",
+    title: "Web Design Portfolio & Projects | Dandilo Digitals",
     description:
       "See recent website design and development projects on WordPress, Shopify, Wix Studio and custom code, from online stores to real estate websites.",
     mainFaq: false,
@@ -65,7 +65,7 @@ const mainPages: RouteInfo[] = [
   },
   {
     path: "/blog",
-    title: "Web Design Tips & Guides for Small Businesses | Dandilo Digitals",
+    title: "Web Design Tips for Small Businesses | Dandilo Digitals",
     description:
       "Practical web design, SEO and website platform guides for small business owners, from choosing between Wix, WordPress and Shopify to getting more leads.",
     mainFaq: false,
