@@ -16,14 +16,14 @@ export type PricingPackage = {
 export const pricingPackages: PricingPackage[] = [
   {
     name: "Starter Website",
-    price: 250,
+    price: 600,
     summary: "A clean, professional website to get your business online.",
     features: ["Up to 3 pages", "Mobile-friendly design", "Contact form and WhatsApp button", "Basic on-page SEO"],
     link: "/services/small-business-web-design",
   },
   {
     name: "Business Website",
-    price: 500,
+    price: 1200,
     summary: "A complete website built to bring in calls, bookings and enquiries.",
     features: [
       "Up to 7 pages",
@@ -36,28 +36,28 @@ export const pricingPackages: PricingPackage[] = [
   },
   {
     name: "Online Store",
-    price: 700,
+    price: 1500,
     summary: "A Shopify or WooCommerce store that's easy to shop and easy to manage.",
     features: ["Shopify or WooCommerce", "Product pages and collections", "Payments and shipping setup", "Mobile-friendly checkout"],
     link: "/services/ecommerce-web-design",
   },
   {
     name: "Website Redesign",
-    price: 300,
+    price: 800,
     summary: "Give your current website a modern look without losing your Google rankings.",
     features: ["Modern, mobile-friendly redesign", "Keep your content and page addresses", "Faster loading pages", "Redirects set up where needed"],
     link: "/services/website-redesign",
   },
   {
     name: "Custom Website Development",
-    price: 1200,
+    price: 2500,
     summary: "Custom-coded websites and web apps for businesses that need more.",
     features: ["Built with React / Next.js", "Custom features and integrations", "Fast and secure", "Built to grow with your business"],
     link: "/platforms",
   },
   {
     name: "SEO Setup",
-    price: 500,
+    price: 600,
     summary: "Help customers find you on Google, including Google Merchant Center.",
     features: [
       "Keyword research",
@@ -68,10 +68,10 @@ export const pricingPackages: PricingPackage[] = [
   },
   {
     name: "Care Plan",
-    price: 200,
+    price: 99,
     per: "/month",
     summary: "We look after your website so you can focus on your business.",
-    features: ["Updates and backups", "Security monitoring", "Small content changes", "Priority support"],
+    features: ["Updates and backups", "Security monitoring", "Small content changes each month", "Priority support"],
   },
 ];
 

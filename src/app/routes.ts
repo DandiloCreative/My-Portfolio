@@ -74,7 +74,7 @@ const mainPages: RouteInfo[] = [
     path: "/pricing",
     title: "Web Design Pricing & Packages | Dandilo Digitals",
     description:
-      "Affordable web design packages for small businesses: websites from $250, online stores from $700 and redesigns from $300. Clear quotes, no surprises.",
+      "Affordable web design packages for small businesses: websites from $600, online stores from $1,500 and redesigns from $800. Clear quotes, no surprises.",
     mainFaq: false,
     schema: pricingSchema,
   },
