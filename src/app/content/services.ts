@@ -59,7 +59,7 @@ export const servicePages: ContentPageData[] = [
         a: "Yes. We build on platforms that let you edit text and photos without any coding, and we show you how.",
       },
     ],
-    related: ["/services/website-redesign", "/services/wordpress-web-design", "/services/landing-page-design"],
+    related: ["/services/website-redesign", "/blog/get-more-customers-from-your-website", "/blog/small-business-website-cost"],
   },
   {
     path: "/services/wordpress-web-design",
@@ -118,7 +118,7 @@ export const servicePages: ContentPageData[] = [
         a: "Yes. We set up your site so you can edit pages and publish posts without touching code, and we walk you through it.",
       },
     ],
-    related: ["/services/ecommerce-web-design", "/services/small-business-web-design", "/blog/wix-vs-wordpress-vs-shopify"],
+    related: ["/services/ecommerce-web-design", "/blog/shopify-vs-woocommerce", "/blog/wix-vs-wordpress-vs-shopify"],
   },
   {
     path: "/services/shopify-website-design",
@@ -168,7 +168,7 @@ export const servicePages: ContentPageData[] = [
         a: "Shopify is usually simpler to run, with hosting and security handled for you. WooCommerce gives more flexibility if you already use WordPress. We'll recommend the best fit for your store.",
       },
     ],
-    related: ["/services/ecommerce-web-design", "/blog/wix-vs-wordpress-vs-shopify", "/portfolio"],
+    related: ["/services/ecommerce-web-design", "/blog/shopify-vs-woocommerce", "/portfolio"],
   },
   {
     path: "/services/wix-web-designer",
@@ -224,7 +224,7 @@ export const servicePages: ContentPageData[] = [
         a: "Yes. That's one of Wix's biggest strengths. We'll show you how to update text, images and pages yourself.",
       },
     ],
-    related: ["/services/small-business-web-design", "/services/website-redesign", "/blog/wix-vs-wordpress-vs-shopify"],
+    related: ["/blog/wix-studio-vs-wix", "/services/website-redesign", "/blog/wix-vs-wordpress-vs-shopify"],
   },
   {
     path: "/services/ecommerce-web-design",
@@ -269,7 +269,7 @@ export const servicePages: ContentPageData[] = [
         a: "Yes. We can redesign key pages like your homepage, product pages and cart to make shopping easier, especially on mobile.",
       },
     ],
-    related: ["/services/shopify-website-design", "/services/wordpress-web-design", "/portfolio"],
+    related: ["/services/shopify-website-design", "/blog/shopify-vs-woocommerce", "/portfolio"],
   },
   {
     path: "/services/website-redesign",
@@ -317,7 +317,7 @@ export const servicePages: ContentPageData[] = [
         a: "No. We can redesign within your current platform, or recommend a move if another platform would serve you better.",
       },
     ],
-    related: ["/services/small-business-web-design", "/blog/signs-your-website-is-losing-customers", "/contact"],
+    related: ["/blog/website-redesign-checklist", "/blog/signs-your-website-is-losing-customers", "/contact"],
   },
   {
     path: "/services/landing-page-design",
@@ -371,6 +371,6 @@ export const servicePages: ContentPageData[] = [
         a: "Yes. We can connect your landing page to the Meta Pixel and Google Analytics so you can track leads from your campaigns.",
       },
     ],
-    related: ["/services/small-business-web-design", "/services/website-redesign", "/contact"],
+    related: ["/services/small-business-web-design", "/blog/get-more-customers-from-your-website", "/contact"],
   },
 ];

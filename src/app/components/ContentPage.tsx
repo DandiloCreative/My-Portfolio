@@ -8,6 +8,7 @@ const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=%2B12246200930&text=H
 const LINK_LABELS: Record<string, string> = {
   "/portfolio": "Our Portfolio",
   "/contact": "Contact Us",
+  "/reviews": "Client Reviews",
   "/services": "Services",
   "/blog": "Blog",
 };

@@ -36,6 +36,27 @@ export function BlogIndex() {
             </Link>
           ))}
         </div>
+
+        <div className="mt-16 grid md:grid-cols-2 gap-10 text-zinc-300 font-light leading-relaxed">
+          <div>
+            <h2 className="text-2xl font-bold text-white tracking-tight mb-3">What you'll find here</h2>
+            <p>
+              Straightforward guides for small business owners planning a new website, a redesign or an online
+              store: what websites cost, how to choose between WordPress, Shopify and Wix Studio, how to keep your
+              Google rankings when you redesign, and how to turn more visitors into calls, bookings and sales.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-white tracking-tight mb-3">Want advice on your own website?</h2>
+            <p className="mb-4">
+              Every business is different. Send us your website and we'll review it for free, then tell you which
+              changes would bring in the most customers.
+            </p>
+            <Link to="/contact" className="inline-flex items-center gap-2 text-violet-400 font-semibold hover:text-violet-300">
+              Get a free website audit <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

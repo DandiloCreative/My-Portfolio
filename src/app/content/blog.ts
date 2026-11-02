@@ -2,6 +2,390 @@ import type { ContentPageData } from "./types";
 
 export const blogPosts: ContentPageData[] = [
   {
+    path: "/blog/shopify-vs-woocommerce",
+    kind: "blog",
+    label: "Shopify vs WooCommerce",
+    title: "Shopify vs WooCommerce for Small Business (2026)",
+    description:
+      "Shopify or WooCommerce? A plain-English comparison of cost, ease of use, payments, SEO and growth to help small businesses choose the right online store.",
+    eyebrow: "Guide",
+    h1: "Shopify vs WooCommerce: Which Is Better for a Small Business?",
+    date: "2026-11-02",
+    readMinutes: 6,
+    intro: [
+      "If you want to sell products online, Shopify and WooCommerce are the two platforms you'll hear about most. Both can run a successful store, but they work very differently, and the right choice depends on your budget, your products and how hands-on you want to be.",
+      "Here's how they compare, without the jargon.",
+    ],
+    sections: [
+      {
+        heading: "The short answer",
+        bullets: [
+          "Choose Shopify if you want a store that's quick to launch, secure and easy to run, with hosting and updates handled for you.",
+          "Choose WooCommerce if you already have a WordPress website, publish lots of content, or need full control and custom features.",
+        ],
+      },
+      {
+        heading: "What they are",
+        paragraphs: [
+          "Shopify is an all-in-one ecommerce platform. You pay a monthly plan and get hosting, security, checkout and store management in one place.",
+          "WooCommerce is a free plugin that turns a WordPress website into an online store. The plugin is free, but you pay for hosting, and often for premium extensions and a theme.",
+        ],
+      },
+      {
+        heading: "Cost",
+        paragraphs: [
+          "Shopify has predictable monthly pricing, plus payment processing fees and the cost of any apps you add. Apps are where Shopify costs often grow, so choose them carefully.",
+          "WooCommerce can be cheaper to run for small stores, but costs are less predictable: hosting, premium plugins, security and someone to keep everything updated all add up.",
+        ],
+      },
+      {
+        heading: "Ease of use",
+        paragraphs: [
+          "Shopify is easier for most business owners. Adding products, managing orders and processing refunds is simple, and there are no software updates to worry about.",
+          "WooCommerce has a steeper learning curve. You manage WordPress, the theme and plugins, and updates need care so nothing breaks.",
+        ],
+      },
+      {
+        heading: "Payments and checkout",
+        paragraphs: [
+          "Shopify's checkout is fast, trusted and optimized for mobile, with Shop Pay, Apple Pay and Google Pay available. Using a payment provider other than Shopify Payments can add extra transaction fees.",
+          "WooCommerce works with many payment gateways, such as Stripe and PayPal, and gives you more control over how checkout looks and works.",
+        ],
+      },
+      {
+        heading: "SEO and content",
+        paragraphs: [
+          "Both can rank well on Google when set up properly. WooCommerce has the edge for content-heavy marketing because it runs on WordPress, the strongest blogging platform. Shopify has a built-in blog that's fine for most stores.",
+        ],
+      },
+      {
+        heading: "Growing your store",
+        paragraphs: [
+          "Shopify scales smoothly: it handles traffic spikes and security for you, so busy sales days don't take your store down.",
+          "WooCommerce can scale too, but needs better hosting and more technical care as your store grows.",
+        ],
+      },
+      {
+        heading: "Our recommendation",
+        paragraphs: [
+          "For most small businesses starting or rebuilding an online store, we recommend Shopify: it's faster to launch and easier to run, so you can focus on selling. If you already have a strong WordPress site or need custom features, WooCommerce is a great option.",
+          "Not sure which fits your products? We'll recommend one as part of a free website audit.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is WooCommerce cheaper than Shopify?",
+        a: "The WooCommerce plugin is free, but you pay for hosting, extensions and maintenance. For many small stores the total cost ends up similar; Shopify's costs are simply more predictable.",
+      },
+      {
+        q: "Can I move from WooCommerce to Shopify later?",
+        a: "Yes. Products, customers and orders can be migrated, and old page addresses can be redirected so you keep your Google rankings.",
+      },
+      {
+        q: "Which is better for SEO?",
+        a: "Both can rank well. WooCommerce offers more control for content-heavy SEO because it runs on WordPress, while Shopify covers the essentials well for most stores.",
+      },
+    ],
+    related: ["/services/shopify-website-design", "/services/ecommerce-web-design", "/services/wordpress-web-design"],
+  },
+  {
+    path: "/blog/wix-studio-vs-wix",
+    kind: "blog",
+    label: "Wix Studio vs Wix",
+    title: "Wix Studio vs Wix Editor: What's the Difference?",
+    description:
+      "Wix Studio or the classic Wix Editor? What's different, who each one is for, and whether your business website should be built on Wix Studio.",
+    eyebrow: "Guide",
+    h1: "Wix Studio vs Wix Editor: What's the Difference for Your Business?",
+    date: "2026-11-02",
+    readMinutes: 5,
+    intro: [
+      "Wix now has two ways to build a website: the classic Wix Editor and Wix Studio. They're made by the same company and run on the same hosting, but they're built for different people.",
+      "Here's what's different and which one makes sense for your business website.",
+    ],
+    sections: [
+      {
+        heading: "The short answer",
+        bullets: [
+          "The Wix Editor is made for business owners building their own site with drag-and-drop.",
+          "Wix Studio is made for professional designers and agencies. It gives much more control over layout, responsive design and custom features.",
+          "Either way, you can edit the content of a Wix Studio site yourself once it's built.",
+        ],
+      },
+      {
+        heading: "Design and layout",
+        paragraphs: [
+          "The classic Editor lets you drag elements anywhere on the page. That's easy to start with, but layouts often look different, or break, on phones and tablets.",
+          "Wix Studio uses modern layout tools (grids, stacks and responsive sections), so the site adapts properly to every screen size. The result looks and behaves like a custom-built website.",
+        ],
+      },
+      {
+        heading: "Mobile experience",
+        paragraphs: [
+          "Most visitors arrive on their phones. In Wix Studio, designers control exactly how each section looks on desktop, tablet and mobile, which usually means a cleaner, faster mobile experience.",
+        ],
+      },
+      {
+        heading: "Animations and custom features",
+        paragraphs: [
+          "Wix Studio includes advanced animations and interactions, and supports custom code for features the standard tools don't cover. That makes it possible to build bookings, member areas and custom integrations on Wix.",
+        ],
+      },
+      {
+        heading: "Can I still edit the site myself?",
+        paragraphs: [
+          "Yes. A good designer sets up a Wix Studio site so you can change text, photos, blog posts, products and opening hours yourself, without breaking the design.",
+        ],
+      },
+      {
+        heading: "Which should you choose?",
+        paragraphs: [
+          "If you're building your first simple site yourself on a tight budget, the classic Wix Editor is fine. If you want a website that looks professional on every device and is built to bring in customers, Wix Studio is the better foundation, ideally set up by a designer.",
+          "Already on Wix? We can review your current site for free and tell you whether a redesign in Wix Studio is worth it.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is Wix Studio better than Wix?",
+        a: "Wix Studio is Wix's professional version. It offers more control over responsive design, layout and custom features, so it's better for a polished business website. The classic Editor is simpler for DIY beginners.",
+      },
+      {
+        q: "Can I move my Wix site to Wix Studio?",
+        a: "Sites aren't converted automatically. The usual approach is to rebuild the design in Wix Studio and move your content across, keeping the same domain and page addresses.",
+      },
+      {
+        q: "Is Wix good for SEO?",
+        a: "Yes. Wix sites can rank well on Google when page titles, descriptions, speed and content are set up properly.",
+      },
+    ],
+    related: ["/services/wix-web-designer", "/blog/wix-vs-wordpress-vs-shopify", "/services/website-redesign"],
+  },
+  {
+    path: "/blog/website-redesign-checklist",
+    kind: "blog",
+    label: "Website Redesign Checklist",
+    title: "Website Redesign Checklist: Keep Your Google Rankings",
+    description:
+      "Planning a website redesign? A 12-step checklist for small businesses to redesign without losing Google rankings, traffic or enquiries.",
+    eyebrow: "Checklist",
+    h1: "Website Redesign Checklist: 12 Steps to Redesign Without Losing Google Rankings",
+    date: "2026-11-02",
+    readMinutes: 6,
+    intro: [
+      "A redesign should bring you more customers, not fewer. But a rushed redesign can wipe out years of Google rankings overnight if old pages disappear or important content gets lost.",
+      "Use this checklist before, during and after your redesign.",
+    ],
+    sections: [
+      {
+        heading: "Before the redesign",
+        bullets: [
+          "1. Set a clear goal: more calls, more bookings, more sales, or a more professional look.",
+          "2. Record your current numbers: visitors, enquiries and top pages (Google Analytics and Search Console).",
+          "3. List every page on your current site, especially the ones that get traffic from Google.",
+          "4. Note the searches you already rank for, so the new site keeps targeting them.",
+          "5. Collect what works: your best reviews, photos of real work and the content customers find useful.",
+        ],
+      },
+      {
+        heading: "During the redesign",
+        bullets: [
+          "6. Keep page addresses (URLs) the same where possible.",
+          "7. Where an address must change, plan a 301 redirect from the old page to the new one.",
+          "8. Keep or improve the content on pages that rank. Don't replace detailed pages with a single line of text.",
+          "9. Write a unique page title and meta description for every page.",
+          "10. Design for phones first, and keep pages fast: compress images and avoid heavy scripts.",
+        ],
+      },
+      {
+        heading: "After launch",
+        bullets: [
+          "11. Test everything: forms, buttons, phone links, redirects and checkout. Submit your sitemap in Google Search Console.",
+          "12. Watch your traffic and enquiries for 4 to 8 weeks, and fix any pages showing errors in Search Console.",
+        ],
+      },
+      {
+        heading: "The most common redesign mistakes",
+        bullets: [
+          "Deleting pages that bring in Google traffic.",
+          "Forgetting redirects, so old links and bookmarks lead to error pages.",
+          "Launching with the site still blocked from Google (a leftover 'noindex' setting).",
+          "Choosing looks over clarity: a beautiful site that doesn't say what you do or how to contact you.",
+        ],
+      },
+      {
+        heading: "Want help with your redesign?",
+        paragraphs: [
+          "We redesign websites for small businesses with these steps built in, so you get a modern site without losing the rankings you've earned. Start with a free audit of your current site.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Will a website redesign hurt my SEO?",
+        a: "It doesn't have to. If you keep valuable content, keep page addresses or redirect them properly, and fix technical issues, a redesign often improves rankings.",
+      },
+      {
+        q: "How often should a small business redesign its website?",
+        a: "Usually every 3 to 5 years, or sooner if your site is slow, hard to use on phones, or no longer matches your business.",
+      },
+    ],
+    related: ["/services/website-redesign", "/blog/signs-your-website-is-losing-customers", "/contact"],
+  },
+  {
+    path: "/blog/get-more-customers-from-your-website",
+    kind: "blog",
+    label: "Get More Customers From Your Website",
+    title: "9 Ways to Get More Customers From Your Website",
+    description:
+      "Getting visitors but not enough calls or sales? Nine practical ways small businesses can turn more website visitors into customers.",
+    eyebrow: "Guide",
+    h1: "9 Ways to Get More Customers From Your Small Business Website",
+    date: "2026-11-02",
+    readMinutes: 6,
+    intro: [
+      "More traffic isn't always the answer. Many small business websites already get visitors, but too few of them call, book or buy. Small changes can make a big difference.",
+      "Here are nine practical improvements, starting with the quickest wins.",
+    ],
+    sections: [
+      {
+        heading: "1. Say what you do in the first few seconds",
+        paragraphs: [
+          "Your headline should clearly say what you offer and who it's for. \"Emergency plumber in Austin, available 24/7\" beats \"Welcome to our website\".",
+        ],
+      },
+      {
+        heading: "2. Make the next step obvious",
+        paragraphs: [
+          "Choose one main action, such as call, book or request a quote, and make it the most visible button on every page. On mobile, keep it within thumb's reach.",
+        ],
+      },
+      {
+        heading: "3. Show real reviews",
+        paragraphs: [
+          "Reviews are often the deciding factor. Show your best Google reviews near your main buttons, with the reviewer's name.",
+        ],
+      },
+      {
+        heading: "4. Use real photos",
+        paragraphs: [
+          "Photos of your team, your work and your premises build far more trust than stock images.",
+        ],
+      },
+      {
+        heading: "5. Make it fast on phones",
+        paragraphs: [
+          "Slow pages lose visitors. Compress images, remove unused plugins and test your site with Google's PageSpeed Insights.",
+        ],
+      },
+      {
+        heading: "6. Shorten your forms",
+        paragraphs: [
+          "Ask only for what you need to reply: name, email or phone, and a short message. Every extra field loses some people.",
+        ],
+      },
+      {
+        heading: "7. Offer an easy way to chat",
+        paragraphs: [
+          "Many customers would rather send a quick message than fill in a form or call. A WhatsApp or chat button gives them a low-pressure way to reach you.",
+        ],
+      },
+      {
+        heading: "8. Answer common questions",
+        paragraphs: [
+          "Add a short FAQ covering price ranges, timelines, areas served and how the process works. It removes doubts and helps you show up in Google searches.",
+        ],
+      },
+      {
+        heading: "9. Track what works",
+        paragraphs: [
+          "Set up Google Analytics and track form submissions and calls, so you know which pages and marketing bring in customers.",
+        ],
+      },
+      {
+        heading: "Want to know which of these your website needs?",
+        paragraphs: [
+          "We'll review your website for free and tell you exactly which changes would bring in the most enquiries.",
+        ],
+      },
+    ],
+    related: ["/services/small-business-web-design", "/services/landing-page-design", "/blog/signs-your-website-is-losing-customers"],
+  },
+  {
+    path: "/blog/how-to-choose-a-web-designer",
+    kind: "blog",
+    label: "How to Choose a Web Designer",
+    title: "How to Choose a Web Designer for Your Small Business",
+    description:
+      "Hiring a web designer? What to look for, the questions to ask and the red flags to avoid, so your small business gets a website that brings in customers.",
+    eyebrow: "Guide",
+    h1: "How to Choose a Web Designer for Your Small Business",
+    date: "2026-11-02",
+    readMinutes: 6,
+    intro: [
+      "Your website is often the first impression customers get of your business, so choosing who builds it matters. The right web designer will help you win customers; the wrong one can cost you months and money.",
+      "Here's what to look for, what to ask and which red flags to avoid.",
+    ],
+    sections: [
+      {
+        heading: "What to look for",
+        bullets: [
+          "Real, live websites in their portfolio, ideally for businesses like yours.",
+          "Genuine reviews on Google or other independent sites.",
+          "Experience with the platform that suits you: WordPress, Shopify, Wix Studio or custom.",
+          "A focus on results (calls, bookings, sales), not just looks.",
+          "Clear communication and a written process.",
+        ],
+      },
+      {
+        heading: "Questions to ask before you hire",
+        bullets: [
+          "What exactly is included in the price, and what costs extra?",
+          "How long will it take, and what do you need from me?",
+          "How many rounds of changes are included?",
+          "Will I own my domain, website and content?",
+          "Will I be able to update the site myself?",
+          "What happens after launch: support, hosting, maintenance?",
+          "How do you set up basic SEO so customers can find me?",
+        ],
+      },
+      {
+        heading: "Red flags",
+        bullets: [
+          "No portfolio of live websites, or only templates.",
+          "Guaranteed \"#1 on Google\" promises. Nobody can guarantee rankings.",
+          "Vague quotes with no list of pages or features.",
+          "They keep ownership of your domain or website.",
+          "Slow or unclear replies before you've even paid.",
+        ],
+      },
+      {
+        heading: "Freelancer or agency?",
+        paragraphs: [
+          "Freelancers can be affordable and flexible, but quality and availability vary. Agencies offer a team and a process, usually at a higher price. A small remote agency can give you both: a dedicated point of contact with a professional process, at a fair price.",
+        ],
+      },
+      {
+        heading: "Start with a free website audit",
+        paragraphs: [
+          "Not sure what your business needs? Send us your website (or tell us about your business). We'll review it for free and explain what we'd do, with a clear quote and no pressure.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does it cost to hire a web designer?",
+        a: "In the US, small business websites typically cost from about $1,500 to $10,000 depending on size and features. See our full guide to website costs for details.",
+      },
+      {
+        q: "How long does a web designer take to build a website?",
+        a: "Most small business websites take 2 to 6 weeks, depending on size, features and how quickly content is ready.",
+      },
+    ],
+    related: ["/blog/small-business-website-cost", "/portfolio", "/reviews"],
+  },
+  {
     path: "/blog/small-business-website-cost",
     kind: "blog",
     label: "How Much Does a Small Business Website Cost?",
