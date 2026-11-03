@@ -10,6 +10,22 @@ const API_VERSION = "v23.0";
 const EVENTS = new Set(["Lead", "Contact"]);
 const SITE = /^https:\/\/(www\.)?dandilodigitals\.com$/;
 
+// Light per-server-instance limit so one visitor can't flood Meta with fake events.
+const WINDOW_MS = 60_000;
+const MAX_PER_WINDOW = 20;
+const hits = new Map();
+function tooMany(ip) {
+  const now = Date.now();
+  const entry = hits.get(ip);
+  if (!entry || now - entry.start > WINDOW_MS) {
+    if (hits.size > 5000) hits.clear();
+    hits.set(ip, { start: now, count: 1 });
+    return false;
+  }
+  entry.count += 1;
+  return entry.count > MAX_PER_WINDOW;
+}
+
 const hash = (value) => createHash("sha256").update(value).digest("hex");
 const text = (value, max = 500) => (typeof value === "string" && value.trim() ? value.trim().slice(0, max) : undefined);
 
@@ -18,8 +34,11 @@ export default async function handler(req, res) {
   const token = process.env.META_CAPI_TOKEN;
   if (!token) return res.status(204).end();
 
-  const origin = req.headers.origin;
-  if (origin && !SITE.test(origin)) return res.status(403).end();
+  // Only accept events sent by our own website (browsers always send Origin on these requests)
+  if (!SITE.test(req.headers.origin || "")) return res.status(403).end();
+  const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
+  if (tooMany(ip)) return res.status(429).end();
+  if (Number(req.headers["content-length"] || 0) > 10_000) return res.status(413).end();
 
   let body = req.body;
   if (typeof body === "string") {
