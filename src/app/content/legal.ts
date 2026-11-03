@@ -54,7 +54,7 @@ export const legalPages: ContentPageData[] = [
       {
         heading: "Who we share it with",
         paragraphs: [
-          "We share information only with service providers that help us run our website and business (our hosting provider, FormSubmit, Google, Meta and Microsoft), and when required by law. These providers may process information in the United States and other countries. Where the law requires it, transfers rely on safeguards such as the European Commission's Standard Contractual Clauses or the EU-US Data Privacy Framework.",
+          "We share information only with service providers that help us run our website and business (our hosting and database providers Vercel and Neon, FormSubmit, Google, Meta and Microsoft), and when required by law. These providers may process information in the United States and other countries. Where the law requires it, transfers rely on safeguards such as the European Commission's Standard Contractual Clauses or the EU-US Data Privacy Framework.",
         ],
       },
       {

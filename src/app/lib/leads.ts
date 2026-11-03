@@ -1,9 +1,11 @@
-// Sends an enquiry to the inbox (via FormSubmit) and records it as a lead in every tracking tool.
+// Sends an enquiry to the email inbox (via FormSubmit) and Dandilo CRM, and records it as a lead in every tracking tool.
 import { getAttributionFields } from "./attribution";
 import { trackLead } from "./metaPixel";
 import { trackAdsLead, trackEvent } from "./analytics";
 
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/dandilodigitals@gmail.com";
+// Dandilo CRM's server (Leads + Inbox). Enquiries are sent here as well as by email.
+const CRM_API_URL = "https://dandilo-crm-api.vercel.app";
 
 export type LeadFields = {
   name: string;
@@ -27,6 +29,16 @@ export async function submitLead(fields: LeadFields, formName: string) {
     _replyto: fields.email,
   });
 
+  // Send to the email inbox and the CRM at the same time; the enquiry counts as sent if either works
+  const [email, crm] = await Promise.allSettled([sendEmail(body), sendToCrm(fields, formName)]);
+  if (email.status === "rejected" && crm.status === "rejected") throw email.reason;
+
+  trackLead({ email: fields.email, phone: fields.phone, name: fields.name }, formName);
+  trackEvent("generate_lead", { method: formName });
+  trackAdsLead(fields.email, fields.phone);
+}
+
+async function sendEmail(body: Record<string, string>) {
   const res = await fetch(FORM_ENDPOINT, {
     method: "POST",
     headers: { "Content-Type": "application/json", Accept: "application/json" },
@@ -37,10 +49,33 @@ export async function submitLead(fields: LeadFields, formName: string) {
   if (!res.ok || String(result?.success) !== "true") {
     throw new Error(result?.message || `Request failed (${res.status})`);
   }
+}
 
-  trackLead({ email: fields.email, phone: fields.phone, name: fields.name }, formName);
-  trackEvent("generate_lead", { method: formName });
-  trackAdsLead(fields.email, fields.phone);
+/** Creates the lead (plus contact and Inbox conversation) in Dandilo CRM. */
+async function sendToCrm(fields: LeadFields, formName: string) {
+  const a = getAttributionFields();
+  const res = await fetch(`${CRM_API_URL}/api/public/leads`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    keepalive: true,
+    signal: AbortSignal.timeout(10_000),
+    body: JSON.stringify({
+      name: fields.name,
+      email: fields.email,
+      phone: fields.phone || undefined,
+      website: fields.website || undefined,
+      budget: fields.budget || undefined,
+      platform: fields.platform || undefined,
+      message: fields.message || undefined,
+      formName,
+      source: a["Lead source"],
+      medium: a["Medium"],
+      campaign: a["Campaign"],
+      keyword: a["Keyword"],
+      landingPage: a["First page visited"],
+    }),
+  });
+  if (!res.ok) throw new Error(`CRM request failed (${res.status})`);
 }
 
 export const BUDGET_OPTIONS = [
