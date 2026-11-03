@@ -3,7 +3,9 @@
 import type { ContentPageData } from "./content/types";
 import { servicePages } from "./content/services";
 import { industryPages } from "./content/industries";
-import { blogPosts } from "./content/blog";
+import { blogPosts as basePosts } from "./content/blog";
+import { countryPosts } from "./content/blog-countries";
+import { locationPages } from "./content/locations";
 import { legalPages } from "./content/legal";
 import { pricingFaqs, pricingPackages } from "./content/pricing";
 
@@ -53,7 +55,7 @@ const mainPages: RouteInfo[] = [
     path: "/",
     title: "Web Design Company for Small Businesses | Dandilo Digitals",
     description:
-      "Web design and development agency for US small businesses. WordPress, Shopify, Wix Studio and custom websites built to win customers. Free website audit.",
+      "Web design agency for small businesses in the US, UK and Canada. WordPress, Shopify, Wix Studio and custom websites built to win customers. Free audit.",
     mainFaq: true,
   },
   {
@@ -127,8 +129,9 @@ const hiddenPages: RouteInfo[] = [
   },
 ];
 
-export const CONTENT_PAGES: ContentPageData[] = [...servicePages, ...industryPages, ...blogPosts, ...legalPages];
-export { servicePages, industryPages, blogPosts, legalPages };
+const blogPosts = [...countryPosts, ...basePosts];
+export const CONTENT_PAGES: ContentPageData[] = [...servicePages, ...locationPages, ...industryPages, ...blogPosts, ...legalPages];
+export { servicePages, locationPages, industryPages, blogPosts, legalPages };
 
 export const ROUTES: RouteInfo[] = [
   ...mainPages,

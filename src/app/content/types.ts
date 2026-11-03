@@ -22,6 +22,8 @@ export type ContentPageData = {
   faqs?: Faq[];
   /** Paths of related pages to link to at the bottom */
   related?: string[];
+  /** Country pages only: countries named in the Service structured data */
+  areaServed?: string[];
   /** Blog posts only */
   date?: string;
   readMinutes?: number;
