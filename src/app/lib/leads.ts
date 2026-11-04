@@ -17,7 +17,7 @@ export type LeadFields = {
 };
 
 /** Throws if the message couldn't be sent. `formName` shows up in the email subject and analytics. */
-export async function submitLead(fields: LeadFields, formName: string) {
+export async function submitLead(fields: LeadFields, formName: string, turnstileToken = "") {
   const body: Record<string, string> = {};
   for (const [key, value] of Object.entries(fields)) {
     if (value) body[key] = value;
@@ -30,7 +30,7 @@ export async function submitLead(fields: LeadFields, formName: string) {
   });
 
   // Send to the email inbox and the CRM at the same time; the enquiry counts as sent if either works
-  const [email, crm] = await Promise.allSettled([sendEmail(body), sendToCrm(fields, formName)]);
+  const [email, crm] = await Promise.allSettled([sendEmail(body), sendToCrm(fields, formName, turnstileToken)]);
   if (email.status === "rejected" && crm.status === "rejected") throw email.reason;
 
   trackLead({ email: fields.email, phone: fields.phone, name: fields.name }, formName);
@@ -52,7 +52,7 @@ async function sendEmail(body: Record<string, string>) {
 }
 
 /** Creates the lead (plus contact and Inbox conversation) in Dandilo CRM. */
-async function sendToCrm(fields: LeadFields, formName: string) {
+async function sendToCrm(fields: LeadFields, formName: string, turnstileToken: string) {
   const a = getAttributionFields();
   const res = await fetch(`${CRM_API_URL}/api/public/leads`, {
     method: "POST",
@@ -73,6 +73,7 @@ async function sendToCrm(fields: LeadFields, formName: string) {
       campaign: a["Campaign"],
       keyword: a["Keyword"],
       landingPage: a["First page visited"],
+      turnstileToken: turnstileToken || undefined,
     }),
   });
   if (!res.ok) throw new Error(`CRM request failed (${res.status})`);

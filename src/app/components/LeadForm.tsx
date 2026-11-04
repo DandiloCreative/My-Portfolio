@@ -5,6 +5,7 @@ import { toast } from "sonner";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { BUDGET_OPTIONS, submitLead } from "../lib/leads";
+import { useTurnstile } from "../lib/turnstile";
 
 const fieldClass =
   "bg-white/5 border-white/10 text-white placeholder-zinc-600 focus:border-violet-500/50 focus:ring-violet-500/30 rounded-xl h-12";
@@ -44,6 +45,7 @@ export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" 
   const empty = { name: "", email: "", phone: "", website: "", platform: "", budget: "", message: "" };
   const [data, setData] = useState(empty);
   const [sending, setSending] = useState(false);
+  const turnstile = useTurnstile();
   const set = (key: keyof typeof empty) => (e: { target: { value: string } }) => setData({ ...data, [key]: e.target.value });
   const id = (name: string) => `${idPrefix}-${name}`;
 
@@ -51,6 +53,7 @@ export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" 
     e.preventDefault();
     setSending(true);
     try {
+      const turnstileToken = await turnstile.getToken();
       await submitLead(
         {
           name: data.name,
@@ -61,7 +64,8 @@ export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" 
           budget: data.budget,
           message: data.message,
         },
-        formName
+        formName,
+        turnstileToken
       );
       setData(empty);
       navigate("/thank-you");
@@ -69,6 +73,7 @@ export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" 
       console.error("Error sending message:", error);
       toast.error("Your message couldn't be sent. Please try again or message us on WhatsApp.");
     } finally {
+      turnstile.reset();
       setSending(false);
     }
   };
@@ -125,6 +130,8 @@ export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" 
           className="bg-white/5 border-white/10 text-white placeholder-zinc-600 focus:border-violet-500/50 focus:ring-violet-500/30 rounded-xl resize-none p-4"
         />
       </Field>
+
+      <div ref={turnstile.ref} className="flex justify-center empty:hidden" />
 
       <button
         type="submit"
