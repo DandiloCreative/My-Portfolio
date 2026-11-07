@@ -3,7 +3,7 @@ import { getAttributionFields } from "./attribution";
 import { trackLead } from "./metaPixel";
 import { trackAdsLead, trackEvent } from "./analytics";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/dandilodigitals@gmail.com";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/hello@dandilodigitals.com";
 // Dandilo CRM's server (Leads + Inbox). Enquiries are sent here as well as by email.
 const CRM_API_URL = "https://dandilo-crm-api.vercel.app";
 
