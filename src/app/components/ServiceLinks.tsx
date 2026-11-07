@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
-import { servicePages, industryPages, locationPages } from "../routes";
+import { servicePages, devPages, industryPages, locationPages } from "../routes";
 
 /** Links to every service and industry page (good for visitors and for Google). */
 export function ServiceLinks() {
@@ -18,6 +18,18 @@ export function ServiceLinks() {
             >
               <span className="text-white font-semibold">{page.label}</span>
               <ArrowRight className="w-4 h-4 text-violet-400 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+            </Link>
+          ))}
+        </div>
+        <h3 className="text-xl font-semibold text-white mb-4 text-center">Full stack development</h3>
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          {devPages.map((page) => (
+            <Link
+              key={page.path}
+              to={page.path}
+              className="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 hover:border-violet-500/40 text-zinc-300 hover:text-white transition-colors"
+            >
+              {page.label}
             </Link>
           ))}
         </div>

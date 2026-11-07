@@ -2,7 +2,7 @@ import { Facebook, Instagram, ArrowUpRight } from "lucide-react";
 import { openCookieSettings } from "../lib/consent";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router";
-import { servicePages, locationPages } from "../routes";
+import { servicePages, devPages, locationPages } from "../routes";
 import brandLogo from "../../assets/dandilo-logo.webp";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -105,6 +105,7 @@ export function Footer() {
             <ul className="space-y-4 text-zinc-500 font-light">
               {[
                 ...servicePages.map((p) => ({ label: p.label, section: p.path.slice(1) })),
+                { label: devPages[0].label, section: devPages[0].path.slice(1) },
                 ...locationPages.map((p) => ({ label: p.label, section: p.path.slice(1) })),
               ].map((item) => (
                 <li key={item.label}>

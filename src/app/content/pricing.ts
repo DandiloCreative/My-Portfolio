@@ -53,7 +53,7 @@ export const pricingPackages: PricingPackage[] = [
     price: 2500,
     summary: "Custom-coded websites and web apps for businesses that need more.",
     features: ["Built with React / Next.js", "Custom features and integrations", "Fast and secure", "Built to grow with your business"],
-    link: "/platforms",
+    link: "/services/full-stack-web-development",
   },
   {
     name: "SEO Setup",

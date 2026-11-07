@@ -6,6 +6,7 @@ import { industryPages } from "./content/industries";
 import { blogPosts as basePosts } from "./content/blog";
 import { countryPosts } from "./content/blog-countries";
 import { locationPages } from "./content/locations";
+import { devPages, devPosts } from "./content/dev-services";
 import { legalPages } from "./content/legal";
 import { pricingFaqs, pricingPackages } from "./content/pricing";
 
@@ -67,9 +68,9 @@ const mainPages: RouteInfo[] = [
   },
   {
     path: "/platforms",
-    title: "WordPress, Shopify & Wix Website Development | Dandilo",
+    title: "WordPress, Shopify, Wix & Full Stack Development | Dandilo",
     description:
-      "WordPress web design, Shopify store development, Wix Studio websites and custom React builds. We help small businesses pick and build on the right platform.",
+      "WordPress, Shopify and Wix Studio websites plus full stack development with React, Next.js, NestJS, Laravel and Django. We help you pick the right platform.",
     mainFaq: false,
   },
   {
@@ -129,9 +130,9 @@ const hiddenPages: RouteInfo[] = [
   },
 ];
 
-const blogPosts = [...countryPosts, ...basePosts];
-export const CONTENT_PAGES: ContentPageData[] = [...servicePages, ...locationPages, ...industryPages, ...blogPosts, ...legalPages];
-export { servicePages, locationPages, industryPages, blogPosts, legalPages };
+const blogPosts = [...devPosts, ...countryPosts, ...basePosts];
+export const CONTENT_PAGES: ContentPageData[] = [...servicePages, ...devPages, ...locationPages, ...industryPages, ...blogPosts, ...legalPages];
+export { servicePages, devPages, locationPages, industryPages, blogPosts, legalPages };
 
 export const ROUTES: RouteInfo[] = [
   ...mainPages,

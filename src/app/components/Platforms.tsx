@@ -17,14 +17,14 @@ const platforms = [
     ]
   },
   {
-    name: "Frontend Developer",
+    name: "Full Stack Developer",
     color: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-    description: "Custom websites and web apps built with React and Next.js, for when you need something no template can do.",
+    description: "Frontend and backend: custom websites, web apps and APIs, from the screens your customers use to the servers and databases behind them.",
     features: [
-      "Responsive UI/UX",
-      "Interactive Animations",
-      "API Integrations",
-      "Performance Optimization"
+      "Frontend: React, Next.js, TypeScript, Tailwind CSS",
+      "Backend: NestJS, Express.js, Laravel, Django",
+      "Languages: JavaScript, TypeScript, PHP, Python",
+      "Databases & APIs: MySQL, PostgreSQL, REST"
     ]
   },
   {
@@ -67,7 +67,7 @@ export const Platforms = memo(function Platforms({ isPage = false }: { isPage?: 
           className="text-center mb-20 will-change-transform"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Platforms</span>
-          <Heading className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">WordPress, Shopify, Wix & Custom Websites</Heading>
+          <Heading className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">WordPress, Shopify, Wix & Full Stack Development</Heading>
           <p className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed">
             Whichever platform suits your business, we design and build it properly, or help you choose the right one.
           </p>
