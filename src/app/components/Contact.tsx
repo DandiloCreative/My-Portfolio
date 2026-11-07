@@ -74,8 +74,8 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                   </div>
                   <div>
                     <p className="text-zinc-500 font-light text-sm mb-1 uppercase tracking-wider">Email Inquiry</p>
-                    <a href="mailto:dandilodigitals@gmail.com" className="text-xl text-zinc-200 font-medium group-hover:text-white transition-colors">
-                      dandilodigitals@gmail.com
+                    <a href="mailto:hello@dandilodigitals.com" className="text-xl text-zinc-200 font-medium group-hover:text-white transition-colors">
+                      hello@dandilodigitals.com
                     </a>
                   </div>
                 </motion.div>

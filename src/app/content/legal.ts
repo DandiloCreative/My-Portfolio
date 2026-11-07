@@ -12,7 +12,7 @@ export const legalPages: ContentPageData[] = [
     h1: "Privacy Policy",
     intro: [
       "Last updated: November 1, 2026.",
-      "This policy explains what information Dandilo Digitals (\"we\", \"us\") collects when you visit dandilodigitals.com or contact us, why we use it, and the choices and rights you have. Dandilo Digitals is responsible (the \"controller\") for this information. You can reach us at dandilodigitals@gmail.com.",
+      "This policy explains what information Dandilo Digitals (\"we\", \"us\") collects when you visit dandilodigitals.com or contact us, why we use it, and the choices and rights you have. Dandilo Digitals is responsible (the \"controller\") for this information. You can reach us at hello@dandilodigitals.com.",
     ],
     sections: [
       {
@@ -66,7 +66,7 @@ export const legalPages: ContentPageData[] = [
           "Control how Meta and Google use your information for ads in your Facebook, Instagram and Google ad settings, and block or delete cookies in your browser.",
           "Complain to a data protection authority, such as your local authority in the EU, the Information Commissioner's Office (ICO) in the UK, the Office of the Privacy Commissioner of Canada, or the Office of the Australian Information Commissioner. We'd appreciate the chance to help first.",
         ],
-        paragraphs: ["To use any of these rights, email dandilodigitals@gmail.com. We'll reply within the time the law allows, usually within one month."],
+        paragraphs: ["To use any of these rights, email hello@dandilodigitals.com. We'll reply within the time the law allows, usually within one month."],
       },
       {
         heading: "How long we keep information",
@@ -82,7 +82,7 @@ export const legalPages: ContentPageData[] = [
         heading: "Changes and contact",
         paragraphs: [
           "We may update this policy from time to time. The \"last updated\" date at the top shows when it last changed.",
-          "Questions about your privacy? Email us at dandilodigitals@gmail.com.",
+          "Questions about your privacy? Email us at hello@dandilodigitals.com.",
         ],
       },
     ],
@@ -133,7 +133,7 @@ export const legalPages: ContentPageData[] = [
       {
         heading: "Changes and contact",
         paragraphs: [
-          "We may update these terms from time to time. Questions? Email us at dandilodigitals@gmail.com.",
+          "We may update these terms from time to time. Questions? Email us at hello@dandilodigitals.com.",
         ],
       },
     ],
