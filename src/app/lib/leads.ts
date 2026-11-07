@@ -1,9 +1,11 @@
-// Sends an enquiry to the email inbox (via FormSubmit) and Dandilo CRM, and records it as a lead in every tracking tool.
+// Sends an enquiry to the email inbox (via Web3Forms, delivered to hello@dandilodigitals.com) and Dandilo CRM, and records it as a lead in every tracking tool.
 import { getAttributionFields } from "./attribution";
 import { trackLead } from "./metaPixel";
 import { trackAdsLead, trackEvent } from "./analytics";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/hello@dandilodigitals.com";
+const FORM_ENDPOINT = "https://api.web3forms.com/submit";
+// Web3Forms access key (public by design). Emails go to the address it was created for: hello@dandilodigitals.com
+const WEB3FORMS_KEY = "3d8d487f-82ce-406e-9138-831dfa56b659";
 // Dandilo CRM's server (Leads + Inbox). Enquiries are sent here as well as by email.
 const CRM_API_URL = "https://dandilo-crm-api.vercel.app";
 
@@ -24,9 +26,10 @@ export async function submitLead(fields: LeadFields, formName: string, turnstile
   }
   Object.assign(body, getAttributionFields(), {
     Form: formName,
-    _subject: `${formName}: ${fields.name}`,
-    _template: "table",
-    _replyto: fields.email,
+    access_key: WEB3FORMS_KEY,
+    subject: `${formName}: ${fields.name}`,
+    from_name: "Dandilo Digitals website",
+    replyto: fields.email,
   });
 
   // Send to the email inbox and the CRM at the same time; the enquiry counts as sent if either works
@@ -45,7 +48,7 @@ async function sendEmail(body: Record<string, string>) {
     body: JSON.stringify(body),
   });
   const result = await res.json().catch(() => null);
-  // FormSubmit returns success: "true" (string) when the email was accepted
+  // Web3Forms returns success: true when the email was accepted
   if (!res.ok || String(result?.success) !== "true") {
     throw new Error(result?.message || `Request failed (${res.status})`);
   }

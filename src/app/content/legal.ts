@@ -19,7 +19,7 @@ export const legalPages: ContentPageData[] = [
         heading: "Information you give us",
         paragraphs: [
           "When you use one of our forms, we collect your name and email address, and anything else you choose to add, such as your phone or WhatsApp number, your website address, the platform you're interested in, your budget range and your message. If you contact us by email or WhatsApp, we receive the details you choose to share.",
-          "Form messages are delivered to our email inbox through a form-delivery service (FormSubmit).",
+          "Form messages are delivered to our email inbox through a form-delivery service (Web3Forms).",
         ],
       },
       {
@@ -54,7 +54,7 @@ export const legalPages: ContentPageData[] = [
       {
         heading: "Who we share it with",
         paragraphs: [
-          "We share information only with service providers that help us run our website and business (our hosting and database providers Vercel and Neon, FormSubmit, Google, Meta and Microsoft), and when required by law. These providers may process information in the United States and other countries. Where the law requires it, transfers rely on safeguards such as the European Commission's Standard Contractual Clauses or the EU-US Data Privacy Framework.",
+          "We share information only with service providers that help us run our website and business (our hosting and database providers Vercel and Neon, Web3Forms, Google, Meta and Microsoft), and when required by law. These providers may process information in the United States and other countries. Where the law requires it, transfers rely on safeguards such as the European Commission's Standard Contractual Clauses or the EU-US Data Privacy Framework.",
         ],
       },
       {
