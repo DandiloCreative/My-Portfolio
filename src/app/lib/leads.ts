@@ -80,7 +80,8 @@ async function sendToCrm(fields: LeadFields, formName: string, turnstileToken: s
 }
 
 export const BUDGET_OPTIONS = [
-  "Under $1,000",
+  "$300 – $600",
+  "$600 – $1,000",
   "$1,000 – $3,000",
   "$3,000 – $7,500",
   "$7,500+",
