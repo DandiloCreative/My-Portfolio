@@ -68,9 +68,9 @@ const mainPages: RouteInfo[] = [
   },
   {
     path: "/platforms",
-    title: "WordPress, Shopify, Wix & Full Stack Development | Dandilo",
+    title: "WordPress, Shopify, Wix, Squarespace & GoHighLevel | Dandilo",
     description:
-      "WordPress, Shopify and Wix Studio websites plus full stack development with React, Next.js, NestJS, Laravel and Django. We help you pick the right platform.",
+      "WordPress, Shopify, Wix Studio, Squarespace and GoHighLevel websites, plus full stack development with React, Next.js, NestJS, Laravel and Django.",
     mainFaq: false,
   },
   {

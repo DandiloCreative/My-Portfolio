@@ -373,4 +373,100 @@ export const servicePages: ContentPageData[] = [
     ],
     related: ["/services/small-business-web-design", "/blog/get-more-customers-from-your-website", "/contact"],
   },
+  {
+    path: "/services/squarespace-web-design",
+    kind: "service",
+    label: "Squarespace Web Design",
+    title: "Squarespace Web Designer for Small Businesses | Dandilo",
+    description:
+      "Hire a Squarespace web designer for a beautiful, easy-to-manage website. Custom Squarespace design, redesigns, online stores and booking setup.",
+    eyebrow: "Squarespace Web Design",
+    h1: "Squarespace Web Design for Small Businesses",
+    intro: [
+      "Squarespace is loved for its clean, stylish templates and how easy it is to update. But a template on its own looks like everyone else's, and many Squarespace sites aren't set up to turn visitors into enquiries.",
+      "We design custom Squarespace websites that look premium, load fast and are built to bring in calls, bookings and sales, while staying simple for you to edit.",
+    ],
+    sections: [
+      {
+        heading: "Our Squarespace services",
+        bullets: [
+          "Custom Squarespace website design and setup",
+          "Squarespace redesigns and template makeovers",
+          "Squarespace Commerce online stores",
+          "Booking and appointments with Squarespace Scheduling (Acuity)",
+          "Custom code and CSS for features templates can't do",
+          "SEO setup: page titles, descriptions, URLs and Google Search Console",
+          "Moving your website to or from Squarespace",
+        ],
+      },
+      {
+        heading: "Is Squarespace right for you?",
+        paragraphs: [
+          "Squarespace is a great fit for photographers, creatives, restaurants, coaches and service businesses that want a beautiful site with very little upkeep. Hosting, security and updates are included.",
+          "If you need lots of custom features or hundreds of pages for SEO, WordPress may suit you better, and we'll tell you honestly.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can you redesign my existing Squarespace website?",
+        a: "Yes. We can refresh your current Squarespace site or rebuild it on a better layout, keeping your content and settings.",
+      },
+      {
+        q: "Will I be able to edit my Squarespace site myself?",
+        a: "Yes. Squarespace is one of the easiest platforms to edit, and we show you how to update pages, products and blog posts.",
+      },
+    ],
+    related: ["/services/wix-web-designer", "/services/website-redesign", "/blog/wix-vs-wordpress-vs-shopify"],
+  },
+  {
+    path: "/services/gohighlevel-website-design",
+    kind: "service",
+    label: "GoHighLevel Websites & Funnels",
+    title: "GoHighLevel Website & Funnel Builder | Dandilo Digitals",
+    description:
+      "Hire a GoHighLevel expert to build websites, sales funnels, forms, calendars and automations that capture leads and follow up for you automatically.",
+    eyebrow: "GoHighLevel (HighLevel)",
+    h1: "GoHighLevel Websites, Funnels and Automations",
+    intro: [
+      "GoHighLevel (HighLevel) puts your website, funnels, forms, calendar, CRM, email and text messages in one place. Set up properly, it captures every lead and follows up automatically, so no enquiry slips through the cracks.",
+      "We build GoHighLevel websites and sales funnels and set up the automations behind them, so new leads get a reply in minutes, book calls and show up in your pipeline.",
+    ],
+    sections: [
+      {
+        heading: "Our GoHighLevel services",
+        bullets: [
+          "GoHighLevel websites and landing pages",
+          "Sales funnels and lead-capture funnels",
+          "Forms, surveys and booking calendars",
+          "Workflows: instant SMS and email follow-up, reminders and nurture sequences",
+          "CRM pipelines so you can see every lead and deal",
+          "Review requests and missed-call text-back",
+          "Connecting GoHighLevel to Facebook and Google ads, Stripe and your domain",
+        ],
+      },
+      {
+        heading: "Who GoHighLevel is for",
+        paragraphs: [
+          "GoHighLevel is ideal for service businesses that live on leads: contractors, med spas, dentists, coaches, real estate agents and marketing agencies. If you run ads and need every lead followed up fast, it's a strong choice.",
+          "If you mainly need a beautiful brochure website, WordPress, Wix Studio or Squarespace may be simpler. We'll recommend the best fit.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can you set up my GoHighLevel account from scratch?",
+        a: "Yes. We can build your website or funnel, forms, calendars, pipelines and automations, connect your domain and show you how to use it.",
+      },
+      {
+        q: "Can you fix or improve an existing GoHighLevel setup?",
+        a: "Yes. We can review your funnels and workflows, fix what's broken and improve follow-up so more leads turn into booked calls.",
+      },
+      {
+        q: "Do you work with agencies that use HighLevel?",
+        a: "Yes. We can build funnels, websites and snapshots for agencies using HighLevel's white-label platform.",
+      },
+    ],
+    related: ["/services/landing-page-design", "/services/small-business-web-design", "/blog/get-more-customers-from-your-website"],
+  },
 ];

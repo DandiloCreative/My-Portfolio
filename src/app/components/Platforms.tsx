@@ -48,6 +48,28 @@ const platforms = [
       "Animated dynamic panels",
       "Third-party deep integrations"
     ]
+  },
+  {
+    name: "Squarespace",
+    color: "bg-zinc-400/10 text-zinc-200 border-zinc-400/20",
+    description: "Squarespace web design for businesses that want a beautiful, stylish website that's simple to update, with hosting included.",
+    features: [
+      "Custom template design",
+      "Squarespace Commerce stores",
+      "Booking with Acuity Scheduling",
+      "SEO setup and custom code"
+    ]
+  },
+  {
+    name: "GoHighLevel",
+    color: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+    description: "GoHighLevel websites, funnels and automations that capture every lead and follow up by text and email automatically.",
+    features: [
+      "Websites and sales funnels",
+      "Forms, calendars and pipelines",
+      "SMS and email automations",
+      "Review requests and missed-call text-back"
+    ]
   }
 ];
 
@@ -67,7 +89,7 @@ export const Platforms = memo(function Platforms({ isPage = false }: { isPage?: 
           className="text-center mb-20 will-change-transform"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Platforms</span>
-          <Heading className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">WordPress, Shopify, Wix & Full Stack Development</Heading>
+          <Heading className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">WordPress, Shopify, Wix, Squarespace, GoHighLevel & Full Stack</Heading>
           <p className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed">
             Whichever platform suits your business, we design and build it properly, or help you choose the right one.
           </p>

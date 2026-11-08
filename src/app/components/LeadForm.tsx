@@ -18,6 +18,8 @@ const PLATFORMS = [
   ["wordpress", "WordPress"],
   ["shopify", "Shopify"],
   ["wix", "Wix Studio"],
+  ["squarespace", "Squarespace"],
+  ["gohighlevel", "GoHighLevel (funnels & automations)"],
   ["custom", "Custom website (React / Next.js)"],
 ];
 
