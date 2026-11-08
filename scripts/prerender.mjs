@@ -122,3 +122,18 @@ ${indexed.map((r) => `  <url><loc>${urlFor(r.path)}</loc><lastmod>${r.content?.d
 `;
 writeFileSync(join(dist, "sitemap.xml"), sitemap);
 console.log(`prerender: sitemap.xml with ${indexed.length} pages`);
+
+// 404 page: Vercel serves dist/404.html with a real "404 Not Found" status for unknown addresses,
+// so search engines don't treat made-up URLs as real pages.
+{
+  const appHtml = await render("/404-page-not-found");
+  let html = template;
+  html = replaceOnce(html, /<title>[^<]*<\/title>/, `<title>Page Not Found | Dandilo Digitals</title>`, "<title>");
+  html = replaceOnce(html, /(<meta name="robots" content=")[^"]*/, `$1noindex, follow`, "robots");
+  html = replaceOnce(html, /(<meta name="googlebot" content=")[^"]*/, `$1noindex, follow`, "googlebot");
+  html = html.replace(/\s*<link rel="canonical" href="[^"]*"\s*\/?>/, "");
+  html = replaceOnce(html, FAQ_BLOCK, "", "FAQ schema");
+  html = replaceOnce(html, /<div id="root"><\/div>/, `<div id="root">${appHtml}</div>`, "#root");
+  writeFileSync(join(dist, "404.html"), html);
+  console.log("prerender: 404.html");
+}
