@@ -6,6 +6,7 @@ import { ROUTE_MAP, SITE_URL, normalizePath } from "./routes";
 import { initMetaPixel, trackPageView } from "./lib/metaPixel";
 import { initAnalytics, trackAnalyticsPageView } from "./lib/analytics";
 import { initClarity } from "./lib/clarity";
+import { initMetricool, trackMetricoolPageView } from "./lib/metricool";
 import { captureAttribution } from "./lib/attribution";
 import { Hero } from "./components/Hero";
 
@@ -39,8 +40,10 @@ function ScrollToTop() {
     trackPageView();
     initAnalytics(); // no-op until a GA4 Measurement ID is set
     initClarity(); // no-op until a Clarity Project ID is set
+    initMetricool();
     // Wait a tick so the page title has updated before recording the view
     setTimeout(trackAnalyticsPageView, 0);
+    setTimeout(trackMetricoolPageView, 0);
   }, [pathname]);
   return null;
 }

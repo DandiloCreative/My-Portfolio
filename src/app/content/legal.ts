@@ -34,6 +34,7 @@ export const legalPages: ContentPageData[] = [
           "Google Analytics: shows us how visitors find and use our website, such as pages viewed and approximate location. It uses cookies.",
           "Google Ads: measures whether people who click our ads go on to contact us. When you send a form after clicking an ad, Google may receive your email address or phone number in a scrambled (hashed) form so it can match the enquiry to the ad click (\"enhanced conversions\").",
           "Meta Pixel: helps us understand visits from Facebook and Instagram and measure our ads there. It may collect pages visited, buttons clicked, your browser, device and IP address, and uses cookies. When you send a form or tap a WhatsApp link, our server may also send this to Meta directly (\"Conversions API\"), together with your email address, phone number and first name in a scrambled (hashed) form, so Meta can match it to an ad you saw.",
+          "Metricool: counts website visits and where they come from, so we can compare them with our social media results. Visitors in the UK and Europe are only counted after accepting cookies.",
           "Microsoft Clarity: if enabled, records how visitors move, click and scroll on our pages so we can improve them. It does not record what you type into forms.",
           "Your light or dark mode choice, cookie choice and how-you-found-us details are saved in your own browser's storage.",
           "Hosting and fonts: our hosting provider keeps technical logs such as IP addresses to keep the site secure, and our fonts load from Google Fonts.",
@@ -54,7 +55,7 @@ export const legalPages: ContentPageData[] = [
       {
         heading: "Who we share it with",
         paragraphs: [
-          "We share information only with service providers that help us run our website and business (our hosting and database providers Vercel and Neon, Web3Forms, Google, Meta and Microsoft), and when required by law. These providers may process information in the United States and other countries. Where the law requires it, transfers rely on safeguards such as the European Commission's Standard Contractual Clauses or the EU-US Data Privacy Framework.",
+          "We share information only with service providers that help us run our website and business (our hosting and database providers Vercel and Neon, Web3Forms, Google, Meta, Microsoft and Metricool), and when required by law. These providers may process information in the United States and other countries. Where the law requires it, transfers rely on safeguards such as the European Commission's Standard Contractual Clauses or the EU-US Data Privacy Framework.",
         ],
       },
       {
