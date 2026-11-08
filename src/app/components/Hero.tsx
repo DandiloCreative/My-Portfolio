@@ -169,7 +169,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Web design & development for small businesses. Websites that connect, convert, and grow.
+              Building websites that connect, convert, and grow.
             </motion.p>
 
             <motion.div
