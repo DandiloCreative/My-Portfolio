@@ -66,14 +66,15 @@ export const locationPages: ContentPageData[] = [
     kind: "service",
     label: "Web Design in the UK",
     areaServed: ["United Kingdom"],
-    title: "Small Business Web Design UK | Dandilo Digitals",
+    title: "Small Business Web Design UK | Bespoke Websites | Dandilo",
     description:
-      "Affordable web design for UK small businesses. WordPress, Shopify and Wix Studio websites from about £470, built to win enquiries. Free website audit.",
+      "Bespoke, affordable web design for UK small businesses: WordPress, Shopify and Wix websites, SEO and website care from about £470. Free website audit.",
     eyebrow: "United Kingdom",
-    h1: "Affordable Web Design for Small Businesses in the UK",
+    h1: "Affordable, Bespoke Web Design for Small Businesses in the UK",
     intro: [
       "Whether you run a trades business in Manchester, a salon in London or an online shop in Glasgow, your customers will look at your website before they ring, book or buy. A slow or dated site sends them straight to a competitor.",
-      "Dandilo Digitals designs and builds websites for small businesses across England, Scotland, Wales and Northern Ireland. Our working hours overlap with the UK working day, so we can talk when it suits you.",
+      "Dandilo Digitals is a web design agency for small businesses across England, Scotland, Wales and Northern Ireland. We work remotely with clients in London, Manchester, Birmingham, Leeds, Bristol, Glasgow and everywhere in between, and our working hours overlap with the UK working day.",
+      "Every website is bespoke: designed around your business and your customers, not a copy of a template.",
     ],
     sections: [
       {
@@ -84,6 +85,10 @@ export const locationPages: ContentPageData[] = [
           "Website redesigns that keep your Google rankings",
           "Landing pages for Google Ads and Meta adverts",
           "Local SEO so you appear for searches like \"plumber near me\" and on Google Maps",
+          "SEO for AI search, so you can be found in Google AI Overviews and tools like ChatGPT",
+          "UX and UI design that makes your site easy to use on every device",
+          "Conversion rate optimisation (CRO) to turn more visitors into enquiries",
+          "Website care plans: updates, backups, security and small changes each month",
         ],
       },
       {
@@ -108,6 +113,14 @@ export const locationPages: ContentPageData[] = [
       },
     ],
     faqs: [
+      {
+        q: "Do you build bespoke websites or use templates?",
+        a: "Bespoke. We design your website around your brand, your services and how your customers buy, then build it on the platform that suits you best.",
+      },
+      {
+        q: "Do you offer website maintenance in the UK?",
+        a: "Yes. Our care plan covers updates, backups, security monitoring and small content changes each month, from about \u00a378 a month.",
+      },
       {
         q: "Do you work with businesses across the UK?",
         a: "Yes. We work remotely with small businesses in England, Scotland, Wales and Northern Ireland, and our working hours overlap with UK office hours.",
