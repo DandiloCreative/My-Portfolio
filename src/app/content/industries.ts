@@ -5,9 +5,9 @@ export const industryPages: ContentPageData[] = [
     path: "/industries/contractor-web-design",
     kind: "industry",
     label: "Web Design for Contractors",
-    title: "Web Design for Contractors & Construction | Dandilo",
+    title: "Web Design for Contractors, Electricians & Tradesmen | Dandilo",
     description:
-      "Websites for contractors, roofers, plumbers, electricians and home service businesses. Built to get more calls and quote requests from local customers.",
+      "Web design for construction companies, contractors, electricians, plumbers, roofers and tradesmen. Home services websites that get more calls and quotes.",
     eyebrow: "Contractors & Home Services",
     h1: "Web Design for Contractors and Home Service Businesses",
     intro: [
@@ -178,5 +178,138 @@ export const industryPages: ContentPageData[] = [
       },
     ],
     related: ["/services/small-business-web-design", "/services/squarespace-web-design", "/services/wordpress-web-design"],
+  },
+  {
+    path: "/industries/law-firm-web-design",
+    kind: "industry",
+    label: "Web Design for Law Firms",
+    title: "Law Firm Web Design for Attorneys & Solicitors | Dandilo",
+    description:
+      "Professional websites for law firms, attorneys and solicitors. Practice area pages, trust signals and consultation forms that turn searches into new clients.",
+    eyebrow: "Law Firms & Attorneys",
+    h1: "Web Design for Law Firms, Attorneys and Solicitors",
+    intro: [
+      "When someone needs a lawyer, they compare a few firms online before they call. Your website has to show, within seconds, that you handle their kind of case and that you're someone they can trust.",
+      "We design websites for law firms, attorneys and solicitors that look established, explain each practice area clearly and make it easy to book a consultation.",
+    ],
+    sections: [
+      {
+        heading: "What a law firm website needs",
+        bullets: [
+          "A separate page for each practice area (family, personal injury, immigration, business, estate planning)",
+          "Attorney or solicitor profiles with qualifications and a professional photo",
+          "Reviews, case results you're allowed to share, and memberships",
+          "A consultation request form and click-to-call on every page",
+          "Clear information on fees, free consultations and what happens next",
+          "Fast, secure and accessible pages",
+        ],
+      },
+      {
+        heading: "Getting found by people who need a lawyer",
+        paragraphs: [
+          "Clients search for things like \"divorce lawyer in [city]\" or \"immigration attorney near me\". Practice area pages, local pages and a well set-up Google Business Profile help you show up for those searches.",
+          "We keep advertising rules in mind for your country and state, and we make sure your forms only ask for what you need, with a note not to send confidential details before you've agreed to act.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Which platform is best for a law firm website?",
+        a: "WordPress is the most popular choice for law firms because it handles many practice area pages and a blog well. Wix Studio and Squarespace suit smaller practices that want to edit the site themselves.",
+      },
+      {
+        q: "How much does a law firm website cost?",
+        a: "Law firm websites usually start from $1,200 for a full practice website with practice area pages, profiles and a blog. Larger firms with many locations need more.",
+      },
+    ],
+    related: ["/services/wordpress-web-design", "/services/small-business-web-design", "/blog/how-to-choose-a-web-designer"],
+  },
+  {
+    path: "/industries/nonprofit-web-design",
+    kind: "industry",
+    label: "Web Design for Nonprofits & Charities",
+    title: "Nonprofit & Charity Web Design | Dandilo Digitals",
+    description:
+      "Websites for nonprofits and charities that tell your story, bring in donations and volunteers, and are easy for your team to update. Affordable packages.",
+    eyebrow: "Nonprofits & Charities",
+    h1: "Web Design for Nonprofits and Charities",
+    intro: [
+      "A nonprofit website has a lot of jobs: telling your story, showing your impact, taking donations, recruiting volunteers and keeping supporters up to date. And it has to do all that on a small budget, managed by a busy team.",
+      "We build websites for nonprofits and charities that make giving easy and that your staff or volunteers can update without help.",
+    ],
+    sections: [
+      {
+        heading: "What a nonprofit website needs",
+        bullets: [
+          "A clear mission statement and the impact you've made, with real photos and stories",
+          "A Donate button on every page and a simple donation form (one-off and monthly)",
+          "Volunteer and event sign-up forms",
+          "A news or blog section and an email newsletter sign-up",
+          "Accessible design so everyone can use it",
+          "Easy editing for staff and volunteers",
+        ],
+      },
+      {
+        heading: "Donations and tools you already use",
+        paragraphs: [
+          "We can connect donation platforms such as Stripe, PayPal, Donorbox or JustGiving, and your email tool for newsletters. For organisations eligible for Google Ad Grants, we can build landing pages ready for those campaigns.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you offer nonprofit pricing?",
+        a: "Our packages start from $600 for a starter website. Tell us about your organisation and budget and we'll recommend the simplest site that does the job.",
+      },
+      {
+        q: "Which platform is best for a charity website?",
+        a: "WordPress and Wix Studio are both good choices. WordPress has more donation and event plugins; Wix Studio is easier for volunteers to update.",
+      },
+    ],
+    related: ["/services/small-business-web-design", "/services/wix-web-designer", "/services/wordpress-web-design"],
+  },
+  {
+    path: "/industries/accountant-web-design",
+    kind: "industry",
+    label: "Web Design for Accountants",
+    title: "Web Design for Accountants & Bookkeepers | Dandilo Digitals",
+    description:
+      "Websites for accountants, bookkeepers and tax preparers that win new clients: clear services, fees, client portal links and booking for consultations.",
+    eyebrow: "Accountants & Bookkeepers",
+    h1: "Web Design for Accountants, Bookkeepers and Tax Preparers",
+    intro: [
+      "Business owners choosing an accountant want someone they can trust with their money and their deadlines. Your website should make your services, your specialties and the way you work easy to understand.",
+      "We design websites for accountants, bookkeepers, tax preparers and CPAs that bring in the clients you want and save you time answering the same questions.",
+    ],
+    sections: [
+      {
+        heading: "What an accounting website needs",
+        bullets: [
+          "Service pages for tax returns, bookkeeping, payroll and advisory",
+          "The kinds of clients you specialise in (sole traders, contractors, ecommerce, landlords)",
+          "Fixed fees or starting prices where you can share them",
+          "Online booking for a discovery call",
+          "Links to your client portal and secure document upload",
+          "Reviews, qualifications and professional memberships",
+        ],
+      },
+      {
+        heading: "Busy season ready",
+        paragraphs: [
+          "Tax deadlines bring a rush of searches like \"accountant near me\" and \"tax preparer for small business\". We set up your pages and Google Business Profile so you show up, and add FAQ pages that answer common questions before clients call.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can you link my website to my client portal or booking tool?",
+        a: "Yes. We can link or embed tools such as Calendly, Karbon, TaxDome, QuickBooks or Xero client portals.",
+      },
+      {
+        q: "How much does an accountant website cost?",
+        a: "Accounting websites usually start from $600 for a starter site and $1,200 for a full website with service pages, booking and a blog.",
+      },
+    ],
+    related: ["/services/small-business-web-design", "/services/wordpress-web-design", "/services/squarespace-web-design"],
   },
 ];

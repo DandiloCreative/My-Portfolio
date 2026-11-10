@@ -65,9 +65,9 @@ export const servicePages: ContentPageData[] = [
     path: "/services/wordpress-web-design",
     kind: "service",
     label: "WordPress Web Design",
-    title: "WordPress Web Design & Development | Dandilo Digitals",
+    title: "WordPress Web Design & WordPress Developer | Dandilo Digitals",
     description:
-      "Custom WordPress web design for small businesses. Fast, secure, SEO-friendly WordPress websites you can update yourself, built to bring in leads.",
+      "WordPress website design services and an experienced WordPress developer for small businesses. Fast, secure, SEO-friendly sites you can update yourself.",
     eyebrow: "WordPress Web Design",
     h1: "WordPress Web Design for Small Businesses",
     intro: [
@@ -126,7 +126,7 @@ export const servicePages: ContentPageData[] = [
     label: "Shopify Website Design",
     title: "Shopify Web Design Services & Shopify Designer | Dandilo",
     description:
-      "Shopify website design and development for online stores that need to sell more. Custom Shopify themes, clean product pages and a smooth checkout.",
+      "Shopify website design by Shopify experts, for online stores and clothing brands that need to sell more. Custom themes, product pages and a smooth checkout.",
     eyebrow: "Shopify Website Design",
     h1: "Shopify Website Design That Helps You Sell More",
     intro: [

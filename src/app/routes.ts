@@ -5,6 +5,7 @@ import { servicePages } from "./content/services";
 import { industryPages } from "./content/industries";
 import { blogPosts as basePosts } from "./content/blog";
 import { countryPosts } from "./content/blog-countries";
+import { guidePosts } from "./content/blog-guides";
 import { locationPages } from "./content/locations";
 import { devPages, devPosts } from "./content/dev-services";
 import { legalPages } from "./content/legal";
@@ -56,7 +57,7 @@ const mainPages: RouteInfo[] = [
     path: "/",
     title: "Web Design Company for Small Businesses | Dandilo Digitals",
     description:
-      "Web design agency for small businesses in the US, UK and Canada. WordPress, Shopify, Wix Studio and custom websites built to win customers. Free audit.",
+      "Website design company for small businesses in the US, UK and Canada. WordPress, Shopify, Wix Studio and custom websites built to win customers. Free audit.",
     mainFaq: true,
   },
   {
@@ -115,9 +116,9 @@ const mainPages: RouteInfo[] = [
 const hiddenPages: RouteInfo[] = [
   {
     path: "/free-website-audit",
-    title: "Free Website Audit for Small Businesses | Dandilo Digitals",
+    title: "Free Small Business Website Audit | Dandilo Digitals",
     description:
-      "Get a free, no-obligation website audit. We review your design, mobile experience, speed and SEO, and send clear fixes to get more enquiries.",
+      "Get a free small business website audit. We review your design, mobile experience, speed, security and SEO, and send clear fixes to get more enquiries.",
     mainFaq: false,
     noindex: true,
   },
@@ -130,7 +131,7 @@ const hiddenPages: RouteInfo[] = [
   },
 ];
 
-const blogPosts = [...devPosts, ...countryPosts, ...basePosts];
+const blogPosts = [...guidePosts, ...devPosts, ...countryPosts, ...basePosts];
 export const CONTENT_PAGES: ContentPageData[] = [...servicePages, ...devPages, ...locationPages, ...industryPages, ...blogPosts, ...legalPages];
 export { servicePages, devPages, locationPages, industryPages, blogPosts, legalPages };
 
