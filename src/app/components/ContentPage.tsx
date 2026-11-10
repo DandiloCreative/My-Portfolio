@@ -5,6 +5,12 @@ import { ROUTE_MAP } from "../routes";
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=%2B12246200930&text=Hi%2C+I%27d+like+a+free+website+audit&type=phone_number&app_absent=0";
 
+/** Branded cover image for a blog post (made by the cover script, saved in public/blog-images). */
+export function blogCover(path: string) {
+  const slug = path.replace(/^\/blog\//, "");
+  return { large: `/blog-images/${slug}.webp`, small: `/blog-images/${slug}-600.webp` };
+}
+
 const LINK_LABELS: Record<string, string> = {
   "/portfolio": "Our Portfolio",
   "/contact": "Contact Us",
@@ -67,6 +73,18 @@ export function ContentPage({ page }: { page: ContentPageData }) {
           <p className="text-zinc-400 text-sm mb-6">
             {formatDate(page.date)}{page.readMinutes ? ` · ${page.readMinutes} min read` : ""}
           </p>
+        )}
+        {page.kind === "blog" && (
+          <img
+            src={blogCover(page.path).large}
+            srcSet={`${blogCover(page.path).small} 600w, ${blogCover(page.path).large} 1200w`}
+            sizes="(min-width: 896px) 832px, 100vw"
+            alt={`${page.label} - Dandilo Digitals guide`}
+            width={1200}
+            height={630}
+            className="w-full h-auto rounded-2xl border border-white/10 mb-8 shadow-[0_0_40px_rgba(124,58,237,0.15)]"
+            decoding="async"
+          />
         )}
         {page.intro.map((p) => (
           <p key={p} className="text-lg md:text-xl text-zinc-300 font-light leading-relaxed mb-4">{p}</p>

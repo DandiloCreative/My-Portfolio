@@ -60,7 +60,7 @@ function extraSchema(route) {
       datePublished: c.date,
       dateModified: c.date,
       mainEntityOfPage: urlFor(c.path),
-      image: `${SITE_URL}/og-image.jpg`,
+      image: `${SITE_URL}/blog-images/${c.path.replace("/blog/", "")}.jpg`,
       author: { "@type": "Organization", name: "Dandilo Digitals", url: SITE_URL },
       publisher: { "@type": "Organization", name: "Dandilo Digitals", logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` } },
     });
@@ -97,6 +97,9 @@ for (const route of ROUTES) {
   html = replaceOnce(html, /(<meta name="twitter:description" content=")[^"]*/, `$1${desc}`, "twitter:description");
   if (route.content?.kind === "blog") {
     html = replaceOnce(html, /(<meta property="og:type" content=")[^"]*/, `$1article`, "og:type");
+    const cover = `${SITE_URL}/blog-images/${route.path.replace("/blog/", "")}.jpg`;
+    html = replaceOnce(html, /(<meta property="og:image" content=")[^"]*/, `$1${cover}`, "og:image");
+    html = replaceOnce(html, /(<meta name="twitter:image" content=")[^"]*/, `$1${cover}`, "twitter:image");
   }
   if (route.noindex) {
     html = replaceOnce(html, /(<meta name="robots" content=")[^"]*/, `$1noindex, follow`, "robots");

@@ -18,12 +18,16 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 );
 
 // "Platforms" lives in the footer to leave room for "Pricing" in the bar
-const NAV_ITEMS = ["home", "services", "pricing", "portfolio", "reviews", "contact"];
+const NAV_ITEMS = ["home", "services", "pricing", "portfolio", "reviews", "blog", "contact"];
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  // Laptops between 1024px and 1279px: tighter link spacing so the full menu fits
+  const [isCompact, setIsCompact] = useState(
+    () => typeof window !== "undefined" && window.matchMedia("(max-width: 1279px)").matches
+  );
   const { scrollY } = useScroll();
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -33,7 +37,14 @@ export function Header() {
     setIsMobile(mq.matches);
     const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
     mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
+    const cq = window.matchMedia("(max-width: 1279px)");
+    setIsCompact(cq.matches);
+    const compactHandler = (e: MediaQueryListEvent) => setIsCompact(e.matches);
+    cq.addEventListener("change", compactHandler);
+    return () => {
+      mq.removeEventListener("change", handler);
+      cq.removeEventListener("change", compactHandler);
+    };
   }, []);
 
   // Shrink progress: 0 = full size, 1 = smallest.
@@ -53,14 +64,14 @@ export function Header() {
     setIsScrolled(next > 0.5);
   });
 
-  const navMaxWidth = useTransform(progress, [0, 1], isMobile ? ["95vw", "60vw"] : ["70rem", "62rem"]);
+  const navMaxWidth = useTransform(progress, [0, 1], isMobile ? ["95vw", "60vw"] : ["78rem", "68rem"]);
   const pillPaddingY = useTransform(progress, [0, 1], isMobile ? [6, 2] : [8, 4]);
   const pillPaddingX = useTransform(progress, [0, 1], isMobile ? [12, 8] : [24, 16]);
   const logoHeight = useTransform(progress, [0, 1], isMobile ? [32, 22] : [40, 28]);
   const brandFontSize = useTransform(progress, [0, 1], [18, 14]);
   const linkFontSize = useTransform(progress, [0, 1], [14, 12]);
   const controlsScale = useTransform(progress, [0, 1], [1, 0.82]);
-  const linkGap = useTransform(progress, [0, 1], [32, 18]);
+  const linkGap = useTransform(progress, [0, 1], isCompact ? [18, 12] : [32, 18]);
   // Desktop: scale the whole bar down so it visibly shrinks without its contents overflowing
   const desktopScale = useTransform(progress, [0, 1], [1, 0.8]);
 
@@ -149,7 +160,7 @@ export function Header() {
 
           <div className="hidden lg:flex items-center gap-4">
             <ThemeToggle />
-            <motion.div className="hidden xl:block" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <motion.div className="hidden 2xl:block" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <a
                 href="https://web.facebook.com/profile.php?id=61576876557950"
                 target="_blank"
@@ -160,7 +171,7 @@ export function Header() {
                 <Facebook size={20} />
               </a>
             </motion.div>
-            <motion.div className="hidden xl:block" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <motion.div className="hidden 2xl:block" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <a
                 href="https://www.instagram.com/dandilodigitals"
                 target="_blank"
@@ -171,7 +182,7 @@ export function Header() {
                 <Instagram size={20} />
               </a>
             </motion.div>
-            <motion.div className="hidden xl:block" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <motion.div className="hidden 2xl:block" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <a
                 href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
                 target="_blank"

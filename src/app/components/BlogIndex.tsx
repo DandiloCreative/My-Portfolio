@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 import { blogPosts } from "../routes";
-import { formatDate } from "./ContentPage";
+import { blogCover, formatDate } from "./ContentPage";
 
 export function BlogIndex() {
   const posts = [...blogPosts].sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
@@ -25,6 +25,19 @@ export function BlogIndex() {
               to={post.path}
               className="group flex flex-col p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-violet-500/40 transition-colors"
             >
+              <div className="-mx-8 -mt-8 mb-6 overflow-hidden rounded-t-[2rem] border-b border-white/10">
+                <img
+                  src={blogCover(post.path).small}
+                  srcSet={`${blogCover(post.path).small} 600w, ${blogCover(post.path).large} 1200w`}
+                  sizes="(min-width: 768px) 480px, 100vw"
+                  alt=""
+                  width={600}
+                  height={315}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
+                />
+              </div>
               <p className="text-zinc-400 text-sm mb-3">
                 {post.date && formatDate(post.date)}{post.readMinutes ? ` · ${post.readMinutes} min read` : ""}
               </p>
