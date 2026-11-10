@@ -5,7 +5,7 @@ export const industryPages: ContentPageData[] = [
     path: "/industries/contractor-web-design",
     kind: "industry",
     label: "Web Design for Contractors",
-    title: "Web Design for Contractors | Dandilo Digitals",
+    title: "Web Design for Contractors & Construction | Dandilo",
     description:
       "Websites for contractors, roofers, plumbers, electricians and home service businesses. Built to get more calls and quote requests from local customers.",
     eyebrow: "Contractors & Home Services",
@@ -133,5 +133,50 @@ export const industryPages: ContentPageData[] = [
       },
     ],
     related: ["/services/wix-web-designer", "/services/small-business-web-design", "/services/ecommerce-web-design"],
+  },
+  {
+    path: "/industries/therapist-web-design",
+    kind: "industry",
+    label: "Web Design for Therapists",
+    title: "Web Design for Therapists & Counselors | Dandilo Digitals",
+    description:
+      "Calm, professional websites for therapists, counselors and private practices. Online booking, clear services and SEO so new clients can find you.",
+    eyebrow: "Therapists & Private Practice",
+    h1: "Web Design for Therapists, Counselors and Private Practices",
+    intro: [
+      "People looking for a therapist are often anxious and unsure where to start. Your website should feel calm, explain how you can help in plain words and make the first step, booking a consultation, easy.",
+      "We design websites for therapists, counselors, psychologists and coaches that build trust quickly and bring in the right clients.",
+    ],
+    sections: [
+      {
+        heading: "What a therapist website needs",
+        bullets: [
+          "A warm, calm design that reflects your approach",
+          "Clear pages for each service or specialty (anxiety, couples, trauma, teens)",
+          "Your credentials, approach and a friendly photo",
+          "Online booking or a simple consultation request form",
+          "Fees, insurance and session details explained clearly",
+          "Fast, mobile-friendly pages and accessible design",
+        ],
+      },
+      {
+        heading: "Helping new clients find you",
+        paragraphs: [
+          "Most clients search for things like \"therapist near me\" or \"anxiety counselor in [city]\". We set up your pages, titles and Google Business Profile so you show up for the people you help most.",
+          "We keep privacy in mind: contact forms ask only for what you need, and we can connect your site to the booking or practice management tool you already use.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can you add online booking to my therapy website?",
+        a: "Yes. We can connect the booking tool you already use, or set up a simple consultation request form.",
+      },
+      {
+        q: "How much does a therapist website cost?",
+        a: "Our therapist websites start from $600 for a starter site and $1,200 for a full practice website with service pages and blog.",
+      },
+    ],
+    related: ["/services/small-business-web-design", "/services/squarespace-web-design", "/services/wordpress-web-design"],
   },
 ];

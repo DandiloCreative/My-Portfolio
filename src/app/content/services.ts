@@ -124,7 +124,7 @@ export const servicePages: ContentPageData[] = [
     path: "/services/shopify-website-design",
     kind: "service",
     label: "Shopify Website Design",
-    title: "Shopify Website Design & Development | Dandilo Digitals",
+    title: "Shopify Web Design Services & Shopify Designer | Dandilo",
     description:
       "Shopify website design and development for online stores that need to sell more. Custom Shopify themes, clean product pages and a smooth checkout.",
     eyebrow: "Shopify Website Design",
@@ -155,6 +155,10 @@ export const servicePages: ContentPageData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How much does a Shopify web designer cost?",
+        a: "Our Shopify stores start from $1,500, depending on the number of products, pages and apps you need. Your Shopify plan is paid to Shopify separately.",
+      },
       {
         q: "Can you redesign my existing Shopify store?",
         a: "Yes. We can customize your current theme or design a new one, and keep your products, customers and orders in place.",
@@ -211,6 +215,10 @@ export const servicePages: ContentPageData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How much does a Wix web designer cost?",
+        a: "Our Wix Studio websites start from $600 for a starter site and $1,200 for a full business website. Your Wix plan is paid to Wix separately.",
+      },
       {
         q: "Is Wix good for SEO?",
         a: "Yes. Wix has solid built-in SEO tools. What matters most is setting up page titles, descriptions, headings and content properly, which we do for every site.",
@@ -275,7 +283,7 @@ export const servicePages: ContentPageData[] = [
     path: "/services/website-redesign",
     kind: "service",
     label: "Website Redesign",
-    title: "Website Redesign for Small Businesses | Dandilo Digitals",
+    title: "Website Redesign Services & Cost | Dandilo Digitals",
     description:
       "Website redesign services for outdated or slow websites. A modern design, clearer messaging and faster pages so more visitors contact you.",
     eyebrow: "Website Redesign",
@@ -308,6 +316,10 @@ export const servicePages: ContentPageData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How much does a website redesign cost?",
+        a: "Our website redesigns start from $800. The price depends on the number of pages, the platform and any new features. You get a fixed quote before work starts.",
+      },
       {
         q: "Will a redesign hurt my Google rankings?",
         a: "Not if it's done carefully. We keep your important content and page addresses, and set up redirects where pages change, so search engines can follow the move.",
@@ -409,6 +421,10 @@ export const servicePages: ContentPageData[] = [
     ],
     faqs: [
       {
+        q: "How much does a Squarespace web designer cost?",
+        a: "Our Squarespace websites start from $600. Your Squarespace plan (hosting included) is paid to Squarespace separately, so you always own your account.",
+      },
+      {
         q: "Can you redesign my existing Squarespace website?",
         a: "Yes. We can refresh your current Squarespace site or rebuild it on a better layout, keeping your content and settings.",
       },
@@ -454,6 +470,10 @@ export const servicePages: ContentPageData[] = [
       },
     ],
     faqs: [
+      {
+        q: "How much does GoHighLevel cost?",
+        a: "HighLevel's own plans start at around $97 a month (check highlevel.com for current pricing) and are paid to HighLevel. Our setup of your website, funnels and automations is quoted separately as a fixed price.",
+      },
       {
         q: "Can you set up my GoHighLevel account from scratch?",
         a: "Yes. We can build your website or funnel, forms, calendars, pipelines and automations, connect your domain and show you how to use it.",

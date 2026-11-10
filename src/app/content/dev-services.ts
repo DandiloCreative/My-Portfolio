@@ -362,6 +362,64 @@ export const devPages: ContentPageData[] = [
 
 export const devPosts: ContentPageData[] = [
   {
+    path: "/blog/web-designer-vs-web-developer",
+    kind: "blog",
+    label: "Web Designer vs Web Developer",
+    title: "Web Designer vs Web Developer: Who Do You Need?",
+    description:
+      "Web designer vs web developer vs full stack developer: what each one does, what they cost and which you need for your small business website or app.",
+    eyebrow: "Guide",
+    h1: "Web Designer vs Web Developer: What's the Difference and Who Do You Need?",
+    date: "2026-11-10",
+    readMinutes: 5,
+    intro: [
+      "When you start looking for help with a website, you'll see web designers, web developers and full stack developers. They overlap, but they're not the same, and hiring the wrong one can cost you time and money.",
+      "Here's what each does, in plain English.",
+    ],
+    sections: [
+      {
+        heading: "What a web designer does",
+        paragraphs: [
+          "A web designer plans how your website looks and feels: layout, colors, fonts, images and how visitors move from page to page. Many designers also build the site on platforms like WordPress, Wix Studio, Squarespace or Shopify.",
+          "Hire a web designer when you need a professional business website, a redesign or an online store.",
+        ],
+      },
+      {
+        heading: "What a web developer does",
+        paragraphs: [
+          "A web developer writes the code that makes a website or app work. Frontend developers build what you see in the browser (React, Next.js, Tailwind CSS). Backend developers build the servers, databases and APIs behind it (NestJS, Express.js, Laravel, Django, MySQL).",
+          "Hire a developer when you need custom features: logins, dashboards, bookings, integrations or a web app.",
+        ],
+      },
+      {
+        heading: "What a full stack developer does",
+        paragraphs: [
+          "A full stack developer does both frontend and backend. For a small business this means one team can build the whole product, from the screens to the database, with nothing lost in between.",
+        ],
+      },
+      {
+        heading: "Which one do you need?",
+        bullets: [
+          "A brochure website or online store: a web designer",
+          "A website with a few custom features: a designer who also develops",
+          "A web app, portal or SaaS product: a full stack developer",
+          "Not sure: start with a free website audit and get a recommendation",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is a web designer or web developer more expensive?",
+        a: "Custom development usually costs more than a website built on a platform, because it takes more time. Our websites start from $600 and custom development from $2,500.",
+      },
+      {
+        q: "What is considered a full stack developer?",
+        a: "Someone who builds both the frontend (what users see) and the backend (servers, databases and APIs) of a website or app.",
+      },
+    ],
+    related: ["/services/full-stack-web-development", "/services/small-business-web-design", "/pricing"],
+  },
+  {
     path: "/blog/choose-tech-stack-nextjs-laravel-django-nestjs",
     kind: "blog",
     label: "Next.js vs Laravel vs Django vs NestJS",

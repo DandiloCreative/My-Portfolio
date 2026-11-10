@@ -473,6 +473,14 @@ export const blogPosts: ContentPageData[] = [
     ],
     faqs: [
       {
+        q: "How much does a Squarespace or Wix website cost per month?",
+        a: "Squarespace and Wix plans for businesses usually cost about $20 to $50 a month, which includes hosting. A designer's fee to build the site is separate.",
+      },
+      {
+        q: "How much does a website cost per year?",
+        a: "Once it's built, most small business websites cost roughly $250 to $1,800 a year to run, covering the domain, hosting or platform plan, apps and maintenance.",
+      },
+      {
         q: "How much should a small business pay for a website?",
         a: "Most small businesses in the US pay somewhere between $1,500 and $10,000 for a professionally designed website, depending on the number of pages, features and whether it includes an online store. DIY builders are cheaper but cost you time.",
       },
