@@ -81,7 +81,7 @@ export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" 
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} onFocusCapture={turnstile.activate} onPointerDown={turnstile.activate} className="space-y-5">
       <Field id={id("name")} label="Name">
         <Input id={id("name")} name="name" autoComplete="name" placeholder="Your name" value={data.name} onChange={set("name")} required className={fieldClass} />
       </Field>

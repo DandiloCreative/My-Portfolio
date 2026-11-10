@@ -29,6 +29,34 @@ const ThankYou = lazy(() => import("./components/ThankYou").then(m => ({ default
 const CookieBanner = lazy(() => import("./components/CookieBanner").then(m => ({ default: m.CookieBanner })));
 const FloatingWhatsApp = lazy(() => import("./components/FloatingWhatsApp").then(m => ({ default: m.FloatingWhatsApp })));
 
+function startTrackingAndRecordView() {
+  initMetaPixel(); // no-op after the first call, or if no Pixel ID is set
+  trackPageView();
+  initAnalytics(); // no-op until a GA4 Measurement ID is set
+  initClarity(); // no-op until a Clarity Project ID is set
+  initMetricool();
+  // Wait a tick so the page title has updated before recording the view
+  setTimeout(trackAnalyticsPageView, 0);
+  setTimeout(trackMetricoolPageView, 0);
+}
+
+// Tracking scripts (Meta, Google, Metricool) are heavy on phones, so they start a moment
+// after the page has finished loading. Later page changes are recorded straight away.
+let trackersReady = false;
+let trackersWaiting = false;
+function recordViewWhenReady() {
+  if (trackersReady) return startTrackingAndRecordView();
+  if (trackersWaiting) return; // the first view is recorded once, for whichever page is open then
+  trackersWaiting = true;
+  const start = () =>
+    setTimeout(() => {
+      trackersReady = true;
+      startTrackingAndRecordView();
+    }, 2500);
+  if (document.readyState === "complete") start();
+  else window.addEventListener("load", start, { once: true });
+}
+
 /** Jump to the top of the page whenever the route changes, and record the page view. */
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -36,14 +64,7 @@ function ScrollToTop() {
   useEffect(() => captureAttribution(), []);
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
-    initMetaPixel(); // no-op after the first call, or if no Pixel ID is set
-    trackPageView();
-    initAnalytics(); // no-op until a GA4 Measurement ID is set
-    initClarity(); // no-op until a Clarity Project ID is set
-    initMetricool();
-    // Wait a tick so the page title has updated before recording the view
-    setTimeout(trackAnalyticsPageView, 0);
-    setTimeout(trackMetricoolPageView, 0);
+    recordViewWhenReady();
   }, [pathname]);
   return null;
 }
@@ -82,7 +103,6 @@ function LazySection({ children, className, forceVisible }: { children: ReactNod
   // Render everything during the build-time prerender (no window there)
   const [visible, setVisible] = useState(() => typeof window === "undefined");
   const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 767px)");
     setIsMobile(mq.matches);

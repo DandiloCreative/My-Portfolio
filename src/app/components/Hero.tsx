@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Sparkles } from "lucide-react";
-import { motion } from "motion/react";
 import { useNavigate } from "react-router";
 import profileImage from "../../assets/hero-profile.webp";
 
@@ -33,11 +32,15 @@ const TypewriterText = ({ text }: { text: string }) => {
   }, [displayText, isDeleting, text]);
 
   return (
-    <>
-      <span>{displayText || " "}</span>
-      {/* Cursor drawn with CSS (not a "|" character) so it doesn't end up in the page text */}
-      <span className="inline-block w-[3px] h-[0.85em] ml-1 align-[-0.08em] bg-cyan-400 animate-pulse opacity-70" />
-    </>
+    <span className="relative inline-block">
+      {/* Invisible full text keeps the headline the same size while it types (no layout jump) */}
+      <span className="invisible">{text}</span>
+      <span className="absolute inset-0">
+        {displayText || "\u00A0"}
+        {/* Cursor drawn with CSS (not a "|" character) so it doesn't end up in the page text */}
+        <span className="inline-block w-[3px] h-[0.85em] ml-1 align-[-0.08em] bg-cyan-400 animate-pulse opacity-70" />
+      </span>
+    </span>
   );
 };
 
@@ -81,11 +84,8 @@ export function Hero() {
                 <div className="hero-ripple absolute inset-0 rounded-full border border-violet-400/40 md:hidden" />
                 <div className="hero-ripple hero-ripple-delay absolute inset-0 rounded-full border border-cyan-400/30 md:hidden" />
 
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.85 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="relative z-10 w-full h-full p-[5px] md:p-2 rounded-full bg-[conic-gradient(from_0deg,#a78bfa_0%,#e879f9_14%,#5eead4_26%,#5eead4_36%,#a78bfa_50%,#e879f9_64%,#5eead4_76%,#5eead4_86%,#a78bfa_100%)] shadow-[0_0_40px_rgba(167,139,250,0.45),0_0_90px_rgba(94,234,212,0.25)]"
+                <div
+                  className="hero-pop relative z-10 w-full h-full p-[5px] md:p-2 rounded-full bg-[conic-gradient(from_0deg,#a78bfa_0%,#e879f9_14%,#5eead4_26%,#5eead4_36%,#a78bfa_50%,#e879f9_64%,#5eead4_76%,#5eead4_86%,#a78bfa_100%)] shadow-[0_0_40px_rgba(167,139,250,0.45),0_0_90px_rgba(94,234,212,0.25)]"
                 >
                   <img
                     src={profileImage}
@@ -99,25 +99,14 @@ export function Hero() {
                   />
                   {/* Inner glow */}
                   <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(255,255,255,0.2)] mix-blend-overlay"></div>
-                </motion.div>
+                </div>
 
                 {/* Floating Platform Logos */}
                 {platformLogos.map((platform, index) => (
-                  <motion.div
+                  <div
                     key={platform.name}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1, y: [0, -15, 0] }}
-                    transition={{
-                      opacity: { delay: 0.6 + index * 0.1, duration: 0.5 },
-                      scale: { delay: 0.6 + index * 0.1, duration: 0.5, type: "spring" },
-                      y: {
-                        delay: 1,
-                        duration: 3 + index * 0.5,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }
-                    }}
-                    className={`absolute z-20 will-change-transform ${platform.position}`}
+                    className={`hero-float absolute z-20 ${platform.position}`}
+                    style={{ animationDelay: `${0.4 + index * 0.1}s, ${1 + index * 0.2}s`, animationDuration: `0.5s, ${3 + index * 0.5}s` }}
                   >
                     <div className="flex items-center justify-center px-3 py-2 md:px-5 md:py-3 rounded-xl md:rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
                       <span className="text-white font-semibold tracking-wide text-[10px] md:text-sm flex items-center gap-2">
@@ -125,78 +114,45 @@ export function Hero() {
                         {platform.name}
                       </span>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col items-start will-change-transform order-2 md:order-1"
-          >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.6 }}
-              className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-md"
+          <div className="flex flex-col items-start order-2 md:order-1">
+            <div
+              className="hero-rise hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-md"
             >
               <Sparkles className="w-4 h-4 text-violet-400" />
               <span className="text-xs md:text-sm font-medium text-zinc-300">Web Design for Small Businesses</span>
-            </motion.div>
+            </div>
 
             {/* Logo - removed from Hero to improve mobile load time */}
 
-            <motion.h1
-              className="text-4xl sm:text-5xl md:text-[5rem] leading-[1.2] md:leading-[1.1] font-bold mb-6 text-white tracking-tight will-change-transform"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-            >
+            <h1 className="text-4xl sm:text-5xl md:text-[5rem] leading-[1.2] md:leading-[1.1] font-bold mb-6 text-white tracking-tight">
               <span>Turn Your Website Into a <br /></span>
               {/* Full text for Google and screen readers; the animated copy is visual only */}
               <span className="sr-only">Customer-Generating Machine.</span>
               <span aria-hidden="true" className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 inline-block min-h-[1.2em]">
                 <TypewriterText text="Customer-Generating Machine." />
               </span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              className="text-lg md:text-2xl mb-8 md:mb-10 leading-relaxed font-light max-w-xl will-change-transform italic text-white"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-            >
+            <p className="text-lg md:text-2xl mb-8 md:mb-10 leading-relaxed font-light max-w-xl italic text-white">
               Building websites that connect, convert, and grow.
-            </motion.p>
+            </p>
 
-            <motion.div
-              className="flex flex-row items-stretch self-center md:self-start gap-2 sm:gap-4 md:gap-5"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ rotateX: 360, transition: { duration: 0.6, ease: "easeInOut" } }}
-                className="flex"
-                style={{ perspective: 1000 }}
-              >
+            <div className="hero-rise flex flex-row items-stretch self-center md:self-start gap-2 sm:gap-4 md:gap-5">
+              <div className="flex transition-transform duration-200 hover:scale-105 active:scale-95">
                 <button
                   onClick={navigateToContact}
                   className="w-full flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white border border-transparent shadow-[0_0_20px_rgba(124,58,237,0.4)] rounded-full px-3 py-3 min-[375px]:py-3.5 min-[410px]:px-4 sm:px-6 md:px-9 md:py-4 text-xs min-[375px]:text-[12.5px] min-[410px]:text-[13px] sm:text-sm md:text-base font-bold sm:tracking-wide transition-all uppercase"
                 >
                   Get Free Website Audit
                 </button>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ rotateX: 360, transition: { duration: 0.6, ease: "easeInOut" } }}
-                className="flex"
-                style={{ perspective: 1000 }}
-              >
+              </div>
+              <div className="flex transition-transform duration-200 hover:scale-105 active:scale-95">
                 <button
                   onClick={() => navigate("/portfolio")}
                   className="group w-full flex items-center justify-center whitespace-nowrap bg-transparent hover:bg-white/10 border border-violet-400/50 hover:border-white/70 rounded-lg px-3 py-3 min-[375px]:py-3.5 min-[410px]:px-4 sm:px-6 md:px-9 md:py-4 text-xs min-[375px]:text-[12.5px] min-[410px]:text-[13px] sm:text-sm md:text-base font-bold sm:tracking-wide transition-all duration-300 uppercase"
@@ -205,9 +161,9 @@ export function Hero() {
                     View My Portfolio
                   </span>
                 </button>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+              </div>
+            </div>
+          </div>
 
 
         </div>

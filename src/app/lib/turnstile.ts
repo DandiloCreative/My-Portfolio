@@ -1,6 +1,6 @@
 // Cloudflare Turnstile: an invisible "are you human?" check on our forms.
 // The CRM checks the token with Cloudflare before saving an enquiry.
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 // Public site key (safe to publish). On localhost we use Cloudflare's always-pass test key.
 const SITE_KEY =
@@ -39,15 +39,20 @@ function loadTurnstile() {
 
 /**
  * Renders the Turnstile check into the returned ref. It stays hidden unless Cloudflare
- * needs the visitor to click. `getToken()` waits (up to 8s) for a token; "" if none.
+ * needs the visitor to click. Nothing loads until `activate()` is called (on the visitor's
+ * first tap or keypress in the form), so the page itself stays fast.
+ * `getToken()` waits (up to 8s) for a token; "" if none.
  */
 export function useTurnstile() {
   const ref = useRef<HTMLDivElement>(null);
   const widgetId = useRef<string | null>(null);
   const token = useRef("");
   const waiters = useRef<((t: string) => void)[]>([]);
+  const [active, setActive] = useState(false);
+  const activate = useCallback(() => setActive(true), []);
 
   useEffect(() => {
+    if (!active) return;
     let cancelled = false;
     loadTurnstile()
       .then((ts) => {
@@ -74,16 +79,18 @@ export function useTurnstile() {
       if (widgetId.current && window.turnstile) window.turnstile.remove(widgetId.current);
       widgetId.current = null;
     };
-  }, []);
+  }, [active]);
 
   const getToken = useCallback(
-    () =>
-      token.current
+    () => {
+      setActive(true);
+      return token.current
         ? Promise.resolve(token.current)
         : new Promise<string>((resolve) => {
             waiters.current.push(resolve);
             setTimeout(() => resolve(token.current), 8000);
-          }),
+          });
+    },
     []
   );
 
@@ -93,5 +100,5 @@ export function useTurnstile() {
     if (widgetId.current && window.turnstile) window.turnstile.reset(widgetId.current);
   }, []);
 
-  return { ref, getToken, reset };
+  return { ref, getToken, reset, activate };
 }
