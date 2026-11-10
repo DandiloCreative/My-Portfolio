@@ -134,7 +134,7 @@ export const locationPages: ContentPageData[] = [
         a: "Our packages are priced in US dollars and most cards convert automatically. If you'd prefer a quote in pounds, just ask.",
       },
     ],
-    related: ["/blog/website-cost-uk", "/blog/uk-small-business-website-checklist", "/pricing"],
+    related: ["/services/bespoke-web-design", "/services/website-maintenance", "/blog/website-cost-uk", "/blog/uk-small-business-website-checklist", "/pricing"],
   },
   {
     path: "/web-design-canada",

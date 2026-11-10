@@ -489,4 +489,119 @@ export const servicePages: ContentPageData[] = [
     ],
     related: ["/services/landing-page-design", "/services/small-business-web-design", "/blog/get-more-customers-from-your-website"],
   },
+  {
+    path: "/services/website-maintenance",
+    kind: "service",
+    label: "Website Maintenance & Care Plans",
+    title: "Website Maintenance Services & Care Plans | Dandilo",
+    description:
+      "Website maintenance from $99 a month: updates, backups, security monitoring, speed checks and small changes for WordPress, Shopify, Wix and custom sites.",
+    eyebrow: "Website Maintenance",
+    h1: "Website Maintenance and Care Plans for Small Businesses",
+    intro: [
+      "A website isn't finished on launch day. Plugins need updating, backups need checking, security threats change and your content goes out of date. Left alone, sites slow down, break or get hacked, usually at the worst possible time.",
+      "Our website care plans keep your site fast, secure and up to date, so you can focus on running your business. One monthly price, no surprises.",
+    ],
+    sections: [
+      {
+        heading: "What's included in a care plan",
+        bullets: [
+          "Software, theme and plugin updates, tested so nothing breaks",
+          "Regular backups you can restore if anything goes wrong",
+          "Security monitoring and malware checks",
+          "Uptime monitoring, so we know quickly if your site goes down",
+          "Speed checks and fixes to keep pages loading fast",
+          "Small content changes each month: text, images, prices and opening hours",
+          "Priority support by email or WhatsApp",
+        ],
+      },
+      {
+        heading: "Platforms we maintain",
+        paragraphs: [
+          "We look after WordPress and WooCommerce, Shopify, Wix Studio, Squarespace, GoHighLevel and custom-coded websites (React, Next.js, Laravel and more), including sites we didn't build. We start with a quick health check and fix anything urgent.",
+        ],
+      },
+      {
+        heading: "Why maintenance matters",
+        bullets: [
+          "Out-of-date plugins are one of the most common ways small business sites get hacked",
+          "Slow sites lose visitors and rank lower on Google",
+          "Broken forms mean lost enquiries you never hear about",
+          "Fresh, accurate content builds trust with customers",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does website maintenance cost?",
+        a: "Our care plans start from $99 a month (about £78 or CA$137). Larger or busier sites, like online stores, may need a bigger plan. You get a fixed monthly price.",
+      },
+      {
+        q: "Can you maintain a website you didn't build?",
+        a: "Yes. We start with a health check, fix anything urgent, then keep it updated, backed up and secure every month.",
+      },
+      {
+        q: "Is there a contract?",
+        a: "No long contract. Care plans run month to month, and you can cancel any time.",
+      },
+    ],
+    related: ["/pricing", "/services/website-redesign", "/services/wordpress-web-design"],
+  },
+  {
+    path: "/services/bespoke-web-design",
+    kind: "service",
+    label: "Bespoke & Custom Web Design",
+    title: "Bespoke & Custom Web Design Services | Dandilo Digitals",
+    description:
+      "Bespoke, custom web design built around your brand and customers, not a template. Custom websites on WordPress, Shopify, Wix Studio or fully custom code.",
+    eyebrow: "Bespoke Web Design",
+    h1: "Bespoke, Custom Web Design Built Around Your Business",
+    intro: [
+      "Templates are quick, but they make your business look like everyone else's. A bespoke website is designed from scratch around your brand, your services and how your customers decide to buy.",
+      "We design and build custom websites that look premium, load fast and are planned to turn visitors into enquiries, at prices that work for small businesses.",
+    ],
+    sections: [
+      {
+        heading: "What makes a website bespoke",
+        bullets: [
+          "A custom design based on your brand, not a pre-made theme",
+          "Page structure and copy planned around what your customers need to know",
+          "Layouts designed for mobile first, then desktop",
+          "Custom features where you need them: booking, quotes, calculators, portals",
+          "Built on the right platform for you: WordPress, Shopify, Wix Studio, Squarespace or custom code",
+        ],
+      },
+      {
+        heading: "Our bespoke design process",
+        bullets: [
+          "Discovery: your goals, customers and competitors",
+          "Sitemap and wireframes: what goes on each page",
+          "Design: a custom look you approve before we build",
+          "Build: fast, accessible and SEO-ready",
+          "Launch and care: training, support and maintenance",
+        ],
+      },
+      {
+        heading: "Bespoke doesn't have to mean expensive",
+        paragraphs: [
+          "Many agencies charge £10,000 or $15,000+ for a bespoke website. Because we're a lean remote team, our custom websites start from $1,200, with fully custom-coded builds from $2,500. You get a fixed quote before work starts.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What's the difference between bespoke and template web design?",
+        a: "A template website starts from a pre-made design that other businesses also use. A bespoke website is designed specifically for your business, so it looks unique and is planned around your customers.",
+      },
+      {
+        q: "How long does a bespoke website take?",
+        a: "Most bespoke small business websites take 3 to 6 weeks, depending on the number of pages, features and how quickly content is ready.",
+      },
+      {
+        q: "Can I still edit a custom website myself?",
+        a: "Yes. We build on platforms with easy editing, or add a simple content manager to custom-coded sites, and show you how to use it.",
+      },
+    ],
+    related: ["/services/small-business-web-design", "/services/full-stack-web-development", "/pricing"],
+  },
 ];

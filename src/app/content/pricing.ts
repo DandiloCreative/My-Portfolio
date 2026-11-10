@@ -72,6 +72,7 @@ export const pricingPackages: PricingPackage[] = [
     per: "/month",
     summary: "We look after your website so you can focus on your business.",
     features: ["Updates and backups", "Security monitoring", "Small content changes each month", "Priority support"],
+    link: "/services/website-maintenance",
   },
 ];
 
