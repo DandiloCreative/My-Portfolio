@@ -8,6 +8,7 @@ import { initAnalytics, trackAnalyticsPageView } from "./lib/analytics";
 import { initClarity } from "./lib/clarity";
 import { initMetricool, trackMetricoolPageView } from "./lib/metricool";
 import { captureAttribution } from "./lib/attribution";
+import { trackCrmPageView } from "./lib/crmTraffic";
 import { Hero } from "./components/Hero";
 
 // Lazy-load below-fold sections for faster initial paint
@@ -65,6 +66,7 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
     recordViewWhenReady();
+    trackCrmPageView(pathname); // tiny request to Dandilo CRM, no cookies
   }, [pathname]);
   return null;
 }

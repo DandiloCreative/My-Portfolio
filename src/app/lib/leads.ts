@@ -7,7 +7,7 @@ const FORM_ENDPOINT = "https://api.web3forms.com/submit";
 // Web3Forms access key (public by design). Emails go to the address it was created for: hello@dandilodigitals.com
 const WEB3FORMS_KEY = "3d8d487f-82ce-406e-9138-831dfa56b659";
 // Dandilo CRM's server (Leads + Inbox). Enquiries are sent here as well as by email.
-const CRM_API_URL = "https://dandilo-crm-api.vercel.app";
+export const CRM_API_URL = "https://dandilo-crm-api.vercel.app";
 
 export type LeadFields = {
   name: string;
