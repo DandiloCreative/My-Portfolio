@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from "react-router";
 import { ThemeToggle } from "./ThemeToggle";
 
 import logoImg from "../../assets/dandilo-logo.webp";
+import logoImgSmall from "../../assets/dandilo-logo-128.webp";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
@@ -107,7 +108,11 @@ export function Header() {
           >
             <div className="absolute inset-0 bg-violet-600/20 blur-xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <motion.img
-              src={logoImg}
+              src={logoImgSmall}
+              srcSet={`${logoImgSmall} 128w, ${logoImg} 360w`}
+              sizes="64px"
+              width={128}
+              height={128}
               alt="Dandilo Digitals logo"
               className="relative z-10 drop-shadow-[0_0_15px_rgba(124,58,237,0.4)] object-contain"
               style={{

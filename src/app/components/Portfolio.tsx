@@ -10,6 +10,24 @@ import mockup4 from "../../assets/project-medipresse.webp";
 import realEstateProject from "../../assets/project-realestate.webp";
 import yachtProject from "../../assets/project-yacht.webp";
 import apartmentProject from "../../assets/project-apartment.webp";
+import mockup1Small from "../../assets/project-clothy-600.webp";
+import mockup3Small from "../../assets/project-jadoo-600.webp";
+import mockup4Small from "../../assets/project-medipresse-600.webp";
+import realEstateSmall from "../../assets/project-realestate-600.webp";
+import yachtSmall from "../../assets/project-yacht-600.webp";
+import apartmentSmall from "../../assets/project-apartment-600.webp";
+
+// 600px-wide copies for phones; the browser picks the right size from srcSet
+const SMALL: Record<string, string> = {
+  [mockup1]: mockup1Small,
+  [mockup3]: mockup3Small,
+  [mockup4]: mockup4Small,
+  [realEstateProject]: realEstateSmall,
+  [yachtProject]: yachtSmall,
+  [apartmentProject]: apartmentSmall,
+};
+const srcSetFor = (img: string, fullWidth: number) => (SMALL[img] ? `${SMALL[img]} 600w, ${img} ${fullWidth}w` : undefined);
+const fullWidthOf = (img: string) => (img === realEstateProject || img === yachtProject || img === apartmentProject ? 900 : 1200);
 
 type Category = "All" | "Frontend" | "WordPress" | "Shopify" | "Wix Studio";
 
@@ -235,6 +253,8 @@ export function Portfolio({ isPage = false }: { isPage?: boolean }) {
                 <div className="relative overflow-hidden w-full h-[160px] sm:h-[220px] md:h-auto md:aspect-auto bg-zinc-900">
                   <img
                     src={featured.image}
+                    srcSet={srcSetFor(featured.image, fullWidthOf(featured.image))}
+                    sizes="(min-width: 768px) 50vw, 100vw"
                     alt={`${featured.title} – ${featured.category} website design project`}
                     className="w-full h-full object-cover object-center md:object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                     loading="lazy"
@@ -344,6 +364,8 @@ export function Portfolio({ isPage = false }: { isPage?: boolean }) {
                   <div className="relative overflow-hidden w-full h-[160px] sm:h-[200px] bg-zinc-900 border-b border-white/5">
                     <img
                       src={project.image}
+                      srcSet={srcSetFor(project.image, fullWidthOf(project.image))}
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                       alt={`${project.title} – ${project.category} website design project`}
                       className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                       loading="lazy"

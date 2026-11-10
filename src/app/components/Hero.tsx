@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Sparkles } from "lucide-react";
 import { useNavigate } from "react-router";
 import profileImage from "../../assets/hero-profile.webp";
+import profileImageSmall from "../../assets/hero-profile-480.webp";
+import profileImageMedium from "../../assets/hero-profile-640.webp";
 
 const TypewriterText = ({ text }: { text: string }) => {
   const [displayText, setDisplayText] = useState("");
@@ -35,7 +37,8 @@ const TypewriterText = ({ text }: { text: string }) => {
     <span className="relative inline-block">
       {/* Invisible full text keeps the headline the same size while it types (no layout jump) */}
       <span className="invisible">{text}</span>
-      <span className="absolute inset-0">
+      {/* The gradient sits on the visible layer (a gradient on a parent can't reach this overlay) */}
+      <span className="absolute left-0 top-0 w-full text-left text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400">
         {displayText || "\u00A0"}
         {/* Cursor drawn with CSS (not a "|" character) so it doesn't end up in the page text */}
         <span className="inline-block w-[3px] h-[0.85em] ml-1 align-[-0.08em] bg-cyan-400 animate-pulse opacity-70" />
@@ -89,6 +92,8 @@ export function Hero() {
                 >
                   <img
                     src={profileImage}
+                    srcSet={`${profileImageSmall} 480w, ${profileImageMedium} 640w, ${profileImage} 768w`}
+                    sizes="(min-width: 768px) 384px, 82vw"
                     alt="Founder of Dandilo Digitals, a web design and development agency"
                     className="w-full h-full rounded-full object-cover border-4 border-zinc-950 md:border-0 contrast-[1.05] saturate-[1.1] md:contrast-100 md:saturate-100"
                     loading="eager"
@@ -134,7 +139,7 @@ export function Hero() {
               <span>Turn Your Website Into a <br /></span>
               {/* Full text for Google and screen readers; the animated copy is visual only */}
               <span className="sr-only">Customer-Generating Machine.</span>
-              <span aria-hidden="true" className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 inline-block min-h-[1.2em]">
+              <span aria-hidden="true" className="inline-block min-h-[1.2em]">
                 <TypewriterText text="Customer-Generating Machine." />
               </span>
             </h1>

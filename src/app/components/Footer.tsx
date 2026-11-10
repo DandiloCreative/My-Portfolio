@@ -3,7 +3,7 @@ import { openCookieSettings } from "../lib/consent";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router";
 import { servicePages, devPages, locationPages } from "../routes";
-import brandLogo from "../../assets/dandilo-logo.webp";
+import brandLogo from "../../assets/dandilo-logo-128.webp";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
@@ -45,6 +45,8 @@ export function Footer() {
             <div className="flex flex-col items-start gap-3 mb-6" style={{ perspective: 1000 }}>
               <motion.img
                 src={brandLogo}
+                width={128}
+                height={128}
                 alt="Dandilo Digitals logo"
                 className="h-12 md:h-14 w-auto drop-shadow-[0_20px_25px_rgba(124,58,237,0.3)] mb-2"
                 animate={{ rotateY: [0, -15, 15, 0], rotateX: [0, 10, -10, 0], y: [0, -5, 5, 0] }}
@@ -67,6 +69,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-emerald-400 hover:bg-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300"
+                aria-label="WhatsApp"
               >
                 <WhatsAppIcon className="w-5 h-5" />
               </a>
@@ -90,7 +93,7 @@ export function Footer() {
                   <a
                     href={item.section === 'home' ? '/' : `/${item.section}`}
                     onClick={(e) => handleNavClick(e, item.section)}
-                    className="text-zinc-500 hover:text-cyan-400 transition-colors inline-flex items-center gap-1 group"
+                    className="text-zinc-400 hover:text-cyan-400 transition-colors inline-flex items-center gap-1 group"
                   >
                     {item.label}
                     <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
@@ -102,7 +105,7 @@ export function Footer() {
 
           <div>
             <h4 className="text-white font-semibold mb-6 tracking-wide">Web Design Services</h4>
-            <ul className="space-y-4 text-zinc-500 font-light">
+            <ul className="space-y-4 text-zinc-400 font-light">
               {[
                 ...servicePages.map((p) => ({ label: p.label, section: p.path.slice(1) })),
                 { label: devPages[0].label, section: devPages[0].path.slice(1) },
@@ -134,7 +137,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between text-zinc-500 text-sm font-light">
+        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between text-zinc-400 text-sm font-light">
           <p>© {currentYear} Dandilo Digitals - Website Development Agency. All Rights Reserved.</p>
           <div className="flex items-center gap-6 mt-4 md:mt-0">
             <a href="/privacy" onClick={(e) => handleNavClick(e, 'privacy')} className="hover:text-white transition-colors">Privacy Policy</a>
