@@ -71,7 +71,7 @@ export function Pricing() {
               </Link>
               {p.link && (
                 <Link to={p.link} className="mt-3 text-center text-sm text-violet-400 hover:text-violet-300">
-                  Learn more
+                  More about {p.name.toLowerCase()}
                 </Link>
               )}
             </div>

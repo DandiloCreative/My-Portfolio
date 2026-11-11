@@ -30,7 +30,7 @@ export function BlogIndex() {
                   src={blogCover(post.path).small}
                   srcSet={`${blogCover(post.path).small} 600w, ${blogCover(post.path).large} 1200w`}
                   sizes="(min-width: 768px) 480px, 100vw"
-                  alt=""
+                  alt={`Cover image for the Dandilo Digitals guide: ${post.label}`}
                   width={600}
                   height={315}
                   loading="lazy"

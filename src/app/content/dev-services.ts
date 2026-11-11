@@ -84,7 +84,7 @@ export const devPages: ContentPageData[] = [
         a: "Yes. We can review your current code, fix problems and keep building on it, whether it's in JavaScript, TypeScript, PHP or Python.",
       },
     ],
-    related: [...STACK_LINKS, "/pricing"],
+    related: [...STACK_LINKS, "/blog/choose-tech-stack-nextjs-laravel-django-nestjs", "/blog/web-designer-vs-web-developer", "/pricing"],
   },
   {
     path: "/services/frontend-development",

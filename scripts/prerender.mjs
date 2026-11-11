@@ -22,9 +22,11 @@ const escapeAttr = (v) => v.replace(/&/g, "&amp;").replace(/"/g, "&quot;").repla
 const jsonLd = (obj) => `<script type="application/ld+json">${JSON.stringify(obj).replace(/</g, "\\u003c")}</script>`;
 const urlFor = (path) => SITE_URL + (path === "/" ? "/" : path);
 
+// Replacement text is inserted exactly as written. A leading "$1" keeps the matched tag start;
+// any other "$" (prices like $1,500 in descriptions) stays a plain dollar sign.
 function replaceOnce(html, regex, replacement, label) {
   if (!regex.test(html)) throw new Error(`prerender: could not find ${label} in index.html`);
-  return html.replace(regex, replacement);
+  return html.replace(regex, (_match, g1) => (replacement.startsWith("$1") && g1 !== undefined ? g1 + replacement.slice(2) : replacement));
 }
 
 const FAQ_BLOCK = /\s*<script type="application\/ld\+json" id="faq-schema">[\s\S]*?<\/script>/;
@@ -108,7 +110,7 @@ for (const route of ROUTES) {
   // The homepage FAQ's structured data only belongs on pages that show that FAQ
   if (!route.mainFaq) html = replaceOnce(html, FAQ_BLOCK, "", "FAQ schema");
   const extra = extraSchema(route);
-  if (extra) html = html.replace("</head>", `  ${extra}\n</head>`);
+  if (extra) html = html.replace("</head>", () => `  ${extra}\n</head>`);
   html = replaceOnce(html, /<div id="root"><\/div>/, `<div id="root">${appHtml}</div>`, "#root");
 
   const file = route.path === "/" ? join(dist, "index.html") : join(dist, route.path.slice(1), "index.html");

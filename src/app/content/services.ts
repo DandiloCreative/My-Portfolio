@@ -59,7 +59,7 @@ export const servicePages: ContentPageData[] = [
         a: "Yes. We build on platforms that let you edit text and photos without any coding, and we show you how.",
       },
     ],
-    related: ["/services/website-redesign", "/blog/get-more-customers-from-your-website", "/blog/small-business-website-cost"],
+    related: ["/services/website-redesign", "/blog/small-business-website-examples", "/blog/website-builder-vs-web-designer", "/blog/small-business-website-cost"],
   },
   {
     path: "/services/wordpress-web-design",
@@ -172,7 +172,7 @@ export const servicePages: ContentPageData[] = [
         a: "Shopify is usually simpler to run, with hosting and security handled for you. WooCommerce gives more flexibility if you already use WordPress. We'll recommend the best fit for your store.",
       },
     ],
-    related: ["/services/ecommerce-web-design", "/blog/shopify-vs-woocommerce", "/portfolio"],
+    related: ["/blog/shopify-website-cost", "/services/ecommerce-web-design", "/blog/shopify-vs-woocommerce", "/portfolio"],
   },
   {
     path: "/services/wix-web-designer",
@@ -232,7 +232,7 @@ export const servicePages: ContentPageData[] = [
         a: "Yes. That's one of Wix's biggest strengths. We'll show you how to update text, images and pages yourself.",
       },
     ],
-    related: ["/blog/wix-studio-vs-wix", "/services/website-redesign", "/blog/wix-vs-wordpress-vs-shopify"],
+    related: ["/blog/wix-studio-vs-wix", "/blog/website-builder-vs-web-designer", "/blog/wix-vs-wordpress-vs-shopify"],
   },
   {
     path: "/services/ecommerce-web-design",
@@ -277,7 +277,7 @@ export const servicePages: ContentPageData[] = [
         a: "Yes. We can redesign key pages like your homepage, product pages and cart to make shopping easier, especially on mobile.",
       },
     ],
-    related: ["/services/shopify-website-design", "/blog/shopify-vs-woocommerce", "/portfolio"],
+    related: ["/services/shopify-website-design", "/blog/shopify-website-cost", "/blog/shopify-vs-woocommerce", "/portfolio"],
   },
   {
     path: "/services/website-redesign",
@@ -545,7 +545,7 @@ export const servicePages: ContentPageData[] = [
         a: "No long contract. Care plans run month to month, and you can cancel any time.",
       },
     ],
-    related: ["/pricing", "/services/website-redesign", "/services/wordpress-web-design"],
+    related: ["/blog/small-business-website-security", "/blog/small-business-website-hosting-and-email", "/pricing", "/services/wordpress-web-design"],
   },
   {
     path: "/services/bespoke-web-design",
@@ -602,6 +602,6 @@ export const servicePages: ContentPageData[] = [
         a: "Yes. We build on platforms with easy editing, or add a simple content manager to custom-coded sites, and show you how to use it.",
       },
     ],
-    related: ["/services/small-business-web-design", "/services/full-stack-web-development", "/pricing"],
+    related: ["/services/small-business-web-design", "/blog/web-designer-vs-web-developer", "/blog/choose-tech-stack-nextjs-laravel-django-nestjs", "/pricing"],
   },
 ];
