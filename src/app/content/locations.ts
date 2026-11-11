@@ -11,7 +11,7 @@ export const locationPages: ContentPageData[] = [
     areaServed: ["United States"],
     title: "Small Business Web Design USA | Dandilo Digitals",
     description:
-      "Affordable web design for US small businesses. WordPress, Shopify and Wix Studio websites from $600, built to win calls, bookings and sales. Free website audit.",
+      "Affordable web design for US small businesses. WordPress, Shopify and Wix Studio websites from $300, built to win calls, bookings and sales. Free website audit.",
     eyebrow: "United States",
     h1: "Small Business Web Design for Companies Across the USA",
     intro: [
@@ -32,10 +32,10 @@ export const locationPages: ContentPageData[] = [
       {
         heading: "Prices in US dollars",
         bullets: [
-          "Starter Website: from $600",
-          "Business Website: from $1,200",
-          "Online Store: from $1,500",
-          "Website Redesign: from $800",
+          "Starter Website: from $300",
+          "Business Website: from $899",
+          "Online Store: from $1,250",
+          "Website Redesign: from $300",
           "Care Plan: from $99 a month",
         ],
         paragraphs: [
@@ -68,7 +68,7 @@ export const locationPages: ContentPageData[] = [
     areaServed: ["United Kingdom"],
     title: "Small Business Web Design UK | Bespoke Websites | Dandilo",
     description:
-      "Bespoke, affordable web design for UK small businesses: WordPress, Shopify and Wix websites, SEO and website care from about £470. Free website audit.",
+      "Bespoke, affordable web design for UK small businesses: WordPress, Shopify and Wix websites, SEO and website care from about £235. Free website audit.",
     eyebrow: "United Kingdom",
     h1: "Affordable, Bespoke Web Design for Small Businesses in the UK",
     intro: [
@@ -101,10 +101,10 @@ export const locationPages: ContentPageData[] = [
       {
         heading: "Approximate prices in pounds",
         bullets: [
-          "Starter Website: from about £470",
-          "Business Website: from about £940",
-          "Online Store: from about £1,170",
-          "Website Redesign: from about £630",
+          "Starter Website: from about £235",
+          "Business Website: from about £705",
+          "Online Store: from about £980",
+          "Website Redesign: from about £235",
           "Care Plan: from about £78 a month",
         ],
         paragraphs: [
@@ -143,7 +143,7 @@ export const locationPages: ContentPageData[] = [
     areaServed: ["Canada"],
     title: "Small Business Web Design Canada | Dandilo Digitals",
     description:
-      "Affordable web design for Canadian small businesses. WordPress, Shopify and Wix Studio websites from about CA$830, built to win enquiries. Free website audit.",
+      "Affordable web design for Canadian small businesses. WordPress, Shopify and Wix Studio websites from about CA$415, built to win enquiries. Free website audit.",
     eyebrow: "Canada",
     h1: "Affordable Web Design for Small Businesses in Canada",
     intro: [
@@ -171,10 +171,10 @@ export const locationPages: ContentPageData[] = [
       {
         heading: "Approximate prices in Canadian dollars",
         bullets: [
-          "Starter Website: from about CA$830",
-          "Business Website: from about CA$1,650",
-          "Online Store: from about CA$2,070",
-          "Website Redesign: from about CA$1,100",
+          "Starter Website: from about CA$415",
+          "Business Website: from about CA$1,240",
+          "Online Store: from about CA$1,725",
+          "Website Redesign: from about CA$415",
           "Care Plan: from about CA$137 a month",
         ],
         paragraphs: [

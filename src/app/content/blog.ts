@@ -466,7 +466,7 @@ export const blogPosts: ContentPageData[] = [
       {
         heading: "Get a clear quote for your website",
         paragraphs: [
-          "Our packages start at $600 for a starter website, $1,200 for a complete business website and $1,500 for an online store. See our pricing page for what's included.",
+          "Our packages start at $300 for a starter website, $899 for a complete business website and $1,250 for an online store. See our pricing page for what's included.",
           "Every business is different, so send us your current website (or tell us about your business) and we'll give you a free website audit and a clear, fixed quote, with no pressure to build with us.",
         ],
       },

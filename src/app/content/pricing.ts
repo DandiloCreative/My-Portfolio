@@ -16,14 +16,14 @@ export type PricingPackage = {
 export const pricingPackages: PricingPackage[] = [
   {
     name: "Starter Website",
-    price: 600,
+    price: 300,
     summary: "A clean, professional website to get your business online.",
     features: ["Up to 3 pages", "Mobile-friendly design", "Contact form and WhatsApp button", "Basic on-page SEO"],
     link: "/services/small-business-web-design",
   },
   {
     name: "Business Website",
-    price: 1200,
+    price: 899,
     summary: "A complete website built to bring in calls, bookings and enquiries.",
     features: [
       "Up to 7 pages",
@@ -36,14 +36,14 @@ export const pricingPackages: PricingPackage[] = [
   },
   {
     name: "Online Store",
-    price: 1500,
+    price: 1250,
     summary: "A Shopify or WooCommerce store that's easy to shop and easy to manage.",
     features: ["Shopify or WooCommerce", "Product pages and collections", "Payments and shipping setup", "Mobile-friendly checkout"],
     link: "/services/ecommerce-web-design",
   },
   {
     name: "Website Redesign",
-    price: 800,
+    price: 300,
     summary: "Give your current website a modern look without losing your Google rankings.",
     features: ["Modern, mobile-friendly redesign", "Keep your content and page addresses", "Faster loading pages", "Redirects set up where needed"],
     link: "/services/website-redesign",

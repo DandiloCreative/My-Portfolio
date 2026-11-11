@@ -53,7 +53,7 @@ export const countryPosts: ContentPageData[] = [
         heading: "How to get good value",
         paragraphs: [
           "Ask every designer what's included: number of pages, mobile design, SEO basics, contact forms, training and who owns the accounts. A cheap site that doesn't bring enquiries is the most expensive option in the end.",
-          "Remote agencies can be a good middle ground. At Dandilo Digitals, a starter website begins at about £470 and a business website at about £940 (our prices are set in US dollars, so the exact pound amount depends on the exchange rate). See our UK web design page for details.",
+          "Remote agencies can be a good middle ground. At Dandilo Digitals, a starter website begins at about £235 and a business website at about £705 (our prices are set in US dollars, so the exact pound amount depends on the exchange rate). See our UK web design page for details.",
         ],
       },
     ],
@@ -184,7 +184,7 @@ export const countryPosts: ContentPageData[] = [
         heading: "How to get good value",
         paragraphs: [
           "Compare what's included, not just the price: number of pages, mobile design, SEO basics, forms, training and account ownership.",
-          "At Dandilo Digitals, a starter website begins at about CA$830 and a business website at about CA$1,650 (our prices are set in US dollars, so the exact amount depends on the exchange rate). See our Canada web design page for details.",
+          "At Dandilo Digitals, a starter website begins at about CA$415 and a business website at about CA$1,240 (our prices are set in US dollars, so the exact amount depends on the exchange rate). See our Canada web design page for details.",
         ],
       },
     ],

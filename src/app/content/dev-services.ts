@@ -410,7 +410,7 @@ export const devPosts: ContentPageData[] = [
     faqs: [
       {
         q: "Is a web designer or web developer more expensive?",
-        a: "Custom development usually costs more than a website built on a platform, because it takes more time. Our websites start from $600 and custom development from $2,500.",
+        a: "Custom development usually costs more than a website built on a platform, because it takes more time. Our websites start from $300 and custom development from $2,500.",
       },
       {
         q: "What is considered a full stack developer?",

@@ -50,7 +50,7 @@ export const guidePosts: ContentPageData[] = [
         heading: "What a Shopify designer costs",
         paragraphs: [
           "Building it yourself costs only the plan and a theme, but many store owners end up with a store that looks like a template and doesn't convert. A Shopify designer sets up your theme, collections, product pages, payments, shipping and taxes, and makes the store fast and easy to buy from on a phone.",
-          "At Dandilo Digitals, Shopify stores start from $1,500. You get a mobile-first design, product and collection pages, payments and shipping set up, and on-page SEO so customers can find you on Google.",
+          "At Dandilo Digitals, Shopify stores start from $1,250. You get a mobile-first design, product and collection pages, payments and shipping set up, and on-page SEO so customers can find you on Google.",
         ],
       },
       {
@@ -180,7 +180,7 @@ export const guidePosts: ContentPageData[] = [
         heading: "Hiring a web designer",
         paragraphs: [
           "A web designer plans the site around your customers: the pages they need, the words they search for and the action you want them to take. You get a site that looks like your brand, loads fast and is set up for Google from day one.",
-          "Small business websites from a freelancer or small agency usually cost $500 to $5,000. At Dandilo Digitals, websites start from $600, with a free website audit first.",
+          "Small business websites from a freelancer or small agency usually cost $500 to $5,000. At Dandilo Digitals, websites start from $300, with a free website audit first.",
         ],
         bullets: ["Good for: businesses that want the website to bring in enquiries and sales", "Watch out for: designers who don't explain costs or who lock you out of your own site"],
       },

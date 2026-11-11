@@ -157,7 +157,7 @@ export const servicePages: ContentPageData[] = [
     faqs: [
       {
         q: "How much does a Shopify web designer cost?",
-        a: "Our Shopify stores start from $1,500, depending on the number of products, pages and apps you need. Your Shopify plan is paid to Shopify separately.",
+        a: "Our Shopify stores start from $1,250, depending on the number of products, pages and apps you need. Your Shopify plan is paid to Shopify separately.",
       },
       {
         q: "Can you redesign my existing Shopify store?",
@@ -217,7 +217,7 @@ export const servicePages: ContentPageData[] = [
     faqs: [
       {
         q: "How much does a Wix web designer cost?",
-        a: "Our Wix Studio websites start from $600 for a starter site and $1,200 for a full business website. Your Wix plan is paid to Wix separately.",
+        a: "Our Wix Studio websites start from $300 for a starter site and $899 for a full business website. Your Wix plan is paid to Wix separately.",
       },
       {
         q: "Is Wix good for SEO?",
@@ -318,7 +318,7 @@ export const servicePages: ContentPageData[] = [
     faqs: [
       {
         q: "How much does a website redesign cost?",
-        a: "Our website redesigns start from $800. The price depends on the number of pages, the platform and any new features. You get a fixed quote before work starts.",
+        a: "Our website redesigns start from $300. The price depends on the number of pages, the platform and any new features. You get a fixed quote before work starts.",
       },
       {
         q: "Will a redesign hurt my Google rankings?",
@@ -422,7 +422,7 @@ export const servicePages: ContentPageData[] = [
     faqs: [
       {
         q: "How much does a Squarespace web designer cost?",
-        a: "Our Squarespace websites start from $600. Your Squarespace plan (hosting included) is paid to Squarespace separately, so you always own your account.",
+        a: "Our Squarespace websites start from $300. Your Squarespace plan (hosting included) is paid to Squarespace separately, so you always own your account.",
       },
       {
         q: "Can you redesign my existing Squarespace website?",
@@ -584,7 +584,7 @@ export const servicePages: ContentPageData[] = [
       {
         heading: "Bespoke doesn't have to mean expensive",
         paragraphs: [
-          "Many agencies charge £10,000 or $15,000+ for a bespoke website. Because we're a lean remote team, our custom websites start from $1,200, with fully custom-coded builds from $2,500. You get a fixed quote before work starts.",
+          "Many agencies charge £10,000 or $15,000+ for a bespoke website. Because we're a lean remote team, our custom websites start from $899, with fully custom-coded builds from $2,500. You get a fixed quote before work starts.",
         ],
       },
     ],

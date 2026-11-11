@@ -174,7 +174,7 @@ export const industryPages: ContentPageData[] = [
       },
       {
         q: "How much does a therapist website cost?",
-        a: "Our therapist websites start from $600 for a starter site and $1,200 for a full practice website with service pages and blog.",
+        a: "Our therapist websites start from $300 for a starter site and $899 for a full practice website with service pages and blog.",
       },
     ],
     related: ["/services/small-business-web-design", "/services/squarespace-web-design", "/services/wordpress-web-design"],
@@ -219,7 +219,7 @@ export const industryPages: ContentPageData[] = [
       },
       {
         q: "How much does a law firm website cost?",
-        a: "Law firm websites usually start from $1,200 for a full practice website with practice area pages, profiles and a blog. Larger firms with many locations need more.",
+        a: "Law firm websites usually start from $899 for a full practice website with practice area pages, profiles and a blog. Larger firms with many locations need more.",
       },
     ],
     related: ["/services/wordpress-web-design", "/services/small-business-web-design", "/blog/how-to-choose-a-web-designer"],
@@ -259,7 +259,7 @@ export const industryPages: ContentPageData[] = [
     faqs: [
       {
         q: "Do you offer nonprofit pricing?",
-        a: "Our packages start from $600 for a starter website. Tell us about your organisation and budget and we'll recommend the simplest site that does the job.",
+        a: "Our packages start from $300 for a starter website. Tell us about your organisation and budget and we'll recommend the simplest site that does the job.",
       },
       {
         q: "Which platform is best for a charity website?",
@@ -307,7 +307,7 @@ export const industryPages: ContentPageData[] = [
       },
       {
         q: "How much does an accountant website cost?",
-        a: "Accounting websites usually start from $600 for a starter site and $1,200 for a full website with service pages, booking and a blog.",
+        a: "Accounting websites usually start from $300 for a starter site and $899 for a full website with service pages, booking and a blog.",
       },
     ],
     related: ["/services/small-business-web-design", "/services/wordpress-web-design", "/services/squarespace-web-design"],
