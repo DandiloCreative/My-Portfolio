@@ -1,0 +1,30 @@
+# After Vercel finishes a production deploy, tell Bing/IndexNow which pages are new or changed.
+name: IndexNow after deploy
+
+on:
+  deployment_status:
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    if: github.event_name == 'workflow_dispatch' || (github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # Fingerprints of each page from the last run, so only changed pages are submitted
+      - uses: actions/cache/restore@v4
+        with:
+          path: .indexnow-state.json
+          key: indexnow-state-${{ github.run_id }}
+          restore-keys: indexnow-state-
+      - name: Submit new and changed pages
+        run: node scripts/indexnow.mjs --changed
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .indexnow-state.json
+          key: indexnow-state-${{ github.run_id }}

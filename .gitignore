@@ -8,3 +8,6 @@ dist-ssr
 
 .vercel
 .env*
+
+# IndexNow page fingerprints (kept in the GitHub Actions cache)
+.indexnow-state.json

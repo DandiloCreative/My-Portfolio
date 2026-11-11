@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { toast } from "sonner";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { BUDGET_OPTIONS, submitLead } from "../lib/leads";
+import { BUDGET_OPTIONS, INTENT_OPTIONS, submitLead } from "../lib/leads";
 import { useTurnstile } from "../lib/turnstile";
 
 const fieldClass =
@@ -44,7 +44,7 @@ function Field({ id, label, children }: { id: string; label: string; children: R
 export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" }: Props) {
   const navigate = useNavigate();
   const isAudit = variant === "audit";
-  const empty = { name: "", email: "", phone: "", website: "", platform: "", budget: "", message: "" };
+  const empty = { name: "", email: "", phone: "", website: "", intent: "", platform: "", budget: "", message: "" };
   const [data, setData] = useState(empty);
   const [sending, setSending] = useState(false);
   const turnstile = useTurnstile();
@@ -62,6 +62,8 @@ export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" 
           email: data.email,
           phone: data.phone,
           website: data.website,
+          intent: isAudit ? "" : data.intent,
+          "Looking for": isAudit ? "" : (INTENT_OPTIONS.find(([v]) => v === data.intent)?.[1] ?? ""),
           platform: isAudit ? "" : data.platform,
           budget: data.budget,
           message: data.message,
@@ -94,6 +96,17 @@ export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" 
           <Input id={id("phone")} name="phone" type="tel" autoComplete="tel" placeholder="+1 555 123 4567" value={data.phone} onChange={set("phone")} className={fieldClass} />
         </Field>
       </div>
+
+      {!isAudit && (
+        <Field id={id("intent")} label="What can we help you with?">
+          <select id={id("intent")} name="intent" className={selectClass} value={data.intent} onChange={set("intent")} required>
+            <option value="" disabled className="bg-zinc-900">Choose one</option>
+            {INTENT_OPTIONS.map(([value, label]) => (
+              <option key={value} value={value} className="bg-zinc-900">{label}</option>
+            ))}
+          </select>
+        </Field>
+      )}
 
       <Field id={id("website")} label={isAudit ? "Your website" : "Your website (if you have one)"}>
         <Input id={id("website")} name="website" type="text" inputMode="url" autoComplete="url" placeholder="yourbusiness.com" value={data.website} onChange={set("website")} required={isAudit} className={fieldClass} />

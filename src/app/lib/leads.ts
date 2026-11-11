@@ -69,6 +69,7 @@ async function sendToCrm(fields: LeadFields, formName: string, turnstileToken: s
       website: fields.website || undefined,
       budget: fields.budget || undefined,
       platform: fields.platform || undefined,
+      intent: fields.intent || undefined,
       message: fields.message || undefined,
       formName,
       source: a["Lead source"],
@@ -81,6 +82,18 @@ async function sendToCrm(fields: LeadFields, formName: string, turnstileToken: s
   });
   if (!res.ok) throw new Error(`CRM request failed (${res.status})`);
 }
+
+/** "What can we help you with?" choices. The CRM keeps "offering-services" out of the lead pipeline. */
+export const INTENT_OPTIONS: [value: string, label: string][] = [
+  ["new-website", "A new website"],
+  ["redesign", "Redesign my current website"],
+  ["online-store", "An online store"],
+  ["seo", "Get found on Google (SEO)"],
+  ["care", "Website care or fixes"],
+  ["custom-app", "A custom web app"],
+  ["other", "Something else"],
+  ["offering-services", "I'm offering services / partnership"],
+];
 
 export const BUDGET_OPTIONS = [
   "$300 – $600",

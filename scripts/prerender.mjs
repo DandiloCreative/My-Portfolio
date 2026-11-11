@@ -3,14 +3,15 @@
 //   - the fully rendered page content (so Google, Bing and AI crawlers can read it without JavaScript)
 //   - that page's own <title>, description, canonical URL and share-preview tags
 //   - structured data: FAQ, breadcrumbs, blog article and service details where relevant
-// It also writes dist/sitemap.xml from the same list of pages.
+// It also writes dist/sitemap.xml and dist/llms.txt from the same list of pages,
+// and stops the build if any page breaks a basic SEO rule (see "SEO checks" at the end).
 import { readFileSync, writeFileSync, mkdirSync, existsSync, copyFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "dist");
-const { render, ROUTES, SITE_URL } = await import(pathToFileURL(join(root, "dist-ssr", "entry-server.js")).href);
+const { render, ROUTES, SITE_URL, pricingPackages } = await import(pathToFileURL(join(root, "dist-ssr", "entry-server.js")).href);
 
 // Keep an untouched copy of the built index.html so this script can be re-run safely
 const templateFile = join(root, "dist-ssr", "index.template.html");
@@ -21,6 +22,11 @@ const today = new Date().toISOString().slice(0, 10);
 const escapeAttr = (v) => v.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 const jsonLd = (obj) => `<script type="application/ld+json">${JSON.stringify(obj).replace(/</g, "\\u003c")}</script>`;
 const urlFor = (path) => SITE_URL + (path === "/" ? "/" : path);
+// Same id as the main ProfessionalService block in index.html, so Google knows it's one business
+const ORG = { "@type": "ProfessionalService", "@id": `${SITE_URL}/#organization`, name: "Dandilo Digitals", url: SITE_URL };
+const MARKETS = ["United States", "Canada", "United Kingdom", "Australia", "Ireland", "New Zealand"];
+const problems = [];
+const seen = { title: {}, description: {} };
 
 // Replacement text is inserted exactly as written. A leading "$1" keeps the matched tag start;
 // any other "$" (prices like $1,500 in descriptions) stays a plain dollar sign.
@@ -63,8 +69,8 @@ function extraSchema(route) {
       dateModified: c.date,
       mainEntityOfPage: urlFor(c.path),
       image: `${SITE_URL}/blog-images/${c.path.replace("/blog/", "")}.jpg`,
-      author: { "@type": "Organization", name: "Dandilo Digitals", url: SITE_URL },
-      publisher: { "@type": "Organization", name: "Dandilo Digitals", logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` } },
+      author: ORG,
+      publisher: { ...ORG, logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` } },
     });
   }
   if (c?.kind === "service") {
@@ -74,8 +80,8 @@ function extraSchema(route) {
       name: c.label,
       description: c.description,
       url: urlFor(c.path),
-      areaServed: (c.areaServed ?? ["United States", "Canada", "United Kingdom", "Australia", "Ireland", "New Zealand", "Nigeria"]).map((name) => ({ "@type": "Country", name })),
-      provider: { "@type": "ProfessionalService", name: "Dandilo Digitals", url: SITE_URL },
+      areaServed: (c.areaServed ?? MARKETS).map((name) => ({ "@type": "Country", name })),
+      provider: ORG,
     });
   }
   if (route.schema) blocks.push(...route.schema);
@@ -113,6 +119,8 @@ for (const route of ROUTES) {
   if (extra) html = html.replace("</head>", () => `  ${extra}\n</head>`);
   html = replaceOnce(html, /<div id="root"><\/div>/, `<div id="root">${appHtml}</div>`, "#root");
 
+  checkPage(route, html, appHtml);
+
   const file = route.path === "/" ? join(dist, "index.html") : join(dist, route.path.slice(1), "index.html");
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, html);
@@ -142,3 +150,89 @@ console.log(`prerender: sitemap.xml with ${indexed.length} pages`);
   writeFileSync(join(dist, "404.html"), html);
   console.log("prerender: 404.html");
 }
+
+// llms.txt: a plain-text summary of the business and its key pages for AI assistants (ChatGPT, Perplexity, Claude...)
+{
+  const money = (n) => "$" + n.toLocaleString("en-US");
+  const list = (filter) =>
+    indexed
+      .filter(filter)
+      .map((r) => `- [${r.content?.label ?? r.title.split(" | ")[0]}](${urlFor(r.path)}): ${r.description}`)
+      .join("\n");
+  const txt = `# Dandilo Digitals
+
+> Dandilo Digitals (dandilodigitals.com) is a web design and development agency for small businesses in the US, UK and Canada. We build WordPress, Shopify, Wix Studio, Squarespace, GoHighLevel and custom-coded websites designed to win calls, bookings and sales. Every project can start with a free website audit.
+
+- Website: ${SITE_URL}
+- Email: hello@dandilodigitals.com
+- WhatsApp / phone: +1 224-620-0930
+- Works remotely with clients in the United States, United Kingdom, Canada, Australia, Ireland and New Zealand
+- Prices are in US dollars and are "from" prices; every client gets a fixed quote before work starts
+
+## Prices
+
+${pricingPackages.map((p) => `- ${p.name}: from ${money(p.price)}${p.per ?? ""}. ${p.summary}`).join("\n")}
+
+Full details: ${SITE_URL}/pricing
+
+## Main pages
+
+${list((r) => !r.content)}
+
+## Services
+
+${list((r) => r.content?.kind === "service")}
+
+## Industries
+
+${list((r) => r.path.startsWith("/industries/"))}
+
+## Countries
+
+${list((r) => r.path.startsWith("/web-design-"))}
+
+## Guides
+
+${list((r) => r.content?.kind === "blog")}
+`;
+  writeFileSync(join(dist, "llms.txt"), txt);
+  console.log(`prerender: llms.txt (${Math.round(txt.length / 1024)} KB)`);
+}
+
+// SEO checks: the build fails (so a broken site never goes live) if a page loses its title, description,
+// H1 or canonical, if two pages share a title or description, or if the business details go wrong.
+function checkPage(route, html, appHtml) {
+  const p = route.path;
+  const fail = (msg) => problems.push(`${p}: ${msg}`);
+  if (!route.title?.trim()) fail("missing title");
+  if (!route.description?.trim()) fail("missing description");
+  else if (route.description.length > 170) fail(`description is ${route.description.length} characters (max 170)`);
+  const h1s = (appHtml.match(/<h1[\s>]/g) ?? []).length;
+  if (h1s !== 1) fail(`${h1s} H1 headings (needs exactly 1)`);
+  if (!route.noindex && !html.includes(`<link rel="canonical" href="${urlFor(p)}"`)) fail("canonical doesn't point to itself");
+  if (route.noindex && !/<meta name="robots" content="noindex/.test(html)) fail("should be noindex");
+  if (/Ibadan|"Nigeria"/.test(html)) fail("old Ibadan / Nigeria business details");
+  for (const block of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
+    try { JSON.parse(block[1]); } catch { fail("broken structured data (JSON-LD)"); }
+  }
+  if (!route.noindex) {
+    for (const key of ["title", "description"]) {
+      const v = route[key];
+      if (seen[key][v]) fail(`same ${key} as ${seen[key][v]}`);
+      else seen[key][v] = p;
+    }
+  }
+  if (p === "/pricing") {
+    for (const pkg of pricingPackages) {
+      const shown = pkg.price.toLocaleString("en-US");
+      if (!appHtml.includes(shown)) fail(`price for ${pkg.name} ($${shown}) isn't on the page`);
+    }
+  }
+}
+
+if (indexed.length < 50) problems.push(`sitemap: only ${indexed.length} pages (expected 50+)`);
+if (problems.length) {
+  console.error(`\nSEO checks failed (${problems.length}):\n  - ${problems.join("\n  - ")}\n`);
+  process.exit(1);
+}
+console.log(`SEO checks: all ${ROUTES.length} pages passed`);

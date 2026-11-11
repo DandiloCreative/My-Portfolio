@@ -7,6 +7,7 @@ import App from "./app/App";
 import { ThemeProvider } from "./app/components/ThemeProvider";
 
 export { ROUTES, SITE_URL } from "./app/routes";
+export { pricingPackages } from "./app/content/pricing";
 
 export function render(url: string): Promise<string> {
   return new Promise((resolve, reject) => {
