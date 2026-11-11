@@ -116,6 +116,13 @@ The CRM **Keywords** page supplies new phrases every morning. Each month we pick
 - IndexNow script
 - Bing verification
 
+> **Status (11 Nov 2026):**
+> - **Done:** schema cleanup (Ibadan address and Nigeria removed, one `@id` for the business, "Dandilo Digitals Agency" as an alternate name), `llms.txt`, automatic IndexNow after every production deploy (first run succeeded), and SEO checks that stop a broken build.
+> - **Waiting:**
+>   - **Portfolio pages:** need real project facts from the owner. Pages with only today's short descriptions would be too thin to rank.
+>   - **Core Web Vitals:** need measuring when Google's PageSpeed quota resets, or from Search Console → Core Web Vitals.
+>   - **Person schema:** waits for team details.
+
 **To do:**
 1. **Schema cleanup (T3):**
    - Keep ProfessionalService with `areaServed` set to US, GB and CA (plus Ireland, Australia and New Zealand if you want them).
@@ -200,6 +207,22 @@ The CRM **Keywords** page supplies new phrases every morning. Each month we pick
    These get sites penalised.
 
 ### Phase 5: Lead quality and measurement (week 1–2) · effort: me · risk: low
+
+> **Status (11 Nov 2026): done, live in the CRM.**
+> - **The form:** asks "What can we help you with?" and includes an "I'm offering services / partnership" choice.
+> - **The detector:** caught 10 of 10 sample pitches and flagged 0 of 11 real enquiries.
+> - **What happens to pitches:**
+>   - They're marked **Vendor pitch**, with the reason shown.
+>   - They're kept out of the lead counts, dashboard, pipeline and Inbox, and they get no auto-reply.
+>   - Your notification email is labelled "Vendor pitch (filtered)".
+> - **CRM buttons:** a **Vendor pitches** tab, **Not a pitch** (undo), and **Scan older leads** (admins only; only checks untouched New leads).
+> - **Monthly report:** Leads → **Monthly report**, and it's emailed on the 3rd of each month. It covers:
+>   - leads by channel compared with the month before
+>   - won leads and filtered pitches
+>   - website visits and top pages
+>   - Search Console clicks, impressions, top searches and the positions of 42 target phrases
+>   - new keyword ideas
+> - **Owner step:** connect Search Console. The steps are in `Dandilo CRM/api/src/reports/search-console.ts`.
 
 1. **Separate vendor pitches from leads in the CRM:**
    - Add a required "What can we help you with?" choice on the contact form, including "I'm offering services / partnership".
