@@ -4,6 +4,8 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence, useInView } from "motion/react";
+import { Link } from "react-router";
+import { BOOK_CALL_URL } from "../lib/booking";
 import mockup1 from "../../assets/project-clothy.webp";
 import mockup3 from "../../assets/project-jadoo.webp";
 import mockup4 from "../../assets/project-medipresse.webp";
@@ -435,16 +437,28 @@ export function Portfolio({ isPage = false }: { isPage?: boolean }) {
           className="text-center mt-20 will-change-transform"
         >
           <p className="text-zinc-500 text-sm mb-6">Ready to join our portfolio of premium clients?</p>
-          <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-            <a
-              href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-semibold shadow-[0_0_30px_rgba(124,58,237,0.35)] hover:shadow-[0_0_50px_rgba(124,58,237,0.55)] transition-all border-0 decoration-none hover:text-white"
-            >
-              Start Your Project <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-            </a>
-          </motion.div>
+          <div className="flex flex-wrap items-stretch justify-center gap-3 md:gap-4">
+            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="flex">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white rounded-full px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-semibold shadow-[0_0_30px_rgba(124,58,237,0.35)] hover:shadow-[0_0_50px_rgba(124,58,237,0.55)] transition-all border-0 decoration-none hover:text-white"
+              >
+                Start Your Project <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+              </Link>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="flex">
+              <a
+                href={BOOK_CALL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center justify-center bg-transparent hover:bg-white/10 border border-violet-400/50 hover:border-white/70 rounded-lg px-7 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold uppercase sm:tracking-wide transition-all duration-300 decoration-none"
+              >
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 group-hover:text-white group-hover:bg-none">
+                  Book a Call
+                </span>
+              </a>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
