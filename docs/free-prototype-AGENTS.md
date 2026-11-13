@@ -17,7 +17,7 @@ A single-purpose landing page for **Dandilo Digitals Agency** (https://dandilodi
 - Your new website designed **before you pay**: a free homepage prototype within **48 hours**
 - **Complimentary Google Business Profile setup** with every website
 - Websites **from $300**, with a fixed quote before any work starts
-- A reply to every enquiry within **24 hours**
+- We **reply immediately** to every enquiry (by email or WhatsApp)
 
 If the ad copy changes, update the hero headline to match. The hero headline must repeat the ad's promise.
 
@@ -29,7 +29,8 @@ public/free-prototype/     (in the main website repo; Vite copies it to the site
 ├── thank-you.html    Shown after a successful submit; fires the Meta "Lead" event
 ├── settings.js       Settings (see below)
 ├── landing.js        WhatsApp links, sticky mobile button, form sending
-├── pixel.js          Meta Pixel: PageView, Lead, Contact
+├── pixel.js          Meta Pixel: PageView, Lead, Contact, BookCallClick
+├── crm-track.js      Page views to Dandilo CRM (Dashboard), like the main website
 ├── img/
 │   ├── logo.png          DG logo, transparent background
 │   ├── hero-work.webp    Grid of real project screenshots used in the hero (880×880)
@@ -50,7 +51,8 @@ window.DD = {
   TURNSTILE_SITE_KEY: "…",                        // Cloudflare "are you human?" check used by the CRM
   WHATSAPP_NUMBER: "12246200930",                 // digits only, with country code
   WHATSAPP_TEXT: "Hi Dandilo Digitals, I'd like my free website prototype.",
-  PIXEL_ID: "1153704343895256"                    // Meta Pixel
+  PIXEL_ID: "1153704343895256",                   // Meta Pixel
+  BOOK_CALL_URL: "https://calendly.com/dandilodigitals/30min" // "Book a Call"
 };
 ```
 
@@ -71,7 +73,9 @@ window.DD = {
 10. **Form** (`#get-prototype`): 6 fields.
 11. **Footer** + **sticky mobile CTA bar.** The bar is hidden on desktop, while the hero buttons are on screen, and while the form is on screen.
 
-Every call-to-action button points to `#get-prototype` ("See Our Work" scrolls to `#our-work`). Don't add links that leave the page, except WhatsApp and the privacy policy (`/privacy`).
+Every call-to-action button points to `#get-prototype` ("See Our Work" scrolls to `#our-work`). Don't add links that leave the page, except WhatsApp, **Book a Call** (Calendly) and the privacy policy (`/privacy`).
+
+**Book a Call placement:** Book a Call is a secondary option. It sits under the promises next to the form ("Prefer to talk to us first?") and on the thank-you page. Keep it out of the hero and the sticky bar: the form is the conversion the ads optimise for, and a Calendly booking doesn't fire `Lead`.
 
 ## Form
 
@@ -99,11 +103,19 @@ Fields: name, business, email, phone, business_type, has_website. All are requir
 | `PageView` | Both pages |
 | `Lead` | `thank-you.html`, only right after a real submit. The form sets a one-time flag, so refreshing the thank-you page or visiting it directly does **not** count a lead. This is the conversion the ads optimise for. |
 | `Contact` | A click on any WhatsApp button (`.js-wa`) |
+| `BookCallClick` (custom) | A click on a Book a Call button (`.js-call`) |
 
 Never fire `Lead` anywhere except the thank-you page, or ad results will be wrong.
 
+## CRM
+
+- **Leads:** every form request appears in **Leads** (form "Free prototype (ads)") and in the **Inbox**. Meta ad clicks show the source "Facebook / Instagram".
+- **Visits:** `crm-track.js` sends each visit to the CRM **Dashboard** (visitors, pages, sources, countries, devices), with no cookies. The landing page and thank-you page count as one visit. Paths: `/free-prototype` and `/free-prototype/thank-you`.
+- **Your own visits:** open the page once with `?notrack=1` to leave your own visits out.
+
 ## Brand
 
+- Buttons grow slightly on hover (scale 1.05) and shrink when pressed (0.95), like the main site. Primary buttons glow on hover. Motion is turned off for visitors who ask for reduced motion.
 - Colours: purple `#8b5cf6` / `#a78bfa`, turquoise `#22d3ee`, dark background `#0a0a12`, light sections `#f6f5fb`.
 - Accent gradient: `linear-gradient(90deg,#a78bfa,#22d3ee)`.
 - Font: Outfit (Google Fonts, `display=swap`), with a system-ui fallback.

@@ -11,6 +11,13 @@
     a.rel = "noopener";
   });
 
+  // Book a Call (Calendly)
+  document.querySelectorAll(".js-call").forEach(function (a) {
+    if (DD.BOOK_CALL_URL) a.href = DD.BOOK_CALL_URL;
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
+
   // Sticky mobile button: hidden while the form is on screen
   var sticky = document.getElementById("sticky-cta");
   var formSection = document.getElementById("get-prototype");

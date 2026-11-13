@@ -5,13 +5,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Free Website Prototype in 48 Hours | Dandilo Digitals</title>
-  <meta name="description" content="See your new website before you pay. Free homepage prototype in 48 hours, free Google Business Profile setup, websites from $300." />
+  <meta name="description" content="See your new website before you pay. Free homepage prototype within 48 hours, free Google Business Profile setup, websites from $300." />
   <!-- Ad landing page: kept out of Google so it doesn't compete with the main site -->
   <meta name="robots" content="noindex, follow" />
   <meta name="theme-color" content="#0a0a12" />
   <link rel="icon" href="/favicon.png" />
   <meta property="og:title" content="Get your new website designed before you pay" />
-  <meta property="og:description" content="Free homepage prototype in 48 hours. Websites from $300." />
+  <meta property="og:description" content="Free homepage prototype within 48 hours. Websites from $300." />
   <meta property="og:image" content="https://dandilodigitals.com/free-prototype/img/hero-work.webp" />
   <link rel="preload" as="image" href="/free-prototype/img/hero-work.webp" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,10 +46,17 @@
 
     /* Buttons: at least 48px tall */
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 12px 26px; border-radius: 999px; font: inherit; font-size: 18px; font-weight: 600; text-decoration: none; border: 0; cursor: pointer; }
-    .btn-primary { background: var(--btn); color: #fff; box-shadow: 0 8px 30px rgba(139, 92, 246, 0.35); }
-    .btn-primary:hover { filter: brightness(1.08); }
-    .btn-outline { background: transparent; color: #fff; border: 1.5px solid rgba(255, 255, 255, 0.35); }
-    .btn-outline:hover { border-color: #fff; }
+    .btn, .wa-round { transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, filter 0.3s ease; }
+    .btn:hover, .wa-round:hover { transform: scale(1.05); }
+    .btn:active, .wa-round:active { transform: scale(0.95); }
+    .btn-primary { background: var(--btn); color: #fff; box-shadow: 0 0 20px rgba(124, 58, 237, 0.4); }
+    .btn-primary:hover { filter: brightness(1.1); box-shadow: 0 0 40px rgba(124, 58, 237, 0.6); }
+    .btn-outline { background: transparent; color: #fff; border: 1.5px solid rgba(167, 139, 250, 0.55); }
+    .btn-outline:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.7); }
+    .btn-wa:hover { background: rgba(37, 211, 102, 0.22); border-color: rgba(37, 211, 102, 0.8); }
+    .btn:disabled:hover { transform: none; }
+    .call-box { margin-top: 26px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, 0.12); }
+    .call-box p { color: var(--on-dark-2); margin-bottom: 12px; }
     .btn-wa { background: rgba(37, 211, 102, 0.12); color: #fff; border: 1px solid rgba(37, 211, 102, 0.45); min-height: 48px; padding: 8px 18px; font-size: 16px; }
     .btn:disabled { opacity: 0.7; cursor: wait; }
     .wa-icon { width: 20px; height: 20px; flex: none; }
@@ -172,7 +179,7 @@
       .sticky { display: none; }
       footer { padding-bottom: 26px; }
     }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .sticky { transition: none; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .sticky, .btn, .wa-round { transition: none; } .btn:hover, .btn:active, .wa-round:hover, .wa-round:active { transform: none; } }
   </style>
 </head>
 <body data-page="landing">
@@ -196,9 +203,9 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <span class="pill">✦ Free website prototype · <b>ready in 48 hours</b></span>
+          <span class="pill">✦ Free website prototype · <b>within 48 hours</b></span>
           <h1>Get Your New Website Designed <span class="grad">Before You Pay a Single Dollar</span></h1>
-          <p class="sub">We'll design a free prototype of your website in 48 hours. Love it? We build it. Don't? You owe nothing.</p>
+          <p class="sub">We'll design a free prototype of your website within 48 hours. Love it? We build it. Don't? You owe nothing.</p>
           <div class="hero-ctas" id="hero-cta">
             <a class="btn btn-primary" href="#get-prototype">Get My Free Prototype <span aria-hidden="true">→</span></a>
             <a class="btn btn-outline" href="#our-work">See Our Work</a>
@@ -385,8 +392,12 @@
           <ul class="promises">
             <li><span class="tick"><svg width="14" height="14" aria-hidden="true"><use href="#ck" /></svg></span><span><b>No payment needed</b> to get your prototype</span></li>
             <li><span class="tick"><svg width="14" height="14" aria-hidden="true"><use href="#ck" /></svg></span><span><b>Free Google Business Profile</b> setup with every website</span></li>
-            <li><span class="tick"><svg width="14" height="14" aria-hidden="true"><use href="#ck" /></svg></span><span><b>We reply within 24 hours</b>, by email or WhatsApp</span></li>
+            <li><span class="tick"><svg width="14" height="14" aria-hidden="true"><use href="#ck" /></svg></span><span><b>We reply immediately</b>, by email or WhatsApp</span></li>
           </ul>
+          <div class="call-box">
+            <p>Prefer to talk to us first?</p>
+            <a class="btn btn-outline js-call" href="https://calendly.com/dandilodigitals/30min"><svg class="wa-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book a Call</a>
+          </div>
         </div>
         <div class="card">
           <form id="prototype-form" novalidate>
@@ -451,5 +462,6 @@
   <script src="/free-prototype/settings.js"></script>
   <script src="/free-prototype/landing.js" defer></script>
   <script src="/free-prototype/pixel.js" defer></script>
+  <script src="/free-prototype/crm-track.js" defer></script>
 </body>
 </html>

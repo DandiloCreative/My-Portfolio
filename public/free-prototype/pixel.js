@@ -2,6 +2,7 @@
 //   PageView: every page.
 //   Lead:     thank-you.html only, and only right after a real form submit (not on refresh or a direct visit).
 //   Contact:  a click on any WhatsApp button (.js-wa).
+//   BookCallClick (custom): a click on a Book a Call button (.js-call). Not a Lead.
 (function () {
   var id = window.DD && window.DD.PIXEL_ID;
   if (!id || /YOUR_/.test(id)) return;
@@ -25,7 +26,9 @@
   }
 
   document.addEventListener("click", function (e) {
-    var a = e.target.closest && e.target.closest(".js-wa");
-    if (a) fbq("track", "Contact", { content_name: "WhatsApp" });
+    var a = e.target.closest && e.target.closest(".js-wa, .js-call");
+    if (!a) return;
+    if (a.classList.contains("js-call")) fbq("trackCustom", "BookCallClick");
+    else fbq("track", "Contact", { content_name: "WhatsApp" });
   });
 })();
