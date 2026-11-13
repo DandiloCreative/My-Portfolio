@@ -1,6 +1,6 @@
 # AGENTS.md: Dandilo Digitals "Free Prototype" landing page
 
-Read this file before changing anything in this folder.
+Read this file before changing anything in `public/free-prototype/`. (It lives here, outside `public/`, so it isn't published on the website.)
 
 ## What this is
 
@@ -34,7 +34,7 @@ public/free-prototype/     (in the main website repo; Vite copies it to the site
 │   ├── logo.png          DG logo, transparent background
 │   ├── hero-work.webp    Grid of real project screenshots used in the hero (880×880)
 │   └── portfolio.webp    Closer look at three projects for "Our work" (800×800)
-└── AGENTS.md         This file
+(Notes: docs/free-prototype-AGENTS.md, this file)
 ```
 
 There's no framework, no dependencies and no build step. Keep it that way unless the owner asks.
