@@ -14,10 +14,9 @@
   <meta property="og:description" content="Free homepage prototype within 48 hours. Websites from $300." />
   <meta property="og:image" content="https://dandilodigitals.com/free-prototype/img/hero-work.webp" />
   <link rel="preload" as="image" href="/free-prototype/img/hero-work.webp" fetchpriority="high" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" />
+  <link rel="preload" href="/free-prototype/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin />
   <style>
+    @font-face { font-family: Outfit; font-style: normal; font-weight: 300 900; font-display: swap; src: url(/free-prototype/fonts/outfit.woff2) format("woff2"); }
     :root {
       --purple: #8b5cf6; --purple-l: #a78bfa; --cyan: #22d3ee;
       --dark: #0a0a12; --dark-2: #12121e; --dark-3: #1a1a2a; --light: #f6f5fb;
@@ -37,7 +36,7 @@
     .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .dark { background: var(--dark); color: var(--on-dark); }
     section { padding: 64px 0; }
-    .eyebrow { display: block; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple); margin-bottom: 10px; }
+    .eyebrow { display: block; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #6d28d9; margin-bottom: 10px; }
     .dark .eyebrow { color: var(--cyan); }
     .center { text-align: center; }
     .h2 { font-size: clamp(28px, 6vw, 40px); font-weight: 700; }
