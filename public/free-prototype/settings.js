@@ -8,6 +8,4 @@ window.DD = {
   TURNSTILE_SITE_KEY: "0x4AAAAAAFzgWU8srwiu33c7",
   WHATSAPP_NUMBER: "12246200930", // digits only, with country code
   WHATSAPP_TEXT: "Hi Dandilo Digitals, I'd like my free website prototype.",
-  PIXEL_ID: "1153704343895256", // Meta Pixel
-  BOOK_CALL_URL: "https://calendly.com/dandilodigitals/30min", // "Book a Call" (Calendly)
-};
+  PIXEL_ID: "1153704343895256", // Meta Pixel};

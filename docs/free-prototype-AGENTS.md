@@ -29,7 +29,7 @@ public/free-prototype/     (in the main website repo; Vite copies it to the site
 ├── thank-you.html    Shown after a successful submit; fires the Meta "Lead" event
 ├── settings.js       Settings (see below)
 ├── landing.js        WhatsApp links, sticky mobile button, form sending
-├── pixel.js          Meta Pixel: PageView, Lead, Contact, BookCallClick
+├── pixel.js          Meta Pixel: PageView, Lead, Contact
 ├── crm-track.js      Page views to Dandilo CRM (Dashboard), like the main website
 ├── img/
 │   ├── logo.png          DG logo, transparent background
@@ -51,8 +51,7 @@ window.DD = {
   TURNSTILE_SITE_KEY: "…",                        // Cloudflare "are you human?" check used by the CRM
   WHATSAPP_NUMBER: "12246200930",                 // digits only, with country code
   WHATSAPP_TEXT: "Hi Dandilo Digitals, I'd like my free website prototype.",
-  PIXEL_ID: "1153704343895256",                   // Meta Pixel
-  BOOK_CALL_URL: "https://calendly.com/dandilodigitals/30min" // "Book a Call"
+  PIXEL_ID: "1153704343895256"                    // Meta Pixel
 };
 ```
 
@@ -73,9 +72,9 @@ window.DD = {
 10. **Form** (`#get-prototype`): 6 fields.
 11. **Footer** + **sticky mobile CTA bar.** The bar is hidden on desktop, while the hero buttons are on screen, and while the form is on screen.
 
-Every call-to-action button points to `#get-prototype` ("See Our Work" scrolls to `#our-work`). Don't add links that leave the page, except WhatsApp, **Book a Call** (Calendly) and the privacy policy (`/privacy`).
+Every call-to-action button points to `#get-prototype` ("See Our Work" scrolls to `#our-work`). Don't add links that leave the page, except WhatsApp and the privacy policy (`/privacy`).
 
-**Book a Call placement:** Book a Call is a secondary option. It sits under the promises next to the form ("Prefer to talk to us first?") and on the thank-you page. Keep it out of the hero and the sticky bar: the form is the conversion the ads optimise for, and a Calendly booking doesn't fire `Lead`.
+**No Book a Call button** on this page (removed on purpose). WhatsApp is the only alternative to the form.
 
 ## Form
 
@@ -103,7 +102,6 @@ Fields: name, business, email, phone, business_type, has_website. All are requir
 | `PageView` | Both pages |
 | `Lead` | `thank-you.html`, only right after a real submit. The form sets a one-time flag, so refreshing the thank-you page or visiting it directly does **not** count a lead. This is the conversion the ads optimise for. |
 | `Contact` | A click on any WhatsApp button (`.js-wa`) |
-| `BookCallClick` (custom) | A click on a Book a Call button (`.js-call`) |
 
 Never fire `Lead` anywhere except the thank-you page, or ad results will be wrong.
 

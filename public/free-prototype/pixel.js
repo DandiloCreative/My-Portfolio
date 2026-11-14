@@ -2,13 +2,12 @@
 //   PageView: every page.
 //   Lead:     thank-you.html only, and only right after a real form submit (not on refresh or a direct visit).
 //   Contact:  a click on any WhatsApp button (.js-wa).
-//   BookCallClick (custom): a click on a Book a Call button (.js-call). Not a Lead.
 (function () {
   var id = window.DD && window.DD.PIXEL_ID;
   if (!id || /YOUR_/.test(id)) return;
 
   // Start after the page has loaded (and the browser is idle), so the Pixel doesn't slow down the first view.
-  // A click on WhatsApp / Book a Call before then starts it straight away, so those clicks are still counted.
+  // A click on WhatsApp before then starts it straight away, so those clicks are still counted.
   var started = false;
   var start = function () {
     if (started) return;
@@ -39,10 +38,9 @@
   document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") start(); });
 
   document.addEventListener("click", function (e) {
-    var a = e.target.closest && e.target.closest(".js-wa, .js-call");
+    var a = e.target.closest && e.target.closest(".js-wa");
     if (!a) return;
     start();
-    if (a.classList.contains("js-call")) fbq("trackCustom", "BookCallClick");
-    else fbq("track", "Contact", { content_name: "WhatsApp" });
+    fbq("track", "Contact", { content_name: "WhatsApp" });
   });
 })();
