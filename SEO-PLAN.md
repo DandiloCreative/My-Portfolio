@@ -5,6 +5,8 @@
 **Status:** in progress. Since 14 Nov 2026 the owner has approved working on the plan every day, phase by phase, without asking first. Facts, results and team details still come only from the owner.
 
 **Daily log:**
+- **14 Nov 2026 (Phase 2, section 3 industry intent):** new page /industries/cleaning-company-web-design (homes vs businesses, quote forms, service areas without doorway pages, 4 FAQs). Still needs a matching portfolio example.
+- **14 Nov 2026 Blog:** Google Business Profile vs Website: Do You Need Both? (https://dandilodigitals.com/blog/google-business-profile-vs-website)
 - **14 Nov 2026 (Phase 2, item 4):** new Google titles and descriptions for the 10 main service pages, using keyword + benefit + "from" price where the pricing page states one. Check click-through in Search Console from about 28 Nov.
 
 ---
@@ -90,7 +92,7 @@ There are **4 intent groups**, in order of value. Each phrase gets **one page th
    - **Pages exist:** contractor, real estate, restaurant, therapist, law firm, nonprofit and accountant websites.
    - **Next candidates:**
      - dentists and clinics
-     - cleaning companies
+     - cleaning companies (page done 14 Nov 2026)
      - salons and beauty
      - coaches and consultants
      - fitness and gyms

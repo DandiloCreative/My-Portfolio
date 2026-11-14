@@ -312,4 +312,75 @@ export const industryPages: ContentPageData[] = [
     ],
     related: ["/services/small-business-web-design", "/services/wordpress-web-design", "/services/squarespace-web-design"],
   },
+  {
+    path: "/industries/cleaning-company-web-design",
+    kind: "industry",
+    label: "Web Design for Cleaning Companies",
+    title: "Cleaning Company Web Design From $300 | Dandilo Digitals",
+    description:
+      "Websites for house cleaning, commercial cleaning and janitorial companies that win more quote requests: clear services, service areas, instant quote forms.",
+    eyebrow: "Cleaning Companies",
+    h1: "Web Design for Cleaning Companies",
+    intro: [
+      "People looking for a cleaner want three answers fast: do you clean the kind of place I have, do you cover my area, and how do I get a price? If your website makes them dig for any of those, they go back to Google and call the next company.",
+      "We build websites for house cleaning, maid service, carpet cleaning, commercial and janitorial companies that make those answers obvious and turn visitors into quote requests.",
+    ],
+    sections: [
+      {
+        heading: "What a cleaning company website needs",
+        bullets: [
+          "A quote request form that asks the right questions (property type, size, how often, preferred day)",
+          "Click-to-call and WhatsApp buttons that stay visible on phones",
+          "A page for each service: regular cleaning, deep cleaning, move-in/move-out, end of tenancy, carpet, office cleaning",
+          "The towns and neighbourhoods you cover, written clearly",
+          "What's included in each clean, so customers know what they're paying for",
+          "Trust signals: insurance, background checks, reviews and real photos of your team",
+          "Starting prices or \"from\" prices if you're happy to share them",
+        ],
+      },
+      {
+        heading: "Homes and businesses are different customers",
+        paragraphs: [
+          "A homeowner booking a deep clean and an office manager hiring a janitorial contractor want different things. Homeowners care about trust, flexibility and price. Businesses care about reliability, contracts, out-of-hours work and insurance.",
+          "If you serve both, we give each group its own page and its own call to action, so neither has to read through information meant for the other.",
+        ],
+      },
+      {
+        heading: "Showing up in local searches",
+        paragraphs: [
+          "Most cleaning jobs start with a search like \"house cleaning near me\" or \"office cleaning in [city]\". We set up page titles, service pages and structured data so Google understands what you do and where, and we help you link your website to your Google Business Profile.",
+          "We don't create dozens of copy-paste town pages. Google treats them as low-quality \"doorway\" pages. Instead we write a clear service area section and add individual area pages only where you have real work to show.",
+        ],
+      },
+      {
+        heading: "How a project works",
+        bullets: [
+          "A short call about your services, areas and ideal customers",
+          "A design draft for you to review",
+          "We build the site, add your content and set up the quote form and tracking",
+          "You check everything, we make changes, then we launch",
+          "Optional Care Plan from $99/month for updates, backups and small changes",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does a cleaning company website cost?",
+        a: "A starter website with up to 3 pages starts from $300. A full business website with service pages, service areas, a quote form and a reviews section starts from $899.",
+      },
+      {
+        q: "Can customers book or request a quote online?",
+        a: "Yes. We can add a quote form that sends requests to your email, or link a booking tool you already use, such as Jobber, Housecall Pro or Calendly.",
+      },
+      {
+        q: "Which platform is best for a cleaning business?",
+        a: "WordPress is best if you want many service pages and a blog for SEO. Wix Studio is a good choice if you want to edit the site yourself without help.",
+      },
+      {
+        q: "Will my website show up on Google?",
+        a: "Every site we build includes basic on-page SEO. Ranking for local searches also depends on your Google Business Profile and your reviews, and we can help you set those up.",
+      },
+    ],
+    related: ["/services/small-business-web-design", "/services/wordpress-web-design", "/industries/contractor-web-design"],
+  },
 ];
