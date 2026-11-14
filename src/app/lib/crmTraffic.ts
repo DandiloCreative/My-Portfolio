@@ -49,9 +49,72 @@ function sendEngagement() {
   post("/api/public/track/engage", { id: viewId, sid: sessionId, seconds }).catch(() => {});
 }
 
+/** Text of a button or link, for the CRM's "Actions that signal intent". Never anything the visitor typed. */
+function labelOf(el: Element) {
+  return (el.getAttribute("aria-label") || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80);
+}
+
+/** Works out what kind of click this was. Plain internal links outside the header/footer are skipped. */
+function classify(el: HTMLElement): { kind: string; target?: string } | null {
+  const href = el.getAttribute("href") ?? "";
+  if (/calendly\.com/i.test(href)) return { kind: "booking", target: "calendly.com" };
+  if (/wa\.me|whatsapp\.com/i.test(href)) return { kind: "whatsapp", target: "WhatsApp" };
+  if (href.startsWith("mailto:")) return { kind: "email" };
+  if (href.startsWith("tel:")) return { kind: "phone" };
+  if (el.tagName === "A" && href) {
+    let url: URL;
+    try {
+      url = new URL(href, window.location.href);
+    } catch {
+      return null;
+    }
+    if (url.host !== window.location.host) return { kind: "outbound", target: url.host };
+    if (/^\/(contact|free-website-audit|free-prototype)/.test(url.pathname) || url.hash === "#get-prototype") {
+      return { kind: "cta", target: url.pathname + url.hash };
+    }
+    if (el.closest("header, nav, footer")) return { kind: "link", target: url.pathname };
+    return null;
+  }
+  if (el.tagName === "BUTTON" && (el as HTMLButtonElement).type !== "submit") return { kind: "button" };
+  return null;
+}
+
+/** Sends one click to the CRM (only for visits that are already being counted). */
+function sendEvent(kind: string, label: string, target?: string) {
+  if (!sessionId) return;
+  post("/api/public/track/event", {
+    sid: sessionId,
+    path: window.location.pathname,
+    kind,
+    ...(label ? { label } : {}),
+    ...(target ? { target: target.slice(0, 200) } : {}),
+  }).catch(() => {});
+}
+
 function listen() {
   if (listening) return;
   listening = true;
+  document.addEventListener(
+    "click",
+    (e) => {
+      const el = (e.target as Element | null)?.closest?.("a, button") as HTMLElement | null;
+      if (!el) return;
+      const c = classify(el);
+      if (c) sendEvent(c.kind, labelOf(el), c.target);
+    },
+    true,
+  );
+  // A form passed the browser's checks and is being sent
+  document.addEventListener(
+    "submit",
+    (e) => {
+      const form = e.target as HTMLFormElement;
+      if (!form.checkValidity()) return; // not filled in yet
+      const btn = form.querySelector("button[type=submit], button:not([type])");
+      sendEvent("submit", form.getAttribute("aria-label") || (btn ? labelOf(btn) : "") || "Form");
+    },
+    true,
+  );
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "hidden") {
       if (visibleSince) visibleMs += performance.now() - visibleSince;

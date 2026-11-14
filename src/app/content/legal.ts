@@ -11,7 +11,7 @@ export const legalPages: ContentPageData[] = [
     eyebrow: "Legal",
     h1: "Privacy Policy",
     intro: [
-      "Last updated: November 1, 2026.",
+      "Last updated: November 14, 2026.",
       "This policy explains what information Dandilo Digitals (\"we\", \"us\") collects when you visit dandilodigitals.com or contact us, why we use it, and the choices and rights you have. Dandilo Digitals is responsible (the \"controller\") for this information. You can reach us at hello@dandilodigitals.com.",
     ],
     sections: [
@@ -36,6 +36,7 @@ export const legalPages: ContentPageData[] = [
           "Meta Pixel: helps us understand visits from Facebook and Instagram and measure our ads there. It may collect pages visited, buttons clicked, your browser, device and IP address, and uses cookies. When you send a form or tap a WhatsApp link, our server may also send this to Meta directly (\"Conversions API\"), together with your email address, phone number and first name in a scrambled (hashed) form, so Meta can match it to an ad you saw.",
           "Metricool: counts website visits and where they come from, so we can compare them with our social media results. Visitors in the UK and Europe are only counted after accepting cookies.",
           "Microsoft Clarity: if enabled, records how visitors move, click and scroll on our pages so we can improve them. It does not record what you type into forms.",
+          "Our own visit counter: without cookies, our customer system records the pages you view, how long they were open, which buttons and links you click (for example Book a Call or WhatsApp, never what you type), how you reached us, your device and browser, and your approximate country, state and city worked out from your network. It does not store your IP address.",
           "Your light or dark mode choice, cookie choice and how-you-found-us details are saved in your own browser's storage.",
           "Hosting and fonts: our hosting provider keeps technical logs such as IP addresses to keep the site secure, and our fonts load from Google Fonts.",
         ],
