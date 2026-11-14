@@ -2,7 +2,10 @@
 
 **Goal:** be on page 1 of Google, and in AI answers (ChatGPT, Perplexity, Google AI Overviews), for searches made by **small businesses in the US, UK and Canada** that are ready to pay for a website. Then turn that traffic into qualified leads in the Dandilo CRM.
 
-**Status:** plan. Each phase starts only when you approve it.
+**Status:** in progress. Since 14 Nov 2026 the owner has approved working on the plan every day, phase by phase, without asking first. Facts, results and team details still come only from the owner.
+
+**Daily log:**
+- **14 Nov 2026 (Phase 2, item 4):** new Google titles and descriptions for the 10 main service pages, using keyword + benefit + "from" price where the pricing page states one. Check click-through in Search Console from about 28 Nov.
 
 ---
 
@@ -145,7 +148,7 @@ The CRM **Keywords** page supplies new phrases every morning. Each month we pick
    - 404s return a real 404.
    - Check monthly in Search Console → Pages.
 
-### Phase 2: Money pages (week 2–6) · effort: me + your input · risk: low
+### Phase 2: Money pages (week 2–6) · effort: me + your input · risk: low · started 14 Nov 2026
 
 1. **Service pages:** deepen each to 1,000–1,800 useful words. Each one has:
    - who it's for, what's included, the process and timeline, and the "from" price;

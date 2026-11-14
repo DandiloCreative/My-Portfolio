@@ -5,9 +5,9 @@ export const servicePages: ContentPageData[] = [
     path: "/services/small-business-web-design",
     kind: "service",
     label: "Small Business Web Design",
-    title: "Small Business Web Design Services | Dandilo Digitals",
+    title: "Small Business Web Design From $300 | Dandilo Digitals",
     description:
-      "Small business web design that turns visitors into calls, bookings and sales. Fast, mobile-friendly websites on WordPress, Shopify, Wix Studio or custom code.",
+      "Small business websites from $300 that bring in calls, bookings and sales. Fast, mobile-friendly sites on WordPress, Shopify, Wix Studio or custom code.",
     eyebrow: "Small Business Web Design",
     h1: "Small Business Web Design That Brings In Customers",
     intro: [
@@ -65,9 +65,9 @@ export const servicePages: ContentPageData[] = [
     path: "/services/wordpress-web-design",
     kind: "service",
     label: "WordPress Web Design",
-    title: "WordPress Web Design & WordPress Developer | Dandilo Digitals",
+    title: "WordPress Web Design & Developer for Small Business | Dandilo",
     description:
-      "WordPress website design services and an experienced WordPress developer for small businesses. Fast, secure, SEO-friendly sites you can update yourself.",
+      "WordPress web design and an experienced WordPress developer for small businesses. Fast, secure, SEO-friendly sites you can update yourself. Fixed quote.",
     eyebrow: "WordPress Web Design",
     h1: "WordPress Web Design for Small Businesses",
     intro: [
@@ -124,9 +124,9 @@ export const servicePages: ContentPageData[] = [
     path: "/services/shopify-website-design",
     kind: "service",
     label: "Shopify Website Design",
-    title: "Shopify Web Design Services & Shopify Designer | Dandilo",
+    title: "Shopify Web Design From $1,250 | Shopify Expert | Dandilo",
     description:
-      "Shopify website design by Shopify experts, for online stores and clothing brands that need to sell more. Custom themes, product pages and a smooth checkout.",
+      "Shopify store design from $1,250 for small businesses and clothing brands. Custom themes, product pages and a smooth checkout that turns browsers into buyers.",
     eyebrow: "Shopify Website Design",
     h1: "Shopify Website Design That Helps You Sell More",
     intro: [
@@ -178,9 +178,9 @@ export const servicePages: ContentPageData[] = [
     path: "/services/wix-web-designer",
     kind: "service",
     label: "Wix Web Designer",
-    title: "Wix Web Designer for Small Businesses | Dandilo Digitals",
+    title: "Wix Web Designer for Small Businesses From $300 | Dandilo",
     description:
-      "Hire a Wix web designer for a polished Wix Studio website that's easy to manage. Custom Wix design, redesigns and Velo features for small businesses.",
+      "Hire a Wix web designer from $300 for a polished Wix Studio website that's easy to manage. Custom Wix design, redesigns and Velo features for small businesses.",
     eyebrow: "Wix Studio Web Design",
     h1: "Wix Web Designer for Small Businesses",
     intro: [
@@ -238,9 +238,9 @@ export const servicePages: ContentPageData[] = [
     path: "/services/ecommerce-web-design",
     kind: "service",
     label: "Ecommerce Web Design",
-    title: "Ecommerce Web Design for Small Businesses | Dandilo Digitals",
+    title: "Ecommerce Web Design From $1,250 | Dandilo Digitals",
     description:
-      "Ecommerce web design on Shopify, WooCommerce and Wix. Online stores with clear product pages and a simple checkout that turns browsers into buyers.",
+      "Online stores from $1,250 on Shopify, WooCommerce and Wix. Clear product pages, payments and shipping set up, and a simple checkout that turns browsers into buyers.",
     eyebrow: "Ecommerce Web Design",
     h1: "Ecommerce Web Design That Turns Browsers Into Buyers",
     intro: [
@@ -283,9 +283,9 @@ export const servicePages: ContentPageData[] = [
     path: "/services/website-redesign",
     kind: "service",
     label: "Website Redesign",
-    title: "Website Redesign Services & Cost | Dandilo Digitals",
+    title: "Website Redesign Services From $300 | Dandilo Digitals",
     description:
-      "Website redesign services for outdated or slow websites. A modern design, clearer messaging and faster pages so more visitors contact you.",
+      "Website redesign from $300 for outdated or slow sites. A modern design, faster pages and clearer messaging, without losing your Google rankings. Fixed quote.",
     eyebrow: "Website Redesign",
     h1: "Website Redesign Services for Small Businesses",
     intro: [
@@ -335,9 +335,9 @@ export const servicePages: ContentPageData[] = [
     path: "/services/landing-page-design",
     kind: "service",
     label: "Landing Page Design",
-    title: "Landing Page Design Services | Dandilo Digitals",
+    title: "Landing Page Design for Ads & Campaigns | Dandilo Digitals",
     description:
-      "High-converting landing page design for ads, campaigns and product launches. Focused pages built to get more leads, calls and sign-ups.",
+      "High-converting landing page design for Facebook ads, Google Ads and product launches. Focused pages built to get more leads, calls and sign-ups.",
     eyebrow: "Landing Page Design",
     h1: "Landing Page Design That Gets More Leads",
     intro: [
@@ -389,9 +389,9 @@ export const servicePages: ContentPageData[] = [
     path: "/services/squarespace-web-design",
     kind: "service",
     label: "Squarespace Web Design",
-    title: "Squarespace Web Designer for Small Businesses | Dandilo",
+    title: "Squarespace Web Designer From $300 | Dandilo Digitals",
     description:
-      "Hire a Squarespace web designer for a beautiful, easy-to-manage website. Custom Squarespace design, redesigns, online stores and booking setup.",
+      "Hire a Squarespace web designer from $300 for a beautiful, easy-to-manage website. Custom Squarespace design, redesigns, online stores and booking setup.",
     eyebrow: "Squarespace Web Design",
     h1: "Squarespace Web Design for Small Businesses",
     intro: [
@@ -493,7 +493,7 @@ export const servicePages: ContentPageData[] = [
     path: "/services/website-maintenance",
     kind: "service",
     label: "Website Maintenance & Care Plans",
-    title: "Website Maintenance Services & Care Plans | Dandilo",
+    title: "Website Maintenance Plans From $99/Month | Dandilo Digitals",
     description:
       "Website maintenance from $99 a month: updates, backups, security monitoring, speed checks and small changes for WordPress, Shopify, Wix and custom sites.",
     eyebrow: "Website Maintenance",
@@ -551,9 +551,9 @@ export const servicePages: ContentPageData[] = [
     path: "/services/bespoke-web-design",
     kind: "service",
     label: "Bespoke & Custom Web Design",
-    title: "Bespoke & Custom Web Design Services | Dandilo Digitals",
+    title: "Bespoke Web Design From $899 | Custom Websites | Dandilo",
     description:
-      "Bespoke, custom web design built around your brand and customers, not a template. Custom websites on WordPress, Shopify, Wix Studio or fully custom code.",
+      "Bespoke web design from $899, built around your brand and customers, not a template. Custom websites on WordPress, Shopify, Wix Studio or fully custom code.",
     eyebrow: "Bespoke Web Design",
     h1: "Bespoke, Custom Web Design Built Around Your Business",
     intro: [
