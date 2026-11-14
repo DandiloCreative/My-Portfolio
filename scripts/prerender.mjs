@@ -212,6 +212,13 @@ function checkPage(route, html, appHtml) {
   if (!route.noindex && !html.includes(`<link rel="canonical" href="${urlFor(p)}"`)) fail("canonical doesn't point to itself");
   if (route.noindex && !/<meta name="robots" content="noindex/.test(html)) fail("should be noindex");
   if (/Ibadan|"Nigeria"/.test(html)) fail("old Ibadan / Nigeria business details");
+  if (route.content?.kind === "blog") {
+    const slug = p.replace("/blog/", "");
+    for (const f of [`${slug}.jpg`, `${slug}.webp`, `${slug}-600.webp`]) {
+      if (!existsSync(join(root, "public", "blog-images", f))) fail(`missing cover image public/blog-images/${f} (make it with scripts/blog-cover.cjs)`);
+    }
+    if (!route.content.date) fail("blog post has no date");
+  }
   for (const block of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
     try { JSON.parse(block[1]); } catch { fail("broken structured data (JSON-LD)"); }
   }
