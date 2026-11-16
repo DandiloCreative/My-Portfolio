@@ -383,4 +383,82 @@ export const industryPages: ContentPageData[] = [
     ],
     related: ["/services/small-business-web-design", "/services/wordpress-web-design", "/industries/contractor-web-design"],
   },
+  {
+    path: "/industries/dentist-web-design",
+    kind: "industry",
+    label: "Web Design for Dentists and Clinics",
+    title: "Dental & Clinic Website Design From $300 | Dandilo Digitals",
+    description:
+      "Websites for dentists, dental practices and private clinics that bring in new patients: clear treatments and fees, online booking, reviews and fast mobile pages.",
+    eyebrow: "Dentists & Clinics",
+    h1: "Web Design for Dentists and Clinics",
+    intro: [
+      "Most new patients choose a dentist or clinic on their phone, often in a few minutes. They want to know whether you offer the treatment they need, roughly what it costs, whether you take new patients or their insurance, and how quickly they can get an appointment.",
+      "We build websites for dental practices, orthodontists, physiotherapy, chiropractic, aesthetics and other private clinics that answer those questions clearly and make booking the obvious next step.",
+    ],
+    sections: [
+      {
+        heading: "What a dental or clinic website needs",
+        bullets: [
+          "A \"Book an appointment\" button that stays visible on phones, plus click-to-call",
+          "A page for each main treatment: check-ups, hygiene, whitening, implants, Invisalign or braces, emergency appointments",
+          "Clear fees or \"from\" prices, and the payment plans or insurance you accept",
+          "Meet-the-team pages with real photos, qualifications and registration details",
+          "Opening hours, parking, accessibility and a map for each location",
+          "Patient reviews and before-and-after photos (only with written patient consent)",
+          "A simple new patient section: what to expect at the first visit and which forms to bring",
+        ],
+      },
+      {
+        heading: "Online booking and patient privacy",
+        paragraphs: [
+          "If you already use a booking or practice management system, such as Dentally, NexHealth, Zocdoc or your software's own online booking, we link or embed it so patients book straight into your diary.",
+          "We keep website contact forms to simple requests: name, contact details and the reason for the appointment. Medical histories and other health information belong in your secure patient system, not in a website form or an email inbox. That keeps you on the right side of privacy rules such as HIPAA in the US and UK GDPR.",
+        ],
+      },
+      {
+        heading: "Following the rules for healthcare websites",
+        paragraphs: [
+          "Healthcare websites have rules other businesses don't. In the UK, the General Dental Council expects dental websites to show each dentist's name, qualifications and GDC number, and the practice's complaints process. In the US and Canada, state and provincial boards have their own advertising rules.",
+          "We build the pages so this information has a clear place, and we avoid claims you can't back up, like \"best dentist in town\" or guaranteed results. You or your compliance adviser confirm the final wording before launch.",
+        ],
+      },
+      {
+        heading: "Getting found by local patients",
+        paragraphs: [
+          "Patients search for things like \"emergency dentist near me\", \"Invisalign cost\" or \"physio in [town]\". We give each treatment its own page with a clear title and description, add structured data so Google understands your practice, and make sure your website and Google Business Profile show the same name, address and phone number.",
+          "If you have more than one location, each gets its own page with its own address, hours, team and directions. We don't create copy-paste pages for towns you don't serve.",
+        ],
+      },
+      {
+        heading: "How a project works",
+        bullets: [
+          "A short call about your treatments, team, locations and the patients you want more of",
+          "A design draft for you to review",
+          "We build the site, add your content and connect your booking system",
+          "You and your team check everything, we make changes, then we launch",
+          "Optional Care Plan from $99/month for updates, backups and small changes",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does a dental website cost?",
+        a: "A starter website with up to 3 pages starts from $300. A full practice website with treatment pages, team profiles, booking and reviews starts from $899.",
+      },
+      {
+        q: "Can patients book appointments online?",
+        a: "Yes. We connect the online booking tool you already use, or add a simple appointment request form that sends requests to your practice email.",
+      },
+      {
+        q: "Can you redesign our existing practice website?",
+        a: "Yes. Website redesigns start from $300. We keep your existing pages' addresses or redirect them, so you don't lose your Google rankings.",
+      },
+      {
+        q: "Do you only work with dentists?",
+        a: "No. The same approach works for orthodontists, physiotherapists, chiropractors, optometrists, aesthetics clinics and other private healthcare practices.",
+      },
+    ],
+    related: ["/services/small-business-web-design", "/services/website-redesign", "/industries/therapist-web-design"],
+  },
 ];

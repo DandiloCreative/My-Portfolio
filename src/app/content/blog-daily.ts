@@ -4,6 +4,102 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/how-long-does-it-take-to-build-a-website",
+    kind: "blog",
+    label: "How Long Does It Take to Build a Website?",
+    title: "How Long Does It Take to Build a Small Business Website?",
+    description:
+      "Most small business websites take 2 to 6 weeks. See typical timelines for starter sites, business sites and online stores, and what speeds a project up or slows it down.",
+    eyebrow: "Guide",
+    h1: "How Long Does It Take to Build a Small Business Website?",
+    date: "2026-11-16",
+    readMinutes: 6,
+    intro: [
+      "In short: most small business websites take 2 to 6 weeks from the first call to launch. A simple starter site can be ready in about a week or two, while an online store or a site with custom features takes longer.",
+      "The biggest factor usually isn't the design or the code. It's how quickly the content (your text, photos and decisions) is ready. Here's what a realistic timeline looks like and how to keep your project moving.",
+    ],
+    sections: [
+      {
+        heading: "Typical timelines by type of website",
+        paragraphs: [
+          "These are rough guides for a small business working with a designer or small agency. Every project is different, so always ask for a timeline in writing with your quote.",
+        ],
+        bullets: [
+          "Starter website (1 to 3 pages, contact form): about 1 to 2 weeks",
+          "Business website (5 to 10 pages, service pages, quote form, reviews): about 2 to 4 weeks",
+          "Website redesign: about 2 to 5 weeks, depending on how much content moves across",
+          "Online store (Shopify or WooCommerce, up to a few dozen products): about 3 to 6 weeks",
+          "Custom web app or site with bespoke features (bookings, portals, AI tools): usually 6 weeks or more, planned in stages",
+        ],
+      },
+      {
+        heading: "The stages of a website project",
+        bullets: [
+          "Discovery call (1 to 3 days): your goals, services, customers and must-have features",
+          "Content gathering (a few days to several weeks): text, photos, logo, prices and product details",
+          "Design draft (3 to 7 days): the look and layout of your key pages",
+          "Build (1 to 3 weeks): pages, forms, booking or store set-up, mobile layouts and basic SEO",
+          "Review and changes (3 to 7 days): you check everything and ask for adjustments",
+          "Launch (1 to 2 days): domain connection, final checks and submitting your site to Google",
+        ],
+      },
+      {
+        heading: "What slows a website project down",
+        bullets: [
+          "Waiting on content: the most common delay by far. A designer can't finish a services page without knowing your services.",
+          "Too many decision makers: every extra person who has to approve a draft adds days.",
+          "Changing the plan halfway: adding a store or a booking system mid-build means going back a step.",
+          "Domain and email access: not knowing who controls your domain can hold up launch for days.",
+          "Large product catalogues: every product needs photos, descriptions, prices and options.",
+        ],
+      },
+      {
+        heading: "How to get your website live faster",
+        bullets: [
+          "Write a short description of each service before the project starts, even in rough notes.",
+          "Gather your logo, photos of your work and team, and a few customer reviews into one folder.",
+          "Choose one person to give feedback and approve drafts.",
+          "Make a list of 2 or 3 websites you like and say what you like about each.",
+          "Find your domain login (GoDaddy, Namecheap, Squarespace Domains and so on) early.",
+          "Start with the pages that bring in customers, and add extras like a blog after launch.",
+        ],
+      },
+      {
+        heading: "Fast doesn't have to mean cheap-looking",
+        paragraphs: [
+          "Website builders promise a site in an afternoon, and you can get a page online that quickly. But a website that brings in enquiries needs clear service pages, good photos, a strong call to action and solid mobile performance. That's worth a few weeks.",
+          "If you need something online urgently, a good compromise is to launch a strong one-page or starter site first, then add more pages over the following weeks.",
+        ],
+      },
+      {
+        heading: "How long a Dandilo Digitals project takes",
+        paragraphs: [
+          "Most of our small business websites take 2 to 6 weeks, depending on the number of pages, the features and how quickly content is ready. You get a written timeline with your quote, and we'll tell you straight away if anything puts it at risk.",
+          "Starter websites begin at $300, business websites at $899 and online stores at $1,250. If you already have a website and aren't sure whether to fix it or start again, ask for a free website audit first.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can a small business website be built in a week?",
+        a: "A simple starter website with 1 to 3 pages can often be built in about a week, as long as the text, photos and logo are ready at the start.",
+      },
+      {
+        q: "How long does a Shopify store take to set up?",
+        a: "A small Shopify store usually takes about 3 to 6 weeks, depending on the number of products, how ready the product photos and descriptions are, and how much custom design is needed.",
+      },
+      {
+        q: "Why is my website project taking so long?",
+        a: "The most common reasons are waiting on content, slow feedback on drafts and features added halfway through. Ask your designer what they're waiting for and agree a new date in writing.",
+      },
+      {
+        q: "How long after launch will my website show up on Google?",
+        a: "Google usually finds a new website within a few days to a few weeks, especially if it's submitted in Search Console. Ranking well for competitive searches takes longer, often a few months.",
+      },
+    ],
+    related: ["/blog/small-business-website-cost", "/blog/how-to-choose-a-web-designer", "/services/small-business-web-design"],
+  },
+  {
     path: "/blog/google-business-profile-vs-website",
     kind: "blog",
     label: "Google Business Profile vs Website",
