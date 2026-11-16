@@ -2,7 +2,7 @@ import { memo } from "react";
 import { motion } from "motion/react";
 import { ExternalLink, Code2, Sparkles, Layers, ShoppingBag, LayoutTemplate, RefreshCw } from "lucide-react";
 
-const FIVERR_URL = "https://www.fiverr.com/dandilodigitals";
+import { FIVERR_URL } from "../lib/fiverr";
 
 const builds = [
   { icon: Code2, title: "Custom websites", text: "Designed around your brand and your customers, not a template everyone else uses." },
