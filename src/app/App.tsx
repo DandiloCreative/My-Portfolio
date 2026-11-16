@@ -16,6 +16,7 @@ const StatsCounter = lazy(() => import("./components/StatsCounter").then(m => ({
 const Services = lazy(() => import("./components/Services").then(m => ({ default: m.Services })));
 const Platforms = lazy(() => import("./components/Platforms").then(m => ({ default: m.Platforms })));
 const SecuritySection = lazy(() => import("./components/SecuritySection").then(m => ({ default: m.SecuritySection })));
+const About = lazy(() => import("./components/About").then(m => ({ default: m.About })));
 const Portfolio = lazy(() => import("./components/Portfolio").then(m => ({ default: m.Portfolio })));
 const Reviews = lazy(() => import("./components/Reviews").then(m => ({ default: m.Reviews })));
 const FAQ = lazy(() => import("./components/FAQ").then(m => ({ default: m.FAQ })));
@@ -261,6 +262,7 @@ function PageSections({ pathname }: { pathname: string }) {
           <Section eager={eager}><Portfolio /></Section>
           <Section eager={eager}><Services /></Section>
           <Section eager={eager}><Platforms /></Section>
+          <Section eager={eager}><About /></Section>
           <Section eager={eager}><SecuritySection /></Section>
           <Section eager={eager}><FAQ /></Section>
           <Section eager={eager}><Contact /></Section>
