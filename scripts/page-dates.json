@@ -1,0 +1,254 @@
+{
+ "/": {
+  "hash": "3f13f23ab45f74d8",
+  "date": "2026-11-14"
+ },
+ "/blog": {
+  "hash": "16d18ee5edaa2414",
+  "date": "2026-11-16"
+ },
+ "/blog/canada-small-business-website-checklist": {
+  "hash": "bfab257af1b13473",
+  "date": "2026-11-03"
+ },
+ "/blog/choose-tech-stack-nextjs-laravel-django-nestjs": {
+  "hash": "06e52903c63cbae8",
+  "date": "2026-11-07"
+ },
+ "/blog/get-more-customers-from-your-website": {
+  "hash": "e6dc980af0b88022",
+  "date": "2026-11-02"
+ },
+ "/blog/google-business-profile-vs-website": {
+  "hash": "783e08ae57ea07f3",
+  "date": "2026-11-14"
+ },
+ "/blog/how-long-does-it-take-to-build-a-website": {
+  "hash": "25a92e6b2ca52f7e",
+  "date": "2026-11-16"
+ },
+ "/blog/how-to-choose-a-web-designer": {
+  "hash": "a8c82e6ac71cb5b3",
+  "date": "2026-11-02"
+ },
+ "/blog/shopify-vs-woocommerce": {
+  "hash": "1472e7bbd05e7b4a",
+  "date": "2026-11-02"
+ },
+ "/blog/shopify-website-cost": {
+  "hash": "53b016c006a975f8",
+  "date": "2026-11-10"
+ },
+ "/blog/signs-your-website-is-losing-customers": {
+  "hash": "41f44d8a9fbf1d43",
+  "date": "2026-10-30"
+ },
+ "/blog/small-business-website-cost": {
+  "hash": "f54a53edeb0cbeea",
+  "date": "2026-11-02"
+ },
+ "/blog/small-business-website-examples": {
+  "hash": "cf5db2adaf779d4d",
+  "date": "2026-11-10"
+ },
+ "/blog/small-business-website-hosting-and-email": {
+  "hash": "2cf0478194c4a3a5",
+  "date": "2026-11-10"
+ },
+ "/blog/small-business-website-security": {
+  "hash": "ea028e07f4fe4477",
+  "date": "2026-11-10"
+ },
+ "/blog/uk-small-business-website-checklist": {
+  "hash": "b4a60afb1ae84c51",
+  "date": "2026-11-03"
+ },
+ "/blog/web-designer-vs-web-developer": {
+  "hash": "68fc51fbe9baee79",
+  "date": "2026-11-10"
+ },
+ "/blog/website-builder-vs-web-designer": {
+  "hash": "4f5635c6827f1baf",
+  "date": "2026-11-10"
+ },
+ "/blog/website-cost-canada": {
+  "hash": "52be1e27b889991f",
+  "date": "2026-11-03"
+ },
+ "/blog/website-cost-uk": {
+  "hash": "b580511a622ad0d2",
+  "date": "2026-11-03"
+ },
+ "/blog/website-redesign-checklist": {
+  "hash": "4010cd3e85485dbe",
+  "date": "2026-11-02"
+ },
+ "/blog/wix-studio-vs-wix": {
+  "hash": "432e82c49fce080d",
+  "date": "2026-11-02"
+ },
+ "/blog/wix-vs-wordpress-vs-shopify": {
+  "hash": "0f6499c0da242957",
+  "date": "2026-10-30"
+ },
+ "/contact": {
+  "hash": "9671268e1ec93160",
+  "date": "2026-11-14"
+ },
+ "/free-website-audit": {
+  "hash": "5509b24173837402",
+  "date": "2026-11-14"
+ },
+ "/industries/accountant-web-design": {
+  "hash": "e92712c99831a0d9",
+  "date": "2026-11-14"
+ },
+ "/industries/cleaning-company-web-design": {
+  "hash": "0033ce94731a1bfa",
+  "date": "2026-11-14"
+ },
+ "/industries/contractor-web-design": {
+  "hash": "33474d7c4b5230b7",
+  "date": "2026-11-14"
+ },
+ "/industries/dentist-web-design": {
+  "hash": "ec3efb177bc1126e",
+  "date": "2026-11-16"
+ },
+ "/industries/law-firm-web-design": {
+  "hash": "5c75203925f83e83",
+  "date": "2026-11-14"
+ },
+ "/industries/nonprofit-web-design": {
+  "hash": "98534730cb824947",
+  "date": "2026-11-14"
+ },
+ "/industries/real-estate-web-design": {
+  "hash": "27810d8c7087f76b",
+  "date": "2026-11-14"
+ },
+ "/industries/restaurant-web-design": {
+  "hash": "bff76b1941a2b974",
+  "date": "2026-11-14"
+ },
+ "/industries/therapist-web-design": {
+  "hash": "49e4bb90d3222c4a",
+  "date": "2026-11-14"
+ },
+ "/platforms": {
+  "hash": "9da0e265dc1cb094",
+  "date": "2026-11-14"
+ },
+ "/portfolio": {
+  "hash": "53a0df698758ef39",
+  "date": "2026-11-14"
+ },
+ "/pricing": {
+  "hash": "38a2408a5c11bc15",
+  "date": "2026-11-14"
+ },
+ "/privacy": {
+  "hash": "572927e61e7fd712",
+  "date": "2026-11-14"
+ },
+ "/reviews": {
+  "hash": "82d6d56a563d9576",
+  "date": "2026-11-14"
+ },
+ "/services": {
+  "hash": "947a43de7c889526",
+  "date": "2026-11-14"
+ },
+ "/services/backend-development": {
+  "hash": "b661c633df1e3f3c",
+  "date": "2026-11-14"
+ },
+ "/services/bespoke-web-design": {
+  "hash": "efeaa2a5345bbf30",
+  "date": "2026-11-14"
+ },
+ "/services/django-development": {
+  "hash": "f507439ca87606ca",
+  "date": "2026-11-14"
+ },
+ "/services/ecommerce-web-design": {
+  "hash": "d90f4d5021f8df74",
+  "date": "2026-11-14"
+ },
+ "/services/frontend-development": {
+  "hash": "8ee4bc9571266e9b",
+  "date": "2026-11-14"
+ },
+ "/services/full-stack-web-development": {
+  "hash": "5da84f3cb581c8ca",
+  "date": "2026-11-14"
+ },
+ "/services/gohighlevel-website-design": {
+  "hash": "771d0e4175ab3da6",
+  "date": "2026-11-14"
+ },
+ "/services/landing-page-design": {
+  "hash": "1dce81ef4bc6f8b4",
+  "date": "2026-11-14"
+ },
+ "/services/laravel-development": {
+  "hash": "0669696fae78aa4b",
+  "date": "2026-11-14"
+ },
+ "/services/nestjs-development": {
+  "hash": "d63f2b72d7966731",
+  "date": "2026-11-14"
+ },
+ "/services/nextjs-development": {
+  "hash": "4c3b7fc50f37392f",
+  "date": "2026-11-14"
+ },
+ "/services/shopify-website-design": {
+  "hash": "ebdfabc70c7ea1ff",
+  "date": "2026-11-14"
+ },
+ "/services/small-business-web-design": {
+  "hash": "27bcc15bab551faa",
+  "date": "2026-11-14"
+ },
+ "/services/squarespace-web-design": {
+  "hash": "5149bbf64a7db2b6",
+  "date": "2026-11-14"
+ },
+ "/services/website-maintenance": {
+  "hash": "be686ce7644d4dc2",
+  "date": "2026-11-14"
+ },
+ "/services/website-redesign": {
+  "hash": "bf7d0c8e24b9744b",
+  "date": "2026-11-14"
+ },
+ "/services/wix-web-designer": {
+  "hash": "3cb74369e40e9886",
+  "date": "2026-11-14"
+ },
+ "/services/wordpress-web-design": {
+  "hash": "d21a36c09c80681e",
+  "date": "2026-11-14"
+ },
+ "/terms": {
+  "hash": "0b178b88cd53ae8a",
+  "date": "2026-11-14"
+ },
+ "/thank-you": {
+  "hash": "cec4965cd976a80f",
+  "date": "2026-11-14"
+ },
+ "/web-design-canada": {
+  "hash": "24318cb00f447d4c",
+  "date": "2026-11-11"
+ },
+ "/web-design-uk": {
+  "hash": "a4a17167560f3244",
+  "date": "2026-11-11"
+ },
+ "/web-design-usa": {
+  "hash": "7a79bc2d48a3d586",
+  "date": "2026-11-11"
+ }
+}

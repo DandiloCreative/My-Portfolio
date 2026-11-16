@@ -6,6 +6,7 @@
 // It also writes dist/sitemap.xml and dist/llms.txt from the same list of pages,
 // and stops the build if any page breaks a basic SEO rule (see "SEO checks" at the end).
 import { readFileSync, writeFileSync, mkdirSync, existsSync, copyFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -88,6 +89,26 @@ function extraSchema(route) {
   return blocks.map(jsonLd).join("\n  ");
 }
 
+// Sitemap "lastmod" dates: each page keeps the date its main content last changed,
+// stored in scripts/page-dates.json (commit it after building). Header and footer changes don't count,
+// so adding one link to the footer doesn't mark every page as changed.
+const datesFile = join(root, "scripts", "page-dates.json");
+const pageDates = existsSync(datesFile) ? JSON.parse(readFileSync(datesFile, "utf8")) : {};
+const pageImages = {};
+function trackPage(route, appHtml) {
+  const main = appHtml.match(/<main[\s\S]*<\/main>/)?.[0] ?? appHtml;
+  const hash = createHash("sha1").update(main).digest("hex").slice(0, 16);
+  const saved = pageDates[route.path];
+  if (!saved || saved.hash !== hash) pageDates[route.path] = { hash, date: saved ? today : route.content?.date ?? today };
+  // Images for the image sitemap: real pictures in the page content (no inline data, no icons)
+  const imgs = new Set();
+  if (route.content?.kind === "blog") imgs.add(`${SITE_URL}/blog-images/${route.path.replace("/blog/", "")}.jpg`);
+  for (const [, src] of main.matchAll(/<img[^>]+src="([^"]+)"/g)) {
+    if (/^\/[^/].*\.(jpe?g|png|webp|avif)$/i.test(src)) imgs.add(SITE_URL + src);
+  }
+  pageImages[route.path] = [...imgs];
+}
+
 for (const route of ROUTES) {
   const url = urlFor(route.path);
   const title = escapeAttr(route.title);
@@ -120,6 +141,7 @@ for (const route of ROUTES) {
   html = replaceOnce(html, /<div id="root"><\/div>/, `<div id="root">${appHtml}</div>`, "#root");
 
   checkPage(route, html, appHtml);
+  trackPage(route, appHtml);
 
   const file = route.path === "/" ? join(dist, "index.html") : join(dist, route.path.slice(1), "index.html");
   mkdirSync(dirname(file), { recursive: true });
@@ -129,12 +151,21 @@ for (const route of ROUTES) {
 
 const indexed = ROUTES.filter((r) => !r.noindex);
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${indexed.map((r) => `  <url><loc>${urlFor(r.path)}</loc><lastmod>${r.content?.date ?? today}</lastmod></url>`).join("\n")}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${indexed
+  .map((r) => {
+    const imgs = (pageImages[r.path] ?? []).map((src) => `<image:image><image:loc>${src}</image:loc></image:image>`).join("");
+    return `  <url><loc>${urlFor(r.path)}</loc><lastmod>${pageDates[r.path]?.date ?? today}</lastmod>${imgs}</url>`;
+  })
+  .join("\n")}
 </urlset>
 `;
 writeFileSync(join(dist, "sitemap.xml"), sitemap);
-console.log(`prerender: sitemap.xml with ${indexed.length} pages`);
+// Keep only pages that still exist, sorted, so the file diff stays readable
+const keptDates = Object.fromEntries(ROUTES.map((r) => r.path).filter((p) => pageDates[p]).sort().map((p) => [p, pageDates[p]]));
+writeFileSync(datesFile, JSON.stringify(keptDates, null, 1) + "\n");
+const imageCount = Object.values(pageImages).reduce((n, list) => n + list.length, 0);
+console.log(`prerender: sitemap.xml with ${indexed.length} pages and ${imageCount} images`);
 
 // 404 page: Vercel serves dist/404.html with a real "404 Not Found" status for unknown addresses,
 // so search engines don't treat made-up URLs as real pages.

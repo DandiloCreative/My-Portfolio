@@ -458,6 +458,14 @@ export const industryPages: ContentPageData[] = [
         q: "Do you only work with dentists?",
         a: "No. The same approach works for orthodontists, physiotherapists, chiropractors, optometrists, aesthetics clinics and other private healthcare practices.",
       },
+      {
+        q: "How long does a dental website take to build?",
+        a: "Most practice websites take 2 to 6 weeks, depending on the number of treatment pages and how quickly your team photos and content are ready.",
+      },
+      {
+        q: "Can you add before-and-after photos?",
+        a: "Yes, as long as you have each patient's written consent to use them online. We add them to the relevant treatment pages in a gallery that loads quickly on phones.",
+      },
     ],
     related: ["/services/small-business-web-design", "/services/website-redesign", "/industries/therapist-web-design"],
   },
