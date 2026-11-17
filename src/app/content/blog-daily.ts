@@ -4,6 +4,106 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/freelancer-vs-agency-website",
+    kind: "blog",
+    label: "Freelancer vs Agency for Your Website",
+    title: "Hiring a Freelancer vs an Agency for Your Website: Which Is Right?",
+    description:
+      "Should a small business hire a freelance web designer or a web design agency? Costs, speed, quality, support and risk compared, plus the questions to ask either one.",
+    eyebrow: "Comparison",
+    h1: "Hiring a Freelancer vs an Agency for Your Small Business Website",
+    date: "2026-11-17",
+    readMinutes: 7,
+    intro: [
+      "In short: a good freelancer suits a simple website on a tight budget, while an agency suits bigger projects, custom features and businesses that want a team and a clear process behind them. A small remote agency often sits in the middle.",
+      "The label matters less than the person or team you actually hire. Here's how the two options compare on cost, speed, quality, support and risk, and the questions that will tell you whether either one is a good fit.",
+    ],
+    sections: [
+      {
+        heading: "The quick comparison",
+        bullets: [
+          "Cost: freelancers are usually cheaper; agencies cost more because you pay for a team and a process.",
+          "Skills: a freelancer is often strong in one or two areas; an agency covers design, development, content and SEO.",
+          "Speed: a freelancer can start quickly but works alone; an agency can split work across people.",
+          "Availability: if a freelancer is ill, busy or moves on, your project waits; an agency has cover.",
+          "Communication: with a freelancer you talk straight to the person doing the work; with an agency you usually get a project manager.",
+          "Support after launch: varies a lot with freelancers; agencies more often offer maintenance plans.",
+        ],
+      },
+      {
+        heading: "When a freelancer is the better choice",
+        paragraphs: [
+          "Freelancers range from beginners on marketplaces to designers with years of client work. A good one can be excellent value, especially for a small, well-defined project.",
+        ],
+        bullets: [
+          "You need a simple 1 to 5 page website or a single landing page.",
+          "Your budget is tight and the scope is clear.",
+          "You want to speak directly with the person building your site.",
+          "You've seen their past work and it's close to what you want.",
+          "You're comfortable managing hosting, updates and small fixes yourself, or have agreed support in writing.",
+        ],
+      },
+      {
+        heading: "When an agency is the better choice",
+        bullets: [
+          "You need an online store, a booking system, a customer portal or AI features.",
+          "Your project needs several skills: design, development, copywriting and SEO.",
+          "You want a written plan, a fixed timeline and someone accountable for both.",
+          "You're redesigning an existing site and need to keep your Google rankings during the move.",
+          "You want ongoing support from a team rather than relying on one person.",
+        ],
+      },
+      {
+        heading: "The risks to watch for with either option",
+        bullets: [
+          "Not owning your website: make sure your domain, hosting account and site files are in your name, or will be handed over.",
+          "No written scope: agree pages, features, price and timeline before you pay anything.",
+          "Templates sold as custom work: ask whether the design is built for you or adapted from a theme. Both can be fine, but the price should match.",
+          "Disappearing after launch: ask what happens if something breaks a month later, and what it costs.",
+          "Hidden extras: check whether hosting, plugins, stock photos, email and changes after launch are included.",
+        ],
+      },
+      {
+        heading: "Questions to ask before you hire anyone",
+        bullets: [
+          "Can I see 2 or 3 websites you've built for businesses like mine?",
+          "Who will actually design and build my website?",
+          "What's included in the price, and what costs extra?",
+          "How long will it take, and what do you need from me to stay on schedule?",
+          "Will I own the domain, the hosting account and the website when it's finished?",
+          "How many rounds of changes are included?",
+          "What support do you offer after launch?",
+        ],
+      },
+      {
+        heading: "Where Dandilo Digitals fits",
+        paragraphs: [
+          "Dandilo Digitals is a small remote web design and development agency. You get a direct point of contact plus a clear process: a written plan, a design draft you approve before any code is written, testing on phones, tablets and desktops, and support after launch. You own your website and everything we build.",
+          "Starter websites begin at $300, business websites at $899 and online stores at $1,250. If you're comparing quotes, ask for a free website audit first and we'll tell you honestly what your project needs.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is it cheaper to hire a freelancer or an agency for a website?",
+        a: "A freelancer is usually cheaper, especially for a simple site. Agencies charge more because you get a team and a process. Small remote agencies are often close to freelancer prices for small business websites.",
+      },
+      {
+        q: "Are freelancers on Fiverr or Upwork good for websites?",
+        a: "Some are excellent and some aren't. Judge each one on their past work, reviews, communication and what's included, not on the marketplace. Always agree the scope and price in writing.",
+      },
+      {
+        q: "What does a web design agency do that a freelancer doesn't?",
+        a: "An agency usually covers more skills in one place (design, development, content and SEO), has cover if someone is unavailable, and follows a set process from planning to launch and support.",
+      },
+      {
+        q: "How do I make sure I own my website?",
+        a: "Register the domain in your own name, ask for the hosting or platform account to be in your name or transferred at launch, and get it in writing that the finished website belongs to you.",
+      },
+    ],
+    related: ["/blog/how-to-choose-a-web-designer", "/blog/small-business-website-cost", "/blog/website-builder-vs-web-designer", "/services/small-business-web-design"],
+  },
+  {
     path: "/blog/how-long-does-it-take-to-build-a-website",
     kind: "blog",
     label: "How Long Does It Take to Build a Website?",

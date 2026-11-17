@@ -5,6 +5,7 @@
 **Status:** in progress. Since 14 Nov 2026 the owner has approved working on the plan every day, phase by phase, without asking first. Facts, results and team details still come only from the owner.
 
 **Daily log:**
+- **17 Nov 2026 (from the earlier plan, comparison post + FAQs):** new post /blog/freelancer-vs-agency-website (4 FAQs). Small business web design, ecommerce web design and website redesign pages now have 6 or more FAQs (prices, timelines, ownership).
 - **16 Nov 2026 (from the earlier plan, sitemaps):** the sitemap now gives each page the date its main content last changed (stored in scripts/page-dates.json, commit it after building) instead of the build date, and lists 76 page images (image sitemap). The dentist page has 6 FAQs.
 - **16 Nov 2026 (Phase 2, section 3 industry intent):** new page /industries/dentist-web-design (dentists and private clinics: treatment pages, online booking, patient privacy, GDC/board rules, local search, 4 FAQs). Still needs a matching portfolio example.
 - **16 Nov 2026 Blog:** How Long Does It Take to Build a Small Business Website? (https://dandilodigitals.com/blog/how-long-does-it-take-to-build-a-website)
@@ -294,9 +295,9 @@ The CRM **Keywords** page supplies new phrases every morning. Each month we pick
 Items from the first version of this plan (Downloads/SEO-PLAN.md) that aren't covered above yet:
 
 - [x] Real `lastmod` dates and an image sitemap (16 Nov 2026).
-- [ ] At least 6 FAQs on every service, industry and country page (most have 2 to 4 today). Dentist page done.
+- [ ] At least 6 FAQs on every service, industry and country page (most have 2 to 4 today). Done: dentist, small business web design, ecommerce, website redesign.
 - [ ] Industry pages for SaaS startups and e-commerce brands.
-- [ ] Comparison posts: "Hiring a freelancer vs an agency", "Dandilo Digitals vs Upwork / Fiverr freelancers" and "Wix vs a custom website".
+- [ ] Comparison posts: "Hiring a freelancer vs an agency" (done 17 Nov 2026), "Dandilo Digitals vs Upwork / Fiverr freelancers" and "Wix vs a custom website".
 - [ ] Posts: "WordPress vs custom website for law firms", "How long does it take to build a web app".
 - [ ] Free tools that attract links: website speed and SEO checker, downloadable website launch checklist.
 - [ ] Every guide links to a matching portfolio project (needs the portfolio pages, which need your project facts).

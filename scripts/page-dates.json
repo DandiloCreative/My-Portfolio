@@ -4,8 +4,8 @@
   "date": "2026-11-16"
  },
  "/blog": {
-  "hash": "16d18ee5edaa2414",
-  "date": "2026-11-16"
+  "hash": "891bd6a57293fa7b",
+  "date": "2026-11-17"
  },
  "/blog/canada-small-business-website-checklist": {
   "hash": "bfab257af1b13473",
@@ -14,6 +14,10 @@
  "/blog/choose-tech-stack-nextjs-laravel-django-nestjs": {
   "hash": "06e52903c63cbae8",
   "date": "2026-11-07"
+ },
+ "/blog/freelancer-vs-agency-website": {
+  "hash": "e3ac8f836b3bac2d",
+  "date": "2026-11-17"
  },
  "/blog/get-more-customers-from-your-website": {
   "hash": "e6dc980af0b88022",
@@ -172,8 +176,8 @@
   "date": "2026-11-14"
  },
  "/services/ecommerce-web-design": {
-  "hash": "d90f4d5021f8df74",
-  "date": "2026-11-14"
+  "hash": "bf8fd3c15688ca83",
+  "date": "2026-11-17"
  },
  "/services/frontend-development": {
   "hash": "8ee4bc9571266e9b",
@@ -208,8 +212,8 @@
   "date": "2026-11-14"
  },
  "/services/small-business-web-design": {
-  "hash": "27bcc15bab551faa",
-  "date": "2026-11-14"
+  "hash": "76eb9191c9c5ca47",
+  "date": "2026-11-17"
  },
  "/services/squarespace-web-design": {
   "hash": "5149bbf64a7db2b6",
@@ -220,8 +224,8 @@
   "date": "2026-11-14"
  },
  "/services/website-redesign": {
-  "hash": "bf7d0c8e24b9744b",
-  "date": "2026-11-14"
+  "hash": "b080248edab9cf43",
+  "date": "2026-11-17"
  },
  "/services/wix-web-designer": {
   "hash": "3cb74369e40e9886",

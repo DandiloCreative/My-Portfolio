@@ -58,6 +58,18 @@ export const servicePages: ContentPageData[] = [
         q: "Can I update the website myself?",
         a: "Yes. We build on platforms that let you edit text and photos without any coding, and we show you how.",
       },
+      {
+        q: "How much does a small business website cost?",
+        a: "Starter websites begin at $300, business websites at $899 and online stores at $1,250. You get a fixed quote in writing before any work starts.",
+      },
+      {
+        q: "How long does it take to build my website?",
+        a: "Most small business websites take 2 to 6 weeks, depending on the number of pages, the features and how quickly your text and photos are ready. You get a written timeline with your quote.",
+      },
+      {
+        q: "Will I own my website?",
+        a: "Yes. You own your website and everything we build for it, and your domain stays in your name.",
+      },
     ],
     related: ["/services/website-redesign", "/blog/small-business-website-examples", "/blog/website-builder-vs-web-designer", "/blog/small-business-website-cost"],
   },
@@ -276,6 +288,22 @@ export const servicePages: ContentPageData[] = [
         q: "Can you improve my existing online store?",
         a: "Yes. We can redesign key pages like your homepage, product pages and cart to make shopping easier, especially on mobile.",
       },
+      {
+        q: "How much does an online store cost?",
+        a: "Our online stores start from $1,250. The final price depends on the platform, the number of products and any custom features. You get a fixed quote before work starts.",
+      },
+      {
+        q: "How long does it take to build an online store?",
+        a: "A small online store usually takes about 3 to 6 weeks. The biggest factor is how ready your product photos, descriptions and prices are.",
+      },
+      {
+        q: "Can you add my products for me?",
+        a: "Yes. We can set up your products, categories, options and shipping rules, or set up a few examples and show you how to add the rest.",
+      },
+      {
+        q: "Will my store work well on phones?",
+        a: "Yes. Most online shoppers browse on a phone, so we design product pages, the cart and checkout mobile-first and test them on phones, tablets and desktops.",
+      },
     ],
     related: ["/services/shopify-website-design", "/blog/shopify-website-cost", "/blog/shopify-vs-woocommerce", "/portfolio"],
   },
@@ -327,6 +355,18 @@ export const servicePages: ContentPageData[] = [
       {
         q: "Do I have to change platforms to redesign my site?",
         a: "No. We can redesign within your current platform, or recommend a move if another platform would serve you better.",
+      },
+      {
+        q: "How long does a website redesign take?",
+        a: "Most redesigns take about 2 to 5 weeks, depending on the number of pages and how much content moves across from your current site.",
+      },
+      {
+        q: "Can I keep my current domain and email?",
+        a: "Yes. Your domain stays the same and we only change what's needed to point it at the new site, so your email keeps working.",
+      },
+      {
+        q: "How do I know whether to redesign or start again?",
+        a: "Ask for a free website audit. We'll look at your current site's design, speed, mobile experience and search setup, and tell you honestly whether a redesign or a rebuild makes more sense.",
       },
     ],
     related: ["/blog/website-redesign-checklist", "/blog/signs-your-website-is-losing-customers", "/contact"],
