@@ -4,7 +4,7 @@
   "date": "2026-11-16"
  },
  "/blog": {
-  "hash": "3263ceb7976f07ec",
+  "hash": "e8b5fbe2cf14d235",
   "date": "2026-11-18"
  },
  "/blog/canada-small-business-website-checklist": {
@@ -14,6 +14,10 @@
  "/blog/choose-tech-stack-nextjs-laravel-django-nestjs": {
   "hash": "06e52903c63cbae8",
   "date": "2026-11-07"
+ },
+ "/blog/eu-small-business-website-checklist": {
+  "hash": "a3631b9341ac146e",
+  "date": "2026-11-18"
  },
  "/blog/freelancer-vs-agency-website": {
   "hash": "e3ac8f836b3bac2d",
@@ -144,8 +148,8 @@
   "date": "2026-11-14"
  },
  "/platforms": {
-  "hash": "9da0e265dc1cb094",
-  "date": "2026-11-14"
+  "hash": "8911b641f7a22798",
+  "date": "2026-11-18"
  },
  "/portfolio": {
   "hash": "53a0df698758ef39",
@@ -164,8 +168,8 @@
   "date": "2026-11-14"
  },
  "/services": {
-  "hash": "947a43de7c889526",
-  "date": "2026-11-14"
+  "hash": "e84b2145e30e155d",
+  "date": "2026-11-18"
  },
  "/services/backend-development": {
   "hash": "b661c633df1e3f3c",
@@ -251,6 +255,10 @@
   "hash": "24318cb00f447d4c",
   "date": "2026-11-11"
  },
+ "/web-design-europe": {
+  "hash": "e66eef51d3d18053",
+  "date": "2026-11-18"
+ },
  "/web-design-uk": {
   "hash": "a4a17167560f3244",
   "date": "2026-11-11"
@@ -258,5 +266,9 @@
  "/web-design-usa": {
   "hash": "7a79bc2d48a3d586",
   "date": "2026-11-11"
+ },
+ "/web-design-worldwide": {
+  "hash": "ae987a5037c08ba0",
+  "date": "2026-11-18"
  }
 }

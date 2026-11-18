@@ -26,6 +26,7 @@ const urlFor = (path) => SITE_URL + (path === "/" ? "/" : path);
 // Same id as the main ProfessionalService block in index.html, so Google knows it's one business
 const ORG = { "@type": "ProfessionalService", "@id": `${SITE_URL}/#organization`, name: "Dandilo Digitals", url: SITE_URL };
 const MARKETS = ["United States", "Canada", "United Kingdom", "Australia", "Ireland", "New Zealand"];
+const REGIONS = new Set(["Europe", "Worldwide"]);
 const problems = [];
 const seen = { title: {}, description: {} };
 
@@ -81,7 +82,7 @@ function extraSchema(route) {
       name: c.label,
       description: c.description,
       url: urlFor(c.path),
-      areaServed: (c.areaServed ?? MARKETS).map((name) => ({ "@type": "Country", name })),
+      areaServed: (c.areaServed ?? MARKETS).map((name) => ({ "@type": REGIONS.has(name) ? "Place" : "Country", name })),
       provider: ORG,
     });
   }
@@ -192,7 +193,7 @@ console.log(`prerender: sitemap.xml with ${indexed.length} pages and ${imageCoun
       .join("\n");
   const txt = `# Dandilo Digitals
 
-> Dandilo Digitals (dandilodigitals.com) is a web design and development agency for small businesses in the US, UK and Canada. We build WordPress, Shopify, Wix Studio, Squarespace, GoHighLevel and custom-coded websites designed to win calls, bookings and sales. Every project can start with a free website audit.
+> Dandilo Digitals (dandilodigitals.com) is a web design and development agency for small businesses in the US, UK, Canada, Europe and worldwide. We build WordPress, Shopify, Wix Studio, Squarespace, GoHighLevel and custom-coded websites designed to win calls, bookings and sales. Every project can start with a free website audit.
 
 - Website: ${SITE_URL}
 - Email: hello@dandilodigitals.com

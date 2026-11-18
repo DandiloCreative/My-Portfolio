@@ -1,4 +1,4 @@
-// Country landing pages (USA, UK, Canada). Each one uses that country's spelling,
+// Country and region landing pages (USA, UK, Canada, Europe, worldwide). Each one uses that country's spelling,
 // search terms and an approximate local price, so Google can match it to searchers there.
 // Local prices are rough conversions of the US dollar prices in pricing.ts.
 import type { ContentPageData } from "./types";
@@ -197,5 +197,172 @@ export const locationPages: ContentPageData[] = [
       },
     ],
     related: ["/blog/website-cost-canada", "/blog/canada-small-business-website-checklist", "/pricing"],
+  },
+  {
+    path: "/web-design-europe",
+    kind: "service",
+    label: "Web Design in Europe",
+    areaServed: ["Europe"],
+    title: "Small Business Web Design Europe | GDPR-Ready | Dandilo",
+    description:
+      "Affordable web design for small businesses across Europe. GDPR-ready WordPress, Shopify and Wix Studio websites from about \u20ac260, multilingual options and a free audit.",
+    eyebrow: "Europe",
+    h1: "Affordable Web Design for Small Businesses Across Europe",
+    intro: [
+      "From cafés in Dublin and design studios in Amsterdam to online shops in Berlin, Paris, Madrid and Lisbon, European customers check your website before they call, book or buy. If it's slow, dated or hard to use on a phone, they choose someone else.",
+      "Dandilo Digitals designs and builds websites for small businesses across Europe, inside and outside the EU. We work remotely, schedule calls to suit European time zones and send a clear, fixed quote before any work starts.",
+    ],
+    sections: [
+      {
+        heading: "What we build for European businesses",
+        bullets: [
+          "Small business websites on WordPress or Wix Studio",
+          "Shopify and WooCommerce shops with euro pricing, EU VAT settings and European payment methods",
+          "Multilingual websites: English plus other languages, using your own translations or a translator you choose",
+          "Website redesigns that keep your Google rankings",
+          "Landing pages for Google Ads and Meta ads",
+          "Local SEO so you show up in local searches and on Google Maps in your city",
+          "Custom web apps and AI features, such as an assistant that answers customer questions 24/7",
+        ],
+      },
+      {
+        heading: "Built for European rules",
+        paragraphs: [
+          "European websites need a few things that many templates miss. We add a cookie banner that asks for consent before any analytics or advertising cookies load, as GDPR and the ePrivacy rules require, plus a clear privacy policy and consent checkboxes on sign-up forms.",
+          "For online shops we design with the European Accessibility Act in mind (it has applied to many online stores since June 2025) and make room for the information EU shoppers expect: prices with VAT, delivery costs and the 14-day right to cancel. If you're based in Germany or Austria, we add an Impressum page with your business details.",
+          "We build these features in, but we're web designers, not lawyers. For legal wording, check with a local adviser or a trusted policy generator.",
+        ],
+      },
+      {
+        heading: "Approximate prices in euros",
+        bullets: [
+          "Starter Website: from about \u20ac260",
+          "Business Website: from about \u20ac775",
+          "Online Store: from about \u20ac1,075",
+          "Website Redesign: from about \u20ac260",
+          "Care Plan: from about \u20ac85 a month",
+        ],
+        paragraphs: [
+          "Our packages are priced in US dollars, so the euro amount depends on the exchange rate on the day. Ask and we'll send your fixed quote in euros. Many European agencies charge \u20ac3,000 to \u20ac10,000 or more for a small business website.",
+        ],
+      },
+      {
+        heading: "How it works",
+        paragraphs: [
+          "Start with a free website audit or a short call. We agree what the website needs, send a fixed quote, show you a design draft to approve, then build, test and launch it. You own your website, your domain and your accounts.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you work with businesses across Europe?",
+        a: "Yes. We work remotely with small businesses in EU countries such as Ireland, Germany, France, the Netherlands, Spain, Italy and Portugal, and outside the EU in places like Switzerland and Norway. For the UK, see our UK web design page.",
+      },
+      {
+        q: "Will my website be GDPR-ready?",
+        a: "We build in the features GDPR and the ePrivacy rules call for: a cookie consent banner, a privacy policy page and consent checkboxes on forms. Your privacy policy wording should still be checked by you or a legal adviser.",
+      },
+      {
+        q: "Can you build a website in more than one language?",
+        a: "Yes. We can set up your website in English and other European languages, using translations you provide or from a translator you choose, with each language on its own pages so Google can show the right one.",
+      },
+      {
+        q: "Can I pay in euros?",
+        a: "Our packages are priced in US dollars and most cards convert automatically. If you'd prefer a quote in euros, just ask.",
+      },
+      {
+        q: "Can my online shop charge VAT for different EU countries?",
+        a: "Yes. Shopify and WooCommerce can show prices with VAT and handle different VAT rates by country. Your accountant should confirm which rates and schemes, like the EU One-Stop Shop, apply to you.",
+      },
+      {
+        q: "Do you work in European time zones?",
+        a: "Yes. We schedule calls at times that suit you and reply to messages during the European working day.",
+      },
+    ],
+    related: ["/blog/eu-small-business-website-checklist", "/services/ecommerce-web-design", "/web-design-worldwide", "/pricing"],
+  },
+  {
+    path: "/web-design-worldwide",
+    kind: "service",
+    label: "Web Design Worldwide",
+    areaServed: ["Worldwide"],
+    title: "International Web Design for Small Businesses | Dandilo",
+    description:
+      "Remote web design and development for small businesses worldwide. WordPress, Shopify, Wix Studio and custom websites from $300, priced in US dollars. Free website audit.",
+    eyebrow: "Worldwide",
+    h1: "Web Design and Development for Small Businesses Worldwide",
+    intro: [
+      "Wherever your business is, your customers look at your website before they get in touch. Dandilo Digitals is a fully remote web design and development agency, so we can work with small businesses anywhere in the world.",
+      "We've built our process for working remotely: calls scheduled in your time zone, written plans and updates, and a design draft you approve before any code is written. You get the same fixed quote and the same quality wherever you are.",
+    ],
+    sections: [
+      {
+        heading: "Where we work",
+        bullets: [
+          "North America: the United States and Canada",
+          "The UK, Ireland and the rest of Europe",
+          "Australia and New Zealand",
+          "The Middle East, Africa, Asia and Latin America",
+          "Businesses selling internationally from anywhere, including online stores shipping to several countries",
+        ],
+      },
+      {
+        heading: "What we build",
+        bullets: [
+          "Small business websites on WordPress, Wix Studio or Squarespace",
+          "Shopify and WooCommerce stores that can sell in several currencies and ship internationally",
+          "Multilingual websites, with each language on its own pages so Google can show the right one",
+          "Custom web apps built with React, Next.js and NestJS",
+          "AI features such as chat assistants that answer questions and book appointments 24/7",
+          "Website redesigns, landing pages and monthly website care",
+        ],
+      },
+      {
+        heading: "Prices in US dollars",
+        bullets: [
+          "Starter Website: from $300",
+          "Business Website: from $899",
+          "Online Store: from $1,250",
+          "Fully custom-coded website: from $2,500",
+          "Care Plan: from $99 a month",
+        ],
+        paragraphs: [
+          "All our packages are priced in US dollars, and most cards convert to your currency automatically. You get a fixed quote before work starts.",
+        ],
+      },
+      {
+        heading: "Built for your market",
+        paragraphs: [
+          "Every country has its own expectations. We set up your website with your local spelling, currency, time zone and contact details, and add the privacy and cookie features your customers' laws call for. For local search, we help you connect your site to your Google Business Profile so you show up in your area.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you work with businesses outside the US, UK and Canada?",
+        a: "Yes. We're a fully remote agency and work with small businesses worldwide, including Europe, Australia, New Zealand, the Middle East, Africa and Asia.",
+      },
+      {
+        q: "How do we communicate if we're in different time zones?",
+        a: "We schedule calls at a time that suits you and keep you updated in writing, so you always know where your project stands even when we're working while you sleep.",
+      },
+      {
+        q: "What currency do you charge in?",
+        a: "Our packages are priced in US dollars. Most cards convert to your local currency automatically, and we can tell you the approximate amount in your currency when we quote.",
+      },
+      {
+        q: "Can my online store sell to customers in other countries?",
+        a: "Yes. Shopify and WooCommerce can show prices in several currencies, calculate international shipping and handle taxes by country. We set this up to match where you sell.",
+      },
+      {
+        q: "Can you build my website in my language?",
+        a: "Yes. We can build websites in English and other languages, using your own text or translations from a translator you choose.",
+      },
+      {
+        q: "Will I own my website?",
+        a: "Yes. You own your website, your domain and your accounts, wherever you're based.",
+      },
+    ],
+    related: ["/web-design-europe", "/web-design-usa", "/web-design-uk", "/web-design-canada", "/pricing"],
   },
 ];

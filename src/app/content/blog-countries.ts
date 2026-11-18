@@ -1,4 +1,4 @@
-// Guides written for UK and Canadian small business owners (UK posts use UK spelling).
+// Guides written for UK, Canadian and European small business owners (UK posts use UK spelling).
 // Price ranges are typical market ranges, not quotes.
 import type { ContentPageData } from "./types";
 
@@ -264,5 +264,99 @@ export const countryPosts: ContentPageData[] = [
       },
     ],
     related: ["/web-design-canada", "/blog/website-cost-canada", "/blog/get-more-customers-from-your-website"],
+  },
+  {
+    path: "/blog/eu-small-business-website-checklist",
+    kind: "blog",
+    label: "EU Small Business Website Checklist",
+    title: "EU Small Business Website Checklist: GDPR, Cookies & More",
+    description:
+      "What a small business website in Europe needs: GDPR cookie consent, a privacy policy, accessibility, VAT pricing, the 14-day right to cancel and an Impressum.",
+    eyebrow: "Europe",
+    h1: "The EU Small Business Website Checklist",
+    date: "2026-11-18",
+    readMinutes: 7,
+    intro: [
+      "Running a small business in Europe means your website has a few extra jobs. On top of looking good and winning customers, it needs to respect privacy rules, show prices the way EU shoppers expect and, for many online shops, be accessible.",
+      "Use this checklist to see what your website already covers and what's missing. It's a practical guide, not legal advice, so check anything you're unsure about with a local adviser.",
+    ],
+    sections: [
+      {
+        heading: "Privacy and cookies (GDPR and ePrivacy)",
+        bullets: [
+          "A cookie banner that asks for consent before analytics or advertising cookies load, with \"Accept\" and \"Reject\" equally easy to click",
+          "A privacy policy that explains what data you collect, why, how long you keep it and who you share it with",
+          "Contact forms that only ask for the information you need",
+          "Unticked consent checkboxes on newsletter sign-ups",
+          "A secure site (https) on every page",
+        ],
+      },
+      {
+        heading: "Business details",
+        bullets: [
+          "Your business name, address and contact details easy to find",
+          "Your company registration and VAT number where your country requires them",
+          "An Impressum page if you're based in Germany or Austria",
+          "Terms and conditions if you sell online",
+        ],
+      },
+      {
+        heading: "Online shops: what EU shoppers must see",
+        bullets: [
+          "Prices shown including VAT",
+          "Delivery costs and times before checkout",
+          "Clear information about the 14-day right to cancel and how to return items",
+          "A checkout button that makes clear the order means paying (for example \"Order and pay\")",
+          "VAT set up correctly for customers in other EU countries; ask your accountant about the One-Stop Shop scheme",
+        ],
+      },
+      {
+        heading: "Accessibility",
+        paragraphs: [
+          "The European Accessibility Act has applied since June 2025 to many businesses selling products and services online, including e-commerce. Very small businesses providing services (fewer than 10 staff and turnover under \u20ac2 million) are generally exempt, but an accessible website is still better for every customer.",
+        ],
+        bullets: [
+          "Text with enough contrast to read easily",
+          "Every image with a short description (alt text)",
+          "A site that works with a keyboard, not only a mouse",
+          "Form fields with clear labels and error messages",
+          "Headings in a logical order",
+        ],
+      },
+      {
+        heading: "Languages and local search",
+        bullets: [
+          "Your website in the languages your customers search in, with each language on its own pages",
+          "Language tags (hreflang) so Google shows the right version",
+          "A Google Business Profile linked to your website",
+          "Service and location pages that say clearly what you do and where",
+        ],
+      },
+      {
+        heading: "Need help ticking these off?",
+        paragraphs: [
+          "Dandilo Digitals builds GDPR-ready websites and online shops for small businesses across Europe. Starter websites begin at about \u20ac260 and online stores at about \u20ac1,075 (priced in US dollars, so the euro amount depends on the exchange rate). Ask for a free website audit and we'll show you what your current site is missing.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Does my small business website need a cookie banner in the EU?",
+        a: "If your website uses analytics, advertising or other non-essential cookies, yes. You need to ask for consent before they load. A site that only uses essential cookies doesn't need a consent banner.",
+      },
+      {
+        q: "Does the European Accessibility Act apply to my website?",
+        a: "It applies to many businesses selling products or services online, including online shops. Very small service businesses (fewer than 10 staff and under \u20ac2 million turnover) are generally exempt. Check with an adviser if you're unsure.",
+      },
+      {
+        q: "What is an Impressum?",
+        a: "An Impressum is a page with your business's legal details, such as name, address, contact details and registration numbers. Businesses in Germany and Austria are required to have one.",
+      },
+      {
+        q: "Do I need a privacy policy if I only have a contact form?",
+        a: "Yes. A contact form collects personal data like names and email addresses, so GDPR requires you to explain how you use and store it.",
+      },
+    ],
+    related: ["/web-design-europe", "/blog/small-business-website-security", "/blog/website-redesign-checklist"],
   },
 ];

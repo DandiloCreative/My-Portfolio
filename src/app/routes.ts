@@ -58,7 +58,7 @@ const mainPages: RouteInfo[] = [
     path: "/",
     title: "Web Design Company for Small Businesses | Dandilo Digitals",
     description:
-      "Website design company for small businesses in the US, UK and Canada. WordPress, Shopify, Wix Studio and custom websites built to win customers. Free audit.",
+      "Web design company for small businesses in the US, UK, Canada, Europe and worldwide. WordPress, Shopify, Wix Studio and custom websites. Free audit.",
     mainFaq: true,
   },
   {

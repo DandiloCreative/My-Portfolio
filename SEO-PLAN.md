@@ -5,6 +5,7 @@
 **Status:** in progress. Since 14 Nov 2026 the owner has approved working on the plan every day, phase by phase, without asking first. Facts, results and team details still come only from the owner.
 
 **Daily log:**
+- **18 Nov 2026 (new markets, user request):** new pages /web-design-europe (GDPR, cookie consent, EAA, VAT, Impressum, approx euro prices, 6 FAQs) and /web-design-worldwide (USD prices, time zones, multi-currency stores, 6 FAQs); blog /blog/eu-small-business-website-checklist. Homepage description, site schema areaServed and llms.txt now say US, UK, Canada, Europe and worldwide.
 - **18 Nov 2026 (from the earlier plan, comparison post + FAQs):** new post /blog/wix-vs-custom-website (4 FAQs). Landing page, WordPress, bespoke and website maintenance pages now have 6 or more FAQs.
 - **17 Nov 2026 (from the earlier plan, comparison post + FAQs):** new post /blog/freelancer-vs-agency-website (4 FAQs). Small business web design, ecommerce web design and website redesign pages now have 6 or more FAQs (prices, timelines, ownership).
 - **16 Nov 2026 (from the earlier plan, sitemaps):** the sitemap now gives each page the date its main content last changed (stored in scripts/page-dates.json, commit it after building) instead of the build date, and lists 76 page images (image sitemap). The dentist page has 6 FAQs.
