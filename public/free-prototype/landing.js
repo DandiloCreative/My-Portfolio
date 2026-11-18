@@ -152,4 +152,37 @@
       );
     });
   });
+  // Popup: after 12 seconds, show the same form in a popup with an X at the top.
+  // Not shown if the visitor is already at the form or typing in it; closing it hides it for 7 days.
+  (function () {
+    var pop = document.getElementById("pop"), slot = document.getElementById("pop-slot"), closeBtn = document.getElementById("pop-x");
+    var card = form.closest(".card");
+    if (!pop || !slot || !closeBtn || !card || /bot|crawler|spider|lighthouse/i.test(navigator.userAgent)) return;
+    var home = card.parentNode, KEY = "dd_proto_pop_closed", touched = false, lastFocus = null;
+    function get(k, store) { try { return (store || localStorage).getItem(k); } catch (e) { return null; } }
+    if (Date.now() - Number(get(KEY) || 0) < 7 * 864e5 || get("dd_lead_pending", window.sessionStorage)) return;
+    form.addEventListener("focusin", function () { touched = true; });
+    function onKey(e) { if (e.key === "Escape") close(); }
+    function open() {
+      var r = formSection && formSection.getBoundingClientRect();
+      if (touched || (r && r.top < window.innerHeight && r.bottom > 0)) return;
+      lastFocus = document.activeElement;
+      slot.appendChild(card);
+      pop.hidden = false;
+      document.body.style.overflow = "hidden";
+      document.addEventListener("keydown", onKey);
+      closeBtn.focus();
+    }
+    function close() {
+      try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
+      home.appendChild(card);
+      pop.hidden = true;
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", onKey);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+    closeBtn.addEventListener("click", close);
+    pop.addEventListener("mousedown", function (e) { if (e.target === pop) close(); });
+    setTimeout(open, 12000);
+  })();
 })();
