@@ -129,6 +129,18 @@ export const servicePages: ContentPageData[] = [
         q: "Will I be able to edit my WordPress site myself?",
         a: "Yes. We set up your site so you can edit pages and publish posts without touching code, and we walk you through it.",
       },
+      {
+        q: "How long does a WordPress website take?",
+        a: "Most small business WordPress websites take 2 to 6 weeks, depending on the number of pages, the features and how quickly your content is ready.",
+      },
+      {
+        q: "Will I own my WordPress website?",
+        a: "Yes. You own your website and everything we build for it, and your domain and hosting stay in your name.",
+      },
+      {
+        q: "Do you look after WordPress sites after launch?",
+        a: "Yes. Our care plans start from $99 a month and cover updates, backups, security monitoring, speed checks and small changes. They run month to month.",
+      },
     ],
     related: ["/services/ecommerce-web-design", "/blog/shopify-vs-woocommerce", "/blog/wix-vs-wordpress-vs-shopify"],
   },
@@ -422,6 +434,22 @@ export const servicePages: ContentPageData[] = [
         q: "Do you set up tracking for ads?",
         a: "Yes. We can connect your landing page to the Meta Pixel and Google Analytics so you can track leads from your campaigns.",
       },
+      {
+        q: "What is a landing page?",
+        a: "A landing page is a single page built for one goal, like booking a call or requesting a quote. It's where visitors land after clicking an ad or a link, so it has no distractions and one clear call to action.",
+      },
+      {
+        q: "Why not just send ad traffic to my homepage?",
+        a: "A homepage has many links and messages. A landing page matches the ad the visitor clicked and gives them one next step, which usually turns more of your paid clicks into enquiries.",
+      },
+      {
+        q: "How long does a landing page take?",
+        a: "A single landing page usually takes about 1 to 2 weeks, as long as your offer, text and images are ready at the start.",
+      },
+      {
+        q: "Will the landing page work on phones?",
+        a: "Yes. Most ad clicks come from phones, so we design landing pages mobile-first and test them on phones, tablets and desktops.",
+      },
     ],
     related: ["/services/small-business-web-design", "/blog/get-more-customers-from-your-website", "/contact"],
   },
@@ -584,6 +612,18 @@ export const servicePages: ContentPageData[] = [
         q: "Is there a contract?",
         a: "No long contract. Care plans run month to month, and you can cancel any time.",
       },
+      {
+        q: "What's included in a care plan?",
+        a: "Updates, backups, security monitoring, speed checks and small changes to your site, for a fixed monthly price.",
+      },
+      {
+        q: "Which platforms do you maintain?",
+        a: "WordPress and WooCommerce, Shopify, Wix Studio, Squarespace, GoHighLevel and custom-coded websites built with React, Next.js, Laravel and more.",
+      },
+      {
+        q: "What happens first when I sign up?",
+        a: "We start with a quick health check of your site and fix anything urgent, then keep it maintained every month.",
+      },
     ],
     related: ["/blog/small-business-website-security", "/blog/small-business-website-hosting-and-email", "/pricing", "/services/wordpress-web-design"],
   },
@@ -640,6 +680,18 @@ export const servicePages: ContentPageData[] = [
       {
         q: "Can I still edit a custom website myself?",
         a: "Yes. We build on platforms with easy editing, or add a simple content manager to custom-coded sites, and show you how to use it.",
+      },
+      {
+        q: "How much does a bespoke website cost?",
+        a: "Our custom websites start from $899, and fully custom-coded builds start from $2,500. You get a fixed quote before work starts.",
+      },
+      {
+        q: "Which platform will my bespoke website be built on?",
+        a: "It depends on what you need. We build bespoke designs on WordPress, Shopify and Wix Studio, or in custom code when you need features those platforms can't handle well. We'll explain our recommendation.",
+      },
+      {
+        q: "Will I own my bespoke website?",
+        a: "Yes. You own your website and everything we build for it.",
       },
     ],
     related: ["/services/small-business-web-design", "/blog/web-designer-vs-web-developer", "/blog/choose-tech-stack-nextjs-laravel-django-nestjs", "/pricing"],

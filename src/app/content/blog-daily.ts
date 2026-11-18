@@ -4,6 +4,101 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/wix-vs-custom-website",
+    kind: "blog",
+    label: "Wix vs a Custom Website",
+    title: "Wix vs a Custom Website: Which Is Better for Your Business?",
+    description:
+      "Wix or a custom-coded website? Cost, speed, SEO, flexibility and ownership compared for small businesses, plus when it makes sense to move from Wix to custom.",
+    eyebrow: "Comparison",
+    h1: "Wix vs a Custom Website: Which Is Better for Your Business?",
+    date: "2026-11-18",
+    readMinutes: 7,
+    intro: [
+      "In short: Wix is a good fit for most small businesses that need a professional website quickly and want to edit it themselves. A custom-coded website makes sense when you need features Wix can't handle well, top speed, or full control over your code and data.",
+      "Neither one is automatically better. Here's how they compare on cost, speed, SEO, flexibility and ownership, and how to tell which one your business actually needs.",
+    ],
+    sections: [
+      {
+        heading: "What we mean by each option",
+        bullets: [
+          "Wix (including Wix Studio): a website builder where your site lives on Wix's platform. You pay Wix a monthly plan that includes hosting, and you edit pages in a visual editor.",
+          "Custom website: a site written in code (for example React, Next.js or Laravel) for your business. It runs on hosting you choose, and you own the code.",
+          "A Wix site can still be custom designed. The difference is the platform underneath, not whether it looks unique.",
+        ],
+      },
+      {
+        heading: "The quick comparison",
+        bullets: [
+          "Upfront cost: Wix is usually cheaper to build. Custom code costs more because everything is built for you.",
+          "Running costs: Wix charges a monthly plan. Custom sites need hosting, which can be low cost, plus someone to make code changes.",
+          "Editing: Wix is easy to edit yourself. Custom sites need a content manager added if you want to edit them without code.",
+          "Features: Wix covers bookings, stores, blogs and forms through its own apps. Custom code can do almost anything, including portals, dashboards and AI tools.",
+          "Speed: a well-built Wix site is fine for most businesses. Custom code gives you more control to make pages very fast.",
+          "Ownership: on Wix you own your content but can't take the site's code to another host. A custom site is yours to move anywhere.",
+        ],
+      },
+      {
+        heading: "When Wix is the right choice",
+        bullets: [
+          "You need a professional site in a few weeks and on a modest budget.",
+          "You want to update text, photos and offers yourself.",
+          "Your needs are standard: service pages, a contact or quote form, bookings, a blog or a small store.",
+          "You'd rather not deal with hosting, security updates or servers.",
+        ],
+      },
+      {
+        heading: "When a custom website is the right choice",
+        bullets: [
+          "You need features Wix apps can't do well, like customer logins, custom calculators, dashboards or connections to your own systems.",
+          "You want AI features built in, such as an assistant trained on your services or automated lead handling.",
+          "Speed and performance are a priority, for example for a large site or heavy ad traffic.",
+          "You want full ownership of the code and the freedom to move hosts.",
+          "Your business is growing fast and you expect the website to grow into a web app.",
+        ],
+      },
+      {
+        heading: "Is Wix bad for SEO?",
+        paragraphs: [
+          "No. Wix sites can rank well on Google. You can edit page titles, descriptions and headings, set up redirects and connect Google Search Console. What matters most is useful content, clear service pages, a fast mobile experience and good local signals like your Google Business Profile.",
+          "A custom site gives you more control over technical details, which helps on bigger or more competitive sites. For a typical local business, the platform matters less than the content and setup.",
+        ],
+      },
+      {
+        heading: "Moving from Wix to a custom website",
+        paragraphs: [
+          "Wix doesn't let you export your site's code, so moving means rebuilding the site on the new platform. Your text, images and domain can come with you. The important step is to keep your page addresses the same or set up redirects, so you don't lose your Google rankings.",
+        ],
+      },
+      {
+        heading: "How Dandilo Digitals can help",
+        paragraphs: [
+          "We build on Wix Studio and in custom code, so we'll recommend whichever suits your business rather than the one we prefer. Wix websites start from $300 for a starter site and $899 for a full business website. Fully custom-coded builds start from $2,500.",
+          "Not sure which you need? Ask for a free website audit and we'll tell you honestly.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is a custom website better than Wix?",
+        a: "Not always. A custom website is better when you need unusual features, top performance or full ownership of the code. For many small businesses, a well-designed Wix site does the job for less money.",
+      },
+      {
+        q: "Can I move my Wix website to custom code later?",
+        a: "Yes, but Wix doesn't export your site's code, so the site has to be rebuilt. Your content and domain can move across, and redirects protect your Google rankings.",
+      },
+      {
+        q: "Is Wix cheaper than a custom website?",
+        a: "Usually, yes, to build. Wix has a monthly plan, while a custom site has hosting costs and needs a developer for code changes. Compare the total cost over two or three years, not just the build price.",
+      },
+      {
+        q: "Can a Wix website be custom designed?",
+        a: "Yes. A designer can create a unique design on Wix or Wix Studio. Custom design and custom code are different things: one is about how your site looks, the other about what it's built with.",
+      },
+    ],
+    related: ["/services/wix-web-designer", "/services/bespoke-web-design", "/blog/wix-vs-wordpress-vs-shopify", "/blog/wix-studio-vs-wix"],
+  },
+  {
     path: "/blog/freelancer-vs-agency-website",
     kind: "blog",
     label: "Freelancer vs Agency for Your Website",

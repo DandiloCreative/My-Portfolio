@@ -4,8 +4,8 @@
   "date": "2026-11-16"
  },
  "/blog": {
-  "hash": "891bd6a57293fa7b",
-  "date": "2026-11-17"
+  "hash": "3263ceb7976f07ec",
+  "date": "2026-11-18"
  },
  "/blog/canada-small-business-website-checklist": {
   "hash": "bfab257af1b13473",
@@ -91,6 +91,10 @@
   "hash": "432e82c49fce080d",
   "date": "2026-11-02"
  },
+ "/blog/wix-vs-custom-website": {
+  "hash": "f5924ce59396d102",
+  "date": "2026-11-18"
+ },
  "/blog/wix-vs-wordpress-vs-shopify": {
   "hash": "0f6499c0da242957",
   "date": "2026-10-30"
@@ -168,8 +172,8 @@
   "date": "2026-11-14"
  },
  "/services/bespoke-web-design": {
-  "hash": "efeaa2a5345bbf30",
-  "date": "2026-11-14"
+  "hash": "808349b980781e66",
+  "date": "2026-11-18"
  },
  "/services/django-development": {
   "hash": "f507439ca87606ca",
@@ -192,8 +196,8 @@
   "date": "2026-11-14"
  },
  "/services/landing-page-design": {
-  "hash": "1dce81ef4bc6f8b4",
-  "date": "2026-11-14"
+  "hash": "f6580439554d57f0",
+  "date": "2026-11-18"
  },
  "/services/laravel-development": {
   "hash": "0669696fae78aa4b",
@@ -220,8 +224,8 @@
   "date": "2026-11-14"
  },
  "/services/website-maintenance": {
-  "hash": "be686ce7644d4dc2",
-  "date": "2026-11-14"
+  "hash": "911894b7e1e1088c",
+  "date": "2026-11-18"
  },
  "/services/website-redesign": {
   "hash": "b080248edab9cf43",
@@ -232,8 +236,8 @@
   "date": "2026-11-14"
  },
  "/services/wordpress-web-design": {
-  "hash": "d21a36c09c80681e",
-  "date": "2026-11-14"
+  "hash": "6aa58628dcd5098a",
+  "date": "2026-11-18"
  },
  "/terms": {
   "hash": "0b178b88cd53ae8a",
