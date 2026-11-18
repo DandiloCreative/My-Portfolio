@@ -1,5 +1,5 @@
 import { Menu, X, Facebook, Instagram } from "lucide-react";
-import { BOOK_CALL_URL } from "../lib/booking";
+import { FIVERR_URL } from "../lib/fiverr";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useNavigate, useLocation } from "react-router";
@@ -196,12 +196,13 @@ export function Header() {
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
-                href={BOOK_CALL_URL}
+                href={FIVERR_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 border-0 text-white hover:text-white rounded-full font-bold uppercase tracking-wider transition-all ${isScrolled ? "px-4 py-1 text-[10px]" : "px-5 py-2 text-xs"}`}
               >
-                Book a Call
+                Hire Us on Fiverr
+                <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </motion.div>
           </div>
@@ -270,13 +271,14 @@ export function Header() {
                 </a>
               </div>
               <a
-                href={BOOK_CALL_URL}
+                href={FIVERR_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
                 className="block w-full mt-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:text-white rounded-full py-4 text-center text-lg font-semibold shadow-[0_0_20px_rgba(124,58,237,0.4)]"
               >
-                Book a Call
+                Hire Us on Fiverr
+                <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </motion.div>
           )}

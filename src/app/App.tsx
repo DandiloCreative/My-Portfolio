@@ -30,6 +30,7 @@ const AuditLanding = lazy(() => import("./components/AuditLanding").then(m => ({
 const ThankYou = lazy(() => import("./components/ThankYou").then(m => ({ default: m.ThankYou })));
 const CookieBanner = lazy(() => import("./components/CookieBanner").then(m => ({ default: m.CookieBanner })));
 const FloatingWhatsApp = lazy(() => import("./components/FloatingWhatsApp").then(m => ({ default: m.FloatingWhatsApp })));
+const LeadPopup = lazy(() => import("./components/LeadPopup").then(m => ({ default: m.LeadPopup })));
 
 function startTrackingAndRecordView() {
   initMetaPixel(); // no-op after the first call, or if no Pixel ID is set
@@ -298,6 +299,7 @@ function PageContent() {
         <Suspense fallback={null}>
           <FloatingWhatsApp />
           <CookieBanner />
+          <LeadPopup pathname={pathname} />
         </Suspense>
       </main>
       <Suspense fallback={null}>

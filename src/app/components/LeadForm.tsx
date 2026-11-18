@@ -28,8 +28,11 @@ type Props = {
   formName: string;
   submitLabel: string;
   idPrefix: string;
-  /** Audit form: website is required and there's no platform question */
-  variant?: "contact" | "audit";
+  /** Audit form: website is required and there's no platform question.
+   *  Popup form: short version (no platform or budget, message optional). */
+  variant?: "contact" | "audit" | "popup";
+  /** Called after the enquiry was sent successfully (before going to the thank-you page) */
+  onSent?: () => void;
 };
 
 function Field({ id, label, children }: { id: string; label: string; children: ReactNode }) {
@@ -41,9 +44,10 @@ function Field({ id, label, children }: { id: string; label: string; children: R
   );
 }
 
-export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" }: Props) {
+export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact", onSent }: Props) {
   const navigate = useNavigate();
   const isAudit = variant === "audit";
+  const isPopup = variant === "popup";
   const empty = { name: "", email: "", phone: "", website: "", intent: "", platform: "", budget: "", message: "" };
   const [data, setData] = useState(empty);
   const [sending, setSending] = useState(false);
@@ -72,6 +76,7 @@ export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" 
         turnstileToken
       );
       setData(empty);
+      onSent?.();
       navigate("/thank-you");
     } catch (error) {
       console.error("Error sending message:", error);
@@ -112,7 +117,7 @@ export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" 
         <Input id={id("website")} name="website" type="text" inputMode="url" autoComplete="url" placeholder="yourbusiness.com" value={data.website} onChange={set("website")} required={isAudit} className={fieldClass} />
       </Field>
 
-      <div className={`grid gap-5 ${isAudit ? "" : "sm:grid-cols-2"}`}>
+      {!isPopup && <div className={`grid gap-5 ${isAudit ? "" : "sm:grid-cols-2"}`}>
         {!isAudit && (
           <Field id={id("platform")} label="Platform">
             <select id={id("platform")} name="platform" className={selectClass} value={data.platform} onChange={set("platform")} required>
@@ -131,17 +136,17 @@ export function LeadForm({ formName, submitLabel, idPrefix, variant = "contact" 
             ))}
           </select>
         </Field>
-      </div>
+      </div>}
 
-      <Field id={id("message")} label={isAudit ? "What would you like to improve? (optional)" : "Tell us about your project"}>
+      <Field id={id("message")} label={isAudit ? "What would you like to improve? (optional)" : isPopup ? "Tell us about your project (optional)" : "Tell us about your project"}>
         <Textarea
           id={id("message")}
           name="message"
-          rows={isAudit ? 3 : 4}
+          rows={isAudit || isPopup ? 3 : 4}
           placeholder={isAudit ? "E.g. more enquiries, faster site, better on mobile…" : "What you need, any deadline, and anything else we should know"}
           value={data.message}
           onChange={set("message")}
-          required={!isAudit}
+          required={!isAudit && !isPopup}
           className="bg-white/5 border-white/10 text-white placeholder-zinc-600 focus:border-violet-500/50 focus:ring-violet-500/30 rounded-xl resize-none p-4"
         />
       </Field>

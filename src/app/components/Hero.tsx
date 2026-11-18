@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Sparkles, ExternalLink } from "lucide-react";
-import { FIVERR_URL } from "../lib/fiverr";
+import { Sparkles } from "lucide-react";
 import { useNavigate } from "react-router";
 import profileImage from "../../assets/hero-profile.webp";
 import profileImageSmall from "../../assets/hero-profile-480.webp";
@@ -169,16 +168,6 @@ export function Hero() {
                 </button>
               </div>
             </div>
-            <a
-              href={FIVERR_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero-rise mt-4 md:mt-5 self-center md:self-start inline-flex items-center gap-2 rounded-full bg-white/5 hover:bg-white/10 border border-cyan-400/40 hover:border-cyan-300/80 px-5 py-2.5 text-sm md:text-base font-bold uppercase tracking-wide text-white transition-colors no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400"
-            >
-              Hire Us on Fiverr
-              <ExternalLink className="w-4 h-4 text-cyan-400" aria-hidden="true" />
-              <span className="sr-only">(opens in a new tab)</span>
-            </a>
           </div>
 
 
