@@ -12,8 +12,8 @@
   "date": "2026-11-03"
  },
  "/blog/choose-tech-stack-nextjs-laravel-django-nestjs": {
-  "hash": "06e52903c63cbae8",
-  "date": "2026-11-07"
+  "hash": "0501738854868668",
+  "date": "2026-11-19"
  },
  "/blog/dandilo-digitals-vs-fiverr-upwork-freelancers": {
   "hash": "7cf24f53c4cd2fc9",
@@ -152,8 +152,8 @@
   "date": "2026-11-14"
  },
  "/platforms": {
-  "hash": "8911b641f7a22798",
-  "date": "2026-11-18"
+  "hash": "453326e048712177",
+  "date": "2026-11-19"
  },
  "/portfolio": {
   "hash": "53a0df698758ef39",
@@ -172,32 +172,44 @@
   "date": "2026-11-14"
  },
  "/services": {
-  "hash": "e84b2145e30e155d",
-  "date": "2026-11-18"
+  "hash": "7fb53365501b198a",
+  "date": "2026-11-19"
  },
  "/services/backend-development": {
-  "hash": "b661c633df1e3f3c",
-  "date": "2026-11-14"
+  "hash": "8afb4859b1b1c847",
+  "date": "2026-11-19"
  },
  "/services/bespoke-web-design": {
   "hash": "808349b980781e66",
   "date": "2026-11-18"
  },
+ "/services/bootstrap-development": {
+  "hash": "216a77031332379e",
+  "date": "2026-11-19"
+ },
  "/services/django-development": {
-  "hash": "f507439ca87606ca",
-  "date": "2026-11-14"
+  "hash": "16a91d4d40f2fe19",
+  "date": "2026-11-19"
  },
  "/services/ecommerce-web-design": {
   "hash": "bf8fd3c15688ca83",
   "date": "2026-11-17"
+ },
+ "/services/enterprise-web-development": {
+  "hash": "6206cfa57d49f1ef",
+  "date": "2026-11-19"
+ },
+ "/services/expressjs-development": {
+  "hash": "04a9c6a040d011d4",
+  "date": "2026-11-19"
  },
  "/services/frontend-development": {
   "hash": "8ee4bc9571266e9b",
   "date": "2026-11-14"
  },
  "/services/full-stack-web-development": {
-  "hash": "5da84f3cb581c8ca",
-  "date": "2026-11-14"
+  "hash": "9fbbea627b412616",
+  "date": "2026-11-19"
  },
  "/services/gohighlevel-website-design": {
   "hash": "35d7b76eddacd141",
@@ -208,16 +220,20 @@
   "date": "2026-11-18"
  },
  "/services/laravel-development": {
-  "hash": "0669696fae78aa4b",
-  "date": "2026-11-14"
+  "hash": "e5b7a0f9d0895251",
+  "date": "2026-11-19"
  },
  "/services/nestjs-development": {
-  "hash": "d63f2b72d7966731",
-  "date": "2026-11-14"
+  "hash": "1e33d97eed175916",
+  "date": "2026-11-19"
  },
  "/services/nextjs-development": {
-  "hash": "4c3b7fc50f37392f",
-  "date": "2026-11-14"
+  "hash": "f9acc52a734b0ea5",
+  "date": "2026-11-19"
+ },
+ "/services/python-development": {
+  "hash": "74cf3d21c270f1df",
+  "date": "2026-11-19"
  },
  "/services/shopify-website-design": {
   "hash": "5cbfe5071448e0f1",
@@ -229,6 +245,14 @@
  },
  "/services/squarespace-web-design": {
   "hash": "e40953faf39fb424",
+  "date": "2026-11-19"
+ },
+ "/services/tailwind-css-development": {
+  "hash": "41494bf5b64ca878",
+  "date": "2026-11-19"
+ },
+ "/services/typescript-development": {
+  "hash": "8cf35beb73fd5273",
   "date": "2026-11-19"
  },
  "/services/website-maintenance": {
