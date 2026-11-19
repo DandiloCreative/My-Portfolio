@@ -4,6 +4,99 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/dandilo-digitals-vs-fiverr-upwork-freelancers",
+    kind: "blog",
+    label: "Dandilo Digitals vs Fiverr and Upwork Freelancers",
+    title: "Dandilo Digitals vs Fiverr and Upwork Freelancers: Which Should You Hire?",
+    description:
+      "Hiring a web designer on Fiverr or Upwork, or going direct to an agency like Dandilo Digitals? Price, process, payment protection, ownership and support compared.",
+    eyebrow: "Comparison",
+    h1: "Dandilo Digitals vs Fiverr and Upwork Freelancers: Which Should You Hire?",
+    date: "2026-11-19",
+    readMinutes: 6,
+    intro: [
+      "In short: Fiverr and Upwork are good places to find a designer for a small, clearly defined job, and the marketplace holds your payment until the work is delivered. Hiring an agency directly suits businesses that want a full website built with a set process, one team accountable for it and support after launch.",
+      "We're on both sides of this question: you can hire Dandilo Digitals on Fiverr or directly through this website. Here's how the options compare, so you can pick the one that fits your project.",
+    ],
+    sections: [
+      {
+        heading: "How hiring on Fiverr and Upwork works",
+        bullets: [
+          "Fiverr: sellers list fixed-price packages (called gigs). You pick a package, pay up front through Fiverr, and the money is released to the seller when you accept the delivery.",
+          "Upwork: you post a job or invite freelancers, compare proposals and agree a fixed price or an hourly rate. Fixed-price work is paid into escrow and released by milestone.",
+          "Both platforms add a service fee for buyers on top of the price. Check the current rate at checkout.",
+          "On both, the quality depends entirely on the person you choose. Marketplaces have beginners and experienced professionals side by side.",
+        ],
+      },
+      {
+        heading: "The quick comparison",
+        bullets: [
+          "Price: marketplace prices start very low, but a full business website from an experienced seller costs about the same as a small agency. Our websites start from $300.",
+          "Payment protection: marketplaces hold your money until delivery. When you hire us directly, you see a free homepage prototype before you pay anything, then get a fixed written quote.",
+          "Scope: gig packages often cover a set number of pages or revisions, with extras charged separately. A direct quote lists everything for your project in one price.",
+          "Process: varies from seller to seller. We follow the same steps on every project: plan, design you approve, build, testing on phones and desktops, launch.",
+          "Communication: marketplaces keep messages on their platform. Direct hiring lets you use email, calls or WhatsApp.",
+          "Support after launch: depends on the seller, and the order usually ends at delivery. We offer a care plan from $99 a month for updates, backups and small changes.",
+        ],
+      },
+      {
+        heading: "When a Fiverr or Upwork freelancer is the right choice",
+        bullets: [
+          "You need one small task: a logo, a single page, a bug fix or a few design changes.",
+          "You know exactly what you want and can describe it clearly.",
+          "You like paying through a platform that holds your money until you accept the work.",
+          "You've checked the seller's past work, reviews and response time, and they match what you need.",
+        ],
+      },
+      {
+        heading: "When hiring an agency directly is the right choice",
+        bullets: [
+          "You need a full website, an online store, a redesign or custom features.",
+          "You want one team handling design, development, on-page SEO and launch.",
+          "You're moving an existing site and need to keep your Google rankings.",
+          "You want to see a design before you commit, and a fixed price in writing.",
+          "You'd like ongoing help after launch rather than a one-off order.",
+        ],
+      },
+      {
+        heading: "How to check any web designer, on a marketplace or not",
+        bullets: [
+          "Look at live websites they've built, not only screenshots.",
+          "Read recent reviews from buyers with projects like yours.",
+          "Ask what's included: pages, revisions, mobile testing, SEO basics, forms and launch.",
+          "Confirm that your domain, hosting or platform account and the finished site will be in your name.",
+          "Ask what happens if something breaks after delivery, and what it costs to fix.",
+        ],
+      },
+      {
+        heading: "Hiring Dandilo Digitals: on Fiverr or direct",
+        paragraphs: [
+          "If you prefer to pay through a marketplace, you can hire us on Fiverr using the button at the top of this site. If you'd rather work with us directly, ask for a free website prototype: we'll design your homepage within 48 hours, with no payment and no obligation, and you only pay if you want us to build the full site.",
+          "Either way, you get the same team and the same process. Starter websites begin at $300, business websites at $899 and online stores at $1,250.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is it cheaper to hire a web designer on Fiverr?",
+        a: "For small tasks, often yes. For a full business website from an experienced seller, prices are close to a small agency, and the marketplace adds a buyer service fee. Compare what's included, not just the starting price.",
+      },
+      {
+        q: "Is it safe to hire a web designer on Upwork or Fiverr?",
+        a: "The platforms protect your payment until the work is delivered, which helps. The bigger risk is choosing the wrong person, so check their past work, recent reviews and exactly what the order includes.",
+      },
+      {
+        q: "Can I hire Dandilo Digitals on Fiverr?",
+        a: "Yes. You can hire us on Fiverr or directly through this website. You get the same team and the same process either way.",
+      },
+      {
+        q: "Do I own my website if I hire on a marketplace?",
+        a: "You should. Agree in writing that the finished site is yours, and keep the domain and hosting or platform account in your own name from the start.",
+      },
+    ],
+    related: ["/blog/freelancer-vs-agency-website", "/blog/how-to-choose-a-web-designer", "/blog/small-business-website-cost", "/services/small-business-web-design"],
+  },
+  {
     path: "/blog/wix-vs-custom-website",
     kind: "blog",
     label: "Wix vs a Custom Website",

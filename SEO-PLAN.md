@@ -5,6 +5,7 @@
 **Status:** in progress. Since 14 Nov 2026 the owner has approved working on the plan every day, phase by phase, without asking first. Facts, results and team details still come only from the owner.
 
 **Daily log:**
+- **19 Nov 2026 (from the earlier plan, comparison post + FAQs):** new post /blog/dandilo-digitals-vs-fiverr-upwork-freelancers (4 FAQs; says honestly that we're also on Fiverr). Shopify, Wix, Squarespace and GoHighLevel pages now have 6 or more FAQs, so every main service page has 6+. Still to do: the 7 developer service pages, 8 industry pages and the USA, UK and Canada pages.
 - **18 Nov 2026 (new markets, user request):** new pages /web-design-europe (GDPR, cookie consent, EAA, VAT, Impressum, approx euro prices, 6 FAQs) and /web-design-worldwide (USD prices, time zones, multi-currency stores, 6 FAQs); blog /blog/eu-small-business-website-checklist. Homepage description, site schema areaServed and llms.txt now say US, UK, Canada, Europe and worldwide.
 - **18 Nov 2026 (from the earlier plan, comparison post + FAQs):** new post /blog/wix-vs-custom-website (4 FAQs). Landing page, WordPress, bespoke and website maintenance pages now have 6 or more FAQs.
 - **17 Nov 2026 (from the earlier plan, comparison post + FAQs):** new post /blog/freelancer-vs-agency-website (4 FAQs). Small business web design, ecommerce web design and website redesign pages now have 6 or more FAQs (prices, timelines, ownership).
@@ -297,9 +298,9 @@ The CRM **Keywords** page supplies new phrases every morning. Each month we pick
 Items from the first version of this plan (Downloads/SEO-PLAN.md) that aren't covered above yet:
 
 - [x] Real `lastmod` dates and an image sitemap (16 Nov 2026).
-- [ ] At least 6 FAQs on every service, industry and country page (most have 2 to 4 today). Done: dentist, small business web design, ecommerce, website redesign, landing page, WordPress, bespoke, maintenance.
+- [ ] At least 6 FAQs on every service, industry and country page (most have 2 to 4 today). Done: dentist, small business web design, ecommerce, website redesign, landing page, WordPress, bespoke, maintenance, Shopify, Wix, Squarespace, GoHighLevel.
 - [ ] Industry pages for SaaS startups and e-commerce brands.
-- [ ] Comparison posts: "Hiring a freelancer vs an agency" (done 17 Nov 2026), "Dandilo Digitals vs Upwork / Fiverr freelancers" and "Wix vs a custom website" (done 18 Nov 2026).
+- [x] Comparison posts: "Hiring a freelancer vs an agency" (done 17 Nov 2026), "Dandilo Digitals vs Upwork / Fiverr freelancers" (done 19 Nov 2026) and "Wix vs a custom website" (done 18 Nov 2026).
 - [ ] Posts: "WordPress vs custom website for law firms", "How long does it take to build a web app".
 - [ ] Free tools that attract links: website speed and SEO checker, downloadable website launch checklist.
 - [ ] Every guide links to a matching portfolio project (needs the portfolio pages, which need your project facts).

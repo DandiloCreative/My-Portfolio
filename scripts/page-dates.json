@@ -1,11 +1,11 @@
 {
  "/": {
-  "hash": "3ddf9a7b4382c664",
-  "date": "2026-11-16"
+  "hash": "fd80120cbd6c8181",
+  "date": "2026-11-18"
  },
  "/blog": {
-  "hash": "e8b5fbe2cf14d235",
-  "date": "2026-11-18"
+  "hash": "41b5df2572d5ced7",
+  "date": "2026-11-19"
  },
  "/blog/canada-small-business-website-checklist": {
   "hash": "bfab257af1b13473",
@@ -14,6 +14,10 @@
  "/blog/choose-tech-stack-nextjs-laravel-django-nestjs": {
   "hash": "06e52903c63cbae8",
   "date": "2026-11-07"
+ },
+ "/blog/dandilo-digitals-vs-fiverr-upwork-freelancers": {
+  "hash": "7cf24f53c4cd2fc9",
+  "date": "2026-11-19"
  },
  "/blog/eu-small-business-website-checklist": {
   "hash": "a3631b9341ac146e",
@@ -196,8 +200,8 @@
   "date": "2026-11-14"
  },
  "/services/gohighlevel-website-design": {
-  "hash": "771d0e4175ab3da6",
-  "date": "2026-11-14"
+  "hash": "35d7b76eddacd141",
+  "date": "2026-11-19"
  },
  "/services/landing-page-design": {
   "hash": "f6580439554d57f0",
@@ -216,16 +220,16 @@
   "date": "2026-11-14"
  },
  "/services/shopify-website-design": {
-  "hash": "ebdfabc70c7ea1ff",
-  "date": "2026-11-14"
+  "hash": "5cbfe5071448e0f1",
+  "date": "2026-11-19"
  },
  "/services/small-business-web-design": {
   "hash": "76eb9191c9c5ca47",
   "date": "2026-11-17"
  },
  "/services/squarespace-web-design": {
-  "hash": "5149bbf64a7db2b6",
-  "date": "2026-11-14"
+  "hash": "e40953faf39fb424",
+  "date": "2026-11-19"
  },
  "/services/website-maintenance": {
   "hash": "911894b7e1e1088c",
@@ -236,8 +240,8 @@
   "date": "2026-11-17"
  },
  "/services/wix-web-designer": {
-  "hash": "3cb74369e40e9886",
-  "date": "2026-11-14"
+  "hash": "3fd683f2ad6bc0ec",
+  "date": "2026-11-19"
  },
  "/services/wordpress-web-design": {
   "hash": "6aa58628dcd5098a",

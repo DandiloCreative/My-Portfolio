@@ -195,6 +195,14 @@ export const servicePages: ContentPageData[] = [
         q: "Should I use Shopify or WooCommerce?",
         a: "Shopify is usually simpler to run, with hosting and security handled for you. WooCommerce gives more flexibility if you already use WordPress. We'll recommend the best fit for your store.",
       },
+      {
+        q: "How long does it take to build a Shopify store?",
+        a: "A small Shopify store usually takes about 3 to 6 weeks. The biggest factor is how ready your product photos, descriptions and prices are.",
+      },
+      {
+        q: "Will I own my Shopify store?",
+        a: "Yes. Your Shopify account, products, customers and domain are in your name. We work on your store as a collaborator, so you stay in control.",
+      },
     ],
     related: ["/blog/shopify-website-cost", "/services/ecommerce-web-design", "/blog/shopify-vs-woocommerce", "/portfolio"],
   },
@@ -254,6 +262,14 @@ export const servicePages: ContentPageData[] = [
       {
         q: "Will I be able to edit my Wix site after launch?",
         a: "Yes. That's one of Wix's biggest strengths. We'll show you how to update text, images and pages yourself.",
+      },
+      {
+        q: "What's the difference between Wix and Wix Studio?",
+        a: "Wix Studio is Wix's platform for professional designers. It gives more control over layouts on every screen size, which is why we build on it. You still edit your site with the easy Wix editor.",
+      },
+      {
+        q: "How long does a Wix website take?",
+        a: "A starter Wix site usually takes about 1 to 2 weeks and a full business website about 2 to 4 weeks, depending on the number of pages and how quickly your text and photos are ready.",
       },
     ],
     related: ["/blog/wix-studio-vs-wix", "/blog/website-builder-vs-web-designer", "/blog/wix-vs-wordpress-vs-shopify"],
@@ -500,6 +516,18 @@ export const servicePages: ContentPageData[] = [
         q: "Will I be able to edit my Squarespace site myself?",
         a: "Yes. Squarespace is one of the easiest platforms to edit, and we show you how to update pages, products and blog posts.",
       },
+      {
+        q: "Is Squarespace good for SEO?",
+        a: "Yes. Squarespace lets you set page titles, descriptions, headings, image alt text and clean page addresses. We set these up on every page and connect Google Search Console.",
+      },
+      {
+        q: "Can I sell products or take bookings on Squarespace?",
+        a: "Yes. Squarespace has built-in online store and appointment booking features on its higher plans. We'll set up the ones your business needs.",
+      },
+      {
+        q: "Should I choose Squarespace or Wix?",
+        a: "Both are easy to edit and suit small businesses. Squarespace is known for polished, simple designs, while Wix offers more apps and layout freedom. We work with both and will recommend the better fit.",
+      },
     ],
     related: ["/services/wix-web-designer", "/services/website-redesign", "/blog/wix-vs-wordpress-vs-shopify"],
   },
@@ -553,6 +581,14 @@ export const servicePages: ContentPageData[] = [
       {
         q: "Do you work with agencies that use HighLevel?",
         a: "Yes. We can build funnels, websites and snapshots for agencies using HighLevel's white-label platform.",
+      },
+      {
+        q: "Can GoHighLevel replace my current website?",
+        a: "Yes, for many service businesses. HighLevel can host your website, forms and booking calendar in one place. If you need a large blog or online store, we may suggest keeping a separate website and connecting it to HighLevel.",
+      },
+      {
+        q: "Will my leads go straight into GoHighLevel?",
+        a: "Yes. Forms, calendar bookings and chat enquiries on your site go straight into your HighLevel contacts and pipeline, so your follow-up texts and emails can start automatically.",
       },
     ],
     related: ["/services/landing-page-design", "/services/small-business-web-design", "/blog/get-more-customers-from-your-website"],
