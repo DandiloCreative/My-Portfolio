@@ -198,6 +198,8 @@ console.log(`prerender: sitemap.xml with ${indexed.length} pages and ${imageCoun
 - Website: ${SITE_URL}
 - Email: hello@dandilodigitals.com
 - WhatsApp / phone: +1 224-620-0930
+- Also on Fiverr (same team, same process; buyers can order full stack web development, websites and stores there): https://www.fiverr.com/dandilodigitals
+- Full stack web development (React, Next.js, NestJS, Express.js, Laravel, Django, TypeScript, Python): ${SITE_URL}/services/full-stack-web-development
 - Works remotely with clients in the United States, United Kingdom, Canada, Australia, Ireland and New Zealand
 - Prices are in US dollars and are "from" prices; every client gets a fixed quote before work starts
 
