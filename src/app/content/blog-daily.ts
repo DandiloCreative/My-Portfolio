@@ -4,6 +4,96 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/how-long-does-it-take-to-build-a-web-app",
+    kind: "blog",
+    label: "How Long Does It Take to Build a Web App?",
+    title: "How Long Does It Take to Build a Web App? Timelines Explained",
+    description:
+      "How long it takes to build a web app, portal or SaaS product: typical timelines by project size, each stage explained, and what speeds things up or slows them down.",
+    eyebrow: "Guide",
+    h1: "How Long Does It Take to Build a Web App?",
+    date: "2026-11-20",
+    readMinutes: 6,
+    intro: [
+      "In short: a simple web app or internal tool usually takes about 4 to 8 weeks, a focused customer portal or first product version about 6 to 12 weeks, and a full SaaS product with payments, several user types and integrations about 3 to 6 months, usually delivered in phases.",
+      "The biggest factors are how many features you need, how many types of user there are, and how quickly decisions get made. Here's what a realistic timeline looks like and how to keep yours on track.",
+    ],
+    sections: [
+      {
+        heading: "Typical timelines by project size",
+        bullets: [
+          "Simple tool or prototype (a few screens, one user type, basic data): about 4 to 8 weeks",
+          "Customer portal, booking system or internal dashboard: about 6 to 12 weeks",
+          "First version of a SaaS product (an MVP) with logins and payments: about 8 to 14 weeks",
+          "Full product with several user roles, integrations and reporting: about 3 to 6 months, in phases",
+          "These are rough guides. A written scope gives you a real timeline for your project.",
+        ],
+      },
+      {
+        heading: "The stages of building a web app",
+        bullets: [
+          "Discovery (1 to 2 weeks): who uses the app, what it must do, and what it connects to",
+          "Design (1 to 3 weeks): screens and user flows you can click through before any code is written",
+          "Build (3 to 12+ weeks): frontend, backend and database, with regular demos",
+          "Testing (1 to 2 weeks): on phones, tablets and desktops, plus security and speed checks",
+          "Launch (a few days): hosting, domain, data set-up and handover",
+        ],
+      },
+      {
+        heading: "What makes a web app take longer",
+        bullets: [
+          "Adding features halfway through the build",
+          "Many user types, each with different permissions and screens",
+          "Integrations with older systems that have limited or poorly documented APIs",
+          "Slow feedback or decisions on designs and demos",
+          "Moving data from an old system that needs cleaning first",
+        ],
+      },
+      {
+        heading: "How to get your web app built faster",
+        bullets: [
+          "Start with a first version that does one job well, then add features in phases",
+          "Write down the must-have features and keep nice-to-haves for later",
+          "Name one person on your side who can make decisions",
+          "Use proven tools for logins, payments and email instead of building them from scratch",
+          "Choose a team that builds both the frontend and the backend, so nothing waits between teams",
+        ],
+      },
+      {
+        heading: "Website or web app?",
+        paragraphs: [
+          "A website mainly shows information and collects enquiries, and most small business websites take 2 to 6 weeks. A web app lets people log in and do things: book, order, manage data or use your service. That extra logic is why apps take longer.",
+        ],
+      },
+      {
+        heading: "How Dandilo Digitals can help",
+        paragraphs: [
+          "We build web apps, portals and SaaS products with Next.js, NestJS, Express.js, Laravel and Django, frontend and backend together. Custom development starts from $2,500, and every project gets a written scope and timeline before work starts.",
+          "Tell us what you want to build and we'll suggest the quickest sensible first version.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How long does it take to build an MVP?",
+        a: "A focused MVP with logins, a few core features and payments usually takes about 8 to 14 weeks, depending on scope and how quickly decisions are made.",
+      },
+      {
+        q: "Can a web app be built in a month?",
+        a: "A simple tool or prototype with a few screens can be. Anything with several user types, payments or integrations usually needs longer to be built and tested properly.",
+      },
+      {
+        q: "Why do web apps take longer than websites?",
+        a: "Web apps have logins, data, business rules and often payments and integrations. Each needs building, connecting and testing, which takes more time than pages of content.",
+      },
+      {
+        q: "How much does it cost to build a web app?",
+        a: "Our custom development starts from $2,500. The final price depends on features, user types and integrations, and you get a fixed quote before work starts.",
+      },
+    ],
+    related: ["/services/full-stack-web-development", "/services/enterprise-web-development", "/blog/choose-tech-stack-nextjs-laravel-django-nestjs", "/blog/how-long-does-it-take-to-build-a-website"],
+  },
+  {
     path: "/blog/dandilo-digitals-vs-fiverr-upwork-freelancers",
     kind: "blog",
     label: "Dandilo Digitals vs Fiverr and Upwork Freelancers",

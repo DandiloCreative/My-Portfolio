@@ -90,6 +90,14 @@ export const devPages: ContentPageData[] = [
         q: "Can you take over an existing app?",
         a: "Yes. We can review your current code, fix problems and keep building on it, whether it's in JavaScript, TypeScript, PHP or Python.",
       },
+      {
+        q: "How long does it take to build a web app?",
+        a: "A focused web app, portal or internal tool often takes 6 to 12 weeks. Bigger products with payments, several user types and integrations are built in phases over a few months, so you can start using the first version sooner.",
+      },
+      {
+        q: "Will I own the code?",
+        a: "Yes. The code, the database and the hosting accounts are yours, and we hand over documentation so any developer can continue the work.",
+      },
     ],
     related: [...STACK_LINKS, "/blog/choose-tech-stack-nextjs-laravel-django-nestjs", "/blog/web-designer-vs-web-developer", "/pricing"],
   },
@@ -138,6 +146,22 @@ export const devPages: ContentPageData[] = [
         q: "Can you connect the frontend to our existing API?",
         a: "Yes. We connect to REST APIs and other backends, or build the backend for you as part of a full stack project.",
       },
+      {
+        q: "How much does frontend development cost?",
+        a: "Custom-coded websites and web apps start from $2,500. Smaller frontend jobs, such as turning a design into code or speeding up an existing app, are quoted after we review them.",
+      },
+      {
+        q: "Will the frontend be accessible?",
+        a: "Yes. We follow WCAG guidelines: good contrast, keyboard navigation, visible focus states, labelled forms and image descriptions.",
+      },
+      {
+        q: "Can you make our slow website or app faster?",
+        a: "Yes. We measure Core Web Vitals, then fix the biggest causes, such as heavy images, too much JavaScript or slow data loading.",
+      },
+      {
+        q: "Do you use Tailwind CSS or Bootstrap?",
+        a: "Mostly Tailwind CSS for custom designs, and Bootstrap when a project already uses it or needs ready-made admin layouts. We work with both.",
+      },
     ],
     related: ["/services/full-stack-web-development", "/services/nextjs-development", "/services/backend-development"],
   },
@@ -185,6 +209,22 @@ export const devPages: ContentPageData[] = [
       {
         q: "Can you build an API for our mobile app?",
         a: "Yes. We build REST APIs that web and mobile apps can use, with logins, documentation and security built in.",
+      },
+      {
+        q: "How much does backend development cost?",
+        a: "Custom backend development starts from $2,500. The price depends on features, user types and integrations, and we send a fixed quote before work starts.",
+      },
+      {
+        q: "Where will my backend be hosted?",
+        a: "Usually on Vercel or a cloud server with a managed MySQL or PostgreSQL database. We set it up in your name and recommend options that fit your traffic and budget.",
+      },
+      {
+        q: "Can you connect payments and our CRM?",
+        a: "Yes. We integrate payments (for example Stripe), email, CRMs and other tools through their APIs and webhooks.",
+      },
+      {
+        q: "How do you keep the backend secure?",
+        a: "We validate every input, limit repeated requests, keep secrets out of the code, use encrypted connections and keep dependencies up to date.",
       },
     ],
     related: ["/services/full-stack-web-development", "/services/nestjs-development", "/services/laravel-development", "/services/django-development"],

@@ -58,6 +58,22 @@ export const locationPages: ContentPageData[] = [
         q: "Can you help my business show up on Google Maps?",
         a: "Yes. We set up local SEO on your website and help you connect it to your Google Business Profile so local customers can find you.",
       },
+      {
+        q: "How much does a small business website cost in the USA?",
+        a: "Our websites start from $300 for a starter site and $899 for a full business website. Many US agencies charge $3,000 to $15,000 for a similar site. You get a fixed quote before any work starts.",
+      },
+      {
+        q: "Will my website be accessible (ADA)?",
+        a: "We build to the WCAG accessibility guidelines, the standard usually referred to for ADA website accessibility: readable contrast, keyboard navigation, image descriptions and clear forms. We can't give legal advice, but accessible design lowers your risk and helps every visitor.",
+      },
+      {
+        q: "How long does it take to build a website?",
+        a: "Most small business websites take 2 to 6 weeks, depending on the number of pages, the features and how quickly your text and photos are ready.",
+      },
+      {
+        q: "Can I see a design before I pay?",
+        a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
+      },
     ],
     related: ["/pricing", "/services/small-business-web-design", "/blog/small-business-website-cost"],
   },
@@ -133,6 +149,14 @@ export const locationPages: ContentPageData[] = [
         q: "Can I pay in pounds?",
         a: "Our packages are priced in US dollars and most cards convert automatically. If you'd prefer a quote in pounds, just ask.",
       },
+      {
+        q: "How long does it take to build a website?",
+        a: "Most small business websites take 2 to 6 weeks, depending on the number of pages, the features and how quickly your text and photos are ready.",
+      },
+      {
+        q: "Can I see a design before I pay?",
+        a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
+      },
     ],
     related: ["/services/bespoke-web-design", "/services/website-maintenance", "/blog/website-cost-uk", "/blog/uk-small-business-website-checklist", "/pricing"],
   },
@@ -194,6 +218,22 @@ export const locationPages: ContentPageData[] = [
       {
         q: "Can I pay in Canadian dollars?",
         a: "Our packages are priced in US dollars and most cards convert automatically. If you'd prefer a quote in Canadian dollars, just ask.",
+      },
+      {
+        q: "How much does a small business website cost in Canada?",
+        a: "Our websites start from about CA$415 for a starter site and about CA$1,240 for a full business website, depending on the exchange rate. You get a fixed quote before any work starts.",
+      },
+      {
+        q: "Will my website meet AODA accessibility rules?",
+        a: "We design to the WCAG guidelines that AODA refers to: readable contrast, keyboard navigation, image descriptions and clear forms. We can't give legal advice, but we'll build your site with accessibility in mind from the start.",
+      },
+      {
+        q: "How long does it take to build a website?",
+        a: "Most small business websites take 2 to 6 weeks, depending on the number of pages, the features and how quickly your text and photos are ready.",
+      },
+      {
+        q: "Can I see a design before I pay?",
+        a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
       },
     ],
     related: ["/blog/website-cost-canada", "/blog/canada-small-business-website-checklist", "/pricing"],

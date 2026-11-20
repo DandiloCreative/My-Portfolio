@@ -4,8 +4,8 @@
   "date": "2026-11-18"
  },
  "/blog": {
-  "hash": "41b5df2572d5ced7",
-  "date": "2026-11-19"
+  "hash": "04183c7db171cd44",
+  "date": "2026-11-20"
  },
  "/blog/canada-small-business-website-checklist": {
   "hash": "bfab257af1b13473",
@@ -34,6 +34,10 @@
  "/blog/google-business-profile-vs-website": {
   "hash": "783e08ae57ea07f3",
   "date": "2026-11-14"
+ },
+ "/blog/how-long-does-it-take-to-build-a-web-app": {
+  "hash": "f8f9a4aef9a68df1",
+  "date": "2026-11-20"
  },
  "/blog/how-long-does-it-take-to-build-a-website": {
   "hash": "25a92e6b2ca52f7e",
@@ -176,8 +180,8 @@
   "date": "2026-11-19"
  },
  "/services/backend-development": {
-  "hash": "8afb4859b1b1c847",
-  "date": "2026-11-19"
+  "hash": "0acc3237fac7806b",
+  "date": "2026-11-20"
  },
  "/services/bespoke-web-design": {
   "hash": "808349b980781e66",
@@ -204,12 +208,12 @@
   "date": "2026-11-19"
  },
  "/services/frontend-development": {
-  "hash": "8ee4bc9571266e9b",
-  "date": "2026-11-14"
+  "hash": "84f8393d882646da",
+  "date": "2026-11-20"
  },
  "/services/full-stack-web-development": {
-  "hash": "9fbbea627b412616",
-  "date": "2026-11-19"
+  "hash": "074a552e1e13f0ac",
+  "date": "2026-11-20"
  },
  "/services/gohighlevel-website-design": {
   "hash": "35d7b76eddacd141",
@@ -280,20 +284,20 @@
   "date": "2026-11-14"
  },
  "/web-design-canada": {
-  "hash": "24318cb00f447d4c",
-  "date": "2026-11-11"
+  "hash": "23c6c08968c99024",
+  "date": "2026-11-20"
  },
  "/web-design-europe": {
   "hash": "e66eef51d3d18053",
   "date": "2026-11-18"
  },
  "/web-design-uk": {
-  "hash": "a4a17167560f3244",
-  "date": "2026-11-11"
+  "hash": "cfaa396fd675276c",
+  "date": "2026-11-20"
  },
  "/web-design-usa": {
-  "hash": "7a79bc2d48a3d586",
-  "date": "2026-11-11"
+  "hash": "ea353d4c42823a73",
+  "date": "2026-11-20"
  },
  "/web-design-worldwide": {
   "hash": "ae987a5037c08ba0",
