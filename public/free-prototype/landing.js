@@ -158,14 +158,19 @@
     var pop = document.getElementById("pop"), slot = document.getElementById("pop-slot"), closeBtn = document.getElementById("pop-x");
     var card = form.closest(".card");
     if (!pop || !slot || !closeBtn || !card || /bot|crawler|spider|lighthouse/i.test(navigator.userAgent)) return;
-    var home = card.parentNode, KEY = "dd_proto_pop_closed", touched = false, lastFocus = null;
+    var home = card.parentNode, next = card.nextSibling, KEY = "dd_proto_pop_closed", touched = false, lastFocus = null, openedAt = 0, downOut = false;
+    // ?popup=1 in the address shows it after 3 seconds, even if closed before (for testing)
+    var force = /[?&]popup=1(&|$)/.test(location.search);
     function get(k, store) { try { return (store || localStorage).getItem(k); } catch (e) { return null; } }
-    if (Date.now() - Number(get(KEY) || 0) < 7 * 864e5 || get("dd_lead_pending", window.sessionStorage)) return;
+    if (!force && (Date.now() - Number(get(KEY) || 0) < 864e5 || get("dd_lead_pending", window.sessionStorage))) return;
     form.addEventListener("focusin", function () { touched = true; });
     function onKey(e) { if (e.key === "Escape") close(); }
     function open() {
       var r = formSection && formSection.getBoundingClientRect();
-      if (touched || (r && r.top < window.innerHeight && r.bottom > 0)) return;
+      if (touched) return;
+      // Visitor is looking at the form already: try again in a few seconds instead of covering it
+      if (!force && r && r.top < window.innerHeight && r.bottom > 0) { setTimeout(open, 5000); return; }
+      openedAt = Date.now();
       lastFocus = document.activeElement;
       slot.appendChild(card);
       pop.hidden = false;
@@ -175,14 +180,15 @@
     }
     function close() {
       try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
-      home.appendChild(card);
+      home.insertBefore(card, next);
       pop.hidden = true;
       document.body.style.overflow = "";
       document.removeEventListener("keydown", onKey);
       if (lastFocus && lastFocus.focus) lastFocus.focus();
     }
     closeBtn.addEventListener("click", close);
-    pop.addEventListener("mousedown", function (e) { if (e.target === pop) close(); });
-    setTimeout(open, 12000);
+    pop.addEventListener("pointerdown", function (e) { downOut = e.target === pop && Date.now() - openedAt > 800; });
+    pop.addEventListener("click", function (e) { if (downOut && e.target === pop) close(); downOut = false; });
+    setTimeout(open, force ? 3000 : 12000);
   })();
 })();

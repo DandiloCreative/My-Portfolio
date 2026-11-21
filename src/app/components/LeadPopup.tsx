@@ -3,11 +3,13 @@ import { X } from "lucide-react";
 import { LeadForm } from "./LeadForm";
 
 // Enquiry popup shown to visitors a few seconds after they arrive.
-// Closing it (X, Escape or clicking outside) hides it for a week; sending the form hides it for good.
-const SHOW_AFTER_MS = 12_000;
+// Closing it (X, Escape or tapping outside) hides it for a day; sending the form hides it for good.
+// Add ?popup=1 to any page address to see it again after 3 seconds (for testing).
+const FORCE = typeof location !== "undefined" && new URLSearchParams(location.search).get("popup") === "1";
+const SHOW_AFTER_MS = FORCE ? 3_000 : 12_000;
 const DISMISS_KEY = "dd_popup_dismissed_at";
 const SENT_KEY = "dd_popup_sent";
-const HIDE_FOR_MS = 7 * 24 * 60 * 60 * 1000;
+const HIDE_FOR_MS = 24 * 60 * 60 * 1000;
 // Pages that already are a form (or come after one) don't get the popup
 const SKIP_PATHS = ["/contact", "/free-website-audit", "/thank-you", "/privacy", "/terms"];
 const IS_BOT = typeof navigator !== "undefined" && /bot|crawler|spider|crawling|lighthouse|inspectiontool/i.test(navigator.userAgent);
@@ -20,6 +22,7 @@ function write(key: string, value: string) {
 }
 
 function shouldShow() {
+  if (FORCE) return true;
   if (IS_BOT || read(SENT_KEY)) return false;
   const dismissedAt = Number(read(DISMISS_KEY) || 0);
   return Date.now() - dismissedAt > HIDE_FOR_MS;
@@ -29,6 +32,9 @@ export function LeadPopup({ pathname }: { pathname: string }) {
   const [open, setOpen] = useState(false);
   const closeRef = useRef<HTMLButtonElement>(null);
   const lastFocus = useRef<HTMLElement | null>(null);
+  // A tap that started before the popup opened (e.g. while scrolling) must not close it
+  const openedAt = useRef(0);
+  const downOnBackdrop = useRef(false);
   const skip = SKIP_PATHS.includes(pathname);
 
   // Start the timer once per visit (not again on every page change)
@@ -49,6 +55,7 @@ export function LeadPopup({ pathname }: { pathname: string }) {
 
   useEffect(() => {
     if (!visible) return;
+    openedAt.current = Date.now();
     lastFocus.current = document.activeElement as HTMLElement | null;
     closeRef.current?.focus();
     const prevOverflow = document.body.style.overflow;
@@ -69,8 +76,12 @@ export function LeadPopup({ pathname }: { pathname: string }) {
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
-      onMouseDown={(e) => {
-        if (e.target === e.currentTarget) close();
+      onPointerDown={(e) => {
+        downOnBackdrop.current = e.target === e.currentTarget && Date.now() - openedAt.current > 800;
+      }}
+      onClick={(e) => {
+        if (downOnBackdrop.current && e.target === e.currentTarget) close();
+        downOnBackdrop.current = false;
       }}
     >
       <div
