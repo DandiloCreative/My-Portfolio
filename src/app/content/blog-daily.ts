@@ -4,6 +4,200 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/why-is-my-website-not-showing-up-on-google",
+    kind: "blog",
+    label: "Why Is My Website Not Showing Up on Google?",
+    title: "Why Is My Website Not Showing Up on Google? 9 Fixes (2026)",
+    description:
+      "Website not showing up on Google? Find out why, including Wix and Squarespace settings, missing logos and favicons, and how to get your business found faster.",
+    eyebrow: "Guide",
+    h1: "Why Is My Website Not Showing Up on Google? Causes and Fixes",
+    date: "2026-11-23",
+    readMinutes: 7,
+    intro: [
+      "In short: the most common reasons are that your website is new and Google hasn't found it yet, a setting is telling search engines to stay away, or you're checking for broad phrases that bigger, older websites already rank for.",
+      "Most of these are quick to check and fix. Here's how to find out what's going on, step by step, including the settings to look at on Wix and Squarespace.",
+    ],
+    sections: [
+      {
+        heading: "Step 1: Check whether Google has your site at all",
+        paragraphs: [
+          "Search Google for site:yourdomain.com (with your own address). If pages appear, Google has indexed your site and the issue is ranking, not visibility. If nothing appears, Google hasn't indexed it yet, or something is blocking it.",
+          "Then search for your exact business name. A new site usually shows up for its own name before it shows up for services like \"plumber in Dallas\".",
+        ],
+      },
+      {
+        heading: "9 common reasons and how to fix them",
+        bullets: [
+          "The site is new: Google can take a few days to a few weeks to find a new site. Speed it up with Google Search Console (step 2 below).",
+          "Search engines are blocked: a \"noindex\" tag, a robots.txt rule or a platform setting can hide your site. Check your SEO settings and remove anything that hides the site.",
+          "The site is private or password-protected: search engines can't see pages that visitors need a password for.",
+          "No sitemap submitted: a sitemap lists your pages for Google. Submit it in Search Console.",
+          "The site is still on a free plan or temporary address: connect your own domain so Google indexes the right address.",
+          "Pages have very little text: Google needs words that explain what you do and where. A page with only a photo and a phone number is hard to rank.",
+          "Every page has the same title: give each page its own title and description that match what people search for.",
+          "The site is slow or broken on phones: Google mainly looks at the mobile version of your site.",
+          "Strong competition: for broad phrases, older and well-linked websites usually rank first. Target specific services and locations instead.",
+        ],
+      },
+      {
+        heading: "Step 2: Set up Google Search Console",
+        bullets: [
+          "Add your website in Google Search Console and verify that you own it.",
+          "Submit your sitemap (often yourdomain.com/sitemap.xml).",
+          "Use the URL Inspection tool on your homepage and key service pages, then click Request indexing.",
+          "Check the Pages report for anything marked as excluded, and why.",
+        ],
+      },
+      {
+        heading: "Wix website not showing on Google",
+        bullets: [
+          "Make sure the site is published and on a paid plan with your own domain connected.",
+          "In your Wix SEO settings, check that search engines are allowed to index your site.",
+          "Check that individual pages aren't hidden from search engines in their page SEO settings.",
+          "Connect Google Search Console through Wix's SEO tools and submit your sitemap.",
+        ],
+      },
+      {
+        heading: "Squarespace website not showing on Google",
+        bullets: [
+          "Make sure the site isn't private, password-protected or still in a trial.",
+          "Check the SEO settings for any option that hides the site or individual pages from search engines.",
+          "Connect Google Search Console and submit your sitemap (yourdomain.com/sitemap.xml).",
+          "Give each page its own SEO title and description.",
+        ],
+      },
+      {
+        heading: "Why your logo or favicon isn't showing in Google",
+        paragraphs: [
+          "The small icon next to your result (the favicon) needs to be a square image, at least 48 by 48 pixels, linked from your homepage and not blocked from Google. After you add or change it, it can take a few weeks to update in search results.",
+          "Your logo can appear in Google when your site includes organisation structured data that points to the logo, but Google decides when to show it. A matching Google Business Profile with your logo also helps.",
+        ],
+      },
+      {
+        heading: "Showing up for your name but not your services?",
+        paragraphs: [
+          "That's a ranking problem rather than a visibility problem. Create a separate page for each main service, mention the areas you cover, set up and complete your Google Business Profile, ask happy customers for reviews, and keep your site fast on phones. Local results usually improve over weeks to months, not days.",
+        ],
+      },
+      {
+        heading: "How Dandilo Digitals can help",
+        paragraphs: [
+          "Every website we build is set up for Google from day one: Search Console, sitemap, page titles, fast mobile pages and structured data. If your current site isn't showing up, ask for a free website audit and we'll tell you what's wrong and how to fix it.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How long does it take for a new website to show up on Google?",
+        a: "Usually a few days to a few weeks. Submitting your sitemap and requesting indexing in Google Search Console helps Google find it sooner.",
+      },
+      {
+        q: "Why does my website show up on Bing but not Google?",
+        a: "Each search engine crawls and indexes on its own schedule. Check Google Search Console for errors, submit your sitemap and request indexing for your main pages.",
+      },
+      {
+        q: "Why is my Wix website not showing on Google?",
+        a: "Common reasons are that the site isn't published, isn't on your own domain yet, or the SEO setting that lets search engines index it is turned off. Connecting Search Console through Wix and submitting the sitemap usually helps.",
+      },
+      {
+        q: "Why is my Squarespace website not showing on Google?",
+        a: "Often the site is private, password-protected or still in a trial, or a setting hides it from search engines. Make it public, then connect Google Search Console and submit your sitemap.",
+      },
+      {
+        q: "Do I have to pay Google to show up in search?",
+        a: "No. Normal search results are free. Paid Google Ads appear separately and are marked as sponsored.",
+      },
+    ],
+    related: ["/blog/google-business-profile-vs-website", "/blog/signs-your-website-is-losing-customers", "/services/website-redesign", "/blog/website-redesign-checklist"],
+  },
+  {
+    path: "/blog/how-much-does-a-website-cost-per-month",
+    kind: "blog",
+    label: "How Much Does a Website Cost Per Month?",
+    title: "How Much Does a Website Cost Per Month? Real Costs (2026)",
+    description:
+      "What a business website costs per month and per year to run: domain, hosting, apps, email and maintenance, with typical costs for Wix, WordPress and Shopify.",
+    eyebrow: "Pricing",
+    h1: "How Much Does a Website Cost Per Month to Run?",
+    date: "2026-11-23",
+    readMinutes: 6,
+    intro: [
+      "In short: most small business websites cost about $20 to $150 a month to run once they're built, which is roughly $250 to $1,800 a year. The main costs are your domain, hosting or platform plan, any paid apps or plugins, business email and maintenance.",
+      "The build itself is a separate, one-off cost. Here's what you'll pay each month, and how to keep it down.",
+    ],
+    sections: [
+      {
+        heading: "The monthly and yearly costs of a website",
+        bullets: [
+          "Domain name: about $10 to $25 a year.",
+          "Hosting or platform plan: about $15 to $50 a month for most small business sites. Shopify plans start at roughly $39 a month.",
+          "Apps and plugins: $0 to $100+ a month, depending on what you add (bookings, reviews, forms, store features).",
+          "Business email: usually a few dollars a month per person.",
+          "Maintenance: your own time, or a monthly care plan from your designer.",
+        ],
+      },
+      {
+        heading: "Typical monthly cost by platform",
+        bullets: [
+          "Wix or Squarespace: about $20 to $50 a month for a business plan, with hosting and security included.",
+          "WordPress: hosting from a few dollars a month for basic shared hosting to about $20 to $50 for managed hosting, plus any paid plugins.",
+          "Shopify: from about $39 a month, plus apps and payment fees on each sale.",
+          "Custom-coded website: hosting can be low for a small site, but changes need a developer, so budget for support time.",
+          "Prices change, so check each provider's current pricing before you decide.",
+        ],
+      },
+      {
+        heading: "Do you have to pay for a website every month?",
+        paragraphs: [
+          "Some ongoing cost is normal. Free plans exist, but they usually show the builder's advertising, use the builder's web address instead of your own domain and limit features, which doesn't look professional for a business.",
+          "You can lower monthly costs by paying yearly (many platforms give a discount), using only the apps you really need and choosing a platform that fits the site's size.",
+        ],
+      },
+      {
+        heading: "What does website maintenance cost per month?",
+        paragraphs: [
+          "If you update the site yourself, maintenance costs your time. If you'd rather hand it over, a care plan covers updates, backups, security monitoring and small changes. Our care plan starts from $99 a month.",
+          "WordPress sites need the most maintenance because plugins and themes need regular updates. Wix, Squarespace and Shopify handle platform updates for you.",
+        ],
+      },
+      {
+        heading: "Example monthly budgets",
+        bullets: [
+          "Simple service business on Wix or Squarespace: about $20 to $50 a month, plus your domain.",
+          "WordPress business site with managed hosting and a care plan: about $120 to $160 a month.",
+          "Small Shopify store with a few apps: about $60 to $150 a month, plus payment fees.",
+        ],
+      },
+      {
+        heading: "How Dandilo Digitals can help",
+        paragraphs: [
+          "We set up your domain, hosting or platform account in your name, so you pay providers directly and never pay a markup. Websites start from $300 to build, and our care plan starts from $99 a month if you want us to look after it.",
+          "Ask for a free website audit and we'll tell you what your site should cost to run.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does a website cost per month for a small business?",
+        a: "Usually about $20 to $150 a month, depending on the platform, apps and whether you pay for maintenance.",
+      },
+      {
+        q: "How much does a website cost per year?",
+        a: "Once it's built, most small business websites cost roughly $250 to $1,800 a year, covering the domain, hosting or platform plan, apps and maintenance.",
+      },
+      {
+        q: "How much does website hosting cost?",
+        a: "Basic shared hosting can be a few dollars a month. Managed WordPress hosting usually costs $20 to $50 a month. Wix, Squarespace and Shopify include hosting in their plans.",
+      },
+      {
+        q: "Can I have a business website for free?",
+        a: "You can start on a free plan, but it will usually show the builder's ads and use their web address. Most businesses need at least a basic paid plan and their own domain.",
+      },
+    ],
+    related: ["/blog/small-business-website-cost", "/blog/small-business-website-hosting-and-email", "/services/website-maintenance", "/blog/shopify-website-cost"],
+  },
+  {
     path: "/blog/wordpress-vs-custom-website-law-firm",
     kind: "blog",
     label: "WordPress vs a Custom Website for Law Firms",

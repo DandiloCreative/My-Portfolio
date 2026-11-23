@@ -5,6 +5,7 @@
 **Status:** in progress. Since 14 Nov 2026 the owner has approved working on the plan every day, phase by phase, without asking first. Facts, results and team details still come only from the owner.
 
 **Daily log:**
+- **23 Nov 2026 (CRM keywords, first use):** owner sent the CRM export (dandilo-keywords-2026-11-23.csv, about 1,100 phrases, not committed). New posts /blog/why-is-my-website-not-showing-up-on-google ("why is my website / Wix / Squarespace not showing on Google", favicon and logo) and /blog/how-much-does-a-website-cost-per-month ("cost per month / per year / to maintain", hosting). Maintenance page title now targets "website maintenance packages" plus 2 cost FAQs. Wix vs WordPress vs Shopify post got 5 FAQs ("Wix or WordPress for small business / SEO / blog", "is Shopify worth it"). Keyword plan added to section 9.
 - **23 Nov 2026 (from the earlier plan, post + FAQs):** no SEO work on 21 and 22 Nov (no session). New post /blog/wordpress-vs-custom-website-law-firm (4 FAQs). All 9 industry pages now have 6 or more FAQs, which completes the 6-FAQ item for every service, industry and country page. CRM keyword CSV still not received (Downloads/keywords.csv is an unrelated 2023 file).
 - **20 Nov 2026 (from the earlier plan, post + FAQs):** new post /blog/how-long-does-it-take-to-build-a-web-app (4 FAQs). USA, UK and Canada pages and the full stack, frontend and backend pages now have 6 or more FAQs (prices, timelines, accessibility, free prototype). FAQs still needed on the 8 industry pages. CRM keywords not used yet: waiting for the owner's keyword CSV export.
 - **19 Nov 2026 (owner request, developer pages):** 6 new service pages: /services/enterprise-web-development (larger businesses; says honestly we suit mid-size firms and defined projects), /services/expressjs-development, /services/typescript-development, /services/python-development, /services/tailwind-css-development and /services/bootstrap-development, each with 6 FAQs. The NestJS page is now NestJS-only and the Django page Django-only, so they don't compete with the new Express.js and Python pages. Next.js, NestJS, Laravel and Django pages now have 6 FAQs.
@@ -308,3 +309,22 @@ Items from the first version of this plan (Downloads/SEO-PLAN.md) that aren't co
 - [ ] Free tools that attract links: website speed and SEO checker, downloadable website launch checklist.
 - [ ] Every guide links to a matching portfolio project (needs the portfolio pages, which need your project facts).
 - [ ] Person schema and author bylines (needs team details).
+
+## 9. CRM keyword plan (from the 23 Nov 2026 export)
+
+Buyer and question phrases from the CRM Keywords page that don't have a matching page yet, in priority order. Tick each one off when it ships.
+
+- [x] "why is my website not showing up on google" (+ Wix, Squarespace, favicon, logo): /blog/why-is-my-website-not-showing-up-on-google (23 Nov)
+- [x] "how much does a website cost per month / per year / to maintain", hosting cost: /blog/how-much-does-a-website-cost-per-month (23 Nov)
+- [x] "website maintenance packages / cost per month": maintenance page title + FAQs (23 Nov)
+- [x] "wix or wordpress for small business / seo / blog", "is shopify worth it for a small business": FAQs on /blog/wix-vs-wordpress-vs-shopify (23 Nov)
+- [ ] "facebook page vs website (for small business)", "facebook shop vs website": new post
+- [ ] "do i need a website for my business", "is it worth paying someone to build a website": new post
+- [ ] "is shopify worth it for a small business / in 2026": new post
+- [ ] "how do i get my business on google maps / listed on google / verified": check /blog/google-business-profile-vs-website covers it, else new guide
+- [ ] "website redesign cost", "website redesign proposal / rfp": new post or FAQs on the redesign page
+- [ ] "ecommerce website cost / price", "landing page design price / services": FAQs on the ecommerce and landing page pages
+- [ ] "hire web designer / hire web developer / hiring web designer remote": check homepage and /blog/how-to-choose-a-web-designer wording
+- [ ] City searches (Toronto, Calgary, Vancouver, New York, Philadelphia, Texas, Denver): needs the owner's decision. Only honest "remote web designer for [city] businesses" pages, no fake local office.
+- Skipped: social media marketing phrases (Instagram, TikTok, LinkedIn, X ads and tips) because they aren't Dandilo services yet, and off-topic phrases (movies, games, gifts, India/Pakistan city searches).
+

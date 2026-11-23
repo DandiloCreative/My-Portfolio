@@ -597,7 +597,7 @@ export const servicePages: ContentPageData[] = [
     path: "/services/website-maintenance",
     kind: "service",
     label: "Website Maintenance & Care Plans",
-    title: "Website Maintenance Plans From $99/Month | Dandilo Digitals",
+    title: "Website Maintenance Packages From $99/Month | Dandilo Digitals",
     description:
       "Website maintenance from $99 a month: updates, backups, security monitoring, speed checks and small changes for WordPress, Shopify, Wix and custom sites.",
     eyebrow: "Website Maintenance",
@@ -659,6 +659,14 @@ export const servicePages: ContentPageData[] = [
       {
         q: "What happens first when I sign up?",
         a: "We start with a quick health check of your site and fix anything urgent, then keep it maintained every month.",
+      },
+      {
+        q: "How much does website maintenance cost per month?",
+        a: "Our care plan starts from $99 a month for updates, backups, security monitoring and small content changes. Larger sites, online stores or more monthly changes are quoted separately.",
+      },
+      {
+        q: "Do I really need website maintenance?",
+        a: "If your site runs on WordPress or uses plugins and apps, yes: updates fix security holes and keep things working. On Wix or Squarespace the platform handles updates, but you still need someone to keep content, forms and SEO in good shape.",
       },
     ],
     related: ["/blog/small-business-website-security", "/blog/small-business-website-hosting-and-email", "/pricing", "/services/wordpress-web-design"],

@@ -4,7 +4,7 @@
   "date": "2026-11-18"
  },
  "/blog": {
-  "hash": "65fae5bd7f2f9cea",
+  "hash": "c5ad7d80aec62bc3",
   "date": "2026-11-23"
  },
  "/blog/canada-small-business-website-checklist": {
@@ -42,6 +42,10 @@
  "/blog/how-long-does-it-take-to-build-a-website": {
   "hash": "25a92e6b2ca52f7e",
   "date": "2026-11-16"
+ },
+ "/blog/how-much-does-a-website-cost-per-month": {
+  "hash": "36e92ab299806420",
+  "date": "2026-11-23"
  },
  "/blog/how-to-choose-a-web-designer": {
   "hash": "a8c82e6ac71cb5b3",
@@ -99,6 +103,10 @@
   "hash": "4010cd3e85485dbe",
   "date": "2026-11-02"
  },
+ "/blog/why-is-my-website-not-showing-up-on-google": {
+  "hash": "b5f0d0db346d92ae",
+  "date": "2026-11-23"
+ },
  "/blog/wix-studio-vs-wix": {
   "hash": "432e82c49fce080d",
   "date": "2026-11-02"
@@ -108,8 +116,8 @@
   "date": "2026-11-18"
  },
  "/blog/wix-vs-wordpress-vs-shopify": {
-  "hash": "0f6499c0da242957",
-  "date": "2026-10-30"
+  "hash": "70d3c39ae1e18339",
+  "date": "2026-11-23"
  },
  "/blog/wordpress-vs-custom-website-law-firm": {
   "hash": "641b1cbb259695b7",
@@ -264,8 +272,8 @@
   "date": "2026-11-19"
  },
  "/services/website-maintenance": {
-  "hash": "911894b7e1e1088c",
-  "date": "2026-11-18"
+  "hash": "d9ba58bb4bf424a3",
+  "date": "2026-11-23"
  },
  "/services/website-redesign": {
   "hash": "b080248edab9cf43",

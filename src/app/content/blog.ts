@@ -564,6 +564,28 @@ export const blogPosts: ContentPageData[] = [
         ],
       },
     ],
+    faqs: [
+      {
+        q: "Is Wix or WordPress better for a small business?",
+        a: "Wix is better if you want a professional site quickly and want to edit it yourself without worrying about hosting or updates. WordPress is better if you want lots of pages, a big blog or more flexibility, and don't mind regular updates.",
+      },
+      {
+        q: "Is Wix or WordPress better for SEO?",
+        a: "Both can rank well. WordPress gives more control for large, content-heavy sites. For most small businesses, helpful service pages, a fast mobile site and a Google Business Profile matter more than the platform.",
+      },
+      {
+        q: "Is Wix or WordPress better for a blog?",
+        a: "WordPress was built for blogging and handles hundreds of posts, categories and authors very well. Wix's blog is simpler and fine for a business that posts now and then.",
+      },
+      {
+        q: "Can I move from Wix to WordPress later?",
+        a: "Yes, but Wix doesn't export your site, so the pages are rebuilt in WordPress. Your text, images and domain can move across, and redirects protect your Google rankings.",
+      },
+      {
+        q: "Is Shopify worth it for a small business?",
+        a: "Yes, if selling products online is a main part of your business. Shopify handles checkout, payments, stock and security for a monthly fee. If you only sell a few items, a Wix or WordPress store may cost less.",
+      },
+    ],
     related: ["/services/wix-web-designer", "/services/wordpress-web-design", "/services/shopify-website-design"],
   },
   {
