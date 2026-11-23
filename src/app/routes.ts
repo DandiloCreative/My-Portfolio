@@ -8,6 +8,7 @@ import { countryPosts } from "./content/blog-countries";
 import { guidePosts } from "./content/blog-guides";
 import { dailyPosts } from "./content/blog-daily";
 import { locationPages } from "./content/locations";
+import { cityPages } from "./content/cities";
 import { devPages, devPosts } from "./content/dev-services";
 import { legalPages } from "./content/legal";
 import { pricingFaqs, pricingPackages } from "./content/pricing";
@@ -133,8 +134,8 @@ const hiddenPages: RouteInfo[] = [
 ];
 
 const blogPosts = [...dailyPosts, ...guidePosts, ...devPosts, ...countryPosts, ...basePosts];
-export const CONTENT_PAGES: ContentPageData[] = [...servicePages, ...devPages, ...locationPages, ...industryPages, ...blogPosts, ...legalPages];
-export { servicePages, devPages, locationPages, industryPages, blogPosts, legalPages };
+export const CONTENT_PAGES: ContentPageData[] = [...servicePages, ...devPages, ...locationPages, ...cityPages, ...industryPages, ...blogPosts, ...legalPages];
+export { servicePages, devPages, locationPages, cityPages, industryPages, blogPosts, legalPages };
 
 export const ROUTES: RouteInfo[] = [
   ...mainPages,

@@ -75,7 +75,7 @@ export const locationPages: ContentPageData[] = [
         a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
       },
     ],
-    related: ["/pricing", "/services/small-business-web-design", "/blog/small-business-website-cost"],
+    related: ["/web-design-new-york", "/web-design-texas", "/web-design-philadelphia", "/pricing", "/services/small-business-web-design", "/blog/small-business-website-cost"],
   },
   {
     path: "/web-design-uk",
@@ -158,7 +158,7 @@ export const locationPages: ContentPageData[] = [
         a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
       },
     ],
-    related: ["/services/bespoke-web-design", "/services/website-maintenance", "/blog/website-cost-uk", "/blog/uk-small-business-website-checklist", "/pricing"],
+    related: ["/web-design-london", "/services/bespoke-web-design", "/services/website-maintenance", "/blog/website-cost-uk", "/blog/uk-small-business-website-checklist", "/pricing"],
   },
   {
     path: "/web-design-canada",
@@ -236,7 +236,7 @@ export const locationPages: ContentPageData[] = [
         a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
       },
     ],
-    related: ["/blog/website-cost-canada", "/blog/canada-small-business-website-checklist", "/pricing"],
+    related: ["/web-design-toronto", "/web-design-vancouver", "/web-design-calgary", "/blog/website-cost-canada", "/blog/canada-small-business-website-checklist", "/pricing"],
   },
   {
     path: "/web-design-europe",

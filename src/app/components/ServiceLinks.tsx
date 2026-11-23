@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
-import { servicePages, devPages, industryPages, locationPages } from "../routes";
+import { servicePages, devPages, industryPages, locationPages, cityPages } from "../routes";
 
 /** Links to every service and industry page (good for visitors and for Google). */
 export function ServiceLinks() {
@@ -35,7 +35,7 @@ export function ServiceLinks() {
         </div>
         <h3 className="text-xl font-semibold text-white mb-4 text-center">Where we work</h3>
         <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {locationPages.map((page) => (
+          {[...locationPages, ...cityPages].map((page) => (
             <Link
               key={page.path}
               to={page.path}

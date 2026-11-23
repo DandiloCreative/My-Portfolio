@@ -168,8 +168,8 @@
   "date": "2026-11-23"
  },
  "/platforms": {
-  "hash": "453326e048712177",
-  "date": "2026-11-19"
+  "hash": "56355478a07ff0e4",
+  "date": "2026-11-23"
  },
  "/portfolio": {
   "hash": "53a0df698758ef39",
@@ -188,8 +188,8 @@
   "date": "2026-11-14"
  },
  "/services": {
-  "hash": "7fb53365501b198a",
-  "date": "2026-11-19"
+  "hash": "284bb6f344b4e30d",
+  "date": "2026-11-23"
  },
  "/services/backend-development": {
   "hash": "0acc3237fac7806b",
@@ -295,21 +295,49 @@
   "hash": "cec4965cd976a80f",
   "date": "2026-11-14"
  },
+ "/web-design-calgary": {
+  "hash": "05275799cb04fe87",
+  "date": "2026-11-23"
+ },
  "/web-design-canada": {
-  "hash": "23c6c08968c99024",
-  "date": "2026-11-20"
+  "hash": "963a522d03144d63",
+  "date": "2026-11-23"
  },
  "/web-design-europe": {
   "hash": "e66eef51d3d18053",
   "date": "2026-11-18"
  },
+ "/web-design-london": {
+  "hash": "058387706b837f92",
+  "date": "2026-11-23"
+ },
+ "/web-design-new-york": {
+  "hash": "7215ae17599788c6",
+  "date": "2026-11-23"
+ },
+ "/web-design-philadelphia": {
+  "hash": "15319126129a93f7",
+  "date": "2026-11-23"
+ },
+ "/web-design-texas": {
+  "hash": "2dab320c3bc32a5b",
+  "date": "2026-11-23"
+ },
+ "/web-design-toronto": {
+  "hash": "8e3ba60d3ed3b907",
+  "date": "2026-11-23"
+ },
  "/web-design-uk": {
-  "hash": "cfaa396fd675276c",
-  "date": "2026-11-20"
+  "hash": "ce31b00f983db588",
+  "date": "2026-11-23"
  },
  "/web-design-usa": {
-  "hash": "ea353d4c42823a73",
-  "date": "2026-11-20"
+  "hash": "74a1b74d449fc3bf",
+  "date": "2026-11-23"
+ },
+ "/web-design-vancouver": {
+  "hash": "c6bfbe3859b27398",
+  "date": "2026-11-23"
  },
  "/web-design-worldwide": {
   "hash": "ae987a5037c08ba0",

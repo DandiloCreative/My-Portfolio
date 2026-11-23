@@ -82,7 +82,7 @@ function extraSchema(route) {
       name: c.label,
       description: c.description,
       url: urlFor(c.path),
-      areaServed: (c.areaServed ?? MARKETS).map((name) => ({ "@type": REGIONS.has(name) ? "Place" : "Country", name })),
+      areaServed: (c.areaServed ?? MARKETS).map((name) => ({ "@type": c.areaServedType ?? (REGIONS.has(name) ? "Place" : "Country"), name })),
       provider: ORG,
     });
   }

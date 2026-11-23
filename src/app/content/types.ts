@@ -24,6 +24,8 @@ export type ContentPageData = {
   related?: string[];
   /** Country pages only: countries named in the Service structured data */
   areaServed?: string[];
+  /** Schema.org type for areaServed entries on city/state pages (defaults to Country) */
+  areaServedType?: "City" | "State";
   /** Blog posts only */
   date?: string;
   readMinutes?: number;
