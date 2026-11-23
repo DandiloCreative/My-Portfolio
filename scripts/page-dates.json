@@ -4,8 +4,8 @@
   "date": "2026-11-18"
  },
  "/blog": {
-  "hash": "04183c7db171cd44",
-  "date": "2026-11-20"
+  "hash": "65fae5bd7f2f9cea",
+  "date": "2026-11-23"
  },
  "/blog/canada-small-business-website-checklist": {
   "hash": "bfab257af1b13473",
@@ -111,6 +111,10 @@
   "hash": "0f6499c0da242957",
   "date": "2026-10-30"
  },
+ "/blog/wordpress-vs-custom-website-law-firm": {
+  "hash": "641b1cbb259695b7",
+  "date": "2026-11-23"
+ },
  "/contact": {
   "hash": "9671268e1ec93160",
   "date": "2026-11-14"
@@ -120,40 +124,40 @@
   "date": "2026-11-14"
  },
  "/industries/accountant-web-design": {
-  "hash": "e92712c99831a0d9",
-  "date": "2026-11-14"
+  "hash": "685452bf34270bd7",
+  "date": "2026-11-23"
  },
  "/industries/cleaning-company-web-design": {
-  "hash": "0033ce94731a1bfa",
-  "date": "2026-11-14"
+  "hash": "0db08a4fd38d0506",
+  "date": "2026-11-23"
  },
  "/industries/contractor-web-design": {
-  "hash": "33474d7c4b5230b7",
-  "date": "2026-11-14"
+  "hash": "27c1bf391f7f47b1",
+  "date": "2026-11-23"
  },
  "/industries/dentist-web-design": {
   "hash": "ec3efb177bc1126e",
   "date": "2026-11-16"
  },
  "/industries/law-firm-web-design": {
-  "hash": "5c75203925f83e83",
-  "date": "2026-11-14"
+  "hash": "9003294bfd2c6c0f",
+  "date": "2026-11-23"
  },
  "/industries/nonprofit-web-design": {
-  "hash": "98534730cb824947",
-  "date": "2026-11-14"
+  "hash": "f7f83921564c27ba",
+  "date": "2026-11-23"
  },
  "/industries/real-estate-web-design": {
-  "hash": "27810d8c7087f76b",
-  "date": "2026-11-14"
+  "hash": "3bc6aaba348c9468",
+  "date": "2026-11-23"
  },
  "/industries/restaurant-web-design": {
-  "hash": "bff76b1941a2b974",
-  "date": "2026-11-14"
+  "hash": "7f86ea8641a8d0ce",
+  "date": "2026-11-23"
  },
  "/industries/therapist-web-design": {
-  "hash": "49e4bb90d3222c4a",
-  "date": "2026-11-14"
+  "hash": "2e96b37ab0e6cb29",
+  "date": "2026-11-23"
  },
  "/platforms": {
   "hash": "453326e048712177",

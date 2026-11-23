@@ -43,6 +43,22 @@ export const industryPages: ContentPageData[] = [
         q: "Can you add a quote request form?",
         a: "Yes. We can add a quote form that sends requests straight to your email, plus click-to-call and WhatsApp buttons.",
       },
+      {
+        q: "How much does a contractor website cost?",
+        a: "A starter website with up to 3 pages starts from $300. A full business website with service pages, service areas, a quote form and a project gallery starts from $899.",
+      },
+      {
+        q: "Can you show my past projects?",
+        a: "Yes. We add a project gallery with before-and-after photos that loads quickly on phones, and you can add new jobs yourself.",
+      },
+      {
+        q: "How long does it take to build a contractor website?",
+        a: "Most contractor websites take 2 to 6 weeks, depending on the number of pages and how quickly your text and photos are ready.",
+      },
+      {
+        q: "Can I see a design before I pay?",
+        a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
+      },
     ],
     related: ["/services/small-business-web-design", "/services/wordpress-web-design", "/services/wix-web-designer"],
   },
@@ -87,6 +103,22 @@ export const industryPages: ContentPageData[] = [
         q: "Which platform is best for real estate websites?",
         a: "WordPress and Wix Studio are both strong choices. WordPress offers more listing features; Wix Studio is easier to manage. We'll recommend the right fit.",
       },
+      {
+        q: "How much does a real estate website cost?",
+        a: "A starter website starts from $300 and a full agent or agency website from $899. Listing feeds and custom search are quoted separately, depending on your provider.",
+      },
+      {
+        q: "Can buyers and sellers contact me from each listing?",
+        a: "Yes. Each listing can have its own enquiry form and click-to-call button, so you know which property the lead is about.",
+      },
+      {
+        q: "Can you help me rank for my area?",
+        a: "Yes. We create neighbourhood and area pages and set up on-page SEO, and help you link your website to your Google Business Profile.",
+      },
+      {
+        q: "How long does it take to build a real estate website?",
+        a: "Most real estate websites take 2 to 6 weeks, depending on the number of pages and how quickly your text and photos are ready.",
+      },
     ],
     related: ["/portfolio", "/services/wix-web-designer", "/services/wordpress-web-design"],
   },
@@ -130,6 +162,22 @@ export const industryPages: ContentPageData[] = [
       {
         q: "Can I update my menu myself?",
         a: "Yes. We set up your menu so you can change items and prices without any technical help.",
+      },
+      {
+        q: "How much does a restaurant website cost?",
+        a: "A starter website with your menu, opening hours, location and contact details starts from $300. A full website with more pages, a gallery and links to your ordering or reservation tools starts from $899.",
+      },
+      {
+        q: "Can customers book a table online?",
+        a: "Yes. We connect the reservation tool you already use, or add a simple booking request form.",
+      },
+      {
+        q: "Will my restaurant show up on Google Maps?",
+        a: "Your website helps, but Google Maps mainly uses your Google Business Profile. We make sure the two match and link to each other, and can help you set up the profile.",
+      },
+      {
+        q: "How long does it take to build a restaurant website?",
+        a: "Most restaurant websites take 2 to 6 weeks, depending on the number of pages and how quickly your text and photos are ready.",
       },
     ],
     related: ["/services/wix-web-designer", "/services/small-business-web-design", "/services/ecommerce-web-design"],
@@ -176,6 +224,22 @@ export const industryPages: ContentPageData[] = [
         q: "How much does a therapist website cost?",
         a: "Our therapist websites start from $300 for a starter site and $899 for a full practice website with service pages and blog.",
       },
+      {
+        q: "Is my therapy website private and secure?",
+        a: "We use secure, encrypted forms that only ask for the basics, with a note not to share sensitive details until you've spoken. For clinical records, we link to the secure practice platform you already use.",
+      },
+      {
+        q: "Can you write the text for my website?",
+        a: "Yes. We can write clear, warm text for your services and about page, based on a short questionnaire, and you approve everything before it goes live.",
+      },
+      {
+        q: "How long does it take to build a therapist website?",
+        a: "Most therapist websites take 2 to 6 weeks, depending on the number of pages and how quickly your text and photos are ready.",
+      },
+      {
+        q: "Can I see a design before I pay?",
+        a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
+      },
     ],
     related: ["/services/small-business-web-design", "/services/squarespace-web-design", "/services/wordpress-web-design"],
   },
@@ -221,6 +285,22 @@ export const industryPages: ContentPageData[] = [
         q: "How much does a law firm website cost?",
         a: "Law firm websites usually start from $899 for a full practice website with practice area pages, profiles and a blog. Larger firms with many locations need more.",
       },
+      {
+        q: "Will my website follow legal advertising rules?",
+        a: "We keep the advertising rules for your country and state in mind, such as how you describe results and specialisms. You or your firm should still approve the final wording, since you know your own professional rules.",
+      },
+      {
+        q: "Can you add a page for each practice area?",
+        a: "Yes. A separate page for each practice area is one of the best ways to show up in Google for the cases you want, and to show clients you handle their kind of matter.",
+      },
+      {
+        q: "Is the consultation form secure?",
+        a: "Yes. Forms are encrypted, ask only for what you need, and include a note not to send confidential details before you've agreed to act.",
+      },
+      {
+        q: "How long does it take to build a law firm website?",
+        a: "Most law firm websites take 2 to 6 weeks, depending on the number of pages and how quickly your text and photos are ready.",
+      },
     ],
     related: ["/services/wordpress-web-design", "/services/small-business-web-design", "/blog/how-to-choose-a-web-designer"],
   },
@@ -265,6 +345,22 @@ export const industryPages: ContentPageData[] = [
         q: "Which platform is best for a charity website?",
         a: "WordPress and Wix Studio are both good choices. WordPress has more donation and event plugins; Wix Studio is easier for volunteers to update.",
       },
+      {
+        q: "Can people donate on our website?",
+        a: "Yes. We connect a donation tool such as PayPal, Stripe or a charity donation platform, with a clear donate button on every page.",
+      },
+      {
+        q: "Can volunteers update the website?",
+        a: "Yes. We build on platforms that are easy to edit and show your team how to add news, events and photos.",
+      },
+      {
+        q: "Can you add event and volunteer sign-up forms?",
+        a: "Yes. We add sign-up forms for events, volunteers and newsletters that send responses to your email or tools.",
+      },
+      {
+        q: "How long does it take to build a nonprofit website?",
+        a: "Most nonprofit websites take 2 to 6 weeks, depending on the number of pages and how quickly your text and photos are ready.",
+      },
     ],
     related: ["/services/small-business-web-design", "/services/wix-web-designer", "/services/wordpress-web-design"],
   },
@@ -308,6 +404,22 @@ export const industryPages: ContentPageData[] = [
       {
         q: "How much does an accountant website cost?",
         a: "Accounting websites usually start from $300 for a starter site and $899 for a full website with service pages, booking and a blog.",
+      },
+      {
+        q: "Which platform is best for an accounting firm website?",
+        a: "WordPress is best if you want many service pages and a blog for SEO. Wix Studio suits smaller firms that want to edit the site themselves.",
+      },
+      {
+        q: "Can you add a page for each service?",
+        a: "Yes. Separate pages for bookkeeping, tax returns, payroll and advisory help you show up for those searches and explain each service clearly.",
+      },
+      {
+        q: "Is the contact form secure?",
+        a: "Yes. Forms are encrypted and only ask for basic details. For documents, we link to your secure client portal rather than collecting files by email.",
+      },
+      {
+        q: "How long does it take to build an accountant website?",
+        a: "Most accounting websites take 2 to 6 weeks, depending on the number of pages and how quickly your text and photos are ready.",
       },
     ],
     related: ["/services/small-business-web-design", "/services/wordpress-web-design", "/services/squarespace-web-design"],
@@ -379,6 +491,14 @@ export const industryPages: ContentPageData[] = [
       {
         q: "Will my website show up on Google?",
         a: "Every site we build includes basic on-page SEO. Ranking for local searches also depends on your Google Business Profile and your reviews, and we can help you set those up.",
+      },
+      {
+        q: "How long does it take to build a cleaning company website?",
+        a: "Most cleaning company websites take 2 to 6 weeks, depending on the number of pages and how quickly your text and photos are ready.",
+      },
+      {
+        q: "Can I see a design before I pay?",
+        a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
       },
     ],
     related: ["/services/small-business-web-design", "/services/wordpress-web-design", "/industries/contractor-web-design"],

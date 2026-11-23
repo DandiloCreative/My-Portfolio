@@ -4,6 +4,97 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/wordpress-vs-custom-website-law-firm",
+    kind: "blog",
+    label: "WordPress vs a Custom Website for Law Firms",
+    title: "WordPress vs a Custom Website for Law Firms: Which Is Better?",
+    description:
+      "Should your law firm website be built on WordPress or custom-coded? Cost, SEO, security, editing and practice area pages compared for attorneys and solicitors.",
+    eyebrow: "Comparison",
+    h1: "WordPress vs a Custom Website for Law Firms: Which Is Better?",
+    date: "2026-11-23",
+    readMinutes: 6,
+    intro: [
+      "In short: WordPress is the right choice for most law firms. It handles many practice area pages and a blog well, it's easy for your team to edit, and it costs less to build. A custom-coded website makes sense when you need things WordPress does poorly, such as a client portal, case intake logic or connections to your practice management software.",
+      "Here's how the two compare for a law firm, and how to decide which one your practice needs.",
+    ],
+    sections: [
+      {
+        heading: "The quick comparison",
+        bullets: [
+          "Cost to build: WordPress is usually cheaper. A custom site costs more because every feature is built for you.",
+          "Editing: WordPress has a familiar editor for updating pages and posts. A custom site needs a content manager added if your team wants to edit it.",
+          "Practice area and location pages: both handle them well. WordPress makes adding new ones quick.",
+          "SEO: both can rank well. What matters most is helpful practice area pages, local signals and a fast site.",
+          "Security: WordPress needs regular updates to plugins and themes. A custom site has fewer moving parts but needs a developer to maintain it.",
+          "Special features: client portals, intake questionnaires and integrations are easier to build well in custom code.",
+        ],
+      },
+      {
+        heading: "When WordPress is the right choice for a law firm",
+        bullets: [
+          "You're a solo practice or small to mid-size firm that mainly needs to win consultations.",
+          "You want a page for each practice area and location, plus a blog answering client questions.",
+          "Your team wants to update pages, attorney profiles and posts without a developer.",
+          "You want a professional site in a few weeks at a modest cost.",
+        ],
+      },
+      {
+        heading: "When a custom website is the right choice",
+        bullets: [
+          "You want a secure client portal for documents, messages or case updates.",
+          "You need an intake questionnaire that routes enquiries by case type or location.",
+          "You want your website connected to your practice management or CRM software.",
+          "You have many offices or attorneys and need features beyond what plugins can do cleanly.",
+          "Speed and security are top priorities and you'd rather avoid relying on many plugins.",
+        ],
+      },
+      {
+        heading: "What every law firm website needs, on either platform",
+        bullets: [
+          "A separate page for each practice area, written in plain English",
+          "Attorney or solicitor profiles with qualifications and a professional photo",
+          "A consultation form and click-to-call on every page",
+          "A note on forms not to send confidential details before you've agreed to act",
+          "Wording that respects the advertising rules for your country and state",
+          "Fast, secure and accessible pages that work well on phones",
+        ],
+      },
+      {
+        heading: "Keeping a WordPress law firm site secure",
+        paragraphs: [
+          "Most WordPress security problems come from outdated plugins and themes. Use a small number of well-maintained plugins, keep everything updated, use strong logins with two-step sign-in, and take regular backups. A care plan can handle this for you.",
+        ],
+      },
+      {
+        heading: "How Dandilo Digitals can help",
+        paragraphs: [
+          "We build law firm websites on WordPress and in custom code, so we'll recommend whichever suits your practice. Full practice websites start from $899, and custom-coded builds start from $2,500. Our care plan, from $99 a month, covers updates, backups and security monitoring.",
+          "Not sure which you need? Ask for a free website audit and we'll tell you honestly.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is WordPress good for law firm websites?",
+        a: "Yes. Many law firms use WordPress because it handles practice area pages and a blog well and is easy to edit. Keep plugins few and up to date for security.",
+      },
+      {
+        q: "Is a custom website better for SEO than WordPress?",
+        a: "Not by itself. Both can rank well. Helpful practice area pages, local signals, reviews and a fast site matter more than the platform.",
+      },
+      {
+        q: "How much does a law firm website cost?",
+        a: "Our full practice websites start from $899 on WordPress or Wix Studio. Custom-coded websites with portals or integrations start from $2,500.",
+      },
+      {
+        q: "Can a law firm website have a client portal?",
+        a: "Yes. A secure client portal is usually built in custom code or provided by your practice management software and linked from your website.",
+      },
+    ],
+    related: ["/industries/law-firm-web-design", "/services/wordpress-web-design", "/services/bespoke-web-design", "/blog/wix-vs-custom-website"],
+  },
+  {
     path: "/blog/how-long-does-it-take-to-build-a-web-app",
     kind: "blog",
     label: "How Long Does It Take to Build a Web App?",
