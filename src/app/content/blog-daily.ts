@@ -4,6 +4,110 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/how-to-choose-a-domain-name",
+    kind: "blog",
+    label: "How to Choose a Domain Name",
+    title: "How to Choose a Domain Name for Your Business (Checklist)",
+    description:
+      "Picking a domain name for your small business? Use this simple checklist: .com vs .co.uk vs .ca, names to avoid, what it costs, and how to keep it safe.",
+    eyebrow: "Checklist",
+    h1: "How to Choose a Domain Name for Your Small Business",
+    date: "2026-11-24",
+    readMinutes: 6,
+    intro: [
+      "In short: pick a name that is short, easy to say out loud, easy to spell, and matches your business name. Register it in your own name, choose the extension your customers expect, and keep it renewed.",
+      "Your domain is your web address and the end of your email address. It's hard to change later without losing visitors, so it's worth ten minutes of thought before you buy. Here's a simple checklist.",
+    ],
+    sections: [
+      {
+        heading: "1. Keep it short and easy to say",
+        bullets: [
+          "Aim for something you could say over the phone without spelling it out.",
+          "Shorter is easier to remember, type and fit on a van, a card or a sign.",
+          "Avoid hard-to-spell words, because customers who mistype it end up somewhere else.",
+        ],
+      },
+      {
+        heading: "2. Match your business name where you can",
+        paragraphs: [
+          "The best domain is usually your business name. People who hear about you will guess it first, and it keeps your brand, email and social handles consistent.",
+          "If your exact name is taken, add a short, natural word such as your trade or town (for example, a plumber could add the town name). Avoid adding random numbers or extra letters.",
+        ],
+      },
+      {
+        heading: "3. Choose the right extension",
+        bullets: [
+          ".com is the safe default and what most people type first, in the US and worldwide.",
+          ".co.uk (or .uk) is familiar and trusted for UK businesses serving UK customers.",
+          ".ca is a good fit for Canadian businesses and shows you're based in Canada.",
+          "If your first choice is taken, a country extension that matches where you work is usually better than an unusual one.",
+          "Be careful with unusual extensions. Some people will type .com out of habit and land on a different site.",
+        ],
+      },
+      {
+        heading: "4. Things to avoid",
+        bullets: [
+          "Hyphens and numbers: they're easy to forget when you say the name aloud.",
+          "Names too close to a well-known brand. That can cause confusion and legal trouble.",
+          "Very narrow names that you'll outgrow, such as a name tied to one product when you plan to add more.",
+          "Trendy spellings that customers will get wrong.",
+        ],
+      },
+      {
+        heading: "5. Check it before you commit",
+        bullets: [
+          "Search for the name on Google to see who else uses something similar.",
+          "Check that matching social media handles are free, if you plan to use them.",
+          "Say the name to a friend and ask them to write it down. If they spell it differently, reconsider.",
+          "Check how it looks without spaces. Some word combinations accidentally spell something unwanted.",
+        ],
+      },
+      {
+        heading: "6. Buy it in your own name and keep it safe",
+        paragraphs: [
+          "Register the domain with an account you control, using your business email. Don't let a designer or freelancer register it in their own name, or you may struggle to get it back later.",
+          "Domains are paid for by the year. A typical .com costs roughly $10 to $20 a year, though prices vary by registrar and extension, and renewal prices can differ from the first-year price. Turn on auto-renew and keep your contact email current so reminders reach you. Also turn on two-step login for your registrar account.",
+        ],
+      },
+      {
+        heading: "7. Set up a business email on your domain",
+        paragraphs: [
+          "An address like hello@yourbusiness.com looks more established than a free webmail address. Email is usually a separate small monthly cost from the domain, depending on the provider you choose. Our guide to small business website hosting and email explains the options.",
+        ],
+      },
+      {
+        heading: "Need help choosing or setting up your domain?",
+        paragraphs: [
+          "At Dandilo Digitals we help small businesses in the US, UK and Canada pick a domain, connect it and build a website on it. Our Starter website starts at $300 and a Business website at $899, and you'll get a fixed quote before work begins. You own your domain and your site.",
+          "Not sure whether your current domain and site are working for you? Request a free website audit at /free-website-audit, or get in touch at /contact and we'll point you in the right direction.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Should my domain name be my business name?",
+        a: "Usually yes. It's the first thing customers will guess, and it keeps your website, email and social media consistent. If it's taken, add a short natural word like your trade or town.",
+      },
+      {
+        q: "Is .com better than .co.uk or .ca?",
+        a: ".com is the most familiar worldwide. For businesses serving customers mainly in the UK or Canada, .co.uk or .ca are good, trusted choices. What matters most is that it's easy to remember and matches your business.",
+      },
+      {
+        q: "How much does a domain name cost?",
+        a: "Typically around $10 to $20 a year for a .com, though prices vary by registrar and extension, and renewal prices can differ from the first year. Business email is usually a separate cost.",
+      },
+      {
+        q: "Who should own my domain name?",
+        a: "You should. Register it with your own account and business email, even if someone else builds your website. That way you can always move it or change who manages your site.",
+      },
+      {
+        q: "Can I change my domain name later?",
+        a: "Yes, but it takes care. You need to redirect the old address to the new one so you don't lose visitors or search visibility, and update your email, listings and social profiles. It's easier to choose well at the start.",
+      },
+    ],
+    related: ["/blog/small-business-website-hosting-and-email", "/blog/how-much-does-a-website-cost-per-month", "/pricing", "/services/small-business-web-design"],
+  },
+  {
     path: "/blog/facebook-page-vs-website",
     kind: "blog",
     label: "Facebook Page vs Website",
