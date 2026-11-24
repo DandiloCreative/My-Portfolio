@@ -1,4 +1,4 @@
-import { Facebook, Instagram, ArrowUpRight } from "lucide-react";
+import { Facebook, Instagram, Linkedin, ArrowUpRight } from "lucide-react";
 import { openCookieSettings } from "../lib/consent";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router";
@@ -63,6 +63,9 @@ export function Footer() {
               </a>
               <a href="https://www.instagram.com/dandilodigitals" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-pink-500/20 hover:border-pink-500/50 transition-all duration-300">
                 <Instagram size={18} />
+              </a>
+              <a href="https://www.linkedin.com/company/145417818" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-sky-500/20 hover:border-sky-500/50 transition-all duration-300">
+                <Linkedin size={18} />
               </a>
               <a
                 href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"

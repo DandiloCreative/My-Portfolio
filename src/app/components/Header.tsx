@@ -1,4 +1,4 @@
-import { Menu, X, Facebook, Instagram } from "lucide-react";
+import { Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
 import { FIVERR_URL } from "../lib/fiverr";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent, useMotionValue, useSpring, useTransform } from "motion/react";
@@ -260,6 +260,14 @@ export function Header() {
                   className="text-zinc-300 hover:text-pink-400 transition-colors flex items-center gap-2 text-lg font-bold"
                 >
                   <Instagram size={24} /> Instagram
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/145417818"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-300 hover:text-sky-400 transition-colors flex items-center gap-2 text-lg font-bold"
+                >
+                  <Linkedin size={24} /> LinkedIn
                 </a>
                 <a
                   href="https://api.whatsapp.com/send/?phone=%2B12246200930&text&type=phone_number&app_absent=0"
