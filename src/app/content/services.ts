@@ -11,6 +11,7 @@ export const servicePages: ContentPageData[] = [
     eyebrow: "Small Business Web Design",
     h1: "Small Business Web Design That Brings In Customers",
     intro: [
+      "In short: Dandilo Digitals builds small business websites from $300 (Starter) and $899 (Business), usually in 2 to 6 weeks. You get a fixed quote, approve the design before we build, and own your website and domain.",
       "Your website is often the first impression a customer gets of your business. If it's slow, confusing or outdated, people leave and call someone else. We design and build websites for small businesses that look professional, load fast on any phone and make it easy for visitors to get in touch.",
       "Every site we build starts with one question: what do you need visitors to do? Call you, book an appointment, request a quote or buy online. The design, the wording and the layout all work toward that goal.",
     ],
@@ -154,6 +155,7 @@ export const servicePages: ContentPageData[] = [
     eyebrow: "Shopify Website Design",
     h1: "Shopify Website Design That Helps You Sell More",
     intro: [
+      "In short: Dandilo Digitals designs and sets up custom Shopify stores for small businesses from $1,250 (Online Store). You get a fixed quote, approve the design first and own your store account.",
       "Shopify is one of the easiest ways to run an online store, but a store that looks like every other Shopify theme struggles to stand out or build trust. We design and develop Shopify stores that look premium, load fast and make buying simple.",
       "Whether you're launching your first store or moving from another platform, we'll set up Shopify so it's built around how your customers shop.",
     ],
@@ -284,6 +286,7 @@ export const servicePages: ContentPageData[] = [
     eyebrow: "Ecommerce Web Design",
     h1: "Ecommerce Web Design That Turns Browsers Into Buyers",
     intro: [
+      "In short: Dandilo Digitals builds online stores on Shopify, WooCommerce and Wix from $1,250 (Online Store), with a fixed quote and a design you approve before we build.",
       "An online store has one job: make it easy for people to find what they want and buy it. Confusing navigation, slow pages or a complicated checkout cost you sales every day.",
       "We design and build ecommerce websites on Shopify, WordPress (WooCommerce) and Wix that are easy to shop, look trustworthy and work beautifully on phones.",
     ],
@@ -345,6 +348,7 @@ export const servicePages: ContentPageData[] = [
     eyebrow: "Website Redesign",
     h1: "Website Redesign Services for Small Businesses",
     intro: [
+      "In short: Dandilo Digitals redesigns existing websites from $300, with a fixed quote. We keep the content and search rankings that already work, and you approve the new design before we build it.",
       "If your website looks dated, loads slowly or isn't bringing in enquiries, it may be time for a redesign. An outdated website can make customers wonder whether you're still in business, even if you're busier than ever.",
       "We redesign websites with a modern look, clearer messaging and a structure built around turning visitors into customers, while keeping the content and search rankings that already work for you.",
     ],

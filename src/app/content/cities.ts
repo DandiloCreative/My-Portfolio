@@ -1019,4 +1019,87 @@ export const cityPages: ContentPageData[] = [
     ],
     related: ["/web-design-usa", "/services/enterprise-web-development", "/services/small-business-web-design", "/pricing"],
   },
+  {
+    path: "/web-design-georgia",
+    kind: "service",
+    label: "Web Design in Georgia",
+    areaServed: ["Georgia"],
+    areaServedType: "State",
+    title: "Web Design for Georgia Small Businesses | Dandilo Digitals",
+    description:
+      "Affordable web design for Georgia small businesses in Atlanta, Savannah, Augusta, Columbus and Athens, from trades to film and logistics firms. From $300.",
+    eyebrow: "Georgia",
+    h1: "Affordable Web Design for Georgia Small Businesses",
+    intro: [
+      "Georgia's small businesses range from Atlanta's startups, agencies and creative studios to Savannah's tourism and port-related firms, and trades, farms and professional services in towns across the state. Each needs a website that is quick to read on a phone and easy to contact.",
+      "Dandilo Digitals designs and builds websites for small businesses across Georgia, including Atlanta, Savannah, Augusta, Columbus, Athens and Macon. We're a remote team, not a local studio, so you don't pay for big-city office rent. We schedule calls in Eastern time, and you see and approve every design before we build it.",
+    ],
+    sections: [
+      {
+        heading: "What we build for Georgia businesses",
+        bullets: [
+          "Websites for Atlanta startups, creative studios and professional services, with clear service pages and a fast enquiry form",
+          "Tourism, event and hospitality websites for places like Savannah, with galleries, bookings and visitor information",
+          "Film and media freelancers and production companies: showreels, project galleries and a simple contact route",
+          "Logistics, trades and home services websites with quote forms and service area pages",
+          "Farms and food producers with online ordering through Shopify or WooCommerce, with sales tax set up for your accountant to confirm",
+        ],
+      },
+      {
+        heading: "Selling online from Georgia",
+        paragraphs: [
+          "Georgia has a state sales tax and local sales taxes that vary by county, so an online store needs its tax settings checked by your accountant before launch. We set up the store; we don't give tax advice.",
+        ],
+      },
+      {
+        heading: "Privacy, accessibility and licences",
+        paragraphs: [
+          "Privacy and accessibility rules change over time and differ between states. Every site we build includes a clear privacy policy and follows common accessibility practice, such as readable text, descriptive image text and keyboard-friendly menus. If your trade is licensed in Georgia, we can show your licence details on the site when you give them to us. We can't give legal advice, so check with your lawyer if you're unsure whether a rule applies to you.",
+        ],
+      },
+      {
+        heading: "Prices in US dollars",
+        bullets: [
+          "Starter Website: from $300",
+          "Business Website: from $899",
+          "Online Store: from $1,250",
+          "Website Redesign: from $300",
+          "Care Plan: from $99 a month",
+        ],
+      },
+      {
+        heading: "How it works",
+        paragraphs: [
+          "Start with a free website audit or a short call. We agree what the website needs, send a fixed quote, show you a design draft to approve, then build, test and launch it. You own your website, your domain and your accounts.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does a website cost in Georgia?",
+        a: "Our websites start from $300 for a starter site and $899 for a full business website. Online stores start from $1,250. You get a fixed quote before work starts.",
+      },
+      {
+        q: "Do you have an office in Georgia?",
+        a: "No. We're a remote team and work with Georgia businesses online, with calls scheduled in Eastern time.",
+      },
+      {
+        q: "Can you build a website for my Atlanta business?",
+        a: "Yes. We build service pages, set up on-page SEO and help you connect your website to your Google Business Profile so customers in Atlanta can find and contact you.",
+      },
+      {
+        q: "Can you build a booking or events website for a Savannah tourism business?",
+        a: "Yes. We can add galleries, visitor information and a booking or enquiry form, and connect an online booking tool if you use one.",
+      },
+      {
+        q: "How long does it take to build a website?",
+        a: "Most small business websites take 2 to 6 weeks, depending on the number of pages, the features and how quickly your text and photos are ready.",
+      },
+      {
+        q: "Can I see a design before I pay?",
+        a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
+      },
+    ],
+    related: ["/web-design-usa", "/industries/contractor-web-design", "/services/small-business-web-design", "/pricing"],
+  },
 ];

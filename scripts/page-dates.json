@@ -172,7 +172,7 @@
   "date": "2026-11-23"
  },
  "/platforms": {
-  "hash": "c17d19f4a7f56aec",
+  "hash": "fefa93b67558a2b3",
   "date": "2026-11-24"
  },
  "/portfolio": {
@@ -192,7 +192,7 @@
   "date": "2026-11-14"
  },
  "/services": {
-  "hash": "e02535746c9f8306",
+  "hash": "0ce23492e20b8307",
   "date": "2026-11-24"
  },
  "/services/backend-development": {
@@ -212,8 +212,8 @@
   "date": "2026-11-19"
  },
  "/services/ecommerce-web-design": {
-  "hash": "bf8fd3c15688ca83",
-  "date": "2026-11-17"
+  "hash": "641dca6c536e69a0",
+  "date": "2026-11-24"
  },
  "/services/enterprise-web-development": {
   "hash": "6206cfa57d49f1ef",
@@ -256,12 +256,12 @@
   "date": "2026-11-19"
  },
  "/services/shopify-website-design": {
-  "hash": "5cbfe5071448e0f1",
-  "date": "2026-11-19"
+  "hash": "153fe5c9de537036",
+  "date": "2026-11-24"
  },
  "/services/small-business-web-design": {
-  "hash": "76eb9191c9c5ca47",
-  "date": "2026-11-17"
+  "hash": "de004ebbaa1a40a2",
+  "date": "2026-11-24"
  },
  "/services/squarespace-web-design": {
   "hash": "e40953faf39fb424",
@@ -280,8 +280,8 @@
   "date": "2026-11-23"
  },
  "/services/website-redesign": {
-  "hash": "b080248edab9cf43",
-  "date": "2026-11-17"
+  "hash": "e653944f8b7b17df",
+  "date": "2026-11-24"
  },
  "/services/wix-web-designer": {
   "hash": "3fd683f2ad6bc0ec",
@@ -323,6 +323,10 @@
   "hash": "ba1ea04dd50ed514",
   "date": "2026-11-24"
  },
+ "/web-design-georgia": {
+  "hash": "6d54ca269faed8f1",
+  "date": "2026-11-24"
+ },
  "/web-design-illinois": {
   "hash": "af87b9847993b977",
   "date": "2026-11-24"
@@ -356,7 +360,7 @@
   "date": "2026-11-23"
  },
  "/web-design-usa": {
-  "hash": "d09b2b405780ecb0",
+  "hash": "d93f0e2fbcfd86c6",
   "date": "2026-11-24"
  },
  "/web-design-vancouver": {

@@ -75,7 +75,7 @@ export const locationPages: ContentPageData[] = [
         a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
       },
     ],
-    related: ["/web-design-california", "/web-design-texas", "/web-design-florida", "/web-design-new-york", "/web-design-illinois", "/web-design-new-jersey", "/web-design-colorado", "/web-design-virginia", "/web-design-philadelphia", "/pricing", "/services/small-business-web-design", "/blog/small-business-website-cost"],
+    related: ["/web-design-california", "/web-design-texas", "/web-design-florida", "/web-design-new-york", "/web-design-illinois", "/web-design-new-jersey", "/web-design-colorado", "/web-design-virginia", "/web-design-georgia", "/web-design-philadelphia", "/pricing", "/services/small-business-web-design", "/blog/small-business-website-cost"],
   },
   {
     path: "/web-design-uk",
