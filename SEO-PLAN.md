@@ -5,6 +5,7 @@
 **Status:** in progress. Since 14 Nov 2026 the owner has approved working on the plan every day, phase by phase, without asking first. Facts, results and team details still come only from the owner.
 
 **Daily log:**
+- **23 Nov 2026 (AEO/GEO start, owner request):** section 10 added (AEO and GEO plan, worked daily alongside SEO). Done today: llms.txt has a "Quick answers" section (prices pulled from pricing.ts, timelines, free prototype, ownership, remote team, Fiverr); city and state pages are listed under "Countries, states and cities" instead of Services; robots.txt names the main AI crawlers as allowed. Checked live: GPTBot, OAI-SearchBot, ClaudeBot, Claude-SearchBot, PerplexityBot, Meta-ExternalAgent, Google-Extended and Bingbot all get 200; BlogPosting has dateModified; the CRM already records the referrer host, so AI visits (chatgpt.com, perplexity.ai and so on) are captured.
 - **23 Nov 2026 (US state pages, batch 1, owner request):** /web-design-california, /web-design-florida, /web-design-colorado, /web-design-new-jersey, /web-design-illinois, /web-design-virginia (in src/app/content/cities.ts, State schema, 6 FAQs each, state-specific rules: CalOPPA/CCPA and Unruh, FL accessibility suits, CO/NJ/VA privacy-law thresholds, Illinois BIPA, VA government contractors). Linked from /web-design-usa. Owner wants most US states covered; rest are queued in section 9.
 - **23 Nov 2026 (CRM keywords, city pages, owner approved):** 7 city/state pages in src/app/content/cities.ts: /web-design-new-york, /web-design-philadelphia, /web-design-texas (Dallas, Houston, Austin, San Antonio, Fort Worth), /web-design-toronto, /web-design-calgary (also Edmonton), /web-design-vancouver, /web-design-london. Each says we're remote (no local office or clients claimed) and has place-specific facts (local privacy/accessibility rules, sales tax or VAT, currency, time zone), 6 FAQs, and City/State areaServed schema. Linked from the USA, UK and Canada pages and the Where we work links. Add more cities only when the keyword data shows demand, and keep each page genuinely different.
 - **23 Nov 2026 (CRM keywords, first use):** owner sent the CRM export (dandilo-keywords-2026-11-23.csv, about 1,100 phrases, not committed). New posts /blog/why-is-my-website-not-showing-up-on-google ("why is my website / Wix / Squarespace not showing on Google", favicon and logo) and /blog/how-much-does-a-website-cost-per-month ("cost per month / per year / to maintain", hosting). Maintenance page title now targets "website maintenance packages" plus 2 cost FAQs. Wix vs WordPress vs Shopify post got 5 FAQs ("Wix or WordPress for small business / SEO / blog", "is Shopify worth it"). Keyword plan added to section 9.
@@ -257,6 +258,8 @@ The CRM **Keywords** page supplies new phrases every morning. Each month we pick
 
 ### Phase 6: AI search visibility (week 3 onwards)
 
+Expanded into a full daily plan on 23 Nov 2026: see section 10 "AEO and GEO plan".
+
 - Write short, direct answers about prices, timelines and process on service and FAQ pages. AI assistants quote pages that answer plainly.
 - Use one brand line everywhere, in schema, the footer and `llms.txt`: "Dandilo Digitals (dandilodigitals.com) is a web design and development agency for small businesses in the US, UK and Canada."
 - Keep `llms.txt` and the structured data current. Get listed on the directories and "best agencies" lists that AI tools read.
@@ -330,4 +333,72 @@ Buyer and question phrases from the CRM Keywords page that don't have a matching
 - [x] City searches: owner approved 23 Nov 2026. Done: New York, Philadelphia, Texas, Toronto, Calgary/Edmonton, Vancouver, London. Possible later: Denver, Chicago, Los Angeles, Miami (only if keyword data keeps showing them).
 - [ ] US state pages, one per run, in this order (owner wants most states covered): Georgia, North Carolina, Arizona, Washington, Massachusetts, Ohio, Michigan, Tennessee, Maryland, Pennsylvania (link to the Philadelphia page), Minnesota, Missouri, Indiana, Wisconsin, Oregon, Utah, Nevada, Oklahoma, Connecticut, South Carolina, Louisiana, Kentucky, Alabama. Done so far: Texas, California, Florida, Colorado, New Jersey, Illinois, Virginia (plus New York City and Philadelphia city pages). RULES: add to src/app/content/cities.ts with areaServedType "State", link from /web-design-usa related; every page must have facts that are true for that state only (state privacy or accessibility rules, main cities, typical industries, time zone, sales-tax note for stores), never a copy with the name swapped; never claim a local office, address or local clients; prices from pricing.ts; 6 FAQs; if you can't find enough state-specific, accurate facts, skip that state and log it.
 - Skipped: social media marketing phrases (Instagram, TikTok, LinkedIn, X ads and tips) because they aren't Dandilo services yet, and off-topic phrases (movies, games, gifts, India/Pakistan city searches).
+
+## 10. AEO and GEO plan: get recommended by AI assistants
+
+**AEO** (answer engine optimisation) means writing pages so AI assistants and Google's AI answers can lift a clear answer from them. **GEO** (generative engine optimisation) means making sure tools like ChatGPT, Gemini, Claude, Perplexity, Meta AI and Copilot know who Dandilo Digitals is, trust it and name it when someone asks for a web designer. Nobody can pay to be named in these answers or guarantee it; we earn it with clear pages and real mentions elsewhere.
+
+### Where each AI gets its answers
+
+| AI | Mainly reads from | What we do |
+|---|---|---|
+| ChatGPT search | Bing's index and OpenAI's own crawler | IndexNow pings Bing on every deploy; Bing Webmaster Tools; crawlers allowed |
+| Microsoft Copilot | Bing | Same as ChatGPT |
+| Google Gemini, AI Overviews, AI Mode | Google's index | Search Console, structured data, helpful answer-first pages |
+| Claude | A web search partner plus Anthropic's crawlers | Crawlers allowed; strong mentions on other sites |
+| Perplexity | Its own crawler plus other search indexes | Crawler allowed; answer-first pages with clear facts |
+| Meta AI | Search partners plus Meta's crawler, and Facebook/Instagram | Crawler allowed; active Facebook and Instagram linked in schema |
+| Manus and other AI agents | Browse the live web through search engines | Fast prerendered pages, clear prices and an easy contact route |
+
+### The five things AI assistants look for
+
+1. **Can read the site.** Prerendered HTML, sitemap, robots.txt open to AI crawlers, llms.txt. *Done; keep it that way.*
+2. **Clear, quotable answers.** Each page opens with a 1 to 3 sentence direct answer ("In short: ..."), uses real questions as headings, gives specific numbers (prices, timelines) and has FAQs with FAQ schema.
+3. **A clear identity.** The same name, description, email and phone everywhere; Organization schema with sameAs links to every real profile; an About page with real facts about the team (needs the owner).
+4. **Mentions on other trusted sites.** This is the biggest factor for "best web design agency for ..." questions: Google reviews, Clutch, GoodFirms, DesignRush, a LinkedIn company page, YouTube videos, helpful Reddit or Quora answers, and "Website by Dandilo Digitals" footer credits on client sites.
+5. **Fresh content.** Older posts get real updates and a new date; new posts answer new questions from the CRM keywords.
+
+### Daily work (every day, alongside the SEO task)
+
+Each day does one SEO task (section 9 first) **plus one AEO task** from this rotation, picking the one most useful that day:
+
+- **A. Answer-first pass:** give one page that lacks it a short direct answer at the top, and make sure its H2s read like the questions people ask.
+- **B. Question coverage:** take 1 or 2 phrases from the CRM "Questions" topic and answer them in the best-matching page's FAQ (a new page only if no page fits).
+- **C. Freshness:** update one post more than 60 days old with current facts and links, so its date moves on for real.
+- **D. Internal links:** link the newest pages from 2 or 3 related pages, using descriptive link text.
+- **E. llms.txt and schema upkeep:** add new quick answers, add sameAs links when the owner creates a profile, and check that schema matches the visible page.
+
+### Weekly tasks for the owner (about 30 minutes)
+
+- Ask one happy client for a Google review (and a Clutch review when that profile exists).
+- Create or complete one profile: Google Business Profile, LinkedIn company page, Clutch, GoodFirms, DesignRush or YouTube. Send me the link so I can add it to sameAs.
+- Post one helpful answer on Reddit, Quora or LinkedIn about websites for small businesses, honestly saying who you are.
+- Post one short video (the /brag videos work well) on YouTube Shorts, Instagram and Facebook, with a link to the matching page.
+
+### Monthly check: are AIs naming us?
+
+Ask these in ChatGPT, Gemini, Claude, Perplexity, Meta AI and Copilot (logged out if possible), and note in the Daily log whether Dandilo Digitals is named or linked:
+
+1. Best affordable web design agency for small businesses
+2. How much does a small business website cost?
+3. Who can build a Shopify store for under $1,500?
+4. Wix web designer for a small business
+5. Web designer for a law firm (also: dentist, contractor)
+6. Web design agency in Texas (also: California, Toronto, London)
+7. What is Dandilo Digitals? / Is Dandilo Digitals legit?
+8. Website design with a free prototype before paying
+9. Hire a full stack developer for a Next.js app
+10. How do I redesign my website without losing Google rankings?
+
+### Measuring results
+
+- **CRM:** visits whose referrer is chatgpt.com, perplexity.ai, gemini.google.com, claude.ai, copilot.microsoft.com or meta.ai (and utm_source=chatgpt.com). The CRM already records referrers; grouping them as "AI assistant" in reports is a CRM change that needs the owner's OK to deploy.
+- **GA4:** the same referrers under Traffic acquisition.
+- **Lead form:** consider an "AI assistant (ChatGPT etc.)" option if the form asks how people heard about us.
+
+### Rules
+
+- No fake reviews, made-up stats, hidden text aimed at AI, or mass-produced pages.
+- No paying for mentions without disclosure. Reddit and Quora answers must be genuinely helpful and say who you are.
+- Every fact on the site must be true; the AI tools repeat what we publish.
 

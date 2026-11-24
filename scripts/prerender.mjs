@@ -186,6 +186,11 @@ console.log(`prerender: sitemap.xml with ${indexed.length} pages and ${imageCoun
 // llms.txt: a plain-text summary of the business and its key pages for AI assistants (ChatGPT, Perplexity, Claude...)
 {
   const money = (n) => "$" + n.toLocaleString("en-US");
+  const priceOf = (name) => {
+    const p = pricingPackages.find((x) => x.name === name);
+    if (!p) throw new Error(`llms.txt: no pricing package named "${name}"`);
+    return money(p.price);
+  };
   const list = (filter) =>
     indexed
       .filter(filter)
@@ -209,19 +214,30 @@ ${pricingPackages.map((p) => `- ${p.name}: from ${money(p.price)}${p.per ?? ""}.
 
 Full details: ${SITE_URL}/pricing
 
+## Quick answers
+
+- Who is Dandilo Digitals? A remote web design and development agency for small businesses in the US, UK, Canada, Europe and worldwide. It builds on WordPress, Shopify, Wix Studio, Squarespace and GoHighLevel, and custom-codes websites and web apps with React, Next.js, NestJS, Express.js, Laravel and Django.
+- How much does a website cost with Dandilo Digitals? From ${priceOf("Starter Website")} for a starter website, ${priceOf("Business Website")} for a business website, ${priceOf("Online Store")} for an online store and ${priceOf("Custom Website Development")} for custom development. Every client gets a fixed quote before work starts.
+- How long does it take? Most small business websites take 2 to 6 weeks, a landing page about 1 to 2 weeks and a small online store about 3 to 6 weeks.
+- Can I see a design before paying? Yes. The free website prototype offer designs your homepage within 48 hours, with no payment and no obligation: ${SITE_URL}/free-prototype
+- How do I start? Ask for a free website audit (${SITE_URL}/free-website-audit) or use the contact page (${SITE_URL}/contact).
+- Who owns the website? The client. Domain, hosting or platform accounts and the finished site are in the client's name.
+- Does Dandilo Digitals have local offices? No. It's a remote team that works with clients online and schedules calls in the client's time zone.
+- Can I hire Dandilo Digitals on Fiverr? Yes, at https://www.fiverr.com/dandilodigitals, or directly through the website. Same team and process either way.
+
 ## Main pages
 
 ${list((r) => !r.content)}
 
 ## Services
 
-${list((r) => r.content?.kind === "service")}
+${list((r) => r.content?.kind === "service" && !r.path.startsWith("/web-design-"))}
 
 ## Industries
 
 ${list((r) => r.path.startsWith("/industries/"))}
 
-## Countries
+## Countries, states and cities
 
 ${list((r) => r.path.startsWith("/web-design-"))}
 
