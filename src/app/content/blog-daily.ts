@@ -4,6 +4,109 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/facebook-page-vs-website",
+    kind: "blog",
+    label: "Facebook Page vs Website",
+    title: "Facebook Page vs Website: Which Does Your Business Need?",
+    description:
+      "Facebook page or website for your small business? What each does well, where a Facebook page or shop falls short, and when you need your own site. Starts at $300.",
+    eyebrow: "Guide",
+    h1: "Facebook Page vs Website: Which Does Your Small Business Need?",
+    date: "2026-11-24",
+    readMinutes: 6,
+    intro: [
+      "In short: a Facebook page is a good free start for staying in touch with people who already know you, but a website is the one place you own and control. Most small businesses do best with both: a website as the home base and Facebook as one way to send people to it.",
+      "Here's what each one does well, where a Facebook page or Facebook Shop falls short, and how to decide when it's time to get your own site.",
+    ],
+    sections: [
+      {
+        heading: "What a Facebook page does well",
+        bullets: [
+          "It's free and quick to set up, so you can be online the same day.",
+          "It's where many people already spend time, so friends and local customers can find and follow you.",
+          "Posts, photos, events and messages make it easy to share news and answer questions.",
+          "Reviews and recommendations can be seen right on the page.",
+        ],
+      },
+      {
+        heading: "Where a Facebook page falls short",
+        bullets: [
+          "You don't own it. Facebook sets the rules and can change the layout, reach or features, or close an account, at any time.",
+          "Your posts aren't guaranteed to reach your followers. Facebook decides who sees them, and reaching more people can mean paying for ads.",
+          "You can't fully control how your business looks. Every page uses Facebook's layout and carries Facebook's branding.",
+          "Search is limited. A website with a page for each service gives Google much more to show for searches like \"plumber in Dallas\" than a single Facebook page does.",
+          "Some customers don't use Facebook, or don't want to log in to read a page.",
+          "It's harder to build trust with a larger customer, such as a company or a council, that expects a proper business website.",
+        ],
+      },
+      {
+        heading: "What a website gives you that Facebook can't",
+        bullets: [
+          "Ownership: your domain, your content and your customer list belong to you.",
+          "A clear home for your services, prices, photos and contact details, laid out the way you choose.",
+          "Search visibility: separate pages for each service and area can show up in Google and in AI answers such as ChatGPT.",
+          "Ways to turn visitors into customers: quote forms, booking, and online payments.",
+          "Credibility: a website with your own domain and email address looks established.",
+        ],
+      },
+      {
+        heading: "Facebook Shop vs your own online store",
+        paragraphs: [
+          "A Facebook Shop can be a fast way to test whether people will buy, because the audience is already there. The trade-offs are the same as above: Facebook's rules, Facebook's fees and checkout options, and little control over the customer relationship.",
+          "Your own online store (on Shopify, WooCommerce or a custom build) lets you set your own branding, shipping, tax and discount rules and collect customer emails. Many sellers run both, using Facebook and Instagram to bring people to the store. If you're choosing a platform, see our comparison of Wix, WordPress and Shopify.",
+        ],
+      },
+      {
+        heading: "So which should you choose?",
+        bullets: [
+          "Just starting, with no budget: set up a Facebook page now, and add a simple website when you can.",
+          "Getting customers mostly through word of mouth: a Facebook page may be enough for a while, but a small website makes you easier to find and trust.",
+          "Want customers to find you in Google, book or pay online: you need a website.",
+          "Selling products: build your own store, and use Facebook to promote it.",
+          "Already have a website: keep your Facebook page active and link to it, and link back to your site from every post that needs more detail.",
+        ],
+      },
+      {
+        heading: "How to use both well",
+        bullets: [
+          "Put your website address in your Facebook page's About section and button.",
+          "Use the same business name, logo, phone number and email on both, so customers and Google see one consistent business.",
+          "Share new website pages, guides and offers on Facebook, with a link back.",
+          "Add a link to your Facebook page in your website footer.",
+        ],
+      },
+      {
+        heading: "What a website costs with Dandilo Digitals",
+        paragraphs: [
+          "A professional website doesn't have to be expensive. Our Starter website starts at $300, a Business website at $899, and an Online Store at $1,250. These are starting prices, and we'll give you a fixed quote before any work begins. We're a remote team working with small businesses in the US, UK and Canada, and we can show you a free prototype before you pay.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is a Facebook page enough for a small business?",
+        a: "It can be enough to start, especially if customers find you by word of mouth. But you don't own it, you can't control who sees your posts, and it shows up less in Google than a website. Most businesses benefit from having both.",
+      },
+      {
+        q: "Do I still need a website if I have a Facebook page?",
+        a: "If you want to be found in Google, take bookings or payments, or look established to bigger customers, yes. A website is also yours to keep if Facebook changes its rules or your account is closed.",
+      },
+      {
+        q: "Is a Facebook Shop better than my own website store?",
+        a: "A Facebook Shop is quick and free to try, but you follow Facebook's rules and have less control over branding and customer details. Your own store gives you more control. Many sellers use Facebook to bring people to their store.",
+      },
+      {
+        q: "Can I use my Facebook page as my website?",
+        a: "You can share the page link as your online presence, but it isn't your own domain, and it doesn't give you the search visibility or control a website does. A small website is a better home base.",
+      },
+      {
+        q: "How much does a small business website cost?",
+        a: "At Dandilo Digitals, a Starter website starts at $300 and a Business website at $899. An Online Store starts at $1,250. You'll get a fixed quote before work starts.",
+      },
+    ],
+    related: ["/blog/small-business-website-cost", "/blog/wix-vs-wordpress-vs-shopify", "/blog/google-business-profile-vs-website", "/services/small-business-web-design"],
+  },
+  {
     path: "/blog/why-is-my-website-not-showing-up-on-google",
     kind: "blog",
     label: "Why Is My Website Not Showing Up on Google?",
@@ -870,6 +973,6 @@ export const dailyPosts: ContentPageData[] = [
         a: "Yes. If you visit customers instead of having them come to you, like cleaners, plumbers and mobile services, you can hide your address and show a service area instead.",
       },
     ],
-    related: ["/blog/get-more-customers-from-your-website", "/blog/small-business-website-cost", "/services/small-business-web-design"],
+    related: ["/blog/get-more-customers-from-your-website", "/blog/small-business-website-cost", "/services/small-business-web-design", "/blog/facebook-page-vs-website"],
   },
 ];

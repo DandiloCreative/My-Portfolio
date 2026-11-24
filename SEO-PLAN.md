@@ -5,6 +5,7 @@
 **Status:** in progress. Since 14 Nov 2026 the owner has approved working on the plan every day, phase by phase, without asking first. Facts, results and team details still come only from the owner.
 
 **Daily log:**
+- **24 Nov 2026 (CRM keywords + AEO task D, internal links):** SEO: new post /blog/facebook-page-vs-website ("facebook page vs website", "facebook shop vs website"; 5 FAQs, Starter $300 / Business $899 / Online Store $1,250 from pricing.ts, cover image made). AEO: the new post is linked from /blog/google-business-profile-vs-website, /blog/get-more-customers-from-your-website and /blog/wix-vs-wordpress-vs-shopify (related links). Request indexing for the new URL. Nothing waiting on the owner.
 - **24 Nov 2026 (AEO task E, entity):** LinkedIn company page https://www.linkedin.com/company/145417818 added to Organization sameAs, llms.txt, footer icons and the mobile menu. Still to add when the owner creates them: Google Business Profile, Clutch, GoodFirms, DesignRush, YouTube.
 - **23 Nov 2026 (AEO/GEO start, owner request):** section 10 added (AEO and GEO plan, worked daily alongside SEO). Done today: llms.txt has a "Quick answers" section (prices pulled from pricing.ts, timelines, free prototype, ownership, remote team, Fiverr); city and state pages are listed under "Countries, states and cities" instead of Services; robots.txt names the main AI crawlers as allowed. Checked live: GPTBot, OAI-SearchBot, ClaudeBot, Claude-SearchBot, PerplexityBot, Meta-ExternalAgent, Google-Extended and Bingbot all get 200; BlogPosting has dateModified; the CRM already records the referrer host, so AI visits (chatgpt.com, perplexity.ai and so on) are captured.
 - **23 Nov 2026 (US state pages, batch 1, owner request):** /web-design-california, /web-design-florida, /web-design-colorado, /web-design-new-jersey, /web-design-illinois, /web-design-virginia (in src/app/content/cities.ts, State schema, 6 FAQs each, state-specific rules: CalOPPA/CCPA and Unruh, FL accessibility suits, CO/NJ/VA privacy-law thresholds, Illinois BIPA, VA government contractors). Linked from /web-design-usa. Owner wants most US states covered; rest are queued in section 9.
@@ -324,7 +325,7 @@ Buyer and question phrases from the CRM Keywords page that don't have a matching
 - [x] "how much does a website cost per month / per year / to maintain", hosting cost: /blog/how-much-does-a-website-cost-per-month (23 Nov)
 - [x] "website maintenance packages / cost per month": maintenance page title + FAQs (23 Nov)
 - [x] "wix or wordpress for small business / seo / blog", "is shopify worth it for a small business": FAQs on /blog/wix-vs-wordpress-vs-shopify (23 Nov)
-- [ ] "facebook page vs website (for small business)", "facebook shop vs website": new post
+- [x] "facebook page vs website (for small business)", "facebook shop vs website": /blog/facebook-page-vs-website (24 Nov)
 - [ ] "do i need a website for my business", "is it worth paying someone to build a website": new post
 - [ ] "is shopify worth it for a small business / in 2026": new post
 - [ ] "how do i get my business on google maps / listed on google / verified": check /blog/google-business-profile-vs-website covers it, else new guide
