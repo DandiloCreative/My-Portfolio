@@ -205,7 +205,7 @@ export const guidePosts: ContentPageData[] = [
         a: "It's fine as a start, but a free plan shows the builder's ads and address, which makes a business look less established. A paid plan with your own domain is the minimum for most businesses.",
       },
     ],
-    related: ["/blog/how-to-choose-a-web-designer", "/blog/wix-vs-wordpress-vs-shopify", "/blog/small-business-website-cost", "/services/small-business-web-design"],
+    related: ["/blog/how-to-choose-a-web-designer", "/blog/wix-vs-wordpress-vs-shopify", "/blog/small-business-website-cost", "/services/small-business-web-design", "/blog/do-i-need-a-website-for-my-business"],
   },
   {
     path: "/blog/small-business-website-hosting-and-email",

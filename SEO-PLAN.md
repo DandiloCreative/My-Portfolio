@@ -5,6 +5,7 @@
 **Status:** in progress. Since 14 Nov 2026 the owner has approved working on the plan every day, phase by phase, without asking first. Facts, results and team details still come only from the owner.
 
 **Daily log:**
+- **25 Nov 2026 (CRM keywords + AEO task D, internal links):** SEO: new post /blog/do-i-need-a-website-for-my-business ("do i need a website for my business", "is it worth paying someone to build a website"; answer-first intro, question H2s, 6 FAQs, Starter $300 / Business $899 / Online Store $1,250 from pricing.ts, timelines match the how-long post, cover image made). AEO: linked from /blog/website-builder-vs-web-designer, /blog/facebook-page-vs-website and /blog/small-business-website-cost. Request indexing for the new URL. Waiting on the owner: Google Business Profile link and review link, and the AdSense publisher ID (asked 24 Nov).
 - **24 Nov 2026 Blog:** How to Choose a Domain Name for Your Business (Checklist) (https://dandilodigitals.com/blog/how-to-choose-a-domain-name)
 - **24 Nov 2026 (US state page + AEO task A, answer-first):** SEO: new page /web-design-georgia (Atlanta, Savannah, Augusta, Columbus, Athens; State schema, 6 FAQs; sales-tax and licensing notes kept conservative, no claim of a state privacy law either way; linked from /web-design-usa). AEO: added a direct "In short:" answer (price, timeline, ownership, from pricing.ts) at the top of /services/small-business-web-design, /services/shopify-website-design, /services/ecommerce-web-design and /services/website-redesign. Freshness (C) skipped: every post is under 60 days old. Request indexing for /web-design-georgia. Nothing waiting on the owner.
 - **24 Nov 2026 (CRM keywords + AEO task D, internal links):** SEO: new post /blog/facebook-page-vs-website ("facebook page vs website", "facebook shop vs website"; 5 FAQs, Starter $300 / Business $899 / Online Store $1,250 from pricing.ts, cover image made). AEO: the new post is linked from /blog/google-business-profile-vs-website, /blog/get-more-customers-from-your-website and /blog/wix-vs-wordpress-vs-shopify (related links). Request indexing for the new URL. Nothing waiting on the owner.
@@ -328,7 +329,7 @@ Buyer and question phrases from the CRM Keywords page that don't have a matching
 - [x] "website maintenance packages / cost per month": maintenance page title + FAQs (23 Nov)
 - [x] "wix or wordpress for small business / seo / blog", "is shopify worth it for a small business": FAQs on /blog/wix-vs-wordpress-vs-shopify (23 Nov)
 - [x] "facebook page vs website (for small business)", "facebook shop vs website": /blog/facebook-page-vs-website (24 Nov)
-- [ ] "do i need a website for my business", "is it worth paying someone to build a website": new post
+- [x] "do i need a website for my business", "is it worth paying someone to build a website": /blog/do-i-need-a-website-for-my-business (25 Nov)
 - [ ] "is shopify worth it for a small business / in 2026": new post
 - [ ] "how do i get my business on google maps / listed on google / verified": check /blog/google-business-profile-vs-website covers it, else new guide
 - [ ] "website redesign cost", "website redesign proposal / rfp": new post or FAQs on the redesign page

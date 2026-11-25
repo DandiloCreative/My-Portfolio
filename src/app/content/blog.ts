@@ -497,7 +497,7 @@ export const blogPosts: ContentPageData[] = [
         a: "A typical small business website takes 2 to 6 weeks, depending on the number of pages, how quickly content is ready and how many rounds of changes are needed.",
       },
     ],
-    related: ["/pricing", "/services/small-business-web-design", "/services/website-redesign"],
+    related: ["/pricing", "/services/small-business-web-design", "/services/website-redesign", "/blog/do-i-need-a-website-for-my-business"],
   },
   {
     path: "/blog/wix-vs-wordpress-vs-shopify",

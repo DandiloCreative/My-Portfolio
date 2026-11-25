@@ -4,6 +4,121 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/do-i-need-a-website-for-my-business",
+    kind: "blog",
+    label: "Do I Need a Website for My Business?",
+    title: "Do I Need a Website for My Business? (Honest Answer)",
+    description:
+      "Do you need a website for your small business, and is it worth paying someone to build it? When a site pays for itself, when it can wait, and what it costs.",
+    eyebrow: "Guide",
+    h1: "Do I Need a Website for My Business, and Is It Worth Paying Someone to Build It?",
+    date: "2026-11-25",
+    readMinutes: 6,
+    intro: [
+      "In short: most small businesses need a website, because it's where customers check you out before they call, book or buy, and it's the one place online you own. Paying someone to build it is usually worth it when the site needs to bring in enquiries or sales; if you only need a simple online card and have time to learn, a DIY builder can do for now.",
+      "Here's how to tell which group you're in, what a website actually does for a small business, and what it costs.",
+    ],
+    sections: [
+      {
+        heading: "Why do most businesses need a website?",
+        bullets: [
+          "Customers look you up first. Even when someone hears about you by word of mouth, they usually search your name before they get in touch.",
+          "It shows up in Google and in AI answers. A page for each service and area gives search engines, and tools like ChatGPT, something to show when people search for what you do.",
+          "It works while you're busy. Prices, opening hours, photos and answers to common questions are there at any time of day.",
+          "You own it. Social media and directory profiles can change their rules or reach overnight; your website and domain stay yours.",
+          "It looks established. A proper website and a matching email address help you win bigger customers who expect them.",
+          "It turns visitors into customers, with quote forms, booking, WhatsApp buttons and online payments.",
+        ],
+      },
+      {
+        heading: "When can a website wait?",
+        paragraphs: [
+          "A website isn't the first thing every business needs. It can sensibly wait if:",
+        ],
+        bullets: [
+          "You're fully booked through referrals, and you don't want new customers right now.",
+          "You're still testing the idea and haven't settled on a name, prices or services.",
+          "All your work comes from one platform you're happy with, such as a marketplace, and you accept the risk of depending on it.",
+        ],
+      },
+      {
+        heading: "Isn't a Facebook page or Google Business Profile enough?",
+        paragraphs: [
+          "They're both worth having, and both are free. A Google Business Profile helps you show up on Google Maps, and a Facebook page keeps you in touch with people who already know you. But neither is yours, both look the same as every other business, and neither has room to explain your services properly. They work best when they point people to your website.",
+          "We compare them in more detail in Facebook Page vs Website and Google Business Profile vs Website.",
+        ],
+      },
+      {
+        heading: "Is it worth paying someone to build a website?",
+        paragraphs: [
+          "It's worth it when the website has a job to do. A simple way to check: think about what one new customer is worth to you. If a website brings in even one or two extra customers a year, a $300 to $900 website usually pays for itself.",
+          "Paying a professional tends to make sense when:",
+        ],
+        bullets: [
+          "You want customers to find you in Google, not just people who already know your name.",
+          "Your time is better spent running your business than learning a website builder.",
+          "You need features that are easy to get wrong, such as bookings, payments, an online store or forms that reach your inbox.",
+          "You've tried a DIY site and it isn't bringing in enquiries.",
+        ],
+      },
+      {
+        heading: "When is DIY good enough?",
+        bullets: [
+          "You only need a one-page online card with your contact details.",
+          "Your budget is close to zero right now.",
+          "You enjoy design and have a few weekends to learn Wix, Squarespace or a similar builder.",
+        ],
+        paragraphs: [
+          "Our Website Builder vs Web Designer guide compares the cost, time and results of each route. Many owners start with DIY and switch to a professional site once they're busy.",
+        ],
+      },
+      {
+        heading: "What should a small business website include?",
+        bullets: [
+          "A clear home page that says what you do, where, and for whom.",
+          "A page for each main service, with prices or a starting price where you can.",
+          "Photos of your real work, plus reviews from real customers.",
+          "An easy way to get in touch: phone, email, WhatsApp and a short form.",
+          "Basic SEO, a fast mobile layout, and your own domain.",
+        ],
+      },
+      {
+        heading: "How much does a small business website cost?",
+        paragraphs: [
+          "With Dandilo Digitals, a Starter website (up to 3 pages) starts at $300, a Business website (up to 7 pages) at $899, and an Online Store at $1,250. These are starting prices in US dollars, and you get a fixed quote before work starts. Hosting, your domain and any platform plan are paid to those providers, so the accounts stay in your name.",
+          "We're a remote team working with small businesses in the US, UK, Canada and Europe, and we can show you a free prototype before you pay.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do I need a website if I have a Google Business Profile?",
+        a: "Your Google Business Profile helps you show up on Google Maps, but it has little room to explain your services and you don't control it. A website gives Google and customers much more to go on. The two work best together.",
+      },
+      {
+        q: "Do I need a website if I get all my work from word of mouth?",
+        a: "Not always. But people who hear about you usually search your name before they call, and a simple website reassures them you're a real, established business.",
+      },
+      {
+        q: "Is it worth paying someone to build a website?",
+        a: "Usually, if the website needs to bring in enquiries or sales. If one or two extra customers a year cover the cost, a professionally built site pays for itself. If you only need an online card, a DIY builder can do for now.",
+      },
+      {
+        q: "Can I build my own business website?",
+        a: "Yes. Builders like Wix and Squarespace make it possible. Expect to spend several days on it, and take care with SEO settings, page speed and forms, which are easy to get wrong.",
+      },
+      {
+        q: "How much does it cost to have someone build a small business website?",
+        a: "Freelancers and small agencies usually charge $500 to $5,000. At Dandilo Digitals, websites start at $300 for a Starter site and $899 for a Business site, with a fixed quote before work starts.",
+      },
+      {
+        q: "How long does it take to get a small business website?",
+        a: "Most small business websites take 2 to 6 weeks. A simple Starter site can be ready in about 1 to 2 weeks, depending on how quickly the content and feedback come in.",
+      },
+    ],
+    related: ["/blog/website-builder-vs-web-designer", "/blog/small-business-website-cost", "/blog/facebook-page-vs-website", "/services/small-business-web-design"],
+  },
+  {
     path: "/blog/how-to-choose-a-domain-name",
     kind: "blog",
     label: "How to Choose a Domain Name",
@@ -208,7 +323,7 @@ export const dailyPosts: ContentPageData[] = [
         a: "At Dandilo Digitals, a Starter website starts at $300 and a Business website at $899. An Online Store starts at $1,250. You'll get a fixed quote before work starts.",
       },
     ],
-    related: ["/blog/small-business-website-cost", "/blog/wix-vs-wordpress-vs-shopify", "/blog/google-business-profile-vs-website", "/services/small-business-web-design"],
+    related: ["/blog/small-business-website-cost", "/blog/wix-vs-wordpress-vs-shopify", "/blog/google-business-profile-vs-website", "/services/small-business-web-design", "/blog/do-i-need-a-website-for-my-business"],
   },
   {
     path: "/blog/why-is-my-website-not-showing-up-on-google",
