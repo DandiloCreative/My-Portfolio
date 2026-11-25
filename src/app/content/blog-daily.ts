@@ -4,6 +4,117 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/restaurant-website-must-haves",
+    kind: "blog",
+    label: "Restaurant Website Must-Haves",
+    title: "What Your Restaurant Website Needs (Checklist)",
+    description:
+      "What should a restaurant website include? A plain checklist: menu, hours, booking, online ordering, photos, mobile speed and Google info, plus what to skip.",
+    eyebrow: "Checklist",
+    h1: "What Your Restaurant Website Needs to Bring in Diners",
+    date: "2026-11-25",
+    readMinutes: 6,
+    intro: [
+      "In short: a restaurant website has one job, which is to help a hungry person decide to visit or order in under a minute. That means a readable menu, correct opening hours, your address, a clear way to book or order, and a page that loads fast on a phone.",
+      "Most diners look you up on their phone, often on the way somewhere. If they can't find the menu or the hours quickly, they pick the next place. Here is a checklist of what to include, what to skip, and how to keep it all up to date.",
+    ],
+    sections: [
+      {
+        heading: "Put the basics where people can see them",
+        paragraphs: [
+          "Before anything else, the top of your home page should answer the questions people are really asking. Don't make them scroll or open a menu to find them.",
+        ],
+        bullets: [
+          "Your name, what kind of food you serve and the area you're in.",
+          "Opening hours, including holidays and any days you're closed.",
+          "Your full address with a map link, and a tap-to-call phone number.",
+          "One clear button: Book a table, Order online or View menu.",
+        ],
+      },
+      {
+        heading: "Show your menu as real text, not a PDF or a photo",
+        paragraphs: [
+          "A menu saved as a PDF or a photographed page is hard to read on a phone, slow to load, and Google can't read it as well as normal text. Put the menu on its own page as ordinary text with headings such as Starters, Mains and Desserts.",
+          "Include prices, and mark common allergens and dietary options such as vegetarian, vegan or gluten-free. Say if the menu changes seasonally and keep the page current. An outdated menu with wrong prices annoys diners more than having no menu at all.",
+        ],
+      },
+      {
+        heading: "Make booking or ordering simple",
+        paragraphs: [
+          "Decide what you want most: reservations, takeaway orders, delivery or walk-ins. Then make that the main button on every page.",
+        ],
+        bullets: [
+          "Reservations: use a booking form or a booking tool, and show how far ahead people can book. Large groups can usually be handled with a phone number or enquiry form.",
+          "Online ordering: check the fees. Third-party delivery apps usually charge a commission on each order, so ordering from your own site can leave you with more of the sale.",
+          "Walk-in places: lead with the menu, location and hours instead.",
+          "Whatever you choose, test it on your own phone every few weeks.",
+        ],
+      },
+      {
+        heading: "Use your own photos",
+        paragraphs: [
+          "Photos of your real food, your room and your team do more than stock images. They show people what to expect. You don't need a professional shoot to start; clear, well-lit phone photos of your best dishes are fine, and you can upgrade later.",
+          "Compress images so pages stay fast, and add short descriptions (alt text) such as 'Margherita pizza with fresh basil' so the images work for screen readers and search.",
+        ],
+      },
+      {
+        heading: "Keep your Google information matching",
+        paragraphs: [
+          "Many diners find you through Google Maps and your Google Business Profile before they ever reach your website. Make sure your name, address, phone number and hours are identical in both places. If they differ, customers get confused and may turn up at the wrong time.",
+          "Link your website from your profile, and your menu and booking links too, if the profile allows it. Our guide on Google Business Profile vs a website explains how the two work together.",
+        ],
+      },
+      {
+        heading: "Make it fast and easy on a phone",
+        bullets: [
+          "Use large tap-friendly buttons, and readable text without zooming.",
+          "Avoid auto-playing music or heavy background videos that slow the page.",
+          "Test the site on mobile data, not only on your office wifi.",
+          "Don't hide the menu or booking behind pop-ups.",
+        ],
+      },
+      {
+        heading: "What to skip",
+        bullets: [
+          "Long welcome speeches before the menu.",
+          "Sliders that rotate through ten images and slow the page.",
+          "A menu that only exists as a downloadable file.",
+          "Old event pages and expired offers that are still live.",
+        ],
+      },
+      {
+        heading: "Want a restaurant website that fills tables?",
+        paragraphs: [
+          "If your current site is hard to read on a phone, or your menu and hours are out of date, we can help. Dandilo Digitals builds websites for small businesses in the US, UK and Canada, with a Business site from $899 and a fixed quote before we start.",
+          "Not sure what's holding your site back? Ask for a free website audit and we'll point out the quick wins. You can also get in touch to talk through your restaurant's needs.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Does a restaurant need its own website if it has a Facebook page?",
+        a: "It helps. A website is yours to control, shows up in Google searches, and can hold your menu, booking and ordering in one place. Facebook is useful for updates but you don't own it. Many owners use both.",
+      },
+      {
+        q: "What pages should a restaurant website have?",
+        a: "At minimum: Home, Menu, Contact or Find us (with hours and a map), and Book or Order. Optional extras include About, Private events, Gallery and Jobs.",
+      },
+      {
+        q: "Should I put my menu on my website as a PDF?",
+        a: "It's better to use normal text on a web page. PDFs are slow and awkward on phones, and harder for Google to read. If you keep a PDF for printing, offer it as an extra, not the only version.",
+      },
+      {
+        q: "Can I take online orders without paying delivery app fees?",
+        a: "Yes. You can add ordering to your own website through an ordering tool or an online store. Check each tool's monthly fee and payment processing fees first, and compare them with the commission you pay on delivery apps.",
+      },
+      {
+        q: "How much does a restaurant website cost?",
+        a: "Prices vary widely. A simple restaurant site is typically a few hundred to a few thousand dollars. At Dandilo Digitals, the Business package is $899 and an Online Store, for selling online, is $1,250.",
+      },
+    ],
+    related: ["/industries/restaurant-web-design", "/blog/google-business-profile-vs-website", "/pricing"],
+  },
+  {
     path: "/blog/is-shopify-worth-it",
     kind: "blog",
     label: "Is Shopify Worth It?",
