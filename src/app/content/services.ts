@@ -143,7 +143,7 @@ export const servicePages: ContentPageData[] = [
         a: "Yes. Our care plans start from $99 a month and cover updates, backups, security monitoring, speed checks and small changes. They run month to month.",
       },
     ],
-    related: ["/services/ecommerce-web-design", "/blog/shopify-vs-woocommerce", "/blog/wix-vs-wordpress-vs-shopify"],
+    related: ["/services/ecommerce-web-design", "/blog/shopify-vs-woocommerce", "/blog/wix-vs-wordpress-vs-shopify", "/blog/is-shopify-worth-it"],
   },
   {
     path: "/services/shopify-website-design",
@@ -206,7 +206,7 @@ export const servicePages: ContentPageData[] = [
         a: "Yes. Your Shopify account, products, customers and domain are in your name. We work on your store as a collaborator, so you stay in control.",
       },
     ],
-    related: ["/blog/shopify-website-cost", "/services/ecommerce-web-design", "/blog/shopify-vs-woocommerce", "/portfolio"],
+    related: ["/blog/shopify-website-cost", "/services/ecommerce-web-design", "/blog/shopify-vs-woocommerce", "/blog/is-shopify-worth-it", "/portfolio"],
   },
   {
     path: "/services/wix-web-designer",

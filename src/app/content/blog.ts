@@ -586,7 +586,7 @@ export const blogPosts: ContentPageData[] = [
         a: "Yes, if selling products online is a main part of your business. Shopify handles checkout, payments, stock and security for a monthly fee. If you only sell a few items, a Wix or WordPress store may cost less.",
       },
     ],
-    related: ["/services/wix-web-designer", "/services/wordpress-web-design", "/services/shopify-website-design", "/blog/facebook-page-vs-website"],
+    related: ["/services/wix-web-designer", "/services/wordpress-web-design", "/services/shopify-website-design", "/blog/facebook-page-vs-website", "/blog/is-shopify-worth-it"],
   },
   {
     path: "/blog/signs-your-website-is-losing-customers",

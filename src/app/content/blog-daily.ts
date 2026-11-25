@@ -4,6 +4,108 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/is-shopify-worth-it",
+    kind: "blog",
+    label: "Is Shopify Worth It?",
+    title: "Is Shopify Worth It for a Small Business? Costs and Alternatives",
+    description:
+      "Is Shopify worth it for a small business in 2026? What it really costs a month, who it suits, who should pick WooCommerce, Wix or Squarespace instead.",
+    eyebrow: "Guide",
+    h1: "Is Shopify Worth It for a Small Business?",
+    date: "2026-11-25",
+    readMinutes: 6,
+    intro: [
+      "In short: Shopify is worth it if selling products online is a main part of your business and you want checkout, payments, stock and security handled for you. It's probably not worth it if you sell only a handful of items, or you mainly offer services and want a few products on the side.",
+      "Plans start at roughly $39 a month, and most real stores spend more once apps and payment fees are added. Here's what you get, what it costs, and when another platform is the better choice.",
+    ],
+    sections: [
+      {
+        heading: "What do you get with Shopify?",
+        bullets: [
+          "Hosting, security and updates are included, so there's nothing to patch or renew separately.",
+          "A checkout that customers already know and trust, with card payments and other payment methods.",
+          "Product, stock, order and customer management in one dashboard.",
+          "Shipping, discount codes, gift cards and abandoned-cart emails built in or available as apps.",
+          "Selling across your website, social media and marketplaces from the same product list.",
+        ],
+      },
+      {
+        heading: "How much does Shopify really cost per month?",
+        paragraphs: [
+          "Shopify's own plans start at roughly $39 a month for Basic, about $105 for Grow and about $399 for Advanced, with a discount of roughly 25% if you pay yearly. Prices change, so check Shopify's pricing page before you sign up.",
+          "The plan is only part of the bill. A typical small store with a few apps spends about $60 to $150 a month in total, plus payment fees on each sale. Your domain name is a separate yearly cost.",
+        ],
+        bullets: [
+          "Plan: the monthly Shopify subscription.",
+          "Apps: reviews, email, subscriptions and similar tools often have their own monthly fee.",
+          "Payment fees: charged on each sale by the payment provider.",
+          "Theme: many good themes are free, and premium ones are usually a one-off cost.",
+          "Setup: your own time, or a one-off fee if you hire someone.",
+        ],
+      },
+      {
+        heading: "When is Shopify worth it?",
+        bullets: [
+          "Products are your main income, and you expect orders every week.",
+          "You have more than a few products, or products with sizes, colours or other options.",
+          "You want to stop worrying about hosting, security and checkout.",
+          "You plan to grow, sell on social media or add more products over time.",
+          "You'd rather pay a monthly fee than manage a store yourself.",
+        ],
+      },
+      {
+        heading: "When is Shopify not worth it?",
+        bullets: [
+          "You sell fewer than about 10 items, or take enquiries and bookings rather than online payments. A simple site with a payment link may be enough.",
+          "You already have a WordPress site you're happy with and want to add a store to it. WooCommerce may fit better.",
+          "You're a service business that sells one or two products on the side. Wix or Squarespace can handle that for less.",
+          "You have no budget for the monthly cost until your first sales come in.",
+        ],
+      },
+      {
+        heading: "Shopify vs WooCommerce, Wix and Squarespace",
+        paragraphs: [
+          "Shopify is usually the simplest way to run a store, because hosting and security are handled for you. WooCommerce (a free WordPress plugin) gives more flexibility and can cost less per month, but you look after hosting, updates and security, or pay someone to.",
+          "Wix and Squarespace both have online store features that suit small catalogues and businesses that are mainly about services or content. If your store is the business, Shopify is normally the stronger choice. Our Wix vs WordPress vs Shopify guide compares all three in more detail.",
+        ],
+      },
+      {
+        heading: "Is it worth hiring someone to set up Shopify?",
+        paragraphs: [
+          "You can set up a basic Shopify store yourself in a few days. Hiring someone is worth considering if you want a design that doesn't look like every other theme, product pages that sell, or help moving products from another platform.",
+          "At Dandilo Digitals, an Online Store starts at $1,250 with a fixed quote and a design you approve before we build. Your Shopify plan is paid to Shopify, and the store account stays in your name. We're a remote team working with small businesses in the US, UK and Canada, and we'll tell you honestly if Shopify isn't the right fit.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is Shopify worth it for a small business in 2026?",
+        a: "Yes, if selling products online is a main part of your business. You pay a monthly fee, and in return checkout, hosting, security and stock tools are handled for you. If you only sell a few items, a cheaper option may do.",
+      },
+      {
+        q: "How much does Shopify cost per month?",
+        a: "Plans start at roughly $39 a month (Basic), about $105 for Grow and about $399 for Advanced, with a discount of roughly 25% for yearly billing. A store with a few apps usually spends about $60 to $150 a month in total, plus payment fees. Check Shopify's site for current prices.",
+      },
+      {
+        q: "Is Shopify cheaper than WooCommerce?",
+        a: "Not always. WooCommerce is free, but you pay for hosting and look after updates and security. Shopify costs more per month but includes those. The cheaper option depends on your store size and how much time you have.",
+      },
+      {
+        q: "Can I start on Shopify and move later?",
+        a: "Yes. Products and customers can be exported and moved to another platform, though design and some apps need to be rebuilt. It's easier to choose well at the start.",
+      },
+      {
+        q: "How much does it cost to have someone build a Shopify store?",
+        a: "Shopify designers usually charge from $1,500 to $10,000 or more, depending on the number of products and custom features. At Dandilo Digitals, an Online Store starts from $1,250, with a fixed quote before work starts.",
+      },
+      {
+        q: "Do I own my Shopify store if a designer builds it?",
+        a: "You should. Your Shopify account, products, customers and domain ought to be in your name, with the designer added as a collaborator. At Dandilo Digitals, that is how we work.",
+      },
+    ],
+    related: ["/services/shopify-website-design", "/blog/wix-vs-wordpress-vs-shopify", "/services/ecommerce-web-design", "/blog/do-i-need-a-website-for-my-business"],
+  },
+  {
     path: "/blog/do-i-need-a-website-for-my-business",
     kind: "blog",
     label: "Do I Need a Website for My Business?",
