@@ -4,7 +4,7 @@
   "date": "2026-11-18"
  },
  "/blog": {
-  "hash": "b42d19857b2c2868",
+  "hash": "18d99cdc6e9b4f9b",
   "date": "2026-11-26"
  },
  "/blog/canada-small-business-website-checklist": {
@@ -124,8 +124,12 @@
   "date": "2026-11-03"
  },
  "/blog/website-redesign-checklist": {
-  "hash": "4010cd3e85485dbe",
-  "date": "2026-11-02"
+  "hash": "bff96bac5216b0e2",
+  "date": "2026-11-26"
+ },
+ "/blog/website-redesign-cost": {
+  "hash": "48a4c70a14df8ba7",
+  "date": "2026-11-26"
  },
  "/blog/why-is-my-website-not-showing-up-on-google": {
   "hash": "58580f9cfc8d2b6b",
@@ -232,8 +236,8 @@
   "date": "2026-11-19"
  },
  "/services/ecommerce-web-design": {
-  "hash": "641dca6c536e69a0",
-  "date": "2026-11-24"
+  "hash": "ac7d92579baa2355",
+  "date": "2026-11-26"
  },
  "/services/enterprise-web-development": {
   "hash": "6206cfa57d49f1ef",
@@ -256,8 +260,8 @@
   "date": "2026-11-19"
  },
  "/services/landing-page-design": {
-  "hash": "f6580439554d57f0",
-  "date": "2026-11-18"
+  "hash": "9e25470d4a4cde08",
+  "date": "2026-11-26"
  },
  "/services/laravel-development": {
   "hash": "e5b7a0f9d0895251",
@@ -300,8 +304,8 @@
   "date": "2026-11-23"
  },
  "/services/website-redesign": {
-  "hash": "e653944f8b7b17df",
-  "date": "2026-11-24"
+  "hash": "647a695b079040db",
+  "date": "2026-11-26"
  },
  "/services/wix-web-designer": {
   "hash": "3fd683f2ad6bc0ec",

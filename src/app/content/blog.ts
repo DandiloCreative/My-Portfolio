@@ -231,7 +231,7 @@ export const blogPosts: ContentPageData[] = [
         a: "Usually every 3 to 5 years, or sooner if your site is slow, hard to use on phones, or no longer matches your business.",
       },
     ],
-    related: ["/services/website-redesign", "/blog/signs-your-website-is-losing-customers", "/contact"],
+    related: ["/blog/website-redesign-cost", "/services/website-redesign", "/blog/signs-your-website-is-losing-customers", "/contact"],
   },
   {
     path: "/blog/get-more-customers-from-your-website",

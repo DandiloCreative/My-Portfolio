@@ -324,6 +324,10 @@ export const servicePages: ContentPageData[] = [
         a: "Our online stores start from $1,250. The final price depends on the platform, the number of products and any custom features. You get a fixed quote before work starts.",
       },
       {
+        q: "How much does an ecommerce website cost?",
+        a: "Our online stores start from $1,250. Across the industry, online stores usually cost about $1,500 to $10,000+ depending on the number of products and custom features, and platform fees (such as a Shopify plan) are paid on top. We give a fixed quote before work starts.",
+      },
+      {
         q: "How long does it take to build an online store?",
         a: "A small online store usually takes about 3 to 6 weeks. The biggest factor is how ready your product photos, descriptions and prices are.",
       },
@@ -401,7 +405,7 @@ export const servicePages: ContentPageData[] = [
         a: "Ask for a free website audit. We'll look at your current site's design, speed, mobile experience and search setup, and tell you honestly whether a redesign or a rebuild makes more sense.",
       },
     ],
-    related: ["/blog/website-redesign-checklist", "/blog/signs-your-website-is-losing-customers", "/contact"],
+    related: ["/blog/website-redesign-cost", "/blog/website-redesign-checklist", "/blog/signs-your-website-is-losing-customers", "/contact"],
   },
   {
     path: "/services/landing-page-design",
@@ -461,6 +465,14 @@ export const servicePages: ContentPageData[] = [
       {
         q: "Why not just send ad traffic to my homepage?",
         a: "A homepage has many links and messages. A landing page matches the ad the visitor clicked and gives them one next step, which usually turns more of your paid clicks into enquiries.",
+      },
+      {
+        q: "How much does landing page design cost?",
+        a: "The price depends on the length of the page, how much writing and design is needed and any tracking or form setup. We give a fixed quote before work starts. If you want a full website as well, our Starter Website starts from $300.",
+      },
+      {
+        q: "Do I need a landing page or a full website?",
+        a: "If you run ads or promote one offer, a landing page usually turns more clicks into leads. If people need to learn about your business or services, a full website is better. Many businesses start with a landing page and add pages later.",
       },
       {
         q: "How long does a landing page take?",

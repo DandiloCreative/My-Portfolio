@@ -4,6 +4,117 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/website-redesign-cost",
+    kind: "blog",
+    label: "Website Redesign Cost",
+    title: "How Much Does a Website Redesign Cost? (2026 Guide)",
+    description:
+      "How much does a website redesign cost for a small business? What changes the price, what's included, redesign vs rebuild, and how to ask for a proposal or RFP.",
+    eyebrow: "Guide",
+    h1: "How Much Does a Website Redesign Cost for a Small Business?",
+    date: "2026-11-26",
+    readMinutes: 6,
+    intro: [
+      "In short: a small business website redesign can cost anywhere from a few hundred dollars to several thousand, depending on the number of pages, the platform and any new features. At Dandilo Digitals, redesigns start from $300, with a fixed quote before work begins. Freelancers and larger agencies usually charge more for bigger sites.",
+      "This guide explains what drives the price, what a redesign should include, when a rebuild makes more sense, and what to put in a redesign proposal or request for proposal (RFP) so quotes are easy to compare.",
+    ],
+    sections: [
+      {
+        heading: "What does a website redesign cost?",
+        paragraphs: [
+          "There's no single price, because a five-page brochure site and a 200-product store are very different jobs. As a rough guide for small businesses in US dollars: a redesign of a small site on a platform you already use is at the low end; a larger site with new features, new platform or lots of content to move is at the high end.",
+          "Our own pricing is public. A Website Redesign starts from $300, a Business Website (up to 7 pages) from $899, an Online Store from $1,250, and custom development from $2,500. These are starting prices, and the final quote depends on your site.",
+          "For comparison, our guide to small business website costs shows freelancers usually charge about $500 to $5,000 for a small business site, and agencies often $3,000 to $15,000 or more. Always compare what's included, not just the headline number.",
+        ],
+      },
+      {
+        heading: "What changes the price of a redesign?",
+        bullets: [
+          "Number of pages: every page needs design, writing checks and testing.",
+          "Platform: staying on WordPress, Wix, Squarespace or Shopify is usually cheaper than moving to a new one.",
+          "Content: if your text and photos are ready, it costs less than if they need writing or reshooting.",
+          "New features: booking, memberships, a store, quote forms or integrations add work.",
+          "Search protection: keeping page addresses and setting up redirects takes care, and it protects your Google rankings.",
+          "Deadline: a rush job usually costs more.",
+        ],
+      },
+      {
+        heading: "What should a redesign include?",
+        bullets: [
+          "A review of your current site: what works, what's slow, and which pages bring in traffic.",
+          "A modern, mobile-friendly design that you approve before it's built.",
+          "Clearer messaging, so visitors see what you do and how to contact you in seconds.",
+          "Faster loading pages.",
+          "Your existing page addresses kept, or redirects set up where they change.",
+          "Testing of forms, buttons and tracking before launch.",
+        ],
+        paragraphs: [
+          "Our website redesign checklist walks through each step, including how to avoid losing Google rankings.",
+        ],
+      },
+      {
+        heading: "Redesign or rebuild: which costs less?",
+        paragraphs: [
+          "A redesign keeps your platform and most of your content and improves how it looks and works. It's usually cheaper and faster. A rebuild starts again, often on a new platform, and makes sense when the site is hard to update, very slow, or built on something outdated.",
+          "If you're not sure, a free website audit will tell you honestly which one your site needs. Spending on a rebuild you didn't need is the most common way to overpay.",
+        ],
+      },
+      {
+        heading: "What's a website redesign proposal or RFP?",
+        paragraphs: [
+          "A redesign proposal is a written offer from a designer that sets out the work, price and timeline. An RFP (request for proposal) is the reverse: you write a short brief and ask several designers to quote against it. For a small business, a one-page brief is plenty.",
+        ],
+        bullets: [
+          "Your website address and what you like and dislike about it.",
+          "Your main goal: more calls, bookings, sales or a more professional look.",
+          "The platform you're on, and whether you're open to changing it.",
+          "Pages and features you need to keep or add.",
+          "Your budget range and when you'd like to launch.",
+          "A request for a fixed price, the timeline, and who owns the finished website.",
+        ],
+      },
+      {
+        heading: "How long does a redesign take?",
+        paragraphs: [
+          "Most of our redesigns take about 2 to 5 weeks, depending on the number of pages and how much content moves across. The biggest delay is usually waiting for text and photos, so having them ready saves time.",
+        ],
+      },
+      {
+        heading: "Want a fixed quote for your redesign?",
+        paragraphs: [
+          "Send us your website address and we'll tell you what we'd change and what it would cost. Redesigns start from $300 with a fixed quote and a design you approve before we build. We're a remote team working with small businesses in the US, UK, Canada and Europe.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does it cost to redesign a small business website?",
+        a: "It depends on pages, platform and features. At Dandilo Digitals, redesigns start from $300 with a fixed quote before work starts. Larger sites, new platforms and custom features cost more.",
+      },
+      {
+        q: "Is a redesign cheaper than a new website?",
+        a: "Usually, yes. A redesign keeps your platform and most of your content, so there's less to build. A rebuild costs more but can be the right choice for an outdated or hard-to-update site.",
+      },
+      {
+        q: "Will a redesign hurt my Google rankings?",
+        a: "It doesn't have to. Keep your page addresses or redirect them, keep the content that ranks, and check Search Console after launch. A careful redesign usually protects rankings.",
+      },
+      {
+        q: "What should I put in a website redesign RFP?",
+        a: "Your current website, your goal, the platform, the pages and features you need, your budget and launch date, and a request for a fixed price, timeline and ownership terms.",
+      },
+      {
+        q: "How often should I redesign my website?",
+        a: "There's no fixed rule. Many businesses refresh every few years, or sooner if the site is slow, looks dated, isn't mobile-friendly or isn't bringing in enquiries.",
+      },
+      {
+        q: "Do I pay anything after the redesign?",
+        a: "You'll still pay your domain and hosting or platform fees. If you want us to handle updates, backups and security, our Care Plan starts from $99 per month.",
+      },
+    ],
+    related: ["/services/website-redesign", "/blog/website-redesign-checklist", "/blog/small-business-website-cost", "/blog/signs-your-website-is-losing-customers"],
+  },
+  {
     path: "/blog/how-to-get-your-business-on-google-maps",
     kind: "blog",
     label: "How to Get Your Business on Google Maps",
