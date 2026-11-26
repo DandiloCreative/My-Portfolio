@@ -4,6 +4,111 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/what-pages-does-a-small-business-website-need",
+    kind: "blog",
+    label: "Pages a Small Business Website Needs",
+    title: "What Pages Does a Small Business Website Need?",
+    description:
+      "How many pages does a small business website need? The essential pages, what to put on each, and which extras to add later, so you don't pay for pages you don't need.",
+    eyebrow: "Checklist",
+    h1: "What Pages Does a Small Business Website Need?",
+    date: "2026-11-26",
+    readMinutes: 6,
+    intro: [
+      "In short: most small businesses need five core pages: Home, Services, About, Contact and a page for reviews or past work. Add a page for each main service, a pricing or quote page, and an FAQ once those are working. You can launch with 5 to 7 pages and grow from there.",
+      "More pages isn't always better. Every page costs time to design, write and keep up to date, and a thin page that says little can do more harm than good. This checklist shows what each page should do, and what to leave for later.",
+    ],
+    sections: [
+      {
+        heading: "The five pages almost every business needs",
+        bullets: [
+          "Home: says what you do, who it's for and where, and gives one clear next step (call, book or request a quote).",
+          "Services: lists what you offer in plain words, so a visitor can tell in seconds if you can help.",
+          "About: shows the real people behind the business, how long you've been going and why customers can trust you.",
+          "Contact: phone, email, address or service area, opening hours and a short form.",
+          "Reviews or Work: real customer reviews, photos of finished jobs or examples of what you've done.",
+        ],
+      },
+      {
+        heading: "What should the home page include?",
+        paragraphs: [
+          "Visitors decide in a few seconds whether to stay. Your home page should answer three questions straight away: what do you do, who do you do it for, and what should I do next?",
+        ],
+        bullets: [
+          "A clear headline with your service and location, for example \"Family-run plumbing in Leeds\".",
+          "A call or quote button that's easy to spot on a phone.",
+          "A short list of your main services, each linking to its own page.",
+          "A few real reviews or photos.",
+          "Your phone number and opening hours.",
+        ],
+      },
+      {
+        heading: "Why give each service its own page?",
+        paragraphs: [
+          "One page that lists everything you do is hard to rank on Google. A separate page for each main service lets you explain it properly and match what people actually search for, such as \"emergency boiler repair\" or \"wedding photography packages\".",
+          "Keep each page useful: what's included, who it's for, how it works, a rough price or what affects the price, and a button to get in touch. Don't copy the same text across pages with only the town name changed. Google tends to treat that as thin content.",
+        ],
+      },
+      {
+        heading: "Do I need a pricing page?",
+        paragraphs: [
+          "If your prices are fixed or easy to explain, yes. People often leave a site that hides cost completely. If your jobs vary, show starting prices or a guide to what affects the price, and invite people to request a quote. Our own prices are public on our pricing page, so visitors know where they stand before they ask.",
+        ],
+      },
+      {
+        heading: "Which extra pages are worth adding?",
+        bullets: [
+          "FAQ: answers the questions that stop people from contacting you, and helps with Google searches phrased as questions.",
+          "Blog or guides: useful if you'll write regularly and answer real customer questions. Skip it if it will sit empty.",
+          "Service area or location pages: only if you genuinely serve those places and each page has something specific to say.",
+          "Booking or shop: if customers can book or buy online, this is a core page, not an extra.",
+          "Gallery or case studies: great for builders, salons, photographers and other visual businesses.",
+        ],
+      },
+      {
+        heading: "Pages you also need behind the scenes",
+        paragraphs: [
+          "Most sites need a privacy policy, especially if you collect details through a form or use analytics. Depending on your country and what you do, you may also need cookie information and terms. Rules differ in the US, UK, Canada and Europe, so check what applies to you, or ask your web designer. Link these pages in the footer, not the main menu.",
+        ],
+      },
+      {
+        heading: "How many pages is the right number?",
+        paragraphs: [
+          "A plumber, cleaner or consultant often does well with 5 to 8 pages. A shop needs a page per product or category, and a business with many services needs more. Start with the pages that bring in customers, launch, then add pages when you see what people look for. A good web designer will tell you honestly when a page isn't worth building.",
+        ],
+      },
+      {
+        heading: "Not sure what your site is missing?",
+        paragraphs: [
+          "Ask for a free website audit and we'll tell you which pages you're missing and which aren't pulling their weight. If you're ready to build, a Starter website starts at $300 and a Business website (up to 7 pages) at $899. These are starting prices in US dollars, with a fixed quote before work begins. You can also contact us with a short description of your business.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How many pages should a small business website have?",
+        a: "Most small businesses launch well with 5 to 8 pages: Home, Services, About, Contact, reviews or work, plus a page for each main service. Add more once you see what customers look for.",
+      },
+      {
+        q: "Can a small business have a one-page website?",
+        a: "Yes, for a very simple offer or a new business, a one-page site can work. But a single page is harder to rank on Google for several services, so most businesses outgrow it.",
+      },
+      {
+        q: "Do I need an About page?",
+        a: "Yes. It's one of the most visited pages on most small business sites. People want to know who they're hiring, so show real people, your experience and how you work.",
+      },
+      {
+        q: "Do I need a blog on my business website?",
+        a: "Not at launch. A blog helps if you'll publish helpful answers to real customer questions on a regular basis. An empty or abandoned blog makes a site look neglected.",
+      },
+      {
+        q: "How many pages are included in a Dandilo Digitals website?",
+        a: "A Starter website starts at $300, and a Business website with up to 7 pages starts at $899. See our pricing page for what each includes.",
+      },
+    ],
+    related: ["/services/small-business-web-design", "/pricing", "/blog/small-business-website-cost", "/blog/do-i-need-a-website-for-my-business"],
+  },
+  {
     path: "/blog/website-redesign-cost",
     kind: "blog",
     label: "Website Redesign Cost",
