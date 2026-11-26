@@ -4,6 +4,117 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/how-to-get-your-business-on-google-maps",
+    kind: "blog",
+    label: "How to Get Your Business on Google Maps",
+    title: "How to Get Your Business on Google Maps (and Verified)",
+    description:
+      "How to get your business listed on Google and Google Maps: create or claim a free Business Profile, get verified, fix common problems, and show up more often.",
+    eyebrow: "Guide",
+    h1: "How to Get Your Business on Google Maps and Verified",
+    date: "2026-11-26",
+    readMinutes: 6,
+    intro: [
+      "In short: to get your business on Google Maps, create or claim a free Google Business Profile at google.com/business, add your business details, and complete Google's verification. Once you're verified, your business can show on Maps and in local Google searches. Showing up near the top then depends on how complete your profile is, your reviews, and your website.",
+      "Here are the steps, how verification works, what to do when it goes wrong, and how to get found more often once you're listed.",
+    ],
+    sections: [
+      {
+        heading: "How do I add my business to Google Maps?",
+        bullets: [
+          "Go to google.com/business and sign in with a Google account. Use an account the business owns, not a staff member's personal account or your web designer's.",
+          "Search for your business name. If it's already listed, choose it and claim it. If not, choose to add a new business.",
+          "Enter your business name exactly as customers see it on your sign, website and paperwork.",
+          "Choose the main category that best describes what you do (for example \"Plumber\" or \"Bakery\").",
+          "Add your address if customers visit you. If you go to them instead, add the areas you serve.",
+          "Add your phone number and website address.",
+          "Complete verification (see below), then fill in the rest of your profile.",
+        ],
+        paragraphs: [
+          "You can also start from the Google Maps app: open the menu and look for the option to add your business.",
+        ],
+      },
+      {
+        heading: "How does Google verify a business?",
+        paragraphs: [
+          "Google needs to check that the business is real and that you're allowed to manage it. It shows you the methods available for your business. Depending on your business type and location, these can include recording a short video, a phone call or text, an email, a live video call, or a postcard sent to your address.",
+          "Video verification is now common. You'll usually be asked to show, in one continuous recording, your location or the area you work in, something that proves the business is yours (such as signage, equipment, stock or a branded vehicle), and something that proves you manage it (such as a key, tools or a business document). Reviews of video and other submissions can take several business days.",
+        ],
+      },
+      {
+        heading: "Can I get on Google Maps without a shop or office?",
+        paragraphs: [
+          "Yes. If you visit customers, like cleaners, plumbers, electricians or mobile hairdressers, you can set up as a service-area business. You still enter your address for verification, but you hide it from the public and show the towns, cities or areas you serve instead.",
+          "Google doesn't accept P.O. boxes or mailboxes as business addresses, and a virtual office you don't actually work from is likely to cause problems. If you work from home, use the service-area option.",
+        ],
+      },
+      {
+        heading: "Why isn't my business showing up on Google Maps?",
+        bullets: [
+          "Verification isn't finished, or it's still being reviewed.",
+          "The profile was suspended. Google suspends profiles for things like keywords added to the business name, a wrong address type or duplicate listings. You can appeal from your Business Profile.",
+          "You're searching from too far away. Maps results favour businesses close to the person searching.",
+          "Your category doesn't match what people search for. Choose the closest main category and add a few relevant secondary ones.",
+          "There's a duplicate listing splitting your reviews and details. Ask Google to merge or remove it.",
+          "Your details don't match your website. Use the same name, address (or service area) and phone number everywhere.",
+        ],
+      },
+      {
+        heading: "How do I show up higher on Google Maps?",
+        bullets: [
+          "Fill in every part of your profile: hours, services with prices where you can, a business description, and attributes.",
+          "Add real photos of your work, premises, vehicles and team, and add new ones regularly.",
+          "Ask every happy customer for a Google review, and reply to all reviews, good and bad.",
+          "Post updates and offers now and then, so the profile looks active.",
+          "Link to a fast website with a page for each service. Google uses your website to understand what you do and where.",
+          "Keep holiday hours and contact details up to date.",
+        ],
+        paragraphs: [
+          "Google says local results are mainly based on relevance, distance and prominence. You can't change how close a searcher is, but the steps above improve the other two.",
+        ],
+      },
+      {
+        heading: "Getting listed on Google search too",
+        paragraphs: [
+          "A Business Profile covers Maps and the local box in search results. To show up for searches beyond that, like a service plus your city, or questions customers ask, you need a website that Google can find and index. If your website isn't appearing, see our guide Why Is My Website Not Showing Up on Google?, and our comparison of a Google Business Profile vs a website.",
+        ],
+      },
+      {
+        heading: "Need a website to go with your profile?",
+        paragraphs: [
+          "Your profile's website button works best when it leads to a fast, clear page with a call or quote button. At Dandilo Digitals, a Starter website starts at $300 and a Business website with service pages, reviews and a quote form at $899. These are starting prices in US dollars, with a fixed quote before work starts. We're a remote team working with small businesses in the US, UK, Canada and Europe.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is it free to put my business on Google Maps?",
+        a: "Yes. Creating, verifying and managing a Google Business Profile is free. You only pay if you choose to run Google Ads.",
+      },
+      {
+        q: "How long does it take for my business to show on Google Maps?",
+        a: "It depends on verification. Some businesses are verified the same day; reviews of video or other submissions can take several business days. After that, your profile can start showing, though ranking well takes longer.",
+      },
+      {
+        q: "Can I verify my Google Business Profile without a postcard?",
+        a: "Often, yes. Google offers the methods available for your business, which commonly include a short video recording, and sometimes phone, text, email or a live video call.",
+      },
+      {
+        q: "Can I list my business on Google Maps from home?",
+        a: "Yes. Set it up as a service-area business, show the areas you serve, and hide your home address from the public.",
+      },
+      {
+        q: "Why was my Google Business Profile suspended?",
+        a: "Common reasons are extra keywords in the business name, using an address you don't really work from, or duplicate listings. Fix the issue, then request a review from your Business Profile.",
+      },
+      {
+        q: "Do I need a website to be on Google Maps?",
+        a: "No, but it helps. Google uses your website to check and understand your business, and customers who click through are more likely to get in touch when they find a clear website.",
+      },
+    ],
+    related: ["/blog/google-business-profile-vs-website", "/blog/why-is-my-website-not-showing-up-on-google", "/blog/do-i-need-a-website-for-my-business", "/services/small-business-web-design"],
+  },
+  {
     path: "/blog/restaurant-website-must-haves",
     kind: "blog",
     label: "Restaurant Website Must-Haves",
@@ -112,7 +223,7 @@ export const dailyPosts: ContentPageData[] = [
         a: "Prices vary widely. A simple restaurant site is typically a few hundred to a few thousand dollars. At Dandilo Digitals, the Business package is $899 and an Online Store, for selling online, is $1,250.",
       },
     ],
-    related: ["/industries/restaurant-web-design", "/blog/google-business-profile-vs-website", "/pricing"],
+    related: ["/industries/restaurant-web-design", "/blog/google-business-profile-vs-website", "/pricing", "/blog/how-to-get-your-business-on-google-maps"],
   },
   {
     path: "/blog/is-shopify-worth-it",
@@ -644,7 +755,7 @@ export const dailyPosts: ContentPageData[] = [
         a: "No. Normal search results are free. Paid Google Ads appear separately and are marked as sponsored.",
       },
     ],
-    related: ["/blog/google-business-profile-vs-website", "/blog/signs-your-website-is-losing-customers", "/services/website-redesign", "/blog/website-redesign-checklist"],
+    related: ["/blog/google-business-profile-vs-website", "/blog/signs-your-website-is-losing-customers", "/services/website-redesign", "/blog/website-redesign-checklist", "/blog/how-to-get-your-business-on-google-maps"],
   },
   {
     path: "/blog/how-much-does-a-website-cost-per-month",
@@ -1405,6 +1516,6 @@ export const dailyPosts: ContentPageData[] = [
         a: "Yes. If you visit customers instead of having them come to you, like cleaners, plumbers and mobile services, you can hide your address and show a service area instead.",
       },
     ],
-    related: ["/blog/get-more-customers-from-your-website", "/blog/small-business-website-cost", "/services/small-business-web-design", "/blog/facebook-page-vs-website"],
+    related: ["/blog/get-more-customers-from-your-website", "/blog/small-business-website-cost", "/services/small-business-web-design", "/blog/facebook-page-vs-website", "/blog/how-to-get-your-business-on-google-maps"],
   },
 ];
