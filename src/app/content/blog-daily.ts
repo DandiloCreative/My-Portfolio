@@ -4,6 +4,104 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/online-booking-for-small-business-website",
+    kind: "blog",
+    label: "Online Booking for Your Website",
+    title: "Online Booking for a Small Business Website: A Guide",
+    description:
+      "Should your small business website take bookings online? How booking works, what to look for in a booking tool, what it costs and the mistakes that lose customers.",
+    eyebrow: "Guide",
+    h1: "Online Booking for a Small Business Website: What You Need to Know",
+    date: "2026-11-27",
+    readMinutes: 6,
+    intro: [
+      "In short: if customers book you by appointment (salons, clinics, cleaners, trades, coaches), online booking saves you phone calls and stops people leaving when you don't pick up. The simplest setup is a booking tool added to your own website, so customers pick a time without leaving your site.",
+      "This guide explains how online booking works, what to look for in a tool, what it typically costs and the mistakes that quietly cost small businesses bookings.",
+    ],
+    sections: [
+      {
+        heading: "Does my business need online booking?",
+        paragraphs: [
+          "If you sell time (appointments, visits, classes, quotes), probably yes. Many customers look for a service in the evening or between other tasks, when your phone line is closed. If they can book there and then, you win the job. If they can only call or send a message and wait, some will book someone else.",
+          "If you mostly handle custom or complex jobs, a quote request form may suit you better than instant booking. You still want something faster than a phone number alone.",
+        ],
+      },
+      {
+        heading: "How does online booking work on a website?",
+        paragraphs: [
+          "You set your working hours, your services and how long each one takes. The booking tool shows only the times you're free. A customer picks a service and a time, enters their details, and you both get a confirmation. Most tools also send reminders and sync with your calendar, which cuts no-shows.",
+          "The tool can sit inside your website as a widget, or open on a separate page. Keeping it inside your own site is better: customers stay on your brand and you keep the trust you've built on the page.",
+        ],
+      },
+      {
+        heading: "What should I look for in a booking tool?",
+        bullets: [
+          "Works well on a phone, because most customers will book from one.",
+          "Syncs with your calendar (Google, Apple or Outlook) so you never double book.",
+          "Sends confirmations and reminders by email or text.",
+          "Lets you set buffers between appointments, holidays and different hours per service.",
+          "Takes deposits or payments if no-shows are a problem for you.",
+          "Lets you export your customer details, so you aren't locked in.",
+        ],
+      },
+      {
+        heading: "What does online booking cost?",
+        paragraphs: [
+          "Booking tools are usually a monthly subscription, and prices vary by features and number of staff. Some have a free basic plan; fuller plans are typically a modest monthly fee per business or per staff member. Payment processing fees apply if you take deposits. Check the current prices on each provider's own site before you decide.",
+          "Adding booking to a website is a small extra on top of the site itself. At Dandilo Digitals, a Starter website starts at $300 and a Business website at $899, and we can set up booking as part of the build. Custom booking systems with logins or special rules fall under custom development, from $2,500.",
+        ],
+      },
+      {
+        heading: "Where should the Book Now button go?",
+        bullets: [
+          "In the top menu, on every page, in a colour that stands out.",
+          "At the top of the home page, next to a short line about what you do.",
+          "On each service page, so the customer can book that exact service.",
+          "On your Contact page and in your Google Business Profile and social bios.",
+        ],
+      },
+      {
+        heading: "Mistakes that lose bookings",
+        bullets: [
+          "Too many steps: every extra form field loses people. Ask only what you need.",
+          "Hidden prices: say what each service costs or what it starts from.",
+          "No confirmation message, so customers aren't sure it worked.",
+          "Hours that don't match your Google listing.",
+          "Never testing it on a real phone before launch.",
+        ],
+      },
+      {
+        heading: "Want booking that fits your business?",
+        paragraphs: [
+          "If you're not sure which setup suits you, request a free website audit and we'll tell you what we'd do, with a clear quote and no pressure. You can also contact us directly and tell us how you take bookings today.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can I add online booking to my existing website?",
+        a: "Usually yes. Most booking tools give you a button or a widget that can be added to an existing site without rebuilding it. A designer can place it neatly and test it on mobile.",
+      },
+      {
+        q: "Is online booking worth it for a small business?",
+        a: "If you work by appointment, it usually is. It saves time on phone calls and lets customers book outside your working hours. It's less useful if every job needs a custom quote first.",
+      },
+      {
+        q: "Do customers prefer to book online?",
+        a: "Many do, especially for routine services, but some still prefer to call. Offer both: a Book Now button and a phone number.",
+      },
+      {
+        q: "How do I reduce no-shows?",
+        a: "Send automatic reminders, ask for a deposit on longer or higher-value appointments, and make cancelling easy so people tell you in advance.",
+      },
+      {
+        q: "Should booking be on my website or only on Facebook or Instagram?",
+        a: "Put it on your website as well. Your site is the one place you control, and Google can send people there directly. Link to it from your social profiles.",
+      },
+    ],
+    related: ["/services/small-business-web-design", "/pricing", "/blog/what-pages-does-a-small-business-website-need"],
+  },
+  {
     path: "/blog/how-to-hire-a-web-designer-remotely",
     kind: "blog",
     label: "Hire a Web Designer Remotely",
