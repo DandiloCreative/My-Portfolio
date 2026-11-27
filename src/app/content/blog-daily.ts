@@ -4,6 +4,113 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/how-to-hire-a-web-designer-remotely",
+    kind: "blog",
+    label: "Hire a Web Designer Remotely",
+    title: "How to Hire a Web Designer or Developer Remotely",
+    description:
+      "Thinking of hiring a web designer or web developer remotely? Where to find one, what to check, what to put in writing and how to stay safe before you pay.",
+    eyebrow: "Guide",
+    h1: "How to Hire a Web Designer or Developer Remotely",
+    date: "2026-11-27",
+    readMinutes: 6,
+    intro: [
+      "In short: hiring a web designer or developer remotely works well when you check their live work, agree the scope and price in writing, and see something real (a prototype or a first draft) before you pay in full. Where they live matters far less than how clearly they communicate and what they've already built.",
+      "This guide covers where to look, what to check, what to ask for in writing and the mistakes that cost small businesses the most when they hire someone they will never meet in person.",
+    ],
+    sections: [
+      {
+        heading: "Do I need a local web designer?",
+        paragraphs: [
+          "Almost never. Building a website is design, writing and code, and all of it can be done from anywhere. What you need is someone who replies quickly, explains things in plain language and works at times that overlap with your day, so you can talk when you need to.",
+          "A local designer can be useful if you want to meet face to face or need photography on site. For most small businesses, the extra cost of being local isn't worth it.",
+        ],
+      },
+      {
+        heading: "Where can I hire a web designer or developer?",
+        bullets: [
+          "Freelance marketplaces such as Fiverr and Upwork: wide choice and low prices, but quality varies a lot, so check reviews and live work carefully.",
+          "Small remote agencies: a team and a process at a fair price. A good one gives you one point of contact.",
+          "Referrals from other business owners: often the most reliable route. Ask who built a site you like.",
+          "Larger agencies: strong for big or complex projects, but usually priced above what a small business needs.",
+        ],
+      },
+      {
+        heading: "Designer or developer: which one do I need?",
+        paragraphs: [
+          "A web designer plans how the site looks and flows. A web developer builds it and makes it work. For a typical small business website, one person or team does both. You only need a separate developer for custom features such as customer logins, booking systems or a web app. If that's your project, see our guide to choosing a web designer and our custom development page.",
+        ],
+      },
+      {
+        heading: "What should I check before hiring someone remotely?",
+        bullets: [
+          "Open their portfolio sites on your phone. Do they load fast and look right?",
+          "Look for independent reviews on Google or another site they don't control.",
+          "Ask for a call or video chat. How they explain things tells you how the project will go.",
+          "Ask who will actually do the work, and whether they will use a template or build to your needs.",
+          "Ask what happens after launch: support, hosting and who can edit the site.",
+        ],
+      },
+      {
+        heading: "What should be in writing?",
+        bullets: [
+          "The pages and features included, and what costs extra.",
+          "The total price and when each payment is due.",
+          "A timeline, and what you need to supply (logo, text, photos).",
+          "How many rounds of changes are included.",
+          "That you own your domain, your website files and your content once paid.",
+          "What happens if the work is late or you are unhappy.",
+        ],
+      },
+      {
+        heading: "How do I stay safe when paying someone I've never met?",
+        paragraphs: [
+          "Pay in stages rather than all upfront, and use a payment method with buyer protection, such as a marketplace's escrow or a card. Register the domain in your own name, not the designer's. Be wary of anyone who asks for your hosting or domain passwords before you've agreed terms, or who guarantees a number-one Google ranking. Nobody can promise that.",
+          "At Dandilo Digitals we're a remote team working with small businesses in the US, UK and Canada. We can show you a free prototype before you pay, and you own your website at the end.",
+        ],
+      },
+      {
+        heading: "What does it cost to hire a web designer remotely?",
+        paragraphs: [
+          "Remote doesn't have to mean cheap or expensive; the price depends on the size of the project. At Dandilo Digitals, a Starter website starts at $300, a Business website at $899 and an Online Store at $1,250, with custom development from $2,500. We give a fixed quote before work begins. For market ranges across freelancers and agencies, see our small business website cost guide.",
+        ],
+      },
+      {
+        heading: "Want to talk it through?",
+        paragraphs: [
+          "Tell us about your business and we'll review your current website for free and explain what we'd do, with a clear quote and no pressure.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is it safe to hire a web designer remotely?",
+        a: "Yes, if you check their live work and reviews, agree the scope and price in writing, pay in stages and keep your domain in your own name. Most problems come from skipping those steps.",
+      },
+      {
+        q: "How do I hire a web developer for my small business?",
+        a: "Decide what you need first (a simple site, a store or a custom app), then shortlist two or three people with similar live projects. Talk to each, compare written quotes and ask to see a prototype or sample before paying in full.",
+      },
+      {
+        q: "Should I hire a freelancer or an agency remotely?",
+        a: "Freelancers can be affordable but depend on one person's availability. A small remote agency gives you a team and a process. Our freelancer vs agency guide compares them in more detail.",
+      },
+      {
+        q: "How much should I pay upfront?",
+        a: "Avoid paying everything before you've seen any work. A common approach is a deposit to start, a payment at design approval and a final payment at launch. Agree the schedule in writing.",
+      },
+      {
+        q: "Can a remote designer work in my time zone?",
+        a: "Many can. Ask which hours they're available and how quickly they reply. Dandilo Digitals works with clients in the US, UK and Canada and agrees call times that suit you.",
+      },
+      {
+        q: "Will I own my website if I hire someone remotely?",
+        a: "You should. Ask for this in writing: you own the domain, the site files and the content once you've paid. At Dandilo Digitals you own your website.",
+      },
+    ],
+    related: ["/blog/how-to-choose-a-web-designer", "/blog/freelancer-vs-agency-website", "/blog/small-business-website-cost", "/services/small-business-web-design"],
+  },
+  {
     path: "/blog/what-pages-does-a-small-business-website-need",
     kind: "blog",
     label: "Pages a Small Business Website Needs",
@@ -1331,7 +1438,7 @@ export const dailyPosts: ContentPageData[] = [
         a: "You should. Agree in writing that the finished site is yours, and keep the domain and hosting or platform account in your own name from the start.",
       },
     ],
-    related: ["/blog/freelancer-vs-agency-website", "/blog/how-to-choose-a-web-designer", "/blog/small-business-website-cost", "/services/small-business-web-design"],
+    related: ["/blog/freelancer-vs-agency-website", "/blog/how-to-choose-a-web-designer", "/blog/small-business-website-cost", "/services/small-business-web-design", "/blog/how-to-hire-a-web-designer-remotely"],
   },
   {
     path: "/blog/wix-vs-custom-website",

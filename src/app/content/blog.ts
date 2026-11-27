@@ -324,12 +324,13 @@ export const blogPosts: ContentPageData[] = [
     date: "2026-11-02",
     readMinutes: 6,
     intro: [
+      "In short: choose a web designer who can show live websites like the one you want, gives you a written quote that lists exactly what's included, lets you own your domain and site, and replies clearly before you've paid. Be wary of guaranteed rankings and vague quotes.",
       "Your website is often the first impression customers get of your business, so choosing who builds it matters. The right web designer will help you win customers; the wrong one can cost you months and money.",
       "Here's what to look for, what to ask and which red flags to avoid.",
     ],
     sections: [
       {
-        heading: "What to look for",
+        heading: "What should I look for in a web designer?",
         bullets: [
           "Real, live websites in their portfolio, ideally for businesses like yours.",
           "Genuine reviews on Google or other independent sites.",
@@ -351,7 +352,7 @@ export const blogPosts: ContentPageData[] = [
         ],
       },
       {
-        heading: "Red flags",
+        heading: "What are the red flags when hiring a web designer?",
         bullets: [
           "No portfolio of live websites, or only templates.",
           "Guaranteed \"#1 on Google\" promises. Nobody can guarantee rankings.",
@@ -361,9 +362,9 @@ export const blogPosts: ContentPageData[] = [
         ],
       },
       {
-        heading: "Freelancer or agency?",
+        heading: "Should I hire a freelancer or an agency?",
         paragraphs: [
-          "Freelancers can be affordable and flexible, but quality and availability vary. Agencies offer a team and a process, usually at a higher price. A small remote agency can give you both: a dedicated point of contact with a professional process, at a fair price.",
+          "Freelancers can be affordable and flexible, but quality and availability vary. Agencies offer a team and a process, usually at a higher price. A small remote agency can give you both: a dedicated point of contact with a professional process, at a fair price. If you're hiring someone you won't meet in person, read our guide to hiring a web designer or developer remotely.",
         ],
       },
       {
@@ -382,8 +383,16 @@ export const blogPosts: ContentPageData[] = [
         q: "How long does a web designer take to build a website?",
         a: "Most small business websites take 2 to 6 weeks, depending on size, features and how quickly content is ready.",
       },
+      {
+        q: "What should I ask a web designer before hiring them?",
+        a: "Ask what's included in the price, how long it will take, how many rounds of changes you get, whether you'll own your domain and site, and what support you get after launch. Get the answers in writing.",
+      },
+      {
+        q: "Can I hire a web designer in another country?",
+        a: "Yes. Location matters less than live work, clear written terms and good communication. Check their portfolio and reviews and agree payment in stages. Dandilo Digitals is a remote team working with small businesses in the US, UK and Canada.",
+      },
     ],
-    related: ["/pricing", "/blog/small-business-website-cost", "/reviews"],
+    related: ["/pricing", "/blog/small-business-website-cost", "/reviews", "/blog/how-to-hire-a-web-designer-remotely"],
   },
   {
     path: "/blog/small-business-website-cost",
