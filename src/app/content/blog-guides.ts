@@ -158,26 +158,26 @@ export const guidePosts: ContentPageData[] = [
     date: "2026-11-10",
     readMinutes: 6,
     intro: [
-      "Free website builders and AI website generators promise a website in minutes. A web designer costs more but builds something made for your business. Which one makes sense depends on your budget, your time and how much your website needs to bring in.",
-      "Here's an honest comparison.",
+      "In short: use a website builder if you have more time than money and only need a simple online presence; it costs about $15 to $50 a month and many hours of your own work. Hire a web designer if the website needs to bring in enquiries or sales; small business sites usually cost $500 to $5,000 once, and you get a site set up for Google without learning the tools yourself.",
+      "Free website builders and AI website generators promise a website in minutes. A web designer costs more but builds something made for your business. Which one makes sense depends on your budget, your time and how much your website needs to bring in. Here's an honest comparison.",
     ],
     sections: [
       {
-        heading: "Free and paid website builders (Wix, Squarespace, GoDaddy)",
+        heading: "Are website builders like Wix, Squarespace and GoDaddy good enough?",
         paragraphs: [
           "Builders give you templates you edit yourself. Free plans show the builder's advertising and use their web address, so most businesses need a paid plan, usually around $15 to $50 a month.",
         ],
         bullets: ["Good for: very new businesses with time to learn and a tiny budget", "Watch out for: template look, slow pages, and SEO settings that are easy to get wrong"],
       },
       {
-        heading: "AI website builders",
+        heading: "Can an AI website builder replace a web designer?",
         paragraphs: [
           "AI builders write a first draft of your pages and pick a layout from a few questions. They're quick for a starting point, but the words are generic, the designs look alike and they rarely know what makes your business different.",
         ],
         bullets: ["Good for: a quick draft or a temporary page", "Watch out for: generic copy that doesn't rank or convert, and facts you need to check"],
       },
       {
-        heading: "Hiring a web designer",
+        heading: "What do you get when you hire a web designer?",
         paragraphs: [
           "A web designer plans the site around your customers: the pages they need, the words they search for and the action you want them to take. You get a site that looks like your brand, loads fast and is set up for Google from day one.",
           "Small business websites from a freelancer or small agency usually cost $500 to $5,000. At Dandilo Digitals, websites start from $300, with a free website audit first.",
@@ -185,7 +185,7 @@ export const guidePosts: ContentPageData[] = [
         bullets: ["Good for: businesses that want the website to bring in enquiries and sales", "Watch out for: designers who don't explain costs or who lock you out of your own site"],
       },
       {
-        heading: "Quick comparison",
+        heading: "Website builder vs web designer: how do they compare?",
         bullets: [
           "Cost: builder $0 to $50 a month; designer usually $500 to $5,000 once, plus hosting",
           "Your time: builder many hours; designer a few hours of feedback",
@@ -204,8 +204,16 @@ export const guidePosts: ContentPageData[] = [
         q: "Is a free website good enough for a small business?",
         a: "It's fine as a start, but a free plan shows the builder's ads and address, which makes a business look less established. A paid plan with your own domain is the minimum for most businesses.",
       },
+      {
+        q: "Is it cheaper to build a website yourself or hire someone?",
+        a: "Building it yourself costs less money up front, about $15 to $50 a month for a builder plan, but it costs many hours of your time. Hiring someone costs more once (usually $500 to $5,000 for a small business site; ours start from $300), and you get a site that is set up for Google and enquiries from the start.",
+      },
+      {
+        q: "Can I start with a website builder and hire a web designer later?",
+        a: "Yes. Many businesses do. A designer can redesign your builder site on the same platform, or move it to a new one and set up redirects so you keep the Google rankings your old pages have earned.",
+      },
     ],
-    related: ["/blog/how-to-choose-a-web-designer", "/blog/wix-vs-wordpress-vs-shopify", "/blog/small-business-website-cost", "/services/small-business-web-design", "/blog/do-i-need-a-website-for-my-business"],
+    related: ["/blog/how-to-choose-a-web-designer", "/blog/how-to-hire-a-web-designer-remotely", "/blog/wix-vs-wordpress-vs-shopify", "/blog/small-business-website-cost", "/services/small-business-web-design", "/blog/do-i-need-a-website-for-my-business"],
   },
   {
     path: "/blog/small-business-website-hosting-and-email",

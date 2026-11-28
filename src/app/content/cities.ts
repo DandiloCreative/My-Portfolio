@@ -1,5 +1,5 @@
 // City and state landing pages (New York, Philadelphia, Texas, Toronto, Calgary/Edmonton, Vancouver, London,
-// plus US states added in batches: California, Florida, Colorado, New Jersey, Illinois, Virginia),
+// plus US states added in batches: California, Florida, Colorado, New Jersey, Illinois, Virginia, Georgia, North Carolina),
 // chosen from the CRM keyword export of 23 Nov 2026. We're a remote team: these pages never claim a local office or local clients.
 // Each page carries facts specific to that place (rules, sales tax, currency, time zone) so it isn't a copy of the others.
 import type { ContentPageData } from "./types";
@@ -1101,5 +1101,96 @@ export const cityPages: ContentPageData[] = [
       },
     ],
     related: ["/web-design-usa", "/industries/contractor-web-design", "/services/small-business-web-design", "/pricing"],
+  },
+  {
+    path: "/web-design-north-carolina",
+    kind: "service",
+    label: "Web Design in North Carolina",
+    areaServed: ["North Carolina"],
+    areaServedType: "State",
+    title: "Web Design for North Carolina Small Businesses | Dandilo Digitals",
+    description:
+      "Affordable web design for North Carolina small businesses in Charlotte, Raleigh, Durham, Greensboro, Asheville and Wilmington, from tech to tourism. From $300.",
+    eyebrow: "North Carolina",
+    h1: "Affordable Web Design for North Carolina Small Businesses",
+    intro: [
+      "In short: Dandilo Digitals builds websites for North Carolina small businesses from $300, working remotely on Eastern time. You see and approve a design before we build, and you own the finished site.",
+      "North Carolina's small businesses include tech and life science startups around the Research Triangle, financial and professional services in Charlotte, furniture makers and showrooms around High Point, and tourism, vacation rental and craft businesses from Asheville to the Outer Banks. We design and build websites for businesses across the state, including Charlotte, Raleigh, Durham, Greensboro, Winston-Salem, Wilmington, Asheville and Fayetteville. We're a remote team, not a local studio, so you don't pay for office rent.",
+    ],
+    sections: [
+      {
+        heading: "What we build for North Carolina businesses",
+        bullets: [
+          "Startup and B2B websites for Raleigh, Durham and Chapel Hill companies, with clear product pages, team pages and demo or contact forms",
+          "Professional services websites for Charlotte accountants, advisers, consultants and law firms, written to build trust before the first call",
+          "Furniture, home decor and manufacturing websites with product catalogues, trade enquiry forms and online stores",
+          "Vacation rental, tourism and hospitality websites for the mountains and the coast, with galleries, availability and direct booking",
+          "Breweries, restaurants and makers in places like Asheville, with menus, events and online ordering",
+          "Trades and home services websites with quote forms and service area pages",
+        ],
+      },
+      {
+        heading: "Selling online from North Carolina",
+        paragraphs: [
+          "North Carolina charges a 4.75% state sales tax, and counties add their own local rate on top, so the total your customer pays depends on where the order goes. An online store needs these tax settings checked by your accountant before launch. We set up the store on Shopify or WooCommerce; we don't give tax advice.",
+        ],
+      },
+      {
+        heading: "Vacation rental websites on the coast and in the mountains",
+        paragraphs: [
+          "Many owners on the Outer Banks, around Wilmington and in the mountains rent homes directly to guests. North Carolina has a Vacation Rental Act that covers rental agreements, so your terms, deposit and cancellation details should be clear on the site and agreed with your lawyer or property manager. We build the booking pages and show those terms clearly; we don't write the legal terms.",
+        ],
+      },
+      {
+        heading: "Privacy, data breaches and licences",
+        paragraphs: [
+          "North Carolina's Identity Theft Protection Act requires businesses to tell people if certain personal information they hold is exposed in a security breach. The simplest protection is to collect only what you need: our forms send enquiries to your email or CRM, and we keep your website, plugins and logins secure. Every site includes a clear privacy policy and follows common accessibility practice, such as readable text, descriptive image text and keyboard-friendly menus.",
+          "If you're a general contractor licensed by the North Carolina Licensing Board for General Contractors, or hold another state licence, we can show your licence details on the site when you give them to us. We can't give legal advice, so check with your lawyer if you're unsure whether a rule applies to you.",
+        ],
+      },
+      {
+        heading: "Prices in US dollars",
+        bullets: [
+          "Starter Website: from $300",
+          "Business Website: from $899",
+          "Online Store: from $1,250",
+          "Website Redesign: from $300",
+          "Care Plan: from $99 a month",
+        ],
+      },
+      {
+        heading: "How it works",
+        paragraphs: [
+          "Start with a free website audit or a short call. We agree what the website needs, send a fixed quote, show you a design draft to approve, then build, test and launch it. You own your website, your domain and your accounts.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does a website cost in North Carolina?",
+        a: "Our websites start from $300 for a starter site and $899 for a full business website. Online stores start from $1,250. You get a fixed quote before work starts.",
+      },
+      {
+        q: "Do you have an office in North Carolina?",
+        a: "No. We're a remote team and work with North Carolina businesses online, with calls scheduled in Eastern time.",
+      },
+      {
+        q: "Can you build a website for my Charlotte or Raleigh business?",
+        a: "Yes. We build service pages, set up on-page SEO and help you connect your website to your Google Business Profile so customers in Charlotte, Raleigh and nearby towns can find and contact you.",
+      },
+      {
+        q: "Can you build a direct booking website for my Outer Banks or mountain vacation rental?",
+        a: "Yes. We can build a site with photos, availability and online booking through a booking tool, so guests can book you directly. Your rental terms should come from you or your lawyer.",
+      },
+      {
+        q: "Do you set up sales tax for North Carolina online stores?",
+        a: "We set up the tax settings in Shopify or WooCommerce, but the rates and rules should be confirmed by your accountant, because North Carolina's state rate is combined with county rates.",
+      },
+      {
+        q: "Can I see a design before I pay?",
+        a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
+      },
+    ],
+    related: ["/web-design-usa", "/blog/online-booking-for-small-business-website", "/services/small-business-web-design", "/pricing"],
   },
 ];
