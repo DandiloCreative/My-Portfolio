@@ -1193,4 +1193,95 @@ export const cityPages: ContentPageData[] = [
     ],
     related: ["/web-design-usa", "/blog/online-booking-for-small-business-website", "/services/small-business-web-design", "/pricing"],
   },
+  {
+    path: "/web-design-arizona",
+    kind: "service",
+    label: "Web Design in Arizona",
+    areaServed: ["Arizona"],
+    areaServedType: "State",
+    title: "Web Design for Arizona Small Businesses | Dandilo Digitals",
+    description:
+      "Affordable web design for Arizona small businesses in Phoenix, Tucson, Scottsdale, Mesa, Chandler and Flagstaff, from home services to tourism. From $300.",
+    eyebrow: "Arizona",
+    h1: "Affordable Web Design for Arizona Small Businesses",
+    intro: [
+      "In short: Dandilo Digitals builds websites for Arizona small businesses from $300, working remotely and scheduling calls to suit Arizona time. You see and approve a design before we build, and you own the finished site.",
+      "Arizona's small businesses include home services such as pool care, landscaping, air conditioning and roofing, builders and real estate, resorts, golf and tour operators, healthcare and senior living, and tech and manufacturing firms around the Phoenix area. We design and build websites for businesses across the state, including Phoenix, Tucson, Scottsdale, Mesa, Chandler, Tempe, Gilbert, Glendale and Flagstaff. We're a remote team, not a local studio, so you don't pay for office rent.",
+    ],
+    sections: [
+      {
+        heading: "What we build for Arizona businesses",
+        bullets: [
+          "Home and outdoor services websites with quote forms, service area pages and clear before-and-after galleries",
+          "Contractor and builder websites that show your work, your licence details and a simple way to request an estimate",
+          "Real estate and property management websites for homes, rentals and short-term stays",
+          "Resort, tour, golf and hospitality websites with photo galleries, itineraries and online booking",
+          "Clinic, wellness and senior care websites with clear service pages and appointment requests",
+          "Tech and B2B websites with product pages, team pages and demo request forms",
+        ],
+      },
+      {
+        heading: "Serving seasonal and visiting customers",
+        paragraphs: [
+          "Many Arizona businesses see demand rise and fall with the seasons, with winter visitors, summer heat and event weekends changing what customers search for. A good website helps you keep up: seasonal offers you can update yourself, clear opening hours, and a Google Business Profile that matches your site so people nearby can find and contact you.",
+        ],
+      },
+      {
+        heading: "Selling online from Arizona",
+        paragraphs: [
+          "Arizona uses a transaction privilege tax, which is charged on the seller's business activity, and state, county and city rates can all apply. That makes the rules for an online store different from a simple sales tax, so ask your accountant or the Arizona Department of Revenue what applies to you before launch. We set up the store on Shopify or WooCommerce and enter the settings you give us; we don't give tax advice.",
+        ],
+      },
+      {
+        heading: "Licences, data breaches and privacy",
+        paragraphs: [
+          "Arizona contractors are generally licensed through the Arizona Registrar of Contractors, and many customers check a licence before hiring. When you give us your licence details, we show them clearly on your site.",
+          "Arizona also has a data breach notification law that can require businesses to tell people if certain personal information is exposed. The simplest protection is to collect only what you need: our forms send enquiries to your email or CRM, and we keep your website, plugins and logins secure. Every site includes a clear privacy policy and follows common accessibility practice, such as readable text, descriptive image text and keyboard-friendly menus. We can't give legal advice, so check with your lawyer if you're unsure whether a rule applies to you.",
+        ],
+      },
+      {
+        heading: "Prices in US dollars",
+        bullets: [
+          "Starter Website: from $300",
+          "Business Website: from $899",
+          "Online Store: from $1,250",
+          "Website Redesign: from $300",
+          "Care Plan: from $99 a month",
+        ],
+      },
+      {
+        heading: "How it works",
+        paragraphs: [
+          "Start with a free website audit or a short call. We agree what the website needs, send a fixed quote, show you a design draft to approve, then build, test and launch it. You own your website, your domain and your accounts.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does a website cost in Arizona?",
+        a: "Our websites start from $300 for a starter site and $899 for a full business website. Online stores start from $1,250. You get a fixed quote before work starts.",
+      },
+      {
+        q: "Do you have an office in Arizona?",
+        a: "No. We're a remote team and work with Arizona businesses online. Arizona doesn't change its clocks for daylight saving time, so we agree call times in advance to avoid mix-ups.",
+      },
+      {
+        q: "Can you build a website for my Phoenix or Tucson home services business?",
+        a: "Yes. We build service pages and quote forms, set up on-page SEO and help you connect your website to your Google Business Profile so customers in Phoenix, Tucson and nearby towns can find and contact you.",
+      },
+      {
+        q: "Can you show my Arizona contractor licence on my website?",
+        a: "Yes. Send us your licence details and we'll show them clearly on your site. Check the details with the licensing authority if you're unsure how to display them.",
+      },
+      {
+        q: "Do you set up sales tax for Arizona online stores?",
+        a: "We set up the tax settings in Shopify or WooCommerce, but the rates and rules should be confirmed by your accountant, because Arizona uses a transaction privilege tax with state, county and city rates.",
+      },
+      {
+        q: "Can I see a design before I pay?",
+        a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
+      },
+    ],
+    related: ["/web-design-usa", "/industries/contractor-web-design", "/services/small-business-web-design", "/pricing"],
+  },
 ];

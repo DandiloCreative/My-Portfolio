@@ -184,8 +184,8 @@
   "date": "2026-11-23"
  },
  "/industries/dentist-web-design": {
-  "hash": "ec3efb177bc1126e",
-  "date": "2026-11-16"
+  "hash": "7769f16f1d30cc4b",
+  "date": "2026-11-28"
  },
  "/industries/law-firm-web-design": {
   "hash": "9003294bfd2c6c0f",
@@ -204,11 +204,11 @@
   "date": "2026-11-23"
  },
  "/industries/therapist-web-design": {
-  "hash": "2e96b37ab0e6cb29",
-  "date": "2026-11-23"
+  "hash": "49dcd5bcd8a2e4fc",
+  "date": "2026-11-28"
  },
  "/platforms": {
-  "hash": "984323ad5b120628",
+  "hash": "8875949e4af2ea87",
   "date": "2026-11-28"
  },
  "/portfolio": {
@@ -228,7 +228,7 @@
   "date": "2026-11-14"
  },
  "/services": {
-  "hash": "5232a13d1a298f9f",
+  "hash": "61d2d0db40bfddba",
   "date": "2026-11-28"
  },
  "/services/backend-development": {
@@ -335,6 +335,10 @@
   "hash": "cec4965cd976a80f",
   "date": "2026-11-14"
  },
+ "/web-design-arizona": {
+  "hash": "ce5d6172f4b8e2b5",
+  "date": "2026-11-28"
+ },
  "/web-design-calgary": {
   "hash": "05275799cb04fe87",
   "date": "2026-11-23"
@@ -400,7 +404,7 @@
   "date": "2026-11-23"
  },
  "/web-design-usa": {
-  "hash": "2ad70e92a0c1b9c5",
+  "hash": "077a0619b85ade7a",
   "date": "2026-11-28"
  },
  "/web-design-vancouver": {

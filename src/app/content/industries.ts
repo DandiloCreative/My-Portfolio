@@ -241,7 +241,7 @@ export const industryPages: ContentPageData[] = [
         a: "Yes. Ask for a free website prototype and we'll design your homepage within 48 hours, with no payment and no obligation. You only pay if you want us to build the full website.",
       },
     ],
-    related: ["/services/small-business-web-design", "/services/squarespace-web-design", "/services/wordpress-web-design"],
+    related: ["/services/small-business-web-design", "/services/squarespace-web-design", "/services/wordpress-web-design", "/blog/online-booking-for-small-business-website"],
   },
   {
     path: "/industries/law-firm-web-design",
@@ -587,6 +587,6 @@ export const industryPages: ContentPageData[] = [
         a: "Yes, as long as you have each patient's written consent to use them online. We add them to the relevant treatment pages in a gallery that loads quickly on phones.",
       },
     ],
-    related: ["/services/small-business-web-design", "/services/website-redesign", "/industries/therapist-web-design"],
+    related: ["/services/small-business-web-design", "/services/website-redesign", "/industries/therapist-web-design", "/blog/online-booking-for-small-business-website"],
   },
 ];
