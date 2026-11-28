@@ -4,6 +4,106 @@ import type { ContentPageData } from "./types";
 
 export const dailyPosts: ContentPageData[] = [
   {
+    path: "/blog/why-is-my-website-slow",
+    kind: "blog",
+    label: "Why Is My Website Slow?",
+    title: "Why Is My Website Slow? 8 Fixes for Small Business",
+    description:
+      "Is your small business website slow to load? The common causes, simple fixes you can try today, and when it is time to ask a professional for help.",
+    eyebrow: "Tips",
+    h1: "Why Is My Website Slow? 8 Common Causes and How to Fix Them",
+    date: "2026-11-28",
+    readMinutes: 6,
+    intro: [
+      "In short: most slow small business websites are slow for a few ordinary reasons: oversized photos, too many plugins or add-ons, cheap hosting and heavy third-party scripts. Most of these can be fixed without rebuilding the site.",
+      "Speed matters because visitors on a phone won't wait around. A slow page can lose you the call, the booking or the sale before the customer has read a word. This guide walks through the causes in the order we'd check them.",
+    ],
+    sections: [
+      {
+        heading: "How do I tell if my website is really slow?",
+        paragraphs: [
+          "Open your site on your phone using mobile data, not your office wifi. Count how long it takes before you can read the text and tap a button. If you notice the wait, your customers do too.",
+          "You can also run your address through Google's free PageSpeed Insights tool. It scores your page and lists what is holding it back. Don't chase a perfect score. Focus on the biggest items it flags, and on how the site feels in your hand.",
+        ],
+      },
+      {
+        heading: "1. Photos that are far too big",
+        paragraphs: [
+          "This is the number one cause we see. A photo straight from a phone or camera can be many times larger than the screen needs. Resize images to the size they are shown, save them in a modern format such as WebP or a well-compressed JPG, and avoid uploading raw originals.",
+        ],
+      },
+      {
+        heading: "2. Too many plugins, apps or add-ons",
+        paragraphs: [
+          "On WordPress, Wix or Shopify, every plugin or app can add code that loads on every page. Remove anything you don't use. Replace several small tools with one good one where you can. Fewer moving parts also means fewer things to break or get hacked.",
+        ],
+      },
+      {
+        heading: "3. Slow or overcrowded hosting",
+        paragraphs: [
+          "Very cheap shared hosting can be slow when the server is busy. If your site is slow even with small images and few plugins, hosting may be the cause. Ask your host about their current plans, or move to a better plan or provider. Back up the site before any move.",
+        ],
+      },
+      {
+        heading: "4. Heavy extras from other companies",
+        bullets: [
+          "Chat widgets, pop-ups and booking tools that load on every page.",
+          "Several tracking and analytics scripts that you no longer use.",
+          "Embedded videos and social feeds that load before the visitor scrolls to them.",
+          "Fonts: use one or two, not five.",
+        ],
+      },
+      {
+        heading: "5. No caching and no compression",
+        paragraphs: [
+          "Caching saves a ready-made copy of your pages so the server doesn't rebuild them for every visitor. Many hosts and platforms offer it as a setting or a plugin. Turn it on, then test again, and check that your forms and shopping cart still work.",
+        ],
+      },
+      {
+        heading: "6. An old, bloated theme or design",
+        paragraphs: [
+          "Some themes and page builders ship with a lot of code you never use. If the site is several years old and has been patched many times, a clean redesign can be quicker and cheaper than endless fixes. A lean, purpose-built site loads faster by design.",
+        ],
+      },
+      {
+        heading: "7. Layout jumping and slow phone experience",
+        paragraphs: [
+          "If buttons move while the page loads, or the menu is hard to tap, visitors get frustrated even if the page is technically quick. Set sizes for images and banners, and test on a real phone, not just a desktop browser.",
+        ],
+      },
+      {
+        heading: "8. When should I ask a professional?",
+        paragraphs: [
+          "If you've resized images, removed unused plugins and the site is still slow, get help. A designer can check hosting, code and third-party scripts in one pass. At Dandilo Digitals, our Redesign package is $300, and our Care Plan is $99/month if you want someone to look after updates, backups and security on an ongoing basis.",
+          "Not sure where the problem is? Request a free website audit and we'll tell you what we see, in plain English. Or contact us and describe what you're experiencing.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How fast should a small business website load?",
+        a: "As fast as you can reasonably make it. A good rule of thumb is that the main content should appear within a few seconds on a phone. Use Google's PageSpeed Insights to see where yours stands.",
+      },
+      {
+        q: "Does a slow website hurt my Google rankings?",
+        a: "Page experience, including speed, is one of many things Google looks at. A slow site is rarely the only reason for poor rankings, but it does hurt visitors, who leave, so it is worth fixing.",
+      },
+      {
+        q: "Can I speed up a Wix or Squarespace site?",
+        a: "Yes, mostly through lighter images, fewer apps and embeds, and simpler pages. You have less control over the server than on your own hosting, so the fixes are mainly on the content side.",
+      },
+      {
+        q: "Will a new website be faster than my old one?",
+        a: "Usually, if it's built lean: optimised images, few plugins and good hosting. A new site built the same way as the old one will have the same problems, so ask about speed before you start.",
+      },
+      {
+        q: "How much does it cost to fix a slow website?",
+        a: "It depends on the cause. Image and plugin clean-ups are often quick, while a slow theme or hosting move takes more work. Ask for a clear quote after a short review of your site.",
+      },
+    ],
+    related: ["/services/website-maintenance", "/pricing", "/blog/why-is-my-website-not-showing-up-on-google"],
+  },
+  {
     path: "/blog/online-booking-for-small-business-website",
     kind: "blog",
     label: "Online Booking for Your Website",
